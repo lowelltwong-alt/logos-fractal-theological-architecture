@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: "Logos Fractal Theological Architecture"
+message: "If you use this repository, please cite it using this metadata."
+type: software
+authors:
+  - family-names: "Wong"
+    given-names: "Lowell T."
+version: "0.1.0"
+date-released: "2026-03-27"
+repository-code: "https://github.com/lowelltwong-alt/logos-fractal-theological-architecture"
+license: "CC-BY-4.0"
+abstract: >
+  A fractal, machine-readable theological architecture for Logos-grounded
+  governance, derivation, and LAIRCA-style decision systems.
