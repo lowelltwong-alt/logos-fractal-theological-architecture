@@ -1,0 +1,139 @@
+{
+  "node_type": "verse_node",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "verse.rom.8.18",
+    "anchor": "verse.rom.8.18",
+    "title": "Romans 8:18",
+    "slug": "rom-8-18",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "lookup_and_graph_traversal",
+    "domain": "scripture",
+    "subdomain": "new_testament",
+    "object_type": "canonical_verse_reference",
+    "tags": [
+      "scripture.romans",
+      "canon.new_testament",
+      "concept.glory",
+      "concept.suffering"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "concordance"
+    ]
+  },
+  "system": {
+    "system_role": "reference_layer",
+    "intent": "Provide a stable canonical verse node for concordance linking.",
+    "author_logic": "Starter verse node for a Romans 8 cluster around suffering, glory, and hope.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "passage.rom.8.18-25",
+    "parents": [
+      "passage.rom.8.18-25"
+    ],
+    "children": [],
+    "depends_on": [],
+    "enables": [
+      "concept.glory",
+      "concept.suffering",
+      "concept.hope"
+    ],
+    "related_to": [
+      "verse.rom.8.19",
+      "verse.rom.8.24"
+    ],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": [
+      {
+        "relationship_type": "relates_to_concept",
+        "target": "concept.glory",
+        "strength": "high",
+        "review_state": "editor_reviewed"
+      },
+      {
+        "relationship_type": "relates_to_concept",
+        "target": "concept.suffering",
+        "strength": "high",
+        "review_state": "editor_reviewed"
+      },
+      {
+        "relationship_type": "relates_to_concept",
+        "target": "concept.hope",
+        "strength": "moderate",
+        "review_state": "community_proposed"
+      }
+    ]
+  },
+  "content": {
+    "summary": "Canonical verse reference for Romans 8:18.",
+    "body": "Canonical scripture text should be attached through approved translation witnesses rather than duplicated here.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [
+      "scripture_ref.rom.8.18"
+    ],
+    "derived_from": [],
+    "synthesizes": [],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "directly_comparable",
+    "alignment_strength": "not_applicable",
+    "review_state": "editor_reviewed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [
+      "author.lowell_wong"
+    ],
+    "last_reviewed_at": "2026-03-30"
+  },
+  "entity_model": {
+    "entity_type": "scripture_reference",
+    "entity_subtype": "verse",
+    "canonical_id": "ROM.8.18",
+    "lifecycle_state": "active",
+    "canonical_status": "canonical",
+    "source_of_truth_ref": "scripture_ref.rom.8.18",
+    "aliases": []
+  },
+  "concordance": {
+    "canonical_ref": "Romans 8:18",
+    "book": "Romans",
+    "chapter": "8",
+    "verse": "18",
+    "passage_span": "Romans 8:18-25",
+    "translation_witnesses": [],
+    "lemmas": [],
+    "entities": [],
+    "topics": [
+      "topic.suffering",
+      "topic.glory",
+      "topic.hope"
+    ],
+    "concepts": [
+      "concept.glory",
+      "concept.suffering",
+      "concept.hope"
+    ],
+    "doctrines": [],
+    "motifs": [],
+    "interpretation_nodes": [],
+    "cross_reference_edges": []
+  },
+  "subnodes": []
+}
