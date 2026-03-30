@@ -1,0 +1,61 @@
+{
+  "node_type": "translation_comparison_object",
+  "artifact_type": "primary_source_object",
+  "identity": {
+    "id": "translation_comparison.mark.1.english.sample",
+    "anchor": "translation_comparison.mark.1.english.sample",
+    "title": "Mark 1 English Translation Comparison Sample",
+    "slug": "mark-1-english-translation-comparison-sample",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "primary_source_object",
+    "primary_use": "translation_comparison_traversal",
+    "domain": "primary_sources",
+    "subdomain": "translation_comparison",
+    "object_type": "translation_comparison",
+    "tags": ["mark_1", "english", "gospel"],
+    "audience_tags": ["translation", "theology", "public_explanation"],
+    "source_domains": ["primary_sources", "translation", "lexical"]
+  },
+  "interfaces": ["reviewable_node", "machine_readable_object", "translation_witness_like"],
+  "trust_zone": "reviewed_specialized",
+  "translation_comparison": {
+    "source_language": "Greek",
+    "target_language": "English",
+    "scope": "text.mark.1.1-15",
+    "likely_renderings": [
+      "gospel",
+      "good news",
+      "beginning",
+      "good news proclamation"
+    ],
+    "context_sensitive_notes": "This sample object highlights that a term like euangelion may require both lexical and contextual explanation rather than one fixed gloss.",
+    "confidence_tiers": ["high for broad narrative sense", "medium for narrow lexical nuance"],
+    "doctrinal_sensitivity_notes": "The opening of Mark shapes later gospel proclamation, Christology, and kingdom language.",
+    "cultural_or_traditional_notes": "Future production objects may compare how formal, functional, and tradition-shaped English renderings distribute nuance."
+  },
+  "relationships": {
+    "parents": ["lexical_evidence.mark.1.gospel_beginning"],
+    "children": [],
+    "depends_on": ["lexical_evidence.mark.1.gospel_beginning", "reconstruction.mark.1.1-15.sample"],
+    "enables": [],
+    "related_to": ["biblical_theme.gospel_beginning"],
+    "typed_edges": []
+  },
+  "provenance": {
+    "source_refs": [],
+    "derived_from": ["lexical_evidence.mark.1.gospel_beginning"],
+    "created_by": "author.lowell_t_wong",
+    "last_modified_by": "author.lowell_t_wong",
+    "asserted_by": "author.lowell_t_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": "Production version should attach renderings to exact lexical items and translation witnesses."
+  }
+}
