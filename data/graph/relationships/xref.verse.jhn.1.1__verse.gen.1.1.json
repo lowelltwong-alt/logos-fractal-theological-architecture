@@ -1,0 +1,128 @@
+{
+  "node_type": "cross_reference_node",
+  "artifact_type": "concordance_relationship",
+  "identity": {
+    "id": "xref.verse.jhn.1.1__verse.gen.1.1",
+    "anchor": "xref.verse.jhn.1.1__verse.gen.1.1",
+    "title": "John 1:1 echoes Genesis 1:1",
+    "slug": "xref-verse-jhn-1-1-verse-gen-1-1",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_relationship_object",
+    "primary_use": "typed_edge_preservation",
+    "domain": "concordance",
+    "subdomain": "relationships",
+    "object_type": "verse_to_verse_edge",
+    "tags": [
+      "relationship.echoes",
+      "scripture.john",
+      "scripture.genesis",
+      "motif.beginning"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "concordance",
+      "intertextuality"
+    ]
+  },
+  "system": {
+    "system_role": "relationship_layer",
+    "intent": "Preserve a reusable intertextual edge with provenance and review state.",
+    "author_logic": "Sample edge object demonstrating a verse-to-verse intertextual link.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [],
+    "depends_on": [
+      "verse.jhn.1.1",
+      "verse.gen.1.1"
+    ],
+    "enables": [],
+    "related_to": [
+      "concept.creation",
+      "concept.word"
+    ],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": []
+  },
+  "content": {
+    "summary": "Edge object linking John 1:1 and Genesis 1:1 through an echo relationship.",
+    "body": "This relationship object preserves an intertextual claim that may be central enough to merit its own rationale and review state.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [
+      "scripture_ref.jhn.1.1",
+      "scripture_ref.gen.1.1"
+    ],
+    "derived_from": [
+      "verse.jhn.1.1",
+      "verse.gen.1.1"
+    ],
+    "synthesizes": [],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "partially_translatable",
+    "alignment_strength": "high",
+    "review_state": "editor_reviewed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [
+      "author.lowell_wong"
+    ],
+    "last_reviewed_at": "2026-03-30"
+  },
+  "concordance": {
+    "canonical_ref": "John 1:1 / Genesis 1:1",
+    "book": "John / Genesis",
+    "chapter": "1 / 1",
+    "verse": "1 / 1",
+    "passage_span": "John 1:1 and Genesis 1:1",
+    "translation_witnesses": [],
+    "lemmas": [
+      "lemma.logos.g3056"
+    ],
+    "entities": [
+      "entity.god"
+    ],
+    "topics": [
+      "topic.creation",
+      "topic.word"
+    ],
+    "concepts": [
+      "concept.creation",
+      "concept.word"
+    ],
+    "doctrines": [
+      "doctrine.creation",
+      "doctrine.christology"
+    ],
+    "motifs": [
+      "motif.beginning"
+    ],
+    "interpretation_nodes": [],
+    "cross_reference_edges": []
+  },
+  "edge": {
+    "source": "verse.jhn.1.1",
+    "relationship_type": "echoes",
+    "target": "verse.gen.1.1",
+    "strength": "high",
+    "status": "editor_reviewed",
+    "rationale": "John 1:1 strongly resonates with the Genesis 1:1 opening and is commonly read as invoking creation-beginning language in a theologically intensified frame."
+  },
+  "subnodes": []
+}
