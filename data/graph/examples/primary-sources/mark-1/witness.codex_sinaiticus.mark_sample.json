@@ -1,0 +1,66 @@
+{
+  "node_type": "witness_object",
+  "artifact_type": "primary_source_object",
+  "identity": {
+    "id": "witness.codex_sinaiticus.mark_sample",
+    "anchor": "witness.codex_sinaiticus.mark_sample",
+    "title": "Codex Sinaiticus Mark Sample",
+    "slug": "codex-sinaiticus-mark-sample",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "primary_source_object",
+    "primary_use": "witness_traversal",
+    "domain": "primary_sources",
+    "subdomain": "witness",
+    "object_type": "manuscript_or_textual_witness",
+    "tags": ["codex_sinaiticus", "greek_nt", "mark"],
+    "audience_tags": ["textual_studies", "ontology", "translation"],
+    "source_domains": ["primary_sources", "scripture"]
+  },
+  "interfaces": ["reviewable_node", "machine_readable_object"],
+  "trust_zone": "reviewed_specialized",
+  "witness": {
+    "witness_kind": "greek_codex",
+    "is_fragmentary": false,
+    "holding_institution": "Codex Sinaiticus Project partner institutions",
+    "shelfmark": "Sample Mark witness page available in online viewer",
+    "language": "Greek",
+    "script": "uncial",
+    "date_range": "4th century CE",
+    "material": "parchment",
+    "coverage": ["Mark 1:1-35 sample page/view"],
+    "authenticity_confidence": "high",
+    "notes": "Use as New Testament Greek codex witness example with stable page/transcription/translation viewer.",
+    "stable_page_url": "https://codexsinaiticus.org/en/manuscript.aspx?book=34",
+    "viewer_url": "https://codexsinaiticus.org/en/manuscript.aspx?book=34",
+    "iiif_manifest": "",
+    "iiif_image_service": "",
+    "canvas_id": "",
+    "region_selector": "",
+    "annotation_refs": []
+  },
+  "relationships": {
+    "parents": [],
+    "children": ["transcription.sinaiticus.mark.1.1-35.sample"],
+    "depends_on": [],
+    "enables": ["reconstruction.mark.1.1-15.sample"],
+    "related_to": [],
+    "typed_edges": []
+  },
+  "provenance": {
+    "source_refs": ["turn0search5"],
+    "derived_from": [],
+    "created_by": "author.lowell_t_wong",
+    "last_modified_by": "author.lowell_t_wong",
+    "asserted_by": "author.lowell_t_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": "Sample uses a stable Mark page range from the Codex Sinaiticus viewer."
+  }
+}
