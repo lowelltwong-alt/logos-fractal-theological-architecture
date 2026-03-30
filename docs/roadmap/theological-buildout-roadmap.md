@@ -43,6 +43,8 @@ For the repo-wide relationship between those layers, see:
 
 - `docs/roadmap/repository-integration-map.md`
 
+This repository also now includes a future primary-sources expansion for witnesses, fragments, transcriptions, passage reconstructions, lexical evidence, and translation comparison. That future branch runs alongside the theological buildout and is meant to support deeper textual, lexical, and translation-aware grounding for later doctrine, concept, and synthesis work.
+
 ## Guiding principle
 
 The project should not grow as a random collection of theologian notes.
