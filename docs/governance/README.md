@@ -11,10 +11,12 @@ This repository is designed to support:
 - semantic chunking for retrieval and RAG-style use
 - recursive buildout across thinkers, doctrines, concepts, comparisons, and traditions
 - future ontology promotion of repeated concepts
+- scripture, translation, manuscript, and boundary-source control
+- graph and concordance growth without silent architectural drift
 
 Because of that, structure and vocabulary discipline are not cosmetic concerns. They are part of the architecture itself.
 
-If anchors, tags, relationship verbs, node types, or concept names drift casually, the repository becomes harder to search, harder to compare, harder to extend, and harder to turn into a serious ontology later.
+If anchors, tags, relationship verbs, node types, concept names, provenance fields, or trust classifications drift casually, the repository becomes harder to search, harder to compare, harder to extend, and harder to turn into a serious ontology later.
 
 ## Core operating rule
 
@@ -30,15 +32,44 @@ Preferred order of extension:
 
 ## Files in this folder
 
+### Core governance
 - `ontology-discipline.md` — the main structural rule set
-- `anchor-conventions.md` — how anchors should be formed and stabilized
-- `tag-registry.md` — controlled tag families and extension guidance
+- `anchor-conventions.md` — base anchor families and address logic
+- `tag-registry.md` — base controlled tag families and extension guidance
 - `relationship-registry.md` — approved relationship verbs and usage guidance
+- `node-types.md` — approved base node families
+
+### Governance extensions and architecture control
+- `anchor-conventions-scripture-and-graph-extension.md` — address extensions for scripture, boundary, and graph layers
+- `tag-registry-scripture-and-boundary-extension.md` — tag extensions for scripture, translation, manuscript, and boundary-source layers
+- `node-types-scripture-and-boundary-extension.md` — node-type extensions for scripture, hermeneutic, translation, manuscript, and noncanonical layers
+- `scripture-taxonomy-and-ontology.md` — scripture-layer ontology design for books, chapters, pericopes, texts, and interpretations
+- `textual-traditions-translation-and-noncanonical-sources.md` — structure for original languages, translations, manuscripts, and noncanonical source handling
+- `noncanonical-and-heresy-classification.md` — classification framework for noncanonical, pseudepigraphal, forged, and heretical materials
+- `translation-trust-and-sectarian-classification.md` — trust and boundary framework for Bible translations and disputed renderings
+
+## How to use this folder
+
+A contributor usually should read this governance layer in roughly this order:
+
+1. `ontology-discipline.md`
+2. `anchor-conventions.md`
+3. `tag-registry.md`
+4. `relationship-registry.md`
+5. `node-types.md`
+
+Then read the relevant extensions when working in:
+- scripture
+- original languages
+- translations
+- manuscripts
+- noncanonical materials
+- graph or concordance structures
 
 ## Project principle
 
-The shell should stay stable.
-The branches can keep growing.
+The shell should stay stable.  
+The branches can keep growing.  
 Repeated concepts can become trunks of their own.
 
 That is the practical meaning of fractal discipline in this repository.
