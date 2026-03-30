@@ -1,0 +1,143 @@
+{
+  "node_type": "verse_node",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "verse.col.1.16",
+    "anchor": "verse.col.1.16",
+    "title": "Colossians 1:16",
+    "slug": "col-1-16",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "lookup_and_graph_traversal",
+    "domain": "scripture",
+    "subdomain": "new_testament",
+    "object_type": "canonical_verse_reference",
+    "tags": [
+      "scripture.colossians",
+      "canon.new_testament",
+      "concept.creation",
+      "doctrine.christology"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "concordance"
+    ]
+  },
+  "system": {
+    "system_role": "reference_layer",
+    "intent": "Provide a stable canonical verse node for concordance linking.",
+    "author_logic": "Starter sample node with strong creation and christology relevance.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "passage.col.1.15-20",
+    "parents": [
+      "passage.col.1.15-20"
+    ],
+    "children": [],
+    "depends_on": [],
+    "enables": [
+      "concept.creation",
+      "doctrine.christology"
+    ],
+    "related_to": [
+      "verse.gen.1.1",
+      "verse.jhn.1.1"
+    ],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": [
+      {
+        "relationship_type": "relates_to_concept",
+        "target": "concept.creation",
+        "strength": "high",
+        "review_state": "editor_reviewed"
+      },
+      {
+        "relationship_type": "supports_doctrine",
+        "target": "doctrine.christology",
+        "strength": "high",
+        "review_state": "community_proposed"
+      },
+      {
+        "relationship_type": "parallel_to",
+        "target": "verse.jhn.1.1",
+        "strength": "moderate",
+        "review_state": "editor_reviewed"
+      }
+    ]
+  },
+  "content": {
+    "summary": "Canonical verse reference for Colossians 1:16.",
+    "body": "Canonical scripture text should be attached through approved translation witnesses rather than duplicated here.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [
+      "scripture_ref.col.1.16"
+    ],
+    "derived_from": [],
+    "synthesizes": [],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "directly_comparable",
+    "alignment_strength": "not_applicable",
+    "review_state": "community_proposed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "entity_model": {
+    "entity_type": "scripture_reference",
+    "entity_subtype": "verse",
+    "canonical_id": "COL.1.16",
+    "lifecycle_state": "active",
+    "canonical_status": "canonical",
+    "source_of_truth_ref": "scripture_ref.col.1.16",
+    "aliases": []
+  },
+  "concordance": {
+    "canonical_ref": "Colossians 1:16",
+    "book": "Colossians",
+    "chapter": "1",
+    "verse": "16",
+    "passage_span": "Colossians 1:15-20",
+    "translation_witnesses": [
+      "translation.esv.col.1.16"
+    ],
+    "lemmas": [],
+    "entities": [
+      "entity.god"
+    ],
+    "topics": [
+      "topic.creation",
+      "topic.christ"
+    ],
+    "concepts": [
+      "concept.creation"
+    ],
+    "doctrines": [
+      "doctrine.creation",
+      "doctrine.christology"
+    ],
+    "motifs": [],
+    "interpretation_nodes": [],
+    "cross_reference_edges": [
+      "xref.verse.col.1.16__verse.gen.1.1",
+      "xref.verse.col.1.16__verse.jhn.1.1"
+    ]
+  },
+  "subnodes": []
+}
