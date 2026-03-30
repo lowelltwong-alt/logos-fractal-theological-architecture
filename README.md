@@ -70,7 +70,7 @@ A doctrine node, a canon node, a derivation, a weighting profile, a scripture no
 
 ### 1. Keep the recursive shell stable
 
-The shell should not be rewritten every time the project expands. Growth should happen by adding nodes and relationships inside the recurring structure.
+The shell should not be rewritten every time the project expands.  should happen by adding nodes and relationships inside the recurring structure.
 
 ### 2. Keep doctrine distinct from ordering
 
@@ -100,7 +100,7 @@ The repository should be broad enough for serious Christian reuse while still al
 
 This repository depends on disciplined recursive structure and controlled vocabulary.
 
-Because it is designed for human reading, semantic retrieval, RAG-style retrieval and interrogation, recursive comparison, future ontology development, and graph-oriented concordance growth, contributors should avoid casually inventing new anchors, tags, node types, relationship verbs, or category names.
+Because it is designed for human reading, semantic retrieval, RAG-style retrieval and interrogation, recursive comparison, future ontology development, and graph-oriented concordance , contributors should avoid casually inventing new anchors, tags, node types, relationship verbs, or category names.
 
 Preferred order of extension:
 
@@ -184,6 +184,8 @@ This project is gradually building:
 - original-language, translation, and manuscript support layers
 - a noncanonical and boundary-source control layer
 - graph and concordance surfaces for governed machine-readable relationships
+- a future primary-sources corpus layer for witnesses, fragments, transcriptions, passage reconstructions, lexical evidence, and translation comparison
+- a future confidence-aware textual knowledge system that could let users move from witness or fragment to passage, to original-language analysis, to translation comparison, to doctrine and theology without losing provenance, confidence, or context
 
 The intent is that the repository becomes not merely a collection of theological notes, but a usable theological architecture.
 
@@ -257,6 +259,7 @@ The strongest next steps are:
 - add more worked derivation examples
 - expand graph and concordance structures only where governed relationship objects are truly needed
 - introduce machine-readable sidecars once the prose architecture is stable enough
+- continue scaffolding the future primary-sources branch so it can eventually support witness-, fragment-, lexical-, and translation-aware textual analysis
 
 For the recommended theologian sequence, thinker-page checklist, concept-promotion logic, comparison roadmap, and synthesis roadmap, see:
 
@@ -277,7 +280,44 @@ That graph layer should remain:
 
 See:
 - `data/graph/README.md`
+- 
+## Future primary-sources horizon
 
+The repository is also being designed so it can one day grow into a governed biblical primary-sources corpus.
+
+That future layer would not be a flat archive of manuscript images or quotations. It would be a structured and confidence-aware source system for:
+
+- manuscript witnesses, including fuller witnesses such as codices, books, letters, or substantial continuous-text objects
+- fragments where a witness survives in pieces
+- transcriptions
+- passage reconstructions
+- lexical evidence
+- translation comparison across modern languages
+- provenance, confidence, and trust-aware source handling
+
+The long-range goal is to make it possible to move through layers such as:
+
+`witness or fragment -> transcription -> passage reconstruction -> lexical evidence -> translation comparison -> doctrine / concept / theology`
+
+without collapsing those layers into one another.
+
+If built well, this future branch could help a user or AI system:
+
+- inspect early witnesses for a passage
+- compare known witnesses across a verse or passage span
+- trace an original-language word or phrase in context
+- compare likely meanings across biblical and relevant non-biblical usage
+- compare renderings into modern languages
+- preserve uncertainty, reconstruction limits, and provenance rather than forcing false certainty
+
+This future layer is intended to extend the repository’s existing ontology rather than replace it. It belongs inside the same fractal shell, governed by the same commitments to stable identity, typed relationships, trust zones, provenance, validation, and machine-legible structure.
+
+See:
+- `docs/roadmap/biblical-primary-sources-future-framework.md`
+- `docs/primary-sources/README.md`
+- `docs/primary-sources/ontology-and-taxonomy.md`
+- `data/graph/schemes/primary-sources.md`
+  
 ## Attribution
 
 Author attribution should appear as **Lowell T. Wong**.
