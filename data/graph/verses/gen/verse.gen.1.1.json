@@ -1,0 +1,138 @@
+{
+  "node_type": "verse_node",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "verse.gen.1.1",
+    "anchor": "verse.gen.1.1",
+    "title": "Genesis 1:1",
+    "slug": "gen-1-1",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "lookup_and_graph_traversal",
+    "domain": "scripture",
+    "subdomain": "old_testament",
+    "object_type": "canonical_verse_reference",
+    "tags": [
+      "scripture.genesis",
+      "canon.old_testament",
+      "concept.creation"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "concordance"
+    ]
+  },
+  "system": {
+    "system_role": "reference_layer",
+    "intent": "Provide a stable canonical verse node for concordance linking.",
+    "author_logic": "Starter sample node for the immutable reference layer.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "passage.gen.1.1-2.3",
+    "parents": [
+      "passage.gen.1.1-2.3"
+    ],
+    "children": [],
+    "depends_on": [],
+    "enables": [
+      "concept.creation",
+      "entity.god"
+    ],
+    "related_to": [
+      "verse.jhn.1.1",
+      "verse.col.1.16"
+    ],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": [
+      {
+        "relationship_type": "centers_on_entity",
+        "target": "entity.god",
+        "strength": "high",
+        "review_state": "editor_reviewed"
+      },
+      {
+        "relationship_type": "relates_to_concept",
+        "target": "concept.creation",
+        "strength": "high",
+        "review_state": "editor_reviewed"
+      }
+    ]
+  },
+  "content": {
+    "summary": "Canonical verse reference for Genesis 1:1.",
+    "body": "In the beginning God created the heavens and the earth.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [
+      "scripture_ref.gen.1.1"
+    ],
+    "derived_from": [],
+    "synthesizes": [],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "directly_comparable",
+    "alignment_strength": "not_applicable",
+    "review_state": "editor_reviewed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [
+      "author.lowell_wong"
+    ],
+    "last_reviewed_at": "2026-03-30"
+  },
+  "entity_model": {
+    "entity_type": "scripture_reference",
+    "entity_subtype": "verse",
+    "canonical_id": "GEN.1.1",
+    "lifecycle_state": "active",
+    "canonical_status": "canonical",
+    "source_of_truth_ref": "scripture_ref.gen.1.1",
+    "aliases": []
+  },
+  "concordance": {
+    "canonical_ref": "Genesis 1:1",
+    "book": "Genesis",
+    "chapter": "1",
+    "verse": "1",
+    "passage_span": "Genesis 1:1-2:3",
+    "translation_witnesses": [
+      "translation.esv.gen.1.1"
+    ],
+    "lemmas": [],
+    "entities": [
+      "entity.god"
+    ],
+    "topics": [
+      "topic.creation"
+    ],
+    "concepts": [
+      "concept.creation"
+    ],
+    "doctrines": [
+      "doctrine.creation"
+    ],
+    "motifs": [
+      "motif.beginning"
+    ],
+    "interpretation_nodes": [],
+    "cross_reference_edges": [
+      "xref.verse.gen.1.1__verse.jhn.1.1",
+      "xref.verse.gen.1.1__concept.creation"
+    ]
+  },
+  "subnodes": []
+}
