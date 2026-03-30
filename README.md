@@ -121,6 +121,44 @@ See:
 - `docs/governance/node-types.md`
 - `docs/roadmap/theological-buildout-roadmap.md`
 
+## Provenance, synthesis, and philosophical influence
+
+This repository is not only concerned with what a node says. It is also concerned with where a node comes from.
+
+Because the project is designed to support human reading, semantic retrieval, recursive comparison, and future ontology development, major nodes should eventually preserve provenance more explicitly.
+
+That means the repository should be able to distinguish between:
+- material directly derived from one major source
+- material synthesized from several Christian thinkers or traditions
+- material adapted from earlier categories into a new theological frame
+- material appropriated from non-Christian philosophy or adjacent intellectual traditions
+- material that requires translation before meaningful comparison can occur
+
+This matters because theological architecture becomes less trustworthy when synthesis is presented as if it came from a single source, or when borrowed philosophical categories are treated as if they were native to Christian theology without acknowledgment.
+
+In practical terms, the project should increasingly support governed distinctions such as:
+- direct derivation
+- multi-source synthesis
+- appropriation
+- adaptation
+- semantic alignment
+- misalignment
+- translation burden
+
+That discipline is especially important in cases where Christian thinkers are deeply shaped by non-Christian philosophical traditions while also revising, correcting, or transforming them.
+
+Over time, this repository should support a clean architecture for both:
+- Christian canon thinkers
+- non-Christian philosophical source traditions
+
+That will allow the project to model intersections such as:
+- Augustine and Platonism
+- Aquinas and Aristotelianism
+- Christian doctrine and modern political or philosophical categories
+- areas of strong alignment, partial alignment, misalignment, correction, or required translation
+
+The goal is not to flatten these relationships into simple influence language. The goal is to preserve traceable theological and conceptual lineage.
+
 ## What the repository is trying to build
 
 This project is gradually building:
