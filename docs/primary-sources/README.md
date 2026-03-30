@@ -4,15 +4,15 @@
 
 This branch defines the future primary-sources expansion of the repository.
 
-Its purpose is to give a future lead and team a governed architectural shell for building a manuscript, fragment, witness, lexical, and translation corpus that fits the rest of the Logos ontology instead of becoming a separate side project.
+Its purpose is to give a future lead and team a governed architectural shell for building a manuscript, witness, fragment, transcription, lexical, reconstruction, and translation corpus that fits the rest of the Logos ontology instead of becoming a separate side project.
 
 ## What this future project is
 
 This is not merely a collection of Bible quotations or a flat archive of manuscript images.
 
 It is a future governed knowledge system for:
-- manuscript witnesses
-- fragments
+- manuscript witnesses, including fuller witnesses such as codices, books, letters, or substantial continuous-text objects
+- fragments where a witness survives in pieces
 - transcriptions
 - passage reconstructions
 - lexical evidence
@@ -59,7 +59,7 @@ They must connect, but remain distinct.
 ## Relation to scholarly practice
 
 This future branch should align as much as possible with real digital-humanities and manuscript standards such as:
-- TEI manuscript description for manuscript and fragment description
+- TEI manuscript description for manuscript, manuscript-part, and fragment description
 - IIIF for image delivery and manifests
 - manuscript-workspace patterns for cataloging, transcription, and collation
 
