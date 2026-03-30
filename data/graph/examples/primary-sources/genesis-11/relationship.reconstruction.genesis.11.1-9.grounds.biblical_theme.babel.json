@@ -1,0 +1,46 @@
+{
+  "object_type": "relationship_object",
+  "schema_version": "v1",
+  "identity": {
+    "edge_id": "edge.reconstruction.genesis.11.1-9.grounds.biblical_theme.babel",
+    "title": "Genesis 11 Reconstruction grounds Babel theme",
+    "status": "working"
+  },
+  "classification": {
+    "domain": "graph",
+    "subdomain": "relationships",
+    "relation_type": "grounds",
+    "tags": ["genesis_11", "babel", "theme_grounding"],
+    "audience_tags": ["ontology", "theology", "graph" ]
+  },
+  "interfaces": ["reviewable_node", "machine_readable_object"],
+  "trust_zone": "working_proposed",
+  "edge": {
+    "from": "reconstruction.genesis.11.1-9",
+    "relation": "grounds",
+    "to": "biblical_theme.babel",
+    "confidence": "medium",
+    "evidence": ["reconstruction.genesis.11.1-9"],
+    "warning": "Theme target node may not yet exist as a fully governed object in the repository.",
+    "use_case_limit": "Sample graph object for architecture demonstration."
+  },
+  "provenance": {
+    "asserted_by": "author.lowell_t_wong",
+    "reviewed_by": [],
+    "created_by": "author.lowell_t_wong",
+    "last_modified_by": "author.lowell_t_wong",
+    "derived_from": ["reconstruction.genesis.11.1-9"],
+    "source_refs": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": "Promote confidence and remove warning once the target theme node is formalized."
+  },
+  "lifecycle": {
+    "supersedes": [],
+    "superseded_by": [],
+    "compatibility_status": "sample"
+  }
+}
