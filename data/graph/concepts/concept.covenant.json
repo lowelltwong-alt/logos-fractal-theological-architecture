@@ -1,0 +1,113 @@
+{
+  "node_type": "concept_node",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "concept.covenant",
+    "anchor": "concept.covenant",
+    "title": "Covenant",
+    "slug": "covenant",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "concept_traversal",
+    "domain": "theology",
+    "subdomain": "conceptual",
+    "object_type": "reusable_concept",
+    "tags": [
+      "concept.covenant",
+      "scripture.exodus"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "theology",
+      "concordance"
+    ]
+  },
+  "system": {
+    "system_role": "concept_layer",
+    "intent": "Provide a reusable concept node for covenant.",
+    "author_logic": "Starter concept node for an Exodus covenant cluster.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [],
+    "depends_on": [],
+    "enables": [
+      "doctrine.covenant"
+    ],
+    "related_to": [
+      "passage.exod.3.1-15",
+      "entity.moses"
+    ],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": []
+  },
+  "content": {
+    "summary": "Reusable concept node for covenant.",
+    "body": "This node provides a reusable conceptual object that can gather scripture passages, doctrine nodes, and later interpretive tradition around covenant.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [],
+    "derived_from": [],
+    "synthesizes": [
+      "passage.exod.3.1-15"
+    ],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "requires_translation_to_compare",
+    "alignment_strength": "mixed",
+    "review_state": "community_proposed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "entity_model": {
+    "entity_type": "conceptual_object",
+    "entity_subtype": "concept",
+    "canonical_id": "CONCEPT.COVENANT",
+    "lifecycle_state": "active",
+    "canonical_status": "canonical",
+    "source_of_truth_ref": "concept.covenant",
+    "aliases": []
+  },
+  "concordance": {
+    "canonical_ref": "",
+    "book": "",
+    "chapter": "",
+    "verse": "",
+    "passage_span": "",
+    "translation_witnesses": [],
+    "lemmas": [],
+    "entities": [
+      "entity.moses"
+    ],
+    "topics": [
+      "topic.covenant"
+    ],
+    "concepts": [],
+    "doctrines": [
+      "doctrine.covenant"
+    ],
+    "motifs": [
+      "motif.calling"
+    ],
+    "interpretation_nodes": [],
+    "cross_reference_edges": []
+  },
+  "subnodes": []
+}
