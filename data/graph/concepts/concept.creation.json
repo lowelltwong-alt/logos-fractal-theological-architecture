@@ -1,0 +1,135 @@
+{
+  "node_type": "concept_node",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "concept.creation",
+    "anchor": "concept.creation",
+    "title": "Creation",
+    "slug": "creation",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "concept_traversal",
+    "domain": "theology",
+    "subdomain": "conceptual",
+    "object_type": "reusable_concept",
+    "tags": [
+      "concept.creation",
+      "doctrine.creation"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "theology",
+      "concordance"
+    ]
+  },
+  "system": {
+    "system_role": "concept_layer",
+    "intent": "Provide a reusable concept node that can connect verses, passages, doctrines, and interpretations.",
+    "author_logic": "Starter concept node showing how the concordance grows beyond simple verse indexing.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [],
+    "depends_on": [],
+    "enables": [
+      "doctrine.creation"
+    ],
+    "related_to": [
+      "concept.word"
+    ],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": [
+      {
+        "relationship_type": "supported_by_concept",
+        "target": "verse.gen.1.1",
+        "strength": "high",
+        "review_state": "editor_reviewed"
+      },
+      {
+        "relationship_type": "supported_by_concept",
+        "target": "verse.jhn.1.1",
+        "strength": "moderate",
+        "review_state": "editor_reviewed"
+      },
+      {
+        "relationship_type": "supported_by_concept",
+        "target": "verse.col.1.16",
+        "strength": "high",
+        "review_state": "community_proposed"
+      }
+    ]
+  },
+  "content": {
+    "summary": "Reusable concept node for creation.",
+    "body": "This node is a governed conceptual object that links relevant scripture references and theological layers without collapsing the concept into one verse alone.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [],
+    "derived_from": [],
+    "synthesizes": [
+      "verse.gen.1.1",
+      "verse.jhn.1.1",
+      "verse.col.1.16"
+    ],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "directly_comparable",
+    "alignment_strength": "high",
+    "review_state": "community_proposed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "entity_model": {
+    "entity_type": "conceptual_object",
+    "entity_subtype": "concept",
+    "canonical_id": "CONCEPT.CREATION",
+    "lifecycle_state": "active",
+    "canonical_status": "canonical",
+    "source_of_truth_ref": "concept.creation",
+    "aliases": []
+  },
+  "concordance": {
+    "canonical_ref": "",
+    "book": "",
+    "chapter": "",
+    "verse": "",
+    "passage_span": "",
+    "translation_witnesses": [],
+    "lemmas": [],
+    "entities": [],
+    "topics": [
+      "topic.creation"
+    ],
+    "concepts": [],
+    "doctrines": [
+      "doctrine.creation"
+    ],
+    "motifs": [
+      "motif.beginning"
+    ],
+    "interpretation_nodes": [],
+    "cross_reference_edges": [
+      "xref.verse.gen.1.1__concept.creation",
+      "xref.verse.jhn.1.1__concept.creation",
+      "xref.verse.col.1.16__concept.creation"
+    ]
+  },
+  "subnodes": []
+}
