@@ -174,6 +174,12 @@ Node type names should be:
 - stable
 - function-based rather than fashionable
 
+## Extension note
+
+For scripture, interpretation, translation, manuscript, original-language, and boundary-source node-type extensions, see:
+
+- `node-types-scripture-and-boundary-extension.md`
+
 ## Summary principle
 
 Use as few node types as necessary, but enough to keep the architecture clear.
