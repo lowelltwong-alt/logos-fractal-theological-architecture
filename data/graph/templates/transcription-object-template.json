@@ -1,0 +1,60 @@
+{
+  "node_type": "transcription_object",
+  "artifact_type": "primary_source_object",
+  "identity": {
+    "id": "transcription.<name>",
+    "anchor": "transcription.<name>",
+    "title": "<Transcription Name>",
+    "slug": "<slug>",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "primary_source_object",
+    "primary_use": "transcription_traversal",
+    "domain": "primary_sources",
+    "subdomain": "transcription",
+    "object_type": "witness_transcription",
+    "tags": [],
+    "audience_tags": [],
+    "source_domains": ["primary_sources", "scripture"]
+  },
+  "interfaces": [
+    "reviewable_node",
+    "machine_readable_object"
+  ],
+  "trust_zone": "reviewed_specialized",
+  "transcription": {
+    "transcription_kind": "",
+    "source_witness": "",
+    "source_fragment": "",
+    "language": "",
+    "script": "",
+    "text": "",
+    "normalization_notes": "",
+    "lacuna_notes": "",
+    "reading_confidence": ""
+  },
+  "relationships": {
+    "parents": [],
+    "children": [],
+    "depends_on": [],
+    "enables": [],
+    "related_to": [],
+    "typed_edges": []
+  },
+  "provenance": {
+    "source_refs": [],
+    "derived_from": [],
+    "created_by": "",
+    "last_modified_by": "",
+    "asserted_by": "",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": ""
+  }
+}
