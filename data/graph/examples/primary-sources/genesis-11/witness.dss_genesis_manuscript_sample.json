@@ -1,0 +1,66 @@
+{
+  "node_type": "witness_object",
+  "artifact_type": "primary_source_object",
+  "identity": {
+    "id": "witness.dss.genesis.manuscript_sample",
+    "anchor": "witness.dss.genesis.manuscript_sample",
+    "title": "Dead Sea Scrolls Genesis Manuscript Sample",
+    "slug": "dss-genesis-manuscript-sample",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "primary_source_object",
+    "primary_use": "witness_traversal",
+    "domain": "primary_sources",
+    "subdomain": "witness",
+    "object_type": "manuscript_or_textual_witness",
+    "tags": ["dead_sea_scrolls", "genesis", "fragmentary_witness"],
+    "audience_tags": ["textual_studies", "ontology", "translation"],
+    "source_domains": ["primary_sources", "scripture"]
+  },
+  "interfaces": ["reviewable_node", "machine_readable_object"],
+  "trust_zone": "reviewed_specialized",
+  "witness": {
+    "witness_kind": "qumran_biblical_manuscript",
+    "is_fragmentary": true,
+    "holding_institution": "Israel Antiquities Authority / Leon Levy Dead Sea Scrolls Digital Library",
+    "shelfmark": "Exact manuscript ID pending verification for Genesis 11 coverage",
+    "language": "Hebrew",
+    "script": "square Hebrew",
+    "date_range": "Second Temple period",
+    "material": "parchment",
+    "coverage": ["Genesis composition witness"],
+    "authenticity_confidence": "high",
+    "notes": "Use as the fragmentary Genesis witness example. A specific Genesis manuscript exists among the Dead Sea Scrolls, but exact Genesis 11:1-9 coverage remains to be verified before narrowing to a named witness.",
+    "stable_page_url": "https://www.deadseascrolls.org.il/learn-about-the-scrolls/introduction",
+    "viewer_url": "https://www.deadseascrolls.org.il/explore-the-archive",
+    "iiif_manifest": "",
+    "iiif_image_service": "",
+    "canvas_id": "",
+    "region_selector": "",
+    "annotation_refs": []
+  },
+  "relationships": {
+    "parents": [],
+    "children": [],
+    "depends_on": [],
+    "enables": ["reconstruction.genesis.11.1-9"],
+    "related_to": [],
+    "typed_edges": []
+  },
+  "provenance": {
+    "source_refs": ["turn0search24"],
+    "derived_from": [],
+    "created_by": "author.lowell_t_wong",
+    "last_modified_by": "author.lowell_t_wong",
+    "asserted_by": "author.lowell_t_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": "Exact Genesis 11 coverage should be verified before promoting this from sample witness to a more specific governed witness object."
+  }
+}
