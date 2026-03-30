@@ -86,6 +86,19 @@ Examples:
 - verse graph datasets
 - relationship objects
 - reusable edge objects with provenance
+- 
+### 8. Primary-sources layer
+This future layer holds governed source objects related to biblical primary materials and their interpretive handling.
+
+Examples:
+- manuscript witnesses
+- fragments
+- transcriptions
+- passage reconstructions
+- lexical evidence objects
+- translation comparison objects
+
+This layer is meant to connect the repository’s theological and graph logic to a future confidence-aware textual corpus rather than functioning as a separate manuscript project.
 
 ## How the layers connect
 The primary-sources layer extends the scripture, lexical, manuscript, and translation layers by preserving a path from witness or fragment to reconstruction, lexical analysis, translation comparison, and downstream doctrine or theology.
@@ -119,19 +132,6 @@ When a new layer is added, it should be integrated in three places where relevan
 - the actual node surface itself
 
 That keeps the repository from accumulating silent architectural side tracks.
-
-### 8. Primary-sources layer
-This future layer holds governed source objects related to biblical primary materials and their interpretive handling.
-
-Examples:
-- manuscript witnesses
-- fragments
-- transcriptions
-- passage reconstructions
-- lexical evidence objects
-- translation comparison objects
-
-This layer is meant to connect the repository’s theological and graph logic to a future confidence-aware textual corpus rather than functioning as a separate manuscript project.
 
 ## Summary principle
 
