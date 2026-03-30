@@ -1,0 +1,116 @@
+{
+  "node_type": "topic_node",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "topic.creation",
+    "anchor": "topic.creation",
+    "title": "Creation",
+    "slug": "topic-creation",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "navigation_and_grouping",
+    "domain": "theology",
+    "subdomain": "topic",
+    "object_type": "broad_retrieval_topic",
+    "tags": [
+      "topic.creation",
+      "concept.creation"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "concordance"
+    ]
+  },
+  "system": {
+    "system_role": "topic_layer",
+    "intent": "Provide a broad retrieval-oriented category for creation references.",
+    "author_logic": "Starter topic node showing the distinction between broad navigation and more precise concept/doctrine objects.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [],
+    "depends_on": [],
+    "enables": [
+      "concept.creation"
+    ],
+    "related_to": [
+      "verse.gen.1.1",
+      "passage.gen.1.1-2.3",
+      "concept.creation",
+      "doctrine.creation"
+    ],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": []
+  },
+  "content": {
+    "summary": "Broad retrieval topic for creation-related material.",
+    "body": "This topic node is intentionally broader than the concept and doctrine layers and is designed primarily for retrieval and grouping.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [],
+    "derived_from": [],
+    "synthesizes": [
+      "verse.gen.1.1",
+      "passage.gen.1.1-2.3",
+      "concept.creation"
+    ],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "directly_comparable",
+    "alignment_strength": "high",
+    "review_state": "community_proposed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "entity_model": {
+    "entity_type": "conceptual_object",
+    "entity_subtype": "topic",
+    "canonical_id": "TOPIC.CREATION",
+    "lifecycle_state": "active",
+    "canonical_status": "canonical",
+    "source_of_truth_ref": "topic.creation",
+    "aliases": []
+  },
+  "concordance": {
+    "canonical_ref": "",
+    "book": "",
+    "chapter": "",
+    "verse": "",
+    "passage_span": "",
+    "translation_witnesses": [],
+    "lemmas": [],
+    "entities": [],
+    "topics": [],
+    "concepts": [
+      "concept.creation"
+    ],
+    "doctrines": [
+      "doctrine.creation"
+    ],
+    "motifs": [
+      "motif.beginning"
+    ],
+    "interpretation_nodes": [],
+    "cross_reference_edges": [
+      "xref.verse.gen.1.1__concept.creation"
+    ]
+  },
+  "subnodes": []
+}
