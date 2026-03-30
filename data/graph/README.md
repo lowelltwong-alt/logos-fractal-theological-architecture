@@ -22,6 +22,8 @@ Some relationships need to become explicit machine-readable objects so they can 
 - reused across many nodes
 - read by concordance or graph systems without hidden drift
 
+This graph layer also now supports a future primary-sources domain, including witness objects, fragment objects, transcriptions, passage reconstructions, lexical evidence objects, and translation comparison objects. That future domain should remain governed by the same identity, trust, provenance, and validation rules as the rest of the graph architecture.
+
 ## Relation to the rest of the repository
 
 This layer should not operate as a separate project.
