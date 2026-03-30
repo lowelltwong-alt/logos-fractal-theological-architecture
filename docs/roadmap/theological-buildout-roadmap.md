@@ -18,6 +18,30 @@ This file should be read alongside:
 - `docs/governance/tag-registry.md`
 - `docs/governance/relationship-registry.md`
 - `docs/governance/node-types.md`
+- `docs/roadmap/repository-integration-map.md`
+
+## Important scope note
+
+This roadmap is primarily about the theological buildout of:
+- canon thinkers
+- doctrine nodes
+- concept nodes
+- comparison nodes
+- synthesis nodes
+
+It now sits inside a wider repository that also includes:
+- scripture-layer nodes
+- original-language nodes
+- translation and manuscript control layers
+- biblical themes
+- noncanonical boundary handling
+- graph and concordance surfaces
+
+Those wider layers do not replace this roadmap. They support and extend it.
+
+For the repo-wide relationship between those layers, see:
+
+- `docs/roadmap/repository-integration-map.md`
 
 ## Guiding principle
 
@@ -185,6 +209,26 @@ If contributors need a concrete first queue, use this order:
 13. first comparison nodes
 14. first synthesis nodes
 
+## Scripture and source-control interaction
+
+The repository now also includes a wider supporting buildout in:
+- scripture
+- original-language terms
+- translations
+- manuscripts
+- biblical themes
+- noncanonical and heresy boundary layers
+- graph and concordance work
+
+Those layers should increasingly support this theological buildout by:
+- grounding doctrine in text
+- preserving lexical nuance
+- clarifying translation and manuscript assumptions
+- distinguishing canonical from noncanonical authority
+- making important connections machine-readable
+
+This roadmap does not try to sequence every one of those supporting layers in detail. It focuses on the theological buildout proper while acknowledging that the repository now has a broader ontological surface.
+
 ## What each thinker page should include
 
 Every thinker page should follow a repeatable pattern so comparison and retrieval stay strong.
@@ -336,8 +380,8 @@ Recommended role:
 
 ## Summary principle
 
-Build the architecture in layers.
-Do not flatten thinkers into slogans.
-Do not bury comparisons in prose.
-Promote repeated concepts into reusable nodes.
+Build the architecture in layers.  
+Do not flatten thinkers into slogans.  
+Do not bury comparisons in prose.  
+Promote repeated concepts into reusable nodes.  
 Keep the shell stable while the theological map grows.
