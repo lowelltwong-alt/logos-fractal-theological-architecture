@@ -15,18 +15,21 @@ A good node header should make the file easier to classify, retrieve, compare, a
 
 ## Core rule
 
-Use the smallest header that gives the node a stable identity.
+Use the smallest header that gives the node a stable identity, but default to the fuller governed form for most serious nodes in this repository.
 
 Do not add unnecessary metadata.
 Do not invent uncontrolled header fields casually.
 Use the approved vocabulary from the governance folder whenever possible.
 
-## Standard minimal header
+## Standard default header
 
-Most governed nodes should begin with a compact block like this:
+Most governed nodes in this repository should begin with this fuller header:
 
 ```markdown
-**Node type:** doctrine_node  
-**Anchor:** doctrine.prudence  
-**Tags:** doctrine.core, concept.governance, ai.governance  
-**Key relationships:** grounds, constrains, translates_into
+**Node type:** canon_thinker  
+**Anchor:** canon.augustine  
+**Tags:** thinker.augustine, tradition.patristic, era.patristic, canon.primary, concept.creation_order, concept.ordered_love, concept.two_cities, ai.governance  
+**Key relationships:** grounds, sharpens, constrains, translates_into  
+**Status:** working  
+**Parent:** docs/canon/README.md  
+**Related nodes:** doctrine.anthropology, doctrine.sin, concept.ordered_love, concept.institutions  
