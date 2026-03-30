@@ -70,7 +70,7 @@ A doctrine node, a canon node, a derivation, a weighting profile, a scripture no
 
 ### 1. Keep the recursive shell stable
 
-The shell should not be rewritten every time the project expands.  should happen by adding nodes and relationships inside the recurring structure.
+The shell should not be rewritten every time the project expands. Growth should happen by adding nodes and relationships inside the recurring structure.
 
 ### 2. Keep doctrine distinct from ordering
 
@@ -100,7 +100,7 @@ The repository should be broad enough for serious Christian reuse while still al
 
 This repository depends on disciplined recursive structure and controlled vocabulary.
 
-Because it is designed for human reading, semantic retrieval, RAG-style retrieval and interrogation, recursive comparison, future ontology development, and graph-oriented concordance , contributors should avoid casually inventing new anchors, tags, node types, relationship verbs, or category names.
+Because it is designed for human reading, semantic retrieval, RAG-style retrieval and interrogation, recursive comparison, future ontology development, and graph-oriented concordance growth, contributors should avoid casually inventing new anchors, tags, node types, relationship verbs, or category names.
 
 Preferred order of extension:
 
@@ -280,7 +280,7 @@ That graph layer should remain:
 
 See:
 - `data/graph/README.md`
-- 
+
 ## Future primary-sources horizon
 
 The repository is also being designed so it can one day grow into a governed biblical primary-sources corpus.
