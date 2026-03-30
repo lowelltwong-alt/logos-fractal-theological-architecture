@@ -1,0 +1,57 @@
+{
+  "node_type": "passage_reconstruction_object",
+  "artifact_type": "primary_source_object",
+  "identity": {
+    "id": "reconstruction.genesis.11.1-9",
+    "anchor": "reconstruction.genesis.11.1-9",
+    "title": "Genesis 11:1-9 Reconstruction Sample",
+    "slug": "genesis-11-1-9-reconstruction",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "primary_source_object",
+    "primary_use": "reconstruction_traversal",
+    "domain": "primary_sources",
+    "subdomain": "reconstruction",
+    "object_type": "passage_reconstruction",
+    "tags": ["genesis_11", "babel", "hebrew_bible"],
+    "audience_tags": ["textual_studies", "ontology", "translation", "theology"],
+    "source_domains": ["primary_sources", "scripture"]
+  },
+  "interfaces": ["reviewable_node", "scripture_grounded_node", "machine_readable_object"],
+  "trust_zone": "reviewed_specialized",
+  "reconstruction": {
+    "passage_id": "text.genesis.11.1-9",
+    "linked_witnesses": ["witness.leningrad_codex", "witness.dss.genesis.manuscript_sample"],
+    "linked_fragments": [],
+    "linked_transcriptions": ["transcription.mt.genesis.11.1-9"],
+    "diplomatic_text": "",
+    "normalized_text": "Sample normalized reconstruction placeholder for Genesis 11:1-9. Replace with governed text once a production textual basis is selected.",
+    "variant_list": [],
+    "confidence_summary": "High confidence for fuller Masoretic witness anchor; fragmentary comparative witness remains illustrative until exact Genesis 11 fragment coverage is verified.",
+    "notes": "This sample demonstrates how witness, transcription, lexical, and translation layers connect for a passage-level reconstruction object."
+  },
+  "relationships": {
+    "parents": [],
+    "children": ["lexical_evidence.genesis.11.language_scatter", "translation_comparison.genesis.11.english.sample"],
+    "depends_on": ["witness.leningrad_codex", "transcription.mt.genesis.11.1-9"],
+    "enables": ["relationship.reconstruction.genesis.11.1-9.grounds.biblical_theme.babel"],
+    "related_to": ["text.genesis.11.1-9"],
+    "typed_edges": []
+  },
+  "provenance": {
+    "source_refs": ["turn0search24"],
+    "derived_from": ["witness.leningrad_codex", "witness.dss.genesis.manuscript_sample", "transcription.mt.genesis.11.1-9"],
+    "created_by": "author.lowell_t_wong",
+    "last_modified_by": "author.lowell_t_wong",
+    "asserted_by": "author.lowell_t_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": "Production version should include explicit variant handling and exact witness coverage notes."
+  }
+}
