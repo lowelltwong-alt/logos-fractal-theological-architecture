@@ -119,6 +119,12 @@ Before using a new tag broadly:
 2. define the family it belongs to
 3. use it consistently thereafter
 
+## Extension note
+
+For scripture, translation, manuscript, noncanonical, and boundary-layer tag extensions, see:
+
+- `tag-registry-scripture-and-boundary-extension.md`
+  
 ## Summary principle
 
 Tags should help the architecture converge, not drift.
