@@ -1,0 +1,57 @@
+{
+  "node_type": "transcription_object",
+  "artifact_type": "primary_source_object",
+  "identity": {
+    "id": "transcription.mt.genesis.11.1-9",
+    "anchor": "transcription.mt.genesis.11.1-9",
+    "title": "MT Genesis 11:1-9 Transcription Sample",
+    "slug": "mt-genesis-11-1-9",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "primary_source_object",
+    "primary_use": "transcription_traversal",
+    "domain": "primary_sources",
+    "subdomain": "transcription",
+    "object_type": "witness_transcription",
+    "tags": ["hebrew", "masoretic_text", "genesis_11"],
+    "audience_tags": ["textual_studies", "ontology", "translation"],
+    "source_domains": ["primary_sources", "scripture"]
+  },
+  "interfaces": ["reviewable_node", "machine_readable_object"],
+  "trust_zone": "reviewed_specialized",
+  "transcription": {
+    "transcription_kind": "normalized_sample",
+    "source_witness": "witness.leningrad_codex",
+    "source_fragment": "",
+    "language": "Hebrew",
+    "script": "Tiberian Masoretic",
+    "text": "Sample placeholder: normalized Hebrew transcription for Genesis 11:1-9 would be inserted here once sourced from a governed textual basis.",
+    "normalization_notes": "This is a structural sample object rather than a production transcription payload.",
+    "lacuna_notes": "None for fuller-witness anchor sample.",
+    "reading_confidence": "high"
+  },
+  "relationships": {
+    "parents": ["witness.leningrad_codex"],
+    "children": [],
+    "depends_on": ["witness.leningrad_codex"],
+    "enables": ["reconstruction.genesis.11.1-9"],
+    "related_to": [],
+    "typed_edges": []
+  },
+  "provenance": {
+    "source_refs": ["turn0search24"],
+    "derived_from": ["witness.leningrad_codex"],
+    "created_by": "author.lowell_t_wong",
+    "last_modified_by": "author.lowell_t_wong",
+    "asserted_by": "author.lowell_t_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": "Replace placeholder text with governed transcription source before treating as production-ready."
+  }
+}
