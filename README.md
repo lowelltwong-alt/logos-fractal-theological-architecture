@@ -100,7 +100,7 @@ The repository should be broad enough for serious Christian reuse while still al
 
 This repository depends on disciplined recursive structure and controlled vocabulary.
 
-Because it is designed for human reading, semantic retrieval, RAG-style interrogation, recursive comparison, and future ontology development, contributors should avoid casually inventing new anchors, tags, node types, relationship verbs, or category names.
+Because it is designed for human reading, semantic retrieval, RAG-style retrieval and interrogation, recursive comparison, and future ontology development, contributors should avoid casually inventing new anchors, tags, node types, relationship verbs, or category names.
 
 Preferred order of extension:
 
@@ -119,6 +119,7 @@ See:
 - `docs/governance/tag-registry.md`
 - `docs/governance/relationship-registry.md`
 - `docs/governance/node-types.md`
+- `docs/roadmap/theological-buildout-roadmap.md`
 
 ## What the repository is trying to build
 
@@ -132,6 +133,7 @@ This project is gradually building:
 - AIRCA crosswalks
 - worked examples
 - future machine-readable artifact patterns
+- a theological buildout roadmap
 
 The intent is that the repository becomes not merely a collection of theological notes, but a usable theological architecture.
 
@@ -167,6 +169,10 @@ The repository is being built in this order:
 
 That order is intentional. It is meant to prevent the project from jumping too quickly into application before the theological source architecture is stable enough to support it.
 
+For the practical sequence of which thinkers, concepts, and comparisons to build next, see:
+
+- `docs/roadmap/theological-buildout-roadmap.md`
+
 ## What has already been built
 
 The repository already contains:
@@ -189,6 +195,10 @@ The strongest next steps are:
 - add nonprofit and ministry weighting profiles
 - add more worked derivation examples
 - introduce machine-readable sidecars once the prose architecture is stable enough
+
+For the recommended theologian sequence, thinker-page checklist, concept-promotion logic, comparison roadmap, and synthesis roadmap, see:
+
+- `docs/roadmap/theological-buildout-roadmap.md`
 
 ## Attribution
 
