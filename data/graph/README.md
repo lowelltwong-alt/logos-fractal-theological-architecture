@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This folder is the entry point for the repository's graph-oriented and machine-readable concordance work.
+This folder is the entry point for the repository's graph-oriented and machine-readable concordance work. This graph layer also now supports a future primary-sources domain, including witness objects, fragment objects, transcriptions, passage reconstructions, lexical evidence objects, and translation comparison objects. That future domain should remain governed by the same identity, trust, provenance, and validation rules as the rest of the graph architecture.
 
 It exists to support governed, machine-readable representations of:
 - verse connections
