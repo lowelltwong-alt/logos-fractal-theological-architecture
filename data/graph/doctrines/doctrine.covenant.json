@@ -1,0 +1,115 @@
+{
+  "node_type": "doctrine_node",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "doctrine.covenant",
+    "anchor": "doctrine.covenant",
+    "title": "Doctrine of Covenant",
+    "slug": "doctrine-covenant",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "doctrine_traversal",
+    "domain": "theology",
+    "subdomain": "doctrine",
+    "object_type": "stable_theological_object",
+    "tags": [
+      "doctrine.covenant",
+      "concept.covenant"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "theology",
+      "concordance"
+    ]
+  },
+  "system": {
+    "system_role": "doctrine_layer",
+    "intent": "Provide a stable doctrinal node for covenant-related theology.",
+    "author_logic": "Starter doctrine node for a covenant cluster, intentionally marked as review-sensitive and translation-aware.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [],
+    "depends_on": [
+      "concept.covenant"
+    ],
+    "enables": [],
+    "related_to": [
+      "passage.exod.3.1-15",
+      "concept.covenant",
+      "entity.moses"
+    ],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": []
+  },
+  "content": {
+    "summary": "Stable doctrinal node for covenant.",
+    "body": "This doctrine node gathers scripture and concept layers around covenant while remaining more review-sensitive than low-risk reference objects.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [],
+    "derived_from": [],
+    "synthesizes": [
+      "concept.covenant",
+      "passage.exod.3.1-15"
+    ],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "requires_translation_to_compare",
+    "alignment_strength": "mixed",
+    "review_state": "community_proposed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "entity_model": {
+    "entity_type": "theological_object",
+    "entity_subtype": "doctrine",
+    "canonical_id": "DOCTRINE.COVENANT",
+    "lifecycle_state": "active",
+    "canonical_status": "canonical",
+    "source_of_truth_ref": "doctrine.covenant",
+    "aliases": []
+  },
+  "concordance": {
+    "canonical_ref": "",
+    "book": "",
+    "chapter": "",
+    "verse": "",
+    "passage_span": "",
+    "translation_witnesses": [],
+    "lemmas": [],
+    "entities": [
+      "entity.moses"
+    ],
+    "topics": [
+      "topic.covenant"
+    ],
+    "concepts": [
+      "concept.covenant"
+    ],
+    "doctrines": [],
+    "motifs": [
+      "motif.calling"
+    ],
+    "interpretation_nodes": [],
+    "cross_reference_edges": []
+  },
+  "subnodes": []
+}
