@@ -1,0 +1,125 @@
+{
+  "node_type": "concept_node",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "concept.word",
+    "anchor": "concept.word",
+    "title": "Word",
+    "slug": "word",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "concept_traversal",
+    "domain": "theology",
+    "subdomain": "conceptual",
+    "object_type": "reusable_concept",
+    "tags": [
+      "concept.word",
+      "scripture.john"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "theology",
+      "concordance"
+    ]
+  },
+  "system": {
+    "system_role": "concept_layer",
+    "intent": "Provide a reusable concept node for Word/Logos connections.",
+    "author_logic": "Starter concept node tied closely to John 1:1 and lexical/logos work.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [],
+    "depends_on": [],
+    "enables": [],
+    "related_to": [
+      "concept.creation"
+    ],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": [
+      {
+        "relationship_type": "relates_to_concept",
+        "target": "verse.jhn.1.1",
+        "strength": "high",
+        "review_state": "editor_reviewed"
+      },
+      {
+        "relationship_type": "contains_lemma",
+        "target": "lemma.logos.g3056",
+        "strength": "high",
+        "review_state": "community_proposed"
+      }
+    ]
+  },
+  "content": {
+    "summary": "Reusable concept node for Word/Logos.",
+    "body": "This node is intentionally narrower than a broad topic and can later connect lexical, doctrinal, and interpretive layers.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [],
+    "derived_from": [
+      "verse.jhn.1.1"
+    ],
+    "synthesizes": [],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "partially_translatable",
+    "alignment_strength": "moderate",
+    "review_state": "community_proposed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "entity_model": {
+    "entity_type": "conceptual_object",
+    "entity_subtype": "concept",
+    "canonical_id": "CONCEPT.WORD",
+    "lifecycle_state": "active",
+    "canonical_status": "canonical",
+    "source_of_truth_ref": "concept.word",
+    "aliases": [
+      "logos"
+    ]
+  },
+  "concordance": {
+    "canonical_ref": "",
+    "book": "",
+    "chapter": "",
+    "verse": "",
+    "passage_span": "",
+    "translation_witnesses": [],
+    "lemmas": [
+      "lemma.logos.g3056"
+    ],
+    "entities": [],
+    "topics": [
+      "topic.word"
+    ],
+    "concepts": [],
+    "doctrines": [
+      "doctrine.christology"
+    ],
+    "motifs": [],
+    "interpretation_nodes": [],
+    "cross_reference_edges": [
+      "xref.verse.jhn.1.1__concept.word"
+    ]
+  },
+  "subnodes": []
+}
