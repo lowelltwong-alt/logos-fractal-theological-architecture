@@ -1,0 +1,81 @@
+---
+id: original_language.root
+anchor: original_language.root
+title: Original Languages Layer
+slug: original-languages
+node_type: original_language_root
+system_role: original_language_layer
+artifact_tier: foundational_support
+
+domain: christian_ai_theology
+subdomain: original_languages
+audience_tags:
+  - theology
+  - biblical_studies
+  - ontology
+
+tags:
+  - original_language.layer
+  - term.layer
+  - biblical_studies
+  - ontology.core
+
+parents:
+  - docs.root
+children: []
+related:
+  - scripture.root
+  - translation.root
+  - hermeneutic.root
+
+authors:
+  - id: author.lowell_t_wong
+    roles: [conceptualization, writing]
+coauthors: []
+editors: []
+reviewers: []
+contributors: []
+tradition_review: []
+
+status: draft
+review_status: unreviewed
+review_cycle: quarterly
+---
+
+# Original Languages Layer
+
+This folder is the entry point for original-language terms and lexical notes in Hebrew, Aramaic, and Greek.
+
+## Why this layer exists
+
+The project should be able to document not only what a passage says in translation, but also:
+- what word or phrase appears in the original language
+- what semantic range that term carries
+- where no one English gloss is sufficient
+- how different modern languages may render the term differently
+- how lexical nuances affect doctrine, interpretation, and application
+
+## Recommended future substructure
+
+- `hebrew/`
+- `aramaic/`
+- `greek/`
+
+## Relation to the rest of the project
+
+This layer connects directly to:
+- scripture text nodes
+- translation witness nodes
+- interpretation nodes
+- doctrine nodes
+- concept nodes
+
+## First recommended lexical buildout
+
+The strongest early terms for this repository include:
+- `tselem`
+- `demut`
+- `radah`
+- `kabash`
+- `logos`
+- other anthropology, stewardship, authority, and wisdom terms as needed
