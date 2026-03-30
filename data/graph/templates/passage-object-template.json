@@ -1,0 +1,88 @@
+{
+  "node_type": "scripture_text",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "text.<book>.<chapter>.<verse_span>",
+    "anchor": "text.<book>.<chapter>.<verse_span>",
+    "title": "<Book> <chapter>:<verse-span>",
+    "slug": "<slug>",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "passage_traversal",
+    "domain": "scripture",
+    "subdomain": "passage",
+    "object_type": "reusable_passage",
+    "tags": [],
+    "audience_tags": [],
+    "source_domains": ["scripture"]
+  },
+  "interfaces": [
+    "reviewable_node",
+    "scripture_grounded_node",
+    "machine_readable_object"
+  ],
+  "trust_zone": "reviewed_specialized",
+  "system": {
+    "system_role": "scripture_layer",
+    "intent": "",
+    "author_logic": "",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [],
+    "depends_on": [],
+    "enables": [],
+    "related_to": [],
+    "typed_edges": []
+  },
+  "content": {
+    "summary": "",
+    "body": "",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [],
+    "derived_from": [],
+    "synthesizes": [],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "",
+    "last_modified_by": "",
+    "asserted_by": "",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": ""
+  },
+  "scripture": {
+    "book": "",
+    "chapter": "",
+    "verse_start": "",
+    "verse_end": "",
+    "canonical_context": [],
+    "translation_witnesses": [],
+    "manuscript_witnesses": [],
+    "lemmas": []
+  },
+  "concordance": {
+    "entities": [],
+    "topics": [],
+    "concepts": [],
+    "doctrines": [],
+    "motifs": [],
+    "interpretation_nodes": [],
+    "cross_reference_edges": []
+  },
+  "subnodes": []
+}
