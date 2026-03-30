@@ -1,0 +1,122 @@
+{
+  "node_type": "translation_witness_node",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "translation.esv.gen.1.1",
+    "anchor": "translation.esv.gen.1.1",
+    "title": "ESV Genesis 1:1",
+    "slug": "esv-gen-1-1",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "translation_witness",
+    "domain": "scripture",
+    "subdomain": "translation",
+    "object_type": "verse_translation_witness",
+    "tags": [
+      "translation.esv",
+      "scripture.genesis"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "translation"
+    ]
+  },
+  "system": {
+    "system_role": "translation_layer",
+    "intent": "Provide a translation-specific witness linked to a canonical verse node.",
+    "author_logic": "Starter translation witness example demonstrating why translation renderings remain distinct from canonical verse identity.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "verse.gen.1.1",
+    "parents": [
+      "verse.gen.1.1"
+    ],
+    "children": [],
+    "depends_on": [
+      "verse.gen.1.1"
+    ],
+    "enables": [],
+    "related_to": [],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": [
+      {
+        "relationship_type": "translates_as",
+        "target": "verse.gen.1.1",
+        "strength": "high",
+        "review_state": "editor_reviewed"
+      }
+    ]
+  },
+  "content": {
+    "summary": "ESV translation witness for Genesis 1:1.",
+    "body": "In the beginning, God created the heavens and the earth.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [
+      "translation_ref.esv.gen.1.1"
+    ],
+    "derived_from": [
+      "verse.gen.1.1"
+    ],
+    "synthesizes": [],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "directly_comparable",
+    "alignment_strength": "high",
+    "review_state": "editor_reviewed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [
+      "author.lowell_wong"
+    ],
+    "last_reviewed_at": "2026-03-30"
+  },
+  "entity_model": {
+    "entity_type": "scripture_witness",
+    "entity_subtype": "translation_verse",
+    "canonical_id": "ESV.GEN.1.1",
+    "lifecycle_state": "active",
+    "canonical_status": "reference_copy",
+    "source_of_truth_ref": "translation_ref.esv.gen.1.1",
+    "aliases": []
+  },
+  "concordance": {
+    "canonical_ref": "Genesis 1:1",
+    "book": "Genesis",
+    "chapter": "1",
+    "verse": "1",
+    "passage_span": "Genesis 1:1",
+    "translation_witnesses": [],
+    "lemmas": [],
+    "entities": [
+      "entity.god"
+    ],
+    "topics": [
+      "topic.creation"
+    ],
+    "concepts": [
+      "concept.creation"
+    ],
+    "doctrines": [
+      "doctrine.creation"
+    ],
+    "motifs": [],
+    "interpretation_nodes": [],
+    "cross_reference_edges": []
+  },
+  "subnodes": []
+}
