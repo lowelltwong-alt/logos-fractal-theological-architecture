@@ -105,6 +105,23 @@ When in doubt:
 2. create a stable node-level anchor
 3. add subanchors only if the concept is likely to recur or be retrieved separately
 
+## Newer layer extensions
+
+The repository now includes additional layers for:
+- scripture
+- biblical themes
+- original-language terms
+- translations
+- manuscripts and textual witnesses
+- noncanonical boundary sources
+- graph and concordance structures
+
+For those newer anchor families, see:
+
+- `anchor-conventions-scripture-and-graph-extension.md`
+
+That extension preserves the same stable address logic while expanding the usable anchor space.
+
 ## Summary principle
 
 Anchors should make the structure more legible, not more improvised.
