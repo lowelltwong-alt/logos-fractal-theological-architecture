@@ -1,0 +1,49 @@
+{
+  "object_type": "relationship_object",
+  "schema_version": "v1",
+  "identity": {
+    "edge_id": "edge.<from>.<relation>.<to>",
+    "title": "<from> <relation> <to>",
+    "status": "working"
+  },
+  "classification": {
+    "domain": "graph",
+    "subdomain": "relationships",
+    "relation_type": "",
+    "tags": [],
+    "audience_tags": []
+  },
+  "interfaces": [
+    "reviewable_node",
+    "machine_readable_object"
+  ],
+  "trust_zone": "working_proposed",
+  "edge": {
+    "from": "",
+    "relation": "",
+    "to": "",
+    "confidence": "",
+    "evidence": [],
+    "warning": "",
+    "use_case_limit": ""
+  },
+  "provenance": {
+    "asserted_by": "",
+    "reviewed_by": [],
+    "created_by": "",
+    "last_modified_by": "",
+    "derived_from": [],
+    "source_refs": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": ""
+  },
+  "lifecycle": {
+    "supersedes": [],
+    "superseded_by": [],
+    "compatibility_status": ""
+  }
+}
