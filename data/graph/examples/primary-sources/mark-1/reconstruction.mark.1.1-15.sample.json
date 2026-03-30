@@ -1,0 +1,57 @@
+{
+  "node_type": "passage_reconstruction_object",
+  "artifact_type": "primary_source_object",
+  "identity": {
+    "id": "reconstruction.mark.1.1-15.sample",
+    "anchor": "reconstruction.mark.1.1-15.sample",
+    "title": "Mark 1:1-15 Reconstruction Sample",
+    "slug": "mark-1-1-15-reconstruction-sample",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "primary_source_object",
+    "primary_use": "reconstruction_traversal",
+    "domain": "primary_sources",
+    "subdomain": "reconstruction",
+    "object_type": "passage_reconstruction",
+    "tags": ["mark_1", "gospel", "greek_nt"],
+    "audience_tags": ["textual_studies", "ontology", "translation", "theology"],
+    "source_domains": ["primary_sources", "scripture"]
+  },
+  "interfaces": ["reviewable_node", "scripture_grounded_node", "machine_readable_object"],
+  "trust_zone": "reviewed_specialized",
+  "reconstruction": {
+    "passage_id": "text.mark.1.1-15",
+    "linked_witnesses": ["witness.codex_sinaiticus.mark_sample"],
+    "linked_fragments": [],
+    "linked_transcriptions": ["transcription.sinaiticus.mark.1.1-35.sample"],
+    "diplomatic_text": "",
+    "normalized_text": "Sample normalized reconstruction placeholder for Mark 1:1-15. Replace with governed text once a production textual basis is selected.",
+    "variant_list": [],
+    "confidence_summary": "High confidence as a structural sample tied to a stable codex viewer. Production version should add exact witness comparison and textual-basis notes.",
+    "notes": "This sample demonstrates a New Testament Greek pathway parallel to the Genesis 11 Hebrew sample."
+  },
+  "relationships": {
+    "parents": [],
+    "children": ["lexical_evidence.mark.1.gospel_beginning", "translation_comparison.mark.1.english.sample"],
+    "depends_on": ["witness.codex_sinaiticus.mark_sample", "transcription.sinaiticus.mark.1.1-35.sample"],
+    "enables": ["relationship.reconstruction.mark.1.1-15.sample.grounds.biblical_theme.gospel_beginning"],
+    "related_to": ["text.mark.1.1-15"],
+    "typed_edges": []
+  },
+  "provenance": {
+    "source_refs": ["turn0search5"],
+    "derived_from": ["witness.codex_sinaiticus.mark_sample", "transcription.sinaiticus.mark.1.1-35.sample"],
+    "created_by": "author.lowell_t_wong",
+    "last_modified_by": "author.lowell_t_wong",
+    "asserted_by": "author.lowell_t_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": "Production version should specify exact reconstruction basis and textual comparison layer."
+  }
+}
