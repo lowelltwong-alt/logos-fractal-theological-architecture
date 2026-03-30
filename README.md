@@ -96,6 +96,30 @@ Tool power, model fluency, or operational convenience should not define the arch
 
 The repository should be broad enough for serious Christian reuse while still allowing optional overlays for narrower traditions, local doctrinal commitments, or institution-specific emphases.
 
+## Structure and vocabulary discipline
+
+This repository depends on disciplined recursive structure and controlled vocabulary.
+
+Because it is designed for human reading, semantic retrieval, RAG-style interrogation, recursive comparison, and future ontology development, contributors should avoid casually inventing new anchors, tags, node types, relationship verbs, or category names.
+
+Preferred order of extension:
+
+1. model the new thing as a node first  
+2. fit it into existing structure and vocabulary where possible  
+3. expand vocabulary only when the concept cannot fit cleanly  
+4. register new vocabulary before broad use  
+5. avoid structural redesign unless the current shell cannot represent the concept without distortion  
+
+Vocabulary drift is not a minor formatting issue here. It weakens retrieval, comparison, ontology coherence, and future reuse.
+
+See:
+- `docs/governance/README.md`
+- `docs/governance/ontology-discipline.md`
+- `docs/governance/anchor-conventions.md`
+- `docs/governance/tag-registry.md`
+- `docs/governance/relationship-registry.md`
+- `docs/governance/node-types.md`
+
 ## What the repository is trying to build
 
 This project is gradually building:
