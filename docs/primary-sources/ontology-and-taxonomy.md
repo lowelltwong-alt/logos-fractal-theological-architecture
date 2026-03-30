@@ -24,16 +24,18 @@ The same larger repository grammar should still apply:
 ## Major object families
 
 ### `witness_object`
-Use for a manuscript witness or textual-tradition witness.
+Use for a manuscript witness, textual-tradition witness, or other substantial text-bearing witness object.
 
 Examples:
 - papyrus witness
 - codex witness
+- witness preserving a whole book
+- witness preserving a letter or major continuous-text section
 - MT witness/tradition object
 - LXX witness/tradition object
 
 ### `fragment_object`
-Use for one identifiable fragment, especially where a manuscript survives in pieces.
+Use for one identifiable fragment, especially where a witness survives in pieces or only partial portions of a larger text-bearing object remain.
 
 ### `transcription_object`
 Use for diplomatic or normalized transcription layers.
@@ -51,6 +53,7 @@ Use for governed comparison across target-language renderings.
 
 This future branch will likely need recursive subdomains such as:
 - witnesses
+- witness-parts or subwitnesses where needed
 - fragments
 - transcriptions
 - reconstructions
@@ -77,6 +80,8 @@ Likely high-value relationships include:
 
 ### Witness metadata
 - witness ID
+- witness kind
+- whether the witness is fragmentary, partial, or more complete
 - institution
 - shelfmark
 - date range
@@ -147,4 +152,4 @@ That means:
 
 ## Summary principle
 
-The future primary-sources branch should be able to move from fragment to theology without losing provenance, confidence, or contextual meaning.
+The future primary-sources branch should be able to move from witness or fragment to theology without losing provenance, confidence, or contextual meaning.
