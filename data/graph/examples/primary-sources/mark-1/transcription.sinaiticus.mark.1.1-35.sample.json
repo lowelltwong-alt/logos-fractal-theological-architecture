@@ -1,0 +1,57 @@
+{
+  "node_type": "transcription_object",
+  "artifact_type": "primary_source_object",
+  "identity": {
+    "id": "transcription.sinaiticus.mark.1.1-35.sample",
+    "anchor": "transcription.sinaiticus.mark.1.1-35.sample",
+    "title": "Codex Sinaiticus Mark 1:1-35 Transcription Sample",
+    "slug": "sinaiticus-mark-1-1-35-sample",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "primary_source_object",
+    "primary_use": "transcription_traversal",
+    "domain": "primary_sources",
+    "subdomain": "transcription",
+    "object_type": "witness_transcription",
+    "tags": ["greek", "mark_1", "codex_sinaiticus"],
+    "audience_tags": ["textual_studies", "ontology", "translation"],
+    "source_domains": ["primary_sources", "scripture"]
+  },
+  "interfaces": ["reviewable_node", "machine_readable_object"],
+  "trust_zone": "reviewed_specialized",
+  "transcription": {
+    "transcription_kind": "viewer-linked sample",
+    "source_witness": "witness.codex_sinaiticus.mark_sample",
+    "source_fragment": "",
+    "language": "Greek",
+    "script": "uncial",
+    "text": "Sample placeholder: transcription is available through the Codex Sinaiticus viewer for Mark 1:1-35. Production ingestion should capture governed text from the viewer/transcription layer rather than copy prose manually.",
+    "normalization_notes": "This sample preserves architecture rather than a full production transcription payload.",
+    "lacuna_notes": "None asserted in this sample object.",
+    "reading_confidence": "high"
+  },
+  "relationships": {
+    "parents": ["witness.codex_sinaiticus.mark_sample"],
+    "children": [],
+    "depends_on": ["witness.codex_sinaiticus.mark_sample"],
+    "enables": ["reconstruction.mark.1.1-15.sample"],
+    "related_to": [],
+    "typed_edges": []
+  },
+  "provenance": {
+    "source_refs": ["turn0search5"],
+    "derived_from": ["witness.codex_sinaiticus.mark_sample"],
+    "created_by": "author.lowell_t_wong",
+    "last_modified_by": "author.lowell_t_wong",
+    "asserted_by": "author.lowell_t_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": "Future production object should include token-ready Greek transcription with morphology hooks."
+  }
+}
