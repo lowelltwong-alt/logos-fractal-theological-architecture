@@ -1,0 +1,57 @@
+{
+  "node_type": "lexical_evidence_object",
+  "artifact_type": "primary_source_object",
+  "identity": {
+    "id": "lexical_evidence.genesis.11.language_scatter",
+    "anchor": "lexical_evidence.genesis.11.language_scatter",
+    "title": "Genesis 11 Language and Scattering Lexical Evidence Sample",
+    "slug": "genesis-11-language-scatter-lexical-evidence",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "primary_source_object",
+    "primary_use": "lexical_evidence_traversal",
+    "domain": "primary_sources",
+    "subdomain": "lexical_evidence",
+    "object_type": "lexical_evidence",
+    "tags": ["genesis_11", "babel", "language", "scatter"],
+    "audience_tags": ["textual_studies", "lexical_studies", "translation", "theology"],
+    "source_domains": ["primary_sources", "scripture", "lexical"]
+  },
+  "interfaces": ["reviewable_node", "scripture_grounded_node", "machine_readable_object"],
+  "trust_zone": "reviewed_specialized",
+  "lexical_evidence": {
+    "term_id": "cluster.genesis.11.language_scatter",
+    "lemma": "Clustered sample for language/lip/speech and scattering motifs",
+    "language": "Hebrew",
+    "morphology_notes": "Future production object should break this cluster into token-level lemma and morphology records.",
+    "passage_occurrences": ["text.genesis.11.1-9"],
+    "witness_sensitive_variation_notes": "No specific witness-sensitive lexical variation asserted in this sample object.",
+    "semantic_range_notes": "This sample object represents the lexical cluster around shared language/speech and later confusion/scattering in the Babel narrative.",
+    "non_biblical_comparative_usage": [],
+    "lexical_confidence": "medium"
+  },
+  "relationships": {
+    "parents": ["reconstruction.genesis.11.1-9"],
+    "children": [],
+    "depends_on": ["reconstruction.genesis.11.1-9"],
+    "enables": ["translation_comparison.genesis.11.english.sample"],
+    "related_to": ["biblical_theme.babel"],
+    "typed_edges": []
+  },
+  "provenance": {
+    "source_refs": [],
+    "derived_from": ["reconstruction.genesis.11.1-9"],
+    "created_by": "author.lowell_t_wong",
+    "last_modified_by": "author.lowell_t_wong",
+    "asserted_by": "author.lowell_t_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": "Production version should split clustered lexical evidence into token-level records with morphology and transliteration."
+  }
+}
