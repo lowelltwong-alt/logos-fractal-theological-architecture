@@ -64,7 +64,7 @@ In practical terms, that means:
 - parent-child and derived-from relationships should remain explicit
 - the architecture should be extensible without redesigning the whole shell every time a new concept is added
 
-A doctrine node, a canon node, a derivation, a weighting profile, and a use-case example should all be capable of fitting into a shared recursive logic.
+A doctrine node, a canon node, a derivation, a weighting profile, a scripture node, a lexical node, and a use-case example should all be capable of fitting into a shared recursive logic.
 
 ## Core design commitments
 
@@ -100,7 +100,7 @@ The repository should be broad enough for serious Christian reuse while still al
 
 This repository depends on disciplined recursive structure and controlled vocabulary.
 
-Because it is designed for human reading, semantic retrieval, RAG-style retrieval and interrogation, recursive comparison, and future ontology development, contributors should avoid casually inventing new anchors, tags, node types, relationship verbs, or category names.
+Because it is designed for human reading, semantic retrieval, RAG-style retrieval and interrogation, recursive comparison, future ontology development, and graph-oriented concordance growth, contributors should avoid casually inventing new anchors, tags, node types, relationship verbs, or category names.
 
 Preferred order of extension:
 
@@ -116,10 +116,18 @@ See:
 - `docs/governance/README.md`
 - `docs/governance/ontology-discipline.md`
 - `docs/governance/anchor-conventions.md`
+- `docs/governance/anchor-conventions-scripture-and-graph-extension.md`
 - `docs/governance/tag-registry.md`
+- `docs/governance/tag-registry-scripture-and-boundary-extension.md`
 - `docs/governance/relationship-registry.md`
 - `docs/governance/node-types.md`
+- `docs/governance/node-types-scripture-and-boundary-extension.md`
+- `docs/governance/scripture-taxonomy-and-ontology.md`
+- `docs/governance/textual-traditions-translation-and-noncanonical-sources.md`
+- `docs/governance/noncanonical-and-heresy-classification.md`
+- `docs/governance/translation-trust-and-sectarian-classification.md`
 - `docs/roadmap/theological-buildout-roadmap.md`
+- `docs/roadmap/repository-integration-map.md`
 
 ## Provenance, synthesis, and philosophical influence
 
@@ -172,6 +180,10 @@ This project is gradually building:
 - worked examples
 - future machine-readable artifact patterns
 - a theological buildout roadmap
+- a scripture and interpretation layer
+- original-language, translation, and manuscript support layers
+- a noncanonical and boundary-source control layer
+- graph and concordance surfaces for governed machine-readable relationships
 
 The intent is that the repository becomes not merely a collection of theological notes, but a usable theological architecture.
 
@@ -211,6 +223,10 @@ For the practical sequence of which thinkers, concepts, and comparisons to build
 
 - `docs/roadmap/theological-buildout-roadmap.md`
 
+For the repo-wide integration of doctrine, scripture, source-control, and graph layers, see:
+
+- `docs/roadmap/repository-integration-map.md`
+
 ## What has already been built
 
 The repository already contains:
@@ -223,20 +239,44 @@ The repository already contains:
 - an anthropology doctrine node
 - an AIRCA companion crosswalk
 - a full worked example deriving anthropology into AI governance workflow
+- a growing scripture layer
+- a growing original-language layer
+- translation and manuscript control layers
+- a noncanonical and heresy-boundary layer
+- graph and relationship-object entry points
 
 ## Recommended next growth path
 
 The strongest next steps are:
 - build more doctrine nodes
 - build canon source nodes
+- deepen scripture, lexical, and manuscript linkages
+- build additional biblical theme nodes
 - add comparative ordering profiles
 - add nonprofit and ministry weighting profiles
 - add more worked derivation examples
+- expand graph and concordance structures only where governed relationship objects are truly needed
 - introduce machine-readable sidecars once the prose architecture is stable enough
 
 For the recommended theologian sequence, thinker-page checklist, concept-promotion logic, comparison roadmap, and synthesis roadmap, see:
 
 - `docs/roadmap/theological-buildout-roadmap.md`
+
+For repo-wide layer integration, see:
+
+- `docs/roadmap/repository-integration-map.md`
+
+## Graph and concordance note
+
+The repository now also includes a graph-oriented layer for governed machine-readable relationships.
+
+That graph layer should remain:
+- downstream of the human-readable theological architecture
+- governed by the same vocabulary and trust controls
+- aligned with scripture, doctrine, canon, translation, manuscript, and boundary-source rules
+
+See:
+- `data/graph/README.md`
 
 ## Attribution
 
