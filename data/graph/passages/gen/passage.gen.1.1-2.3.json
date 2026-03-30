@@ -1,0 +1,135 @@
+{
+  "node_type": "passage_node",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "passage.gen.1.1-2.3",
+    "anchor": "passage.gen.1.1-2.3",
+    "title": "Genesis 1:1-2:3",
+    "slug": "gen-1-1-2-3",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "lookup_and_graph_traversal",
+    "domain": "scripture",
+    "subdomain": "old_testament",
+    "object_type": "canonical_passage_reference",
+    "tags": [
+      "scripture.genesis",
+      "canon.old_testament",
+      "concept.creation",
+      "motif.beginning"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "concordance"
+    ]
+  },
+  "system": {
+    "system_role": "reference_layer",
+    "intent": "Provide a stable passage node when the larger unit carries the primary semantic weight.",
+    "author_logic": "Starter sample passage node showing how verses roll into a higher semantic unit.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [
+      "verse.gen.1.1"
+    ],
+    "depends_on": [],
+    "enables": [
+      "concept.creation",
+      "doctrine.creation"
+    ],
+    "related_to": [
+      "passage.jhn.1.1-18"
+    ],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": [
+      {
+        "relationship_type": "relates_to_concept",
+        "target": "concept.creation",
+        "strength": "high",
+        "review_state": "editor_reviewed"
+      },
+      {
+        "relationship_type": "parallel_to",
+        "target": "passage.jhn.1.1-18",
+        "strength": "moderate",
+        "review_state": "community_proposed"
+      }
+    ]
+  },
+  "content": {
+    "summary": "Canonical passage reference for Genesis 1:1-2:3.",
+    "body": "This node represents the broader creation passage as a semantic unit for concordance work.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [
+      "scripture_ref.gen.1.1-2.3"
+    ],
+    "derived_from": [],
+    "synthesizes": [],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "directly_comparable",
+    "alignment_strength": "not_applicable",
+    "review_state": "editor_reviewed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [
+      "author.lowell_wong"
+    ],
+    "last_reviewed_at": "2026-03-30"
+  },
+  "entity_model": {
+    "entity_type": "scripture_reference",
+    "entity_subtype": "passage",
+    "canonical_id": "GEN.1.1-2.3",
+    "lifecycle_state": "active",
+    "canonical_status": "canonical",
+    "source_of_truth_ref": "scripture_ref.gen.1.1-2.3",
+    "aliases": []
+  },
+  "concordance": {
+    "canonical_ref": "Genesis 1:1-2:3",
+    "book": "Genesis",
+    "chapter": "1-2",
+    "verse": "1:1-2:3",
+    "passage_span": "Genesis 1:1-2:3",
+    "translation_witnesses": [],
+    "lemmas": [],
+    "entities": [
+      "entity.god"
+    ],
+    "topics": [
+      "topic.creation"
+    ],
+    "concepts": [
+      "concept.creation"
+    ],
+    "doctrines": [
+      "doctrine.creation"
+    ],
+    "motifs": [
+      "motif.beginning"
+    ],
+    "interpretation_nodes": [],
+    "cross_reference_edges": [
+      "xref.passage.gen.1.1-2.3__concept.creation"
+    ]
+  },
+  "subnodes": []
+}
