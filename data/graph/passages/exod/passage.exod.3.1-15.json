@@ -1,0 +1,130 @@
+{
+  "node_type": "passage_node",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "passage.exod.3.1-15",
+    "anchor": "passage.exod.3.1-15",
+    "title": "Exodus 3:1-15",
+    "slug": "exod-3-1-15",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "lookup_and_graph_traversal",
+    "domain": "scripture",
+    "subdomain": "old_testament",
+    "object_type": "canonical_passage_reference",
+    "tags": [
+      "scripture.exodus",
+      "canon.old_testament",
+      "concept.covenant",
+      "entity.moses"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "concordance"
+    ]
+  },
+  "system": {
+    "system_role": "reference_layer",
+    "intent": "Provide a stable passage node for a major Exodus covenant/calling unit.",
+    "author_logic": "Starter sample passage node for an Exodus cluster around Moses, divine self-identification, and covenant mission.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [],
+    "depends_on": [],
+    "enables": [
+      "concept.covenant",
+      "entity.moses"
+    ],
+    "related_to": [
+      "passage.rom.8.18-25"
+    ],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": [
+      {
+        "relationship_type": "centers_on_entity",
+        "target": "entity.moses",
+        "strength": "high",
+        "review_state": "editor_reviewed"
+      },
+      {
+        "relationship_type": "relates_to_concept",
+        "target": "concept.covenant",
+        "strength": "moderate",
+        "review_state": "community_proposed"
+      }
+    ]
+  },
+  "content": {
+    "summary": "Canonical passage reference for Exodus 3:1-15.",
+    "body": "This node represents a major calling and revelation passage around Moses and the divine name.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [
+      "scripture_ref.exod.3.1-15"
+    ],
+    "derived_from": [],
+    "synthesizes": [],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "directly_comparable",
+    "alignment_strength": "not_applicable",
+    "review_state": "community_proposed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "entity_model": {
+    "entity_type": "scripture_reference",
+    "entity_subtype": "passage",
+    "canonical_id": "EXOD.3.1-15",
+    "lifecycle_state": "active",
+    "canonical_status": "canonical",
+    "source_of_truth_ref": "scripture_ref.exod.3.1-15",
+    "aliases": []
+  },
+  "concordance": {
+    "canonical_ref": "Exodus 3:1-15",
+    "book": "Exodus",
+    "chapter": "3",
+    "verse": "1-15",
+    "passage_span": "Exodus 3:1-15",
+    "translation_witnesses": [],
+    "lemmas": [],
+    "entities": [
+      "entity.moses"
+    ],
+    "topics": [
+      "topic.covenant",
+      "topic.calling"
+    ],
+    "concepts": [
+      "concept.covenant"
+    ],
+    "doctrines": [
+      "doctrine.covenant"
+    ],
+    "motifs": [
+      "motif.calling"
+    ],
+    "interpretation_nodes": [],
+    "cross_reference_edges": []
+  },
+  "subnodes": []
+}
