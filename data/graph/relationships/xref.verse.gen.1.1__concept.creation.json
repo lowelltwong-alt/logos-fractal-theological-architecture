@@ -1,0 +1,116 @@
+{
+  "node_type": "cross_reference_node",
+  "artifact_type": "concordance_relationship",
+  "identity": {
+    "id": "xref.verse.gen.1.1__concept.creation",
+    "anchor": "xref.verse.gen.1.1__concept.creation",
+    "title": "Genesis 1:1 relates to Creation",
+    "slug": "xref-verse-gen-1-1-concept-creation",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_relationship_object",
+    "primary_use": "typed_edge_preservation",
+    "domain": "concordance",
+    "subdomain": "relationships",
+    "object_type": "verse_to_concept_edge",
+    "tags": [
+      "relationship.relates_to_concept",
+      "concept.creation",
+      "scripture.genesis"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "concordance",
+      "theology"
+    ]
+  },
+  "system": {
+    "system_role": "relationship_layer",
+    "intent": "Preserve a reusable typed edge with provenance and review state.",
+    "author_logic": "Sample edge object demonstrating that important relationships can become governed artifacts of their own.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [],
+    "depends_on": [
+      "verse.gen.1.1",
+      "concept.creation"
+    ],
+    "enables": [],
+    "related_to": [
+      "passage.gen.1.1-2.3"
+    ],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": []
+  },
+  "content": {
+    "summary": "Edge object linking Genesis 1:1 to the concept of creation.",
+    "body": "This relationship object exists because typed edge claims may need their own provenance, review state, and rationale.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [
+      "scripture_ref.gen.1.1"
+    ],
+    "derived_from": [
+      "verse.gen.1.1",
+      "concept.creation"
+    ],
+    "synthesizes": [],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "directly_comparable",
+    "alignment_strength": "high",
+    "review_state": "editor_reviewed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [
+      "author.lowell_wong"
+    ],
+    "last_reviewed_at": "2026-03-30"
+  },
+  "concordance": {
+    "canonical_ref": "Genesis 1:1",
+    "book": "Genesis",
+    "chapter": "1",
+    "verse": "1",
+    "passage_span": "Genesis 1:1",
+    "translation_witnesses": [],
+    "lemmas": [],
+    "entities": [],
+    "topics": [
+      "topic.creation"
+    ],
+    "concepts": [
+      "concept.creation"
+    ],
+    "doctrines": [
+      "doctrine.creation"
+    ],
+    "motifs": [],
+    "interpretation_nodes": [],
+    "cross_reference_edges": []
+  },
+  "edge": {
+    "source": "verse.gen.1.1",
+    "relationship_type": "relates_to_concept",
+    "target": "concept.creation",
+    "strength": "high",
+    "status": "editor_reviewed",
+    "rationale": "Genesis 1:1 is a primary creation reference and functions as a core source-text anchor for the creation concept."
+  },
+  "subnodes": []
+}
