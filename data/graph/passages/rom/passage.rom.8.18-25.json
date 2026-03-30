@@ -1,0 +1,135 @@
+{
+  "node_type": "passage_node",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "passage.rom.8.18-25",
+    "anchor": "passage.rom.8.18-25",
+    "title": "Romans 8:18-25",
+    "slug": "rom-8-18-25",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "lookup_and_graph_traversal",
+    "domain": "scripture",
+    "subdomain": "new_testament",
+    "object_type": "canonical_passage_reference",
+    "tags": [
+      "scripture.romans",
+      "canon.new_testament",
+      "concept.hope",
+      "concept.glory",
+      "concept.suffering"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "concordance"
+    ]
+  },
+  "system": {
+    "system_role": "reference_layer",
+    "intent": "Provide a stable passage node when a larger textual unit carries the primary semantic weight.",
+    "author_logic": "Starter sample passage node for the Romans 8 hope/suffering/glory cluster.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [
+      "verse.rom.8.18"
+    ],
+    "depends_on": [],
+    "enables": [
+      "concept.hope",
+      "concept.glory",
+      "concept.suffering"
+    ],
+    "related_to": [
+      "passage.exod.3.1-15"
+    ],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": [
+      {
+        "relationship_type": "relates_to_concept",
+        "target": "concept.hope",
+        "strength": "high",
+        "review_state": "editor_reviewed"
+      },
+      {
+        "relationship_type": "relates_to_concept",
+        "target": "concept.suffering",
+        "strength": "high",
+        "review_state": "editor_reviewed"
+      }
+    ]
+  },
+  "content": {
+    "summary": "Canonical passage reference for Romans 8:18-25.",
+    "body": "This node represents a larger argument unit around suffering, glory, waiting, and hope.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [
+      "scripture_ref.rom.8.18-25"
+    ],
+    "derived_from": [],
+    "synthesizes": [],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "directly_comparable",
+    "alignment_strength": "not_applicable",
+    "review_state": "editor_reviewed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [
+      "author.lowell_wong"
+    ],
+    "last_reviewed_at": "2026-03-30"
+  },
+  "entity_model": {
+    "entity_type": "scripture_reference",
+    "entity_subtype": "passage",
+    "canonical_id": "ROM.8.18-25",
+    "lifecycle_state": "active",
+    "canonical_status": "canonical",
+    "source_of_truth_ref": "scripture_ref.rom.8.18-25",
+    "aliases": []
+  },
+  "concordance": {
+    "canonical_ref": "Romans 8:18-25",
+    "book": "Romans",
+    "chapter": "8",
+    "verse": "18-25",
+    "passage_span": "Romans 8:18-25",
+    "translation_witnesses": [],
+    "lemmas": [],
+    "entities": [],
+    "topics": [
+      "topic.hope",
+      "topic.suffering",
+      "topic.glory"
+    ],
+    "concepts": [
+      "concept.hope",
+      "concept.glory",
+      "concept.suffering"
+    ],
+    "doctrines": [],
+    "motifs": [
+      "motif.waiting"
+    ],
+    "interpretation_nodes": [],
+    "cross_reference_edges": []
+  },
+  "subnodes": []
+}
