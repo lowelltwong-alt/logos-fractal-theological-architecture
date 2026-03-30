@@ -21,6 +21,7 @@ This file should be read alongside:
 - `docs/roadmap/repository-integration-map.md`
 
 ## Important scope note
+This repository also now includes a future primary-sources expansion for witnesses, fragments, transcriptions, passage reconstructions, lexical evidence, and translation comparison. That future branch runs alongside the theological buildout and is meant to support deeper textual, lexical, and translation-aware grounding for later doctrine, concept, and synthesis work.
 
 This roadmap is primarily about the theological buildout of:
 - canon thinkers
@@ -42,8 +43,6 @@ Those wider layers do not replace this roadmap. They support and extend it.
 For the repo-wide relationship between those layers, see:
 
 - `docs/roadmap/repository-integration-map.md`
-
-This repository also now includes a future primary-sources expansion for witnesses, fragments, transcriptions, passage reconstructions, lexical evidence, and translation comparison. That future branch runs alongside the theological buildout and is meant to support deeper textual, lexical, and translation-aware grounding for later doctrine, concept, and synthesis work.
 
 ## Guiding principle
 
