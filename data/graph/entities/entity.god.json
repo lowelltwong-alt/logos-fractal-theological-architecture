@@ -1,0 +1,120 @@
+{
+  "node_type": "entity_person_node",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "entity.god",
+    "anchor": "entity.god",
+    "title": "God",
+    "slug": "god",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "entity_traversal",
+    "domain": "scripture",
+    "subdomain": "entity",
+    "object_type": "biblical_entity_person",
+    "tags": [
+      "entity.god",
+      "scripture.core_entity"
+    ],
+    "audience_tags": [
+      "contributor",
+      "editor"
+    ],
+    "source_domains": [
+      "scripture",
+      "concordance",
+      "theology"
+    ]
+  },
+  "system": {
+    "system_role": "entity_layer",
+    "intent": "Provide a reusable entity node for scripture and concordance linking.",
+    "author_logic": "Starter entity node used to demonstrate stable entity references apart from topic or doctrine nodes.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [],
+    "depends_on": [],
+    "enables": [],
+    "related_to": [
+      "concept.creation"
+    ],
+    "supersedes": [],
+    "superseded_by": [],
+    "typed_edges": [
+      {
+        "relationship_type": "mentioned_by",
+        "target": "verse.gen.1.1",
+        "strength": "high",
+        "review_state": "editor_reviewed"
+      },
+      {
+        "relationship_type": "mentioned_by",
+        "target": "verse.jhn.1.1",
+        "strength": "high",
+        "review_state": "editor_reviewed"
+      }
+    ]
+  },
+  "content": {
+    "summary": "Reusable entity node for God in scripture-linked concordance work.",
+    "body": "This node is intentionally distinct from doctrine and concept layers and should function as a stable entity reference for graph traversal.",
+    "attachments": [],
+    "examples": []
+  },
+  "provenance": {
+    "source_refs": [],
+    "derived_from": [],
+    "synthesizes": [
+      "verse.gen.1.1",
+      "verse.jhn.1.1"
+    ],
+    "appropriates_from": [],
+    "adapts": [],
+    "created_by": "author.lowell_wong",
+    "last_modified_by": "author.lowell_wong",
+    "translation_status": "directly_comparable",
+    "alignment_strength": "high",
+    "review_state": "community_proposed",
+    "asserted_by": "author.lowell_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "entity_model": {
+    "entity_type": "biblical_entity",
+    "entity_subtype": "person",
+    "canonical_id": "ENTITY.GOD",
+    "lifecycle_state": "active",
+    "canonical_status": "canonical",
+    "source_of_truth_ref": "entity.god",
+    "aliases": []
+  },
+  "concordance": {
+    "canonical_ref": "",
+    "book": "",
+    "chapter": "",
+    "verse": "",
+    "passage_span": "",
+    "translation_witnesses": [],
+    "lemmas": [],
+    "entities": [],
+    "topics": [],
+    "concepts": [
+      "concept.creation"
+    ],
+    "doctrines": [
+      "doctrine.god"
+    ],
+    "motifs": [],
+    "interpretation_nodes": [],
+    "cross_reference_edges": []
+  },
+  "subnodes": []
+}
