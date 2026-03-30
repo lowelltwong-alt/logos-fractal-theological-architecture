@@ -1,0 +1,63 @@
+{
+  "node_type": "translation_comparison_object",
+  "artifact_type": "primary_source_object",
+  "identity": {
+    "id": "translation_comparison.genesis.11.english.sample",
+    "anchor": "translation_comparison.genesis.11.english.sample",
+    "title": "Genesis 11 English Translation Comparison Sample",
+    "slug": "genesis-11-english-translation-comparison-sample",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "primary_source_object",
+    "primary_use": "translation_comparison_traversal",
+    "domain": "primary_sources",
+    "subdomain": "translation_comparison",
+    "object_type": "translation_comparison",
+    "tags": ["genesis_11", "english", "babel"],
+    "audience_tags": ["translation", "theology", "public_explanation"],
+    "source_domains": ["primary_sources", "translation", "lexical"]
+  },
+  "interfaces": ["reviewable_node", "machine_readable_object", "translation_witness_like"],
+  "trust_zone": "reviewed_specialized",
+  "translation_comparison": {
+    "source_language": "Hebrew",
+    "target_language": "English",
+    "scope": "text.genesis.11.1-9",
+    "likely_renderings": [
+      "language",
+      "speech",
+      "lip / one lip",
+      "scatter",
+      "disperse",
+      "confuse"
+    ],
+    "context_sensitive_notes": "This sample object emphasizes that literal glosses and contextual rendering should be kept distinct. Future production objects should tie each rendering to token-level lexical evidence.",
+    "confidence_tiers": ["high for broad narrative sense", "medium for narrower lexical nuance"],
+    "doctrinal_sensitivity_notes": "The Babel narrative affects discussions of unity, pride, culture, language, and divine judgment.",
+    "cultural_or_traditional_notes": "Future production objects may compare how different traditions explain the relation between literal language-confusion, cultural plurality, and theological symbolism."
+  },
+  "relationships": {
+    "parents": ["lexical_evidence.genesis.11.language_scatter"],
+    "children": [],
+    "depends_on": ["lexical_evidence.genesis.11.language_scatter", "reconstruction.genesis.11.1-9"],
+    "enables": [],
+    "related_to": ["biblical_theme.babel"],
+    "typed_edges": []
+  },
+  "provenance": {
+    "source_refs": [],
+    "derived_from": ["lexical_evidence.genesis.11.language_scatter"],
+    "created_by": "author.lowell_t_wong",
+    "last_modified_by": "author.lowell_t_wong",
+    "asserted_by": "author.lowell_t_wong",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": "Production version should tie each rendering option to explicit token-level or phrase-level evidence."
+  }
+}
