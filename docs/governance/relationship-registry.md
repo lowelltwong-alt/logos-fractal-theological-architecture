@@ -240,6 +240,17 @@ That means:
 3. add the new verb here only if the distinction is recurrent and architecturally meaningful
 4. use it consistently thereafter
 
+## Extension note
+
+For newer scripture, boundary, and graph-oriented relationship use, read this file together with:
+
+- `docs/governance/scripture-taxonomy-and-ontology.md`
+- `docs/governance/textual-traditions-translation-and-noncanonical-sources.md`
+- `docs/governance/noncanonical-and-heresy-classification.md`
+- `docs/roadmap/repository-integration-map.md`
+
+This registry remains the base controlled relationship vocabulary for the entire repository, including newer concordance and graph surfaces.
+
 ## Summary principle
 
 Relationship verbs are part of the ontology, not just descriptive prose.
