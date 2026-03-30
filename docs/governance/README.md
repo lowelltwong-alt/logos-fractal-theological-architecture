@@ -65,6 +65,15 @@ Then read the relevant extensions when working in:
 - manuscripts
 - noncanonical materials
 - graph or concordance structures
+- 
+## Related governed branches
+
+The repository now also includes a future primary-sources branch that should be read as a governed extension of the ontology rather than as a separate side project.
+
+See:
+- `docs/primary-sources/README.md`
+- `docs/primary-sources/ontology-and-taxonomy.md`
+- `docs/roadmap/biblical-primary-sources-future-framework.md`
 
 ## Project principle
 
