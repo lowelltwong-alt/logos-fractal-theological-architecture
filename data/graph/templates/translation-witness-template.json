@@ -1,0 +1,70 @@
+{
+  "node_type": "translation_witness",
+  "artifact_type": "concordance_node",
+  "identity": {
+    "id": "translation.<name>",
+    "anchor": "translation.<name>",
+    "title": "<Translation Name>",
+    "slug": "<slug>",
+    "version": "v1",
+    "status": "working"
+  },
+  "classification": {
+    "document_type": "concordance_object",
+    "primary_use": "translation_traversal",
+    "domain": "scripture",
+    "subdomain": "translation",
+    "object_type": "translation_witness",
+    "tags": [],
+    "audience_tags": [],
+    "source_domains": ["scripture", "translation"]
+  },
+  "interfaces": [
+    "reviewable_node",
+    "boundary_sensitive_node",
+    "machine_readable_object",
+    "translation_witness_like"
+  ],
+  "trust_zone": "reviewed_specialized",
+  "system": {
+    "system_role": "translation_layer",
+    "intent": "",
+    "author_logic": "",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "translation": {
+    "translation_class": "",
+    "translation_philosophy": "",
+    "textual_base_quality": "",
+    "provenance_claim_status": "",
+    "doctrinal_tendency": "",
+    "confessional_or_sectarian_association": "",
+    "use_case_limit": "",
+    "manipulation_risk": ""
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [],
+    "depends_on": [],
+    "enables": [],
+    "related_to": [],
+    "typed_edges": []
+  },
+  "provenance": {
+    "source_refs": [],
+    "derived_from": [],
+    "created_by": "",
+    "last_modified_by": "",
+    "asserted_by": "",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": ""
+  }
+}
