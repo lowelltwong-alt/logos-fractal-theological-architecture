@@ -1,0 +1,266 @@
+{
+  "node_type": "decision_node",
+  "artifact_type": "Decision-Enabling Artifact (Second-Order Core)",
+  "identity": {
+    "id": "",
+    "anchor": "",
+    "title": "",
+    "slug": "",
+    "version": "v1",
+    "status": "draft"
+  },
+  "classification": {
+    "document_type": "ai_interrogatable_system",
+    "primary_use": "decision_support",
+    "domain": "",
+    "subdomain": "",
+    "object_type": "",
+    "tags": [],
+    "audience_tags": [],
+    "source_domains": []
+  },
+  "system": {
+    "system_role": "",
+    "intent": "",
+    "author_logic": "",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [],
+    "depends_on": [],
+    "enables": [],
+    "related_to": [],
+    "supersedes": [],
+    "superseded_by": [],
+    "relationship_metadata": {
+      "dependency_strength": [],
+      "critical_dependencies": [],
+      "informational_dependencies": [],
+      "blocking_dependencies": []
+    }
+  },
+  "logic": {
+    "inputs": [],
+    "outputs": [],
+    "decision_type": "",
+    "output_type": "",
+    "constraints": [],
+    "assumptions": [],
+    "tradeoffs": [],
+    "evaluation_criteria": [],
+    "success_metrics": []
+  },
+  "execution": {
+    "recommended_actions": [],
+    "ai_prompt_template": "",
+    "human_instructions": [],
+    "implementation_notes": [],
+    "risks": [],
+    "mitigations": []
+  },
+  "governance": {
+    "owner": "",
+    "reviewers": [],
+    "decision_rights": [],
+    "approval_required": false,
+    "review_cycle": "",
+    "sensitivity": "internal",
+    "retention_guidance": ""
+  },
+  "evidence": {
+    "citations": [],
+    "data_sources": [],
+    "confidence": "",
+    "confidence_notes": "",
+    "confidence_model": {
+      "overall_confidence": "",
+      "evidence_quality": "",
+      "source_freshness": "",
+      "completeness": "",
+      "model_confidence": "",
+      "human_review_status": "",
+      "confidence_rationale": ""
+    }
+  },
+  "persistence": {
+    "decision_ledger_entry": {
+      "problem": "",
+      "options_considered": [],
+      "criteria_used": [],
+      "decision_made": "",
+      "expected_outcome": "",
+      "actual_outcome": "",
+      "follow_up_date": ""
+    }
+  },
+  "content": {
+    "summary": "",
+    "body": "",
+    "attachments": [],
+    "examples": []
+  },
+  "time": {
+    "created_at": "",
+    "updated_at": "",
+    "effective_date": "",
+    "review_date": "",
+    "expires_at": ""
+  },
+  "permissions": {
+    "visibility": "internal",
+    "allowed_audiences": [],
+    "restricted_audiences": [],
+    "usage_notes": "",
+    "action_permissions": {
+      "agent_may_read": true,
+      "agent_may_summarize": true,
+      "agent_may_tag": true,
+      "agent_may_propose_edits": true,
+      "agent_may_create_child_nodes": false,
+      "agent_may_merge_nodes": false,
+      "agent_may_archive": false,
+      "agent_may_delete": false,
+      "human_signoff_required_for_publish": true,
+      "human_signoff_required_for_supersession": true,
+      "human_signoff_required_for_structural_change": true
+    }
+  },
+  "provenance": {
+    "source_refs": [],
+    "derived_from": [],
+    "created_by": "",
+    "last_modified_by": "",
+    "transformation_history": [],
+    "derivation_method": "",
+    "process_refs": [],
+    "authoring_mix": {
+      "human_authored_percent": "",
+      "ai_assisted_percent": ""
+    }
+  },
+  "validation": {
+    "required_fields": [],
+    "field_rules": [],
+    "status_checks": [],
+    "fit_notes": "",
+    "interpretation_checks": [
+      "Blank values must not be treated as destructive permissions.",
+      "Child overrides must not weaken parent protections without explicit human approval."
+    ]
+  },
+  "entity_model": {
+    "entity_type": "",
+    "entity_subtype": "",
+    "canonical_id": "",
+    "lifecycle_state": "",
+    "canonical_status": "",
+    "source_of_truth_ref": "",
+    "aliases": []
+  },
+  "fractal_fit_algorithm": {
+    "purpose": "Absorb future things into the stable recursive structure.",
+    "core_rule": "Model new things as nodes first, then as existing field family members, then as vocabulary extensions, and only lastly as new optional field families.",
+    "fit_order": [
+      "identity",
+      "classification",
+      "system",
+      "relationships",
+      "logic",
+      "execution",
+      "governance",
+      "lifecycle",
+      "permissions",
+      "provenance",
+      "validation",
+      "entity_model",
+      "evidence",
+      "persistence",
+      "content",
+      "subnodes"
+    ],
+    "extension_rules": [
+      "Prefer new node_type values before new top-level sections.",
+      "Prefer controlled vocabulary expansion before structural redesign.",
+      "Prefer optional field groups before changing the recursive skeleton.",
+      "Prefer relationships and subnodes before duplicating data.",
+      "Only add a new top-level field family if the new thing cannot fit any existing category without distortion.",
+      "Prefer inheritance and stricter control defaults before local overrides.",
+      "Prefer adding dormant optional fields over redesigning the recursive shell.",
+      "Never allow blank values to imply destructive permission."
+    ],
+    "future_ontology_rule": "Promote repeated concepts into typed objects when they become reusable across many nodes, including lifecycle policies, retention rules, and deletion gates."
+  },
+  "subnodes": [],
+  "lifecycle": {
+    "artifact_tier": "",
+    "artifact_class": "",
+    "durability": "",
+    "state": "",
+    "last_reviewed_at": "",
+    "next_review_due": "",
+    "refresh_interval_days": "",
+    "staleness_rule": "",
+    "disposition_recommendation": "",
+    "disposition_reason": "",
+    "archive_after": "",
+    "delete_after": "",
+    "deletion_allowed": false,
+    "human_approval_required_for_delete": true,
+    "human_approval_required_for_archive": true,
+    "human_approval_required_for_supersession": true,
+    "minimum_approvers_for_delete": "",
+    "required_approver_roles": [],
+    "agent_may_propose_delete": true,
+    "agent_may_execute_delete": false,
+    "agent_may_execute_archive": false,
+    "protected_from_autonomous_deletion": true,
+    "supersession_policy": "",
+    "refresh_trigger_events": [],
+    "invalidation_trigger_events": [],
+    "next_human_action": ""
+  },
+  "inheritance": {
+    "inherits_from_parent_by_default": true,
+    "inherit_if_blank": [
+      "governance.owner",
+      "governance.review_cycle",
+      "permissions.visibility",
+      "permissions.allowed_audiences",
+      "classification.domain",
+      "classification.subdomain",
+      "lifecycle.artifact_tier",
+      "lifecycle.state"
+    ],
+    "fields_never_inherited": [
+      "identity.id",
+      "identity.anchor",
+      "identity.title",
+      "provenance.created_by",
+      "time.created_at"
+    ],
+    "child_may_override": [
+      "governance.owner",
+      "governance.review_cycle",
+      "permissions.visibility",
+      "permissions.allowed_audiences",
+      "lifecycle.next_review_due",
+      "lifecycle.disposition_recommendation"
+    ],
+    "parent_protection_flows_down": true,
+    "stricter_child_controls_allowed": true,
+    "looser_child_controls_require_human_approval": true,
+    "conflict_resolution_rule": "When parent and child conflict, the stricter control wins unless a human explicitly approves a local override."
+  },
+  "interpretation_rules": {
+    "missing_field_means": "not used on this node",
+    "empty_value_means": "reserved but not yet populated",
+    "explicit_false_means": "intentionally disabled",
+    "explicit_true_means": "active rule",
+    "never_infer_destructive_action_from_blank": true,
+    "blank_fields_are_behaviorally_dormant_until_populated": true
+  }
+}
