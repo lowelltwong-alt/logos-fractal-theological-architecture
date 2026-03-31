@@ -1,0 +1,144 @@
+{
+  "node_type": "discernment_profile",
+  "artifact_type": "Christian AI Discernment Profile",
+  "identity": {
+    "id": "profile.example.non_denom_basic_001",
+    "anchor": "profiles.non_denom_basic_001",
+    "title": "Broad Non-Denominational Christian Starting Profile",
+    "slug": "broad-non-denominational-christian-starting-profile",
+    "version": "v1",
+    "status": "draft"
+  },
+  "classification": {
+    "document_type": "ai_interrogatable_system",
+    "primary_use": "decision_support",
+    "domain": "christian_ai_discernment",
+    "subdomain": "belief_profile",
+    "object_type": "discernment_profile",
+    "tags": [
+      "layperson",
+      "non_denominational",
+      "starter_profile"
+    ],
+    "audience_tags": [
+      "lay_christian",
+      "guide_builder",
+      "ai_discernment_system"
+    ],
+    "source_domains": [
+      "theology",
+      "christian_ethics",
+      "ai_governance",
+      "discernment"
+    ]
+  },
+  "system": {
+    "system_role": "configuration_layer",
+    "intent": "Represent a user’s current belief state for Christian AI discernment without forcing premature theological precision.",
+    "author_logic": "This object captures the user-facing bridge between doctrine, tradition, and AI issue evaluation.",
+    "ai_compatibility": "high",
+    "interaction_mode": "interrogate",
+    "requires_human_judgment": true
+  },
+  "relationships": {
+    "parent": "",
+    "parents": [],
+    "children": [],
+    "depends_on": [
+      "doctrine_tier_model",
+      "belief_state_vocabulary",
+      "ai_issue_taxonomy"
+    ],
+    "enables": [
+      "discernment_path_selection",
+      "issue_specific_guidance"
+    ],
+    "related_to": [],
+    "supersedes": [],
+    "superseded_by": []
+  },
+  "logic": {
+    "inputs": [
+      "belief in God",
+      "belief in Christian moral authority",
+      "view of Scripture",
+      "view of human dignity",
+      "view of truth and deception",
+      "view of stewardship and responsibility",
+      "tradition familiarity",
+      "AI issue under consideration"
+    ],
+    "outputs": [
+      "provisional belief map",
+      "unresolved question map",
+      "relevant doctrine set",
+      "recommended discernment path"
+    ],
+    "decision_type": "configuration",
+    "output_type": "selectable_model",
+    "constraints": [
+      "Do not force denominational precision unless the issue requires it.",
+      "Do not treat undecided status as failure.",
+      "Do not imply that blank means safe, settled, or approved."
+    ],
+    "assumptions": [
+      "The user identifies as Christian or is exploring Christianity seriously.",
+      "The user is not a theological expert.",
+      "The user needs plain-language guidance."
+    ],
+    "tradeoffs": [
+      "Too much specificity creates friction for lay users.",
+      "Too little specificity weakens meaningful discernment."
+    ],
+    "evaluation_criteria": [
+      "plain-language usability",
+      "theological honesty",
+      "ability to preserve unresolved questions",
+      "issue relevance"
+    ],
+    "success_metrics": [
+      "User can see what they believe, what they have not settled, and what matters for the current AI issue."
+    ]
+  },
+  "belief_state": {
+    "user_position": "undecided",
+    "confidence": "medium",
+    "importance_to_user": "medium",
+    "required_for_path_completion": false,
+    "tradition_default_if_blank": "broad_evangelical_non_denom",
+    "explanation_level": "basic"
+  },
+  "doctrinal_status": {
+    "tier": "core",
+    "consensus_scope": "broad_christian",
+    "decision_pressure": "helpful_soon"
+  },
+  "content": {
+    "summary": "Starter profile for a lay Christian with basic convictions and many unresolved secondary doctrinal questions.",
+    "body": "Use this profile when a user wants to think faithfully about AI but has not mapped their theology in formal denominational terms.",
+    "attachments": [],
+    "examples": [
+      "A user who believes humans have God-given dignity but is unsure how tradition should shape technology ethics.",
+      "A user who is non-denominational and wants to evaluate AI companionship or automation."
+    ]
+  },
+  "validation": {
+    "required_fields": [
+      "identity.id",
+      "identity.title",
+      "classification.domain",
+      "classification.object_type",
+      "belief_state.user_position",
+      "doctrinal_status.tier"
+    ],
+    "field_rules": [
+      "belief_state.user_position must use the controlled vocabulary.",
+      "doctrinal_status.tier must use the doctrine tier vocabulary."
+    ],
+    "status_checks": [
+      "No destructive or doctrinally definitive inference from blank values."
+    ],
+    "fit_notes": "Profile objects are reusable bridge nodes between ontology and discernment outputs."
+  },
+  "subnodes": []
+}
