@@ -1,0 +1,20 @@
+# Default owner for everything
+* @lowelltwong-alt
+
+# Core governance and canonical project structure
+/.github/ @lowelltwong-alt
+/ontology/ @lowelltwong-alt
+/taxonomy/ @lowelltwong-alt
+/schema/ @lowelltwong-alt
+/validation/ @lowelltwong-alt
+/registry/ @lowelltwong-alt
+
+# Public site and docs
+/docs/ @lowelltwong-alt
+README.md @lowelltwong-alt
+
+# Machine-readable artifacts
+*.json @lowelltwong-alt
+*.jsonld @lowelltwong-alt
+*.yaml @lowelltwong-alt
+*.yml @lowelltwong-alt
