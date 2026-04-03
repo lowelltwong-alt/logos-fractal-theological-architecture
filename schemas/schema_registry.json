@@ -1,0 +1,21 @@
+{
+  "registry_version": "0.1.0",
+  "schemas": [
+    {
+      "name": "logos_node_min",
+      "path": "schemas/logos_node_min.schema.json",
+      "applies_to": [
+        "docs/**/*.md"
+      ],
+      "notes": "Minimal frontmatter-oriented validation for governed node documents."
+    },
+    {
+      "name": "logos_claim_min",
+      "path": "schemas/logos_claim_min.schema.json",
+      "applies_to": [
+        "data/claims/*.yaml"
+      ],
+      "notes": "Minimal validation for governed claim objects."
+    }
+  ]
+}
