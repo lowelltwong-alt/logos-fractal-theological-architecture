@@ -1,0 +1,19 @@
+claim_id: claim.text.genesis_1_26_28.anchors.application_ai_governance_human_dignity
+subject: text.genesis.1.26-28
+predicate: anchors
+object: application.ai_governance.human_dignity_non_reductive_evaluation
+epistemic_status: asserted
+trust_zone: working_proposed
+review_status: unreviewed
+evidence_refs:
+  - text.genesis.1.26-28
+  - application.ai_governance.human_dignity_non_reductive_evaluation
+source_basis:
+  - scripture_text
+  - application
+lineage:
+  - reference_slice.genesis_anthropology
+  - application_bridge.ai_governance
+ai_usage_posture: retrieval_ok_not_auto_promote
+reviewer: null
+notes: Genesis 1:26-28 anchors the first AI-governance application node on human dignity and non-reductive evaluation.
