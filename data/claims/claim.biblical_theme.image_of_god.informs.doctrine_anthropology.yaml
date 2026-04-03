@@ -1,0 +1,18 @@
+claim_id: claim.biblical_theme.image_of_god.informs.doctrine_anthropology
+subject: biblical_theme.image_of_god
+predicate: informs
+object: doctrine.anthropology
+epistemic_status: asserted
+trust_zone: working_proposed
+review_status: unreviewed
+evidence_refs:
+  - biblical_theme.image_of_god
+  - doctrine.anthropology
+source_basis:
+  - biblical_theme
+  - doctrine
+lineage:
+  - reference_slice.genesis_anthropology
+ai_usage_posture: retrieval_ok_not_auto_promote
+reviewer: null
+notes: Theme-to-doctrine claim linking the image of God biblical theme to the anthropology doctrine node.
