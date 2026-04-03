@@ -1,0 +1,19 @@
+claim_id: claim.doctrine.anthropology.constrains.application_ai_governance_human_dignity
+subject: doctrine.anthropology
+predicate: constrains
+object: application.ai_governance.human_dignity_non_reductive_evaluation
+epistemic_status: asserted
+trust_zone: working_proposed
+review_status: unreviewed
+evidence_refs:
+  - doctrine.anthropology
+  - application.ai_governance.human_dignity_non_reductive_evaluation
+source_basis:
+  - doctrine
+  - application
+lineage:
+  - reference_slice.genesis_anthropology
+  - application_bridge.ai_governance
+ai_usage_posture: retrieval_ok_not_auto_promote
+reviewer: null
+notes: Anthropology doctrine constrains AI-governance design by limiting reductive treatment of persons.
