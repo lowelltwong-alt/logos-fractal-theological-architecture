@@ -1,0 +1,30 @@
+neighborhood_id: retrieval.ai_governance.genesis_anthropology_constraints.primary
+focus_object: application.ai_governance.genesis_anthropology_constraints
+neighborhood_type: application
+trust_zone: working_proposed
+review_status: unreviewed
+overlay_scope: application:ai_governance
+included_objects:
+  - application.ai_governance.root
+  - application.ai_governance.genesis_anthropology_constraints
+  - doctrine.anthropology
+  - concept.imago_dei
+  - concept.stewardship
+  - concept.vocation
+  - biblical_theme.image_of_god
+  - text.genesis.1.26-28
+  - term.hebrew.tselem
+  - term.hebrew.demut
+  - translation.esv
+  - witness.mt
+included_claims:
+  - claim.text.genesis_1_26_28.grounds.image_of_god
+  - claim.biblical_theme.image_of_god.informs.doctrine_anthropology
+  - claim.term.hebrew.tselem.clarifies.text_genesis_1_26_28
+  - claim.translation.esv.renders.text_genesis_1_26_28
+  - claim.witness.mt.attests.text_genesis_1_26_28
+  - claim.doctrine.anthropology.constrains.application_ai_governance_genesis_constraints
+  - claim.concept.imago_dei.constrains.application_ai_governance_genesis_constraints
+  - claim.concept.stewardship.informs.application_ai_governance_genesis_constraints
+  - claim.concept.vocation.informs.application_ai_governance_genesis_constraints
+notes: Application neighborhood showing how Genesis anthropology flows into downstream AI-governance constraints.
