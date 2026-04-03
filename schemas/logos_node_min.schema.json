@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/logos_node_min.schema.json",
+  "title": "Logos Minimal Node Schema",
+  "type": "object",
+  "required": [
+    "id",
+    "anchor",
+    "title",
+    "node_type",
+    "status",
+    "review_status"
+  ],
+  "properties": {
+    "id": {"type": "string", "minLength": 3},
+    "anchor": {"type": "string", "minLength": 3},
+    "address": {"type": "string", "pattern": "^[a-z0-9_]+(\\.[a-z0-9_]+){7}$"},
+    "title": {"type": "string", "minLength": 1},
+    "node_type": {"type": "string", "minLength": 1},
+    "status": {"type": "string", "enum": ["draft", "review_pending", "reviewed", "deprecated", "superseded"]},
+    "review_status": {"type": "string", "enum": ["unreviewed", "review_pending", "reviewed", "disputed"]},
+    "trust_zone": {"type": "string", "enum": ["core_trusted", "reviewed_specialized", "working_proposed", "boundary_restricted", "experimental_graph"]},
+    "lifecycle_state": {"type": "string"},
+    "epistemic_status": {"type": "string"},
+    "parents": {"type": "array", "items": {"type": "string"}},
+    "children": {"type": "array", "items": {"type": "string"}},
+    "related": {"type": "array", "items": {"type": "string"}},
+    "ai_usage_posture": {"type": "string"}
+  },
+  "additionalProperties": true
+}
