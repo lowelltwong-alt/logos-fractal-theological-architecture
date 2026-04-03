@@ -1,0 +1,20 @@
+neighborhood_id: retrieval.ai_governance_fallenness_limits.primary
+focus_object: application.ai_governance.fallenness_and_automation_limits
+neighborhood_type: application
+trust_zone: working_proposed
+review_status: unreviewed
+overlay_scope: application:ai_governance
+included_objects:
+  - application.ai_governance.root
+  - application.ai_governance.fallenness_and_automation_limits
+  - scripture.genesis.3
+  - text.genesis.3.1-19
+  - biblical_theme.fall
+  - concept.sin
+  - doctrine.anthropology
+included_claims:
+  - claim.text.genesis_3_1_19.grounds.fall
+  - claim.biblical_theme.fall.informs.concept_sin
+  - claim.concept.sin.constrains.application_ai_governance_fallenness_limits
+  - claim.text.genesis_3_1_19.anchors.application_ai_governance_fallenness_limits
+notes: Application neighborhood linking the Genesis 3 / fall slice to a second downstream AI-governance constraint on automation optimism and institutional realism.
