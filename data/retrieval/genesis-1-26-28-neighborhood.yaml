@@ -1,0 +1,26 @@
+neighborhood_id: retrieval.genesis_1_26_28.primary
+focus_object: text.genesis.1.26-28
+neighborhood_type: passage
+trust_zone: working_proposed
+review_status: unreviewed
+overlay_scope: shared_core
+included_objects:
+  - scripture.genesis
+  - scripture.genesis.1
+  - text.genesis.1.26-28
+  - biblical_theme.image_of_god
+  - doctrine.anthropology
+  - concept.imago_dei
+  - concept.stewardship
+  - concept.vocation
+  - term.hebrew.tselem
+  - term.hebrew.demut
+  - translation.esv
+  - witness.mt
+included_claims:
+  - claim.text.genesis_1_26_28.grounds.image_of_god
+  - claim.biblical_theme.image_of_god.informs.doctrine_anthropology
+  - claim.term.hebrew.tselem.clarifies.text_genesis_1_26_28
+  - claim.translation.esv.renders.text_genesis_1_26_28
+  - claim.witness.mt.attests.text_genesis_1_26_28
+notes: Primary passage neighborhood for the first Logos reference slice, joining text, doctrine, concept, lexical, translation, manuscript, and claim layers.
