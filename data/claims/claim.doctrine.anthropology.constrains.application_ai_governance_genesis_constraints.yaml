@@ -1,0 +1,19 @@
+claim_id: claim.doctrine.anthropology.constrains.application_ai_governance_genesis_constraints
+subject: doctrine.anthropology
+predicate: constrains
+object: application.ai_governance.genesis_anthropology_constraints
+epistemic_status: asserted
+trust_zone: working_proposed
+review_status: unreviewed
+evidence_refs:
+  - doctrine.anthropology
+  - application.ai_governance.genesis_anthropology_constraints
+source_basis:
+  - doctrine
+  - application
+lineage:
+  - reference_slice.genesis_anthropology
+  - application_bridge.ai_governance
+ai_usage_posture: retrieval_ok_not_auto_promote
+reviewer: null
+notes: Doctrine-to-application claim showing that anthropology constrains downstream AI-governance design.
