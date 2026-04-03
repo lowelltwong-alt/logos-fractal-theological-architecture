@@ -1,0 +1,25 @@
+name: Validate Logos Structure
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate node frontmatter
+        run: python scripts/validate_node_frontmatter.py
+
+      - name: Validate claim files
+        run: python scripts/validate_claim_files.py
