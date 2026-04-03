@@ -1,0 +1,18 @@
+claim_id: claim.translation.esv.renders.text_genesis_1_26_28
+subject: translation.esv
+predicate: renders
+object: text.genesis.1.26-28
+epistemic_status: asserted
+trust_zone: working_proposed
+review_status: unreviewed
+evidence_refs:
+  - translation.esv
+  - text.genesis.1.26-28
+source_basis:
+  - translation_witness
+  - scripture_text
+lineage:
+  - reference_slice.genesis_anthropology
+ai_usage_posture: retrieval_ok_not_auto_promote
+reviewer: null
+notes: Translation-witness claim linking the ESV to Genesis 1:26-28 as a mainstream modern English rendering witness.
