@@ -1,0 +1,16 @@
+claim_id: claim.text.genesis_3_1_19.grounds.fall
+subject: text.genesis.3.1-19
+predicate: grounds
+object: biblical_theme.fall
+epistemic_status: asserted
+trust_zone: working_proposed
+review_status: unreviewed
+evidence_refs:
+  - text.genesis.3.1-19
+source_basis:
+  - scripture_text
+lineage:
+  - reference_slice.genesis_fall
+ai_usage_posture: retrieval_ok_not_auto_promote
+reviewer: null
+notes: Primary grounding claim connecting Genesis 3:1-19 to the fall biblical theme.
