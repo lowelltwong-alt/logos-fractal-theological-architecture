@@ -1,0 +1,19 @@
+claim_id: claim.concept.vocation.informs.application_ai_governance_genesis_constraints
+subject: concept.vocation
+predicate: informs
+object: application.ai_governance.genesis_anthropology_constraints
+epistemic_status: asserted
+trust_zone: working_proposed
+review_status: unreviewed
+evidence_refs:
+  - concept.vocation
+  - application.ai_governance.genesis_anthropology_constraints
+source_basis:
+  - concept
+  - application
+lineage:
+  - reference_slice.genesis_anthropology
+  - application_bridge.ai_governance
+ai_usage_posture: retrieval_ok_not_auto_promote
+reviewer: null
+notes: Concept-to-application claim showing that vocation reasoning informs downstream AI-governance design.
