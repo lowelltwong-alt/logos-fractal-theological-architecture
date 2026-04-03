@@ -1,0 +1,19 @@
+claim_id: claim.text.genesis_3_1_19.anchors.application_ai_governance_fallenness_limits
+subject: text.genesis.3.1-19
+predicate: anchors
+object: application.ai_governance.fallenness_and_automation_limits
+epistemic_status: asserted
+trust_zone: working_proposed
+review_status: unreviewed
+evidence_refs:
+  - text.genesis.3.1-19
+  - application.ai_governance.fallenness_and_automation_limits
+source_basis:
+  - scripture_text
+  - application
+lineage:
+  - reference_slice.genesis_fall
+  - application_bridge.ai_governance_fallenness
+ai_usage_posture: retrieval_ok_not_auto_promote
+reviewer: null
+notes: Genesis 3:1-19 anchors the second AI-governance application node on fallenness and the limits of automation optimism.
