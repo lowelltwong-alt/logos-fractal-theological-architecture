@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/logos_claim_min.schema.json",
+  "title": "Logos Minimal Claim Schema",
+  "type": "object",
+  "required": [
+    "claim_id",
+    "subject",
+    "predicate",
+    "object",
+    "epistemic_status",
+    "review_status"
+  ],
+  "properties": {
+    "claim_id": {"type": "string", "minLength": 3},
+    "subject": {"type": "string", "minLength": 3},
+    "predicate": {"type": "string", "minLength": 1},
+    "object": {"type": "string", "minLength": 3},
+    "epistemic_status": {"type": "string", "enum": ["asserted", "inferred", "hypothesis", "disputed", "superseded"]},
+    "trust_zone": {"type": "string", "enum": ["core_trusted", "reviewed_specialized", "working_proposed", "boundary_restricted", "experimental_graph"]},
+    "review_status": {"type": "string", "enum": ["unreviewed", "review_pending", "reviewed", "disputed"]},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "source_basis": {"type": "array", "items": {"type": "string"}},
+    "lineage": {"type": "array", "items": {"type": "string"}},
+    "ai_usage_posture": {"type": "string"},
+    "reviewer": {"type": ["string", "null"]},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": true
+}
