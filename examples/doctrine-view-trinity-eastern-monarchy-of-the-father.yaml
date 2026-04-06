@@ -1,0 +1,13 @@
+id: doctrine_view.trinity.eastern_monarchy_of_the_father
+object_type: doctrine_view
+trust_zone: proposed
+lifecycle_status: draft
+provenance_note: "Created on 2026-04-06 as a minimal pilot view representing an Eastern-leaning monarchy-of-the-Father formulation."
+reason_for_inclusion: "Provide a distinct Trinity view that keeps Eastern procession language and emphasis at the view level."
+topic_ref: doctrine_topic.trinity
+labels:
+  preferred: Eastern monarchy of the Father Trinity view
+summary: An Eastern-leaning Trinity view emphasizing the Father as the personal source within Trinitarian relations.
+scripture_references:
+  - John 14:16-17
+  - Matthew 28:19

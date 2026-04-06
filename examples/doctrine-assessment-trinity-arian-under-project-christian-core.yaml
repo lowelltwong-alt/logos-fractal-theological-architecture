@@ -1,0 +1,12 @@
+id: doctrine_assessment.trinity.arian.project_christian_core
+object_type: doctrine_assessment
+trust_zone: proposed
+lifecycle_status: draft
+provenance_note: "Created on 2026-04-06 as a pilot assessment of the Arian Trinity view under a project-specific baseline."
+reason_for_inclusion: "Preserve a clear rejection judgment in the assessment layer rather than attaching that judgment to the Trinity topic."
+topic_ref: doctrine_topic.trinity
+view_ref: doctrine_view.trinity.arian
+baseline_ref: doctrinal_baseline.project_christian_core
+assessment_outcome: rejected
+assessment_classification: false_doctrine
+assessment_summary: Rejected as false doctrine under the project Christian core baseline.

@@ -1,0 +1,11 @@
+id: doctrine_assessment.trinity.latin_filioque.project_christian_core
+object_type: doctrine_assessment
+trust_zone: proposed
+lifecycle_status: draft
+provenance_note: "Created on 2026-04-06 as a pilot assessment of the Latin filioque Trinity view under a project-specific baseline."
+reason_for_inclusion: "Show how a more specific Trinity view can be assessed under the same project baseline without becoming the topic itself."
+topic_ref: doctrine_topic.trinity
+view_ref: doctrine_view.trinity.latin_filioque
+baseline_ref: doctrinal_baseline.project_christian_core
+assessment_outcome: permitted_with_review
+assessment_summary: Treated as within pilot scope but still in need of later human review for precise formulation.
