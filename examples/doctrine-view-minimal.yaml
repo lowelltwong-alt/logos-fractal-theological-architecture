@@ -1,0 +1,10 @@
+id: doctrine_view.anthropology.image_of_god
+object_type: doctrine_view
+trust_zone: proposed
+lifecycle_status: draft
+provenance_note: "Created on 2026-04-05 as a minimal governed example that points back to a doctrine topic."
+reason_for_inclusion: "Show the minimum structure for a doctrine view without collapsing it into the topic itself."
+topic_ref: doctrine_topic.anthropology
+labels:
+  preferred: Humanity as image of God
+summary: A sample doctrine view within the anthropology topic.

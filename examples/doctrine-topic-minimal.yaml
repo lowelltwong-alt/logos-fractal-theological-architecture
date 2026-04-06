@@ -1,0 +1,9 @@
+id: doctrine_topic.anthropology
+object_type: doctrine_topic
+trust_zone: proposed
+lifecycle_status: draft
+provenance_note: "Created on 2026-04-05 as a minimal governed example for solo-maintainer onboarding."
+reason_for_inclusion: "Show the minimum structure for a doctrine topic while keeping identity separate from labels."
+labels:
+  preferred: Anthropology
+summary: The theological topic concerning the human person.
