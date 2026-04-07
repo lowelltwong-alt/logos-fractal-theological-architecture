@@ -1,0 +1,9 @@
+id: relationship_object.trinity_assessment.nicene_core.project_christian_core.strengthens.nicene_core
+object_type: relationship_object
+trust_zone: proposed
+lifecycle_status: draft
+provenance_note: "Created on 2026-04-07 to express that the Nicene core assessment reinforces the standing of the Nicene core Trinity view under the project baseline."
+reason_for_inclusion: "Demonstrate that assessments can do more than label; they can strengthen the stability of a view within a scoped doctrinal network."
+relationship_type: strengthens
+source_id: doctrine_assessment.trinity.nicene_core.project_christian_core
+target_id: doctrine_view.trinity.nicene_core
