@@ -1,0 +1,9 @@
+id: relationship_object.trinity_topic.has_view.nicene_core
+object_type: relationship_object
+trust_zone: proposed
+lifecycle_status: draft
+provenance_note: "Created on 2026-04-06 to connect the Trinity topic to the Nicene core view as an explicit governed relationship."
+reason_for_inclusion: "Keep doctrine topic identity separate from doctrine view alternatives while making the connection queryable."
+relationship_type: has_view
+source_id: doctrine_topic.trinity
+target_id: doctrine_view.trinity.nicene_core
