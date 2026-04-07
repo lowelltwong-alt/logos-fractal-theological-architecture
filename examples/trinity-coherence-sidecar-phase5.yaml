@@ -1,0 +1,27 @@
+id: coherence_sidecar.trinity.phase5
+object_type: coherence_sidecar
+trust_zone: proposed
+lifecycle_status: draft
+provenance_note: "Created on 2026-04-07 to summarize first-pass coherence and tension relations around the Trinity pilot."
+reason_for_inclusion: "Make doctrinal ripple effects legible by gathering dependence, contradiction, reinforcement, and baseline-presupposition relations into one compact sidecar."
+primary_topic_id: trinity
+baseline_id: doctrinal_baseline.project_christian_core
+coherence_relation_ids:
+  - relationship_object.trinity_view.eastern_monarchy_of_the_father.depends_on.nicene_core
+  - relationship_object.trinity_view.arian.contradicts.nicene_core
+  - relationship_object.trinity_assessment.nicene_core.project_christian_core.strengthens.nicene_core
+  - relationship_object.trinity_assessment.nicene_core.project_christian_core.presupposes.project_christian_core
+visible_advantage:
+  - The Trinity pilot can now express structural dependence, contradiction, reinforcement, and baseline presupposition without collapsing them into prose notes.
+  - Movement in one major view can now be discussed as a network event rather than only as a local doctrinal edit.
+ripple_example:
+  changed_object_id: doctrine_view.trinity.nicene_core
+  impacted_relationships:
+    - relationship_object.trinity_view.eastern_monarchy_of_the_father.depends_on.nicene_core
+    - relationship_object.trinity_view.arian.contradicts.nicene_core
+    - relationship_object.trinity_assessment.nicene_core.project_christian_core.strengthens.nicene_core
+  short_explanation: If the Nicene core view were materially redefined, the Eastern monarchy view would need reevaluation, the explicit contradiction with Arianism would need restatement, and the project-baseline affirmation that strengthens the Nicene view would also require review.
+next_expansion:
+  - Add coherence relations for Latin filioque and additional neighboring views.
+  - Introduce broader contradiction and dependency surfaces across more doctrine topics.
+  - Prepare for later weighted coherence or tension scoring.
