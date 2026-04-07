@@ -1,0 +1,9 @@
+id: relationship_object.trinity_view.eastern_monarchy_of_the_father.depends_on.nicene_core
+object_type: relationship_object
+trust_zone: proposed
+lifecycle_status: draft
+provenance_note: "Created on 2026-04-07 to express that the Eastern monarchy of the Father view remains intelligible inside the broader Nicene Trinitarian frame."
+reason_for_inclusion: "Demonstrate a first-pass coherence relation in which one Trinity view depends on the continued presence of a broader orthodox core."
+relationship_type: depends_on
+source_id: doctrine_view.trinity.eastern_monarchy_of_the_father
+target_id: doctrine_view.trinity.nicene_core
