@@ -1,0 +1,1705 @@
+From 59babd13c322b71a290caf9b76330ed7a0cabe8c Mon Sep 17 00:00:00 2001
+From: "OpenAI GPT-5.4 Pro" <assistant@example.com>
+Date: Tue, 7 Apr 2026 22:05:47 +0000
+Subject: [PATCH 1/3] feat: scaffold exceptions lake pack and habitat
+ alignment docs
+
+---
+ .github/ISSUE_TEMPLATE/exception-capture.md |  22 ++++
+ .github/pull_request_template.md            |  22 ++++
+ .github/workflows/validate.yml              |  31 +++++
+ .gitignore                                  |   2 +
+ README.md                                   |  58 +++++++++
+ docs/adr/0001-exceptions-lake.md            |  47 +++++++
+ docs/architecture/action-catalog.md         |  48 +++++++
+ docs/architecture/address-grammar.md        |  56 ++++++++
+ docs/architecture/habitat-alignment.md      |  29 +++++
+ examples/address-node.sample.json           |  27 ++++
+ examples/decision-record.sample.json        |  17 +++
+ examples/evidence-ref-1.sample.json         |  10 ++
+ examples/evidence-ref-2.sample.json         |  10 ++
+ examples/exception-event.sample.json        |  32 +++++
+ examples/expectation.sample.json            |  13 ++
+ examples/full-example.dataset.json          |  65 ++++++++++
+ examples/observation-event.sample.json      |  13 ++
+ examples/pressure-vector.sample.json        |  19 +++
+ examples/promotion-log.sample.json          |  16 +++
+ examples/resolution-action.sample.json      |  17 +++
+ requirements.txt                            |   3 +
+ tools/build_priority_report.py              | 120 +++++++++++++++++++
+ tools/validate_examples.py                  | 114 +++++++++++++++++++
+ 23 files changed, 791 insertions(+)
+ create mode 100644 .github/ISSUE_TEMPLATE/exception-capture.md
+ create mode 100644 .github/pull_request_template.md
+ create mode 100644 .github/workflows/validate.yml
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 docs/adr/0001-exceptions-lake.md
+ create mode 100644 docs/architecture/action-catalog.md
+ create mode 100644 docs/architecture/address-grammar.md
+ create mode 100644 docs/architecture/habitat-alignment.md
+ create mode 100644 examples/address-node.sample.json
+ create mode 100644 examples/decision-record.sample.json
+ create mode 100644 examples/evidence-ref-1.sample.json
+ create mode 100644 examples/evidence-ref-2.sample.json
+ create mode 100644 examples/exception-event.sample.json
+ create mode 100644 examples/expectation.sample.json
+ create mode 100644 examples/full-example.dataset.json
+ create mode 100644 examples/observation-event.sample.json
+ create mode 100644 examples/pressure-vector.sample.json
+ create mode 100644 examples/promotion-log.sample.json
+ create mode 100644 examples/resolution-action.sample.json
+ create mode 100644 requirements.txt
+ create mode 100644 tools/build_priority_report.py
+ create mode 100644 tools/validate_examples.py
+
+diff --git a/.github/ISSUE_TEMPLATE/exception-capture.md b/.github/ISSUE_TEMPLATE/exception-capture.md
+new file mode 100644
+index 0000000..cb2f442
+--- /dev/null
++++ b/.github/ISSUE_TEMPLATE/exception-capture.md
+@@ -0,0 +1,22 @@
++---
++name: Exception capture
++about: Capture a new exception event candidate for review
++title: "exception: <short summary>"
++labels: ["exception-candidate"]
++assignees: []
++---
++
++## Address
++
++`root.domain.capability.entity.instance.state.expectation.exception.adaptation`
++
++## Exception type
++
++- [ ] low_confidence
++- [ ] manual_override
++- [ ] missing_evidence
++- [ ] policy_exception
++- [ ] governance_conflict
++- [ ] other
++
++## Evidence refs
++
++List the evidence IDs or links.
++
++## Notes
++
++Describe what happened, why it matters, and what pressure it may reveal.
+diff --git a/.github/pull_request_template.md b/.github/pull_request_template.md
+new file mode 100644
+index 0000000..984f03d
+--- /dev/null
++++ b/.github/pull_request_template.md
+@@ -0,0 +1,22 @@
++## What changed
++
++-
++
++## Why it changed
++
++-
++
++## Checklist
++
++- [ ] I updated or added schema contracts when the data contract changed.
++- [ ] I updated or added example records when behavior or structure changed.
++- [ ] I ran `python tools/validate_examples.py`.
++- [ ] I ran `python tools/build_priority_report.py` when example priority output should change.
++- [ ] I documented promotions, deprecations, or governance impacts.
++
++## Promotion impact
++
++- [ ] No promotion impact
++- [ ] Case-only resolution
++- [ ] Rule change
++- [ ] Taxonomy change
++- [ ] Ontology change
++- [ ] Governance / policy change
++
+diff --git a/.github/workflows/validate.yml b/.github/workflows/validate.yml
+new file mode 100644
+index 0000000..bf20447
+--- /dev/null
++++ b/.github/workflows/validate.yml
+@@ -0,0 +1,31 @@
++name: validate-exceptions-lake
++
++on:
++  push:
++    paths:
++      - "schema/**"
++      - "examples/**"
++      - "tools/**"
++      - "docs/**"
++      - ".github/workflows/validate.yml"
++  pull_request:
++    paths:
++      - "schema/**"
++      - "examples/**"
++      - "tools/**"
++      - "docs/**"
++      - ".github/workflows/validate.yml"
++
++jobs:
++  validate:
++    runs-on: ubuntu-latest
++    steps:
++      - uses: actions/checkout@v4
++      - uses: actions/setup-python@v5
++        with:
++          python-version: "3.11"
++      - name: Install dependencies
++        run: |
++          pip install -r requirements.txt
++      - name: Validate examples
++        run: |
++          python tools/validate_examples.py
++      - name: Build priority report
++        run: |
++          python tools/build_priority_report.py
++
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..4ea5bb1
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++__pycache__/
++*.pyc
++
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..2248d6a
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,58 @@
++# Habitat Exceptions Lake Pack
++
++This repository is a commit-ready schema pack for a fractal exceptions lake that plugs into the Habitat decision architecture.
++
++It treats exceptions as structured pressure signals tied to a canonical 9-layer address:
++
++`root.domain.capability.entity.instance.state.expectation.exception.adaptation`
++
++The pack includes:
++
++- architecture notes and an ADR
++- JSON Schema contracts for the core learning-loop objects
++- example records for every object type
++- validation and scoring tools
++- a CI workflow that validates the examples and builds a priority report
++
++## Core design choices
++
++- **Stable operating locus:** layers 1-7 capture where the work lives
++- **Failure and learning suffix:** layers 8-9 capture deviation and adaptation
++- **AIRCA bridge:** architect, inform, rank, commit, act map directly to the record types
++- **Governance layering:** worldview, institutional, operating, human, technical are first-class enums
++- **Pressure vector:** theological, psychological, moral, political, economic, cultural lenses are scored per exception
++- **Append-only promotion path:** local fixes can be promoted to rule, taxonomy, ontology, policy, or authority changes
++
++## Repository layout
++
++```text
++schema/      JSON Schema contracts
++examples/    sample records and a stitched demo dataset
++tools/       validation and scoring scripts
++docs/        architecture notes and ADRs
++build/       generated artifacts
++```
++
++## Quickstart
++
++Validate the examples:
++
++```bash
++python tools/validate_examples.py
++```
++
++Build the priority report:
++
++```bash
++python tools/build_priority_report.py
++```
++
++The report is written to `build/priority_report.md`.
++
++## Core objects
++
++- `address_node`
++- `expectation`
++- `observation_event`
++- `evidence_ref`
++- `exception_event`
++- `pressure_vector`
++- `resolution_action`
++- `promotion_log`
++- `decision_record`
++
++## Intended use
++
++This pack is designed to be lifted into a larger repo. If the main codebase already has models, table migrations, or event contracts, the schemas here can be used as:
++
++1. the canonical contract source
++2. a migration target map
++3. seed data for tests and demos
+diff --git a/docs/adr/0001-exceptions-lake.md b/docs/adr/0001-exceptions-lake.md
+new file mode 100644
+index 0000000..15ca4b1
+--- /dev/null
++++ b/docs/adr/0001-exceptions-lake.md
+@@ -0,0 +1,47 @@
++# ADR 0001: Exceptions lake as a first-class learning organ
++
++## Status
++Accepted
++
++## Context
++The project already frames decision models as the operating system for agency, uses AIRCA as the decision spine, and expects a decision ledger to record inputs considered, options evaluated, owner, and final action. That creates a strong control plane, but it still needs a structured way to capture where reality resisted the model.
++
++Without that layer, overrides, low-confidence classifications, missing evidence, and governance conflicts remain buried in operational residue instead of becoming governed learning signals.
++
++## Decision
++Adopt an exceptions lake as a first-class learning organ.
++
++Every significant exception event must point back to a canonical address in the core architecture and must remain separable from the adaptation eventually promoted from it.
++
++The canonical address grammar is:
++
++`root.domain.capability.entity.instance.state.expectation.exception.adaptation`
++
++The lake records exceptions as structured events rather than free-text logs.
++
++## Consequences
++
++### Positive
++- preserves the difference between what was expected, what failed, and what changed
++- enables case, rule, taxonomy, ontology, and governance learning loops
++- creates a pressure map rather than a dead error log
++- lets AIRCA carry not only decision flow but also counterfactual memory
++
++### Trade-offs
++- requires stronger schema discipline
++- adds governance around disposition and promotion
++- creates more metadata work at capture time
++
++## Design law
++Ontology stores the world as currently believed.
++Taxonomy organizes the world for use.
++Exceptions lake stores where the world refused the model.
++Learning loop decides what gets promoted back into ontology, taxonomy, workflow, or governance.
++
++## Promotion rule
++No exception may directly overwrite the original expectation.
++
++Exceptions, resolutions, and promotions remain append-only and version-traceable.
++
++## Review trigger
++This ADR should be reviewed if the canonical address grammar changes or if the project collapses exception and adaptation into a single layer.
+diff --git a/docs/architecture/action-catalog.md b/docs/architecture/action-catalog.md
+new file mode 100644
+index 0000000..5c0eb37
+--- /dev/null
++++ b/docs/architecture/action-catalog.md
+@@ -0,0 +1,48 @@
++# Action catalog
++
++This catalog defines the minimum resolution and promotion actions expected in the exceptions lake.
++
++## Resolution scopes
++
++- `case`
++- `rule`
++- `taxonomy`
++- `ontology`
++- `governance`
++
++## Common action types
++
++### Case resolution
++- `fix_case_record`
++- `request_missing_evidence`
++- `close_as_noise`
++
++### Rule resolution
++- `adjust_threshold`
++- `add_override_guardrail`
++- `change_transition_rule`
++
++### Taxonomy resolution
++- `add_alias`
++- `split_category`
++- `merge_category`
++- `add_missing_label`
++
++### Ontology resolution
++- `add_entity_type`
++- `add_relation_type`
++- `retire_relation_type`
++- `change_cardinality`
++
++### Governance resolution
++- `escalate_authority`
++- `change_policy`
++- `change_approval_path`
++- `record_executive_exception`
++
++## Promotion targets
++
++- `rule`
++- `taxonomy`
++- `ontology`
++- `policy`
++- `authority`
++
++## Design note
++Keep local resolution distinct from promoted learning.
++
++The same exception may resolve locally while still promoting a broader change later.
+diff --git a/docs/architecture/address-grammar.md b/docs/architecture/address-grammar.md
+new file mode 100644
+index 0000000..f2d3d69
+--- /dev/null
++++ b/docs/architecture/address-grammar.md
+@@ -0,0 +1,56 @@
++# Canonical address grammar
++
++The exceptions lake uses a 9-layer canonical address:
++
++`root.domain.capability.entity.instance.state.expectation.exception.adaptation`
++
++## Layers
++
++1. `root`
++   top-level mandate or realm
++2. `domain`
++   major territory
++3. `capability`
++   functional stream
++4. `entity`
++   ontology class or taxonomy family
++5. `instance`
++   specific object, case, or artifact
++6. `state`
++   lifecycle stage
++7. `expectation`
++   what should hold here
++8. `exception`
++   how reality deviated
++9. `adaptation`
++   what the system learned or changed
++
++## Design law
++
++- layers 1-7 define the stable operating locus
++- layers 8-9 define the failure / learning suffix
++- any prefix can recurse as its own node
++- exception and adaptation must remain distinct
++
++## DNA triad
++
++Each addressable node should answer:
++
++- `definition` — what is this here?
++- `norm` — what should be true here?
++- `adaptation` — what changes when reality does not fit?
++
++## Example
++
++`habitat.governance.approval.policy.policy_07.review.stewardship_rule.executive_override.escalate_governance`
++
++Interpretation:
++
++- `habitat` = root
++- `governance` = domain
++- `approval` = capability
++- `policy` = entity
++- `policy_07` = instance
++- `review` = state
++- `stewardship_rule` = expectation
++- `executive_override` = exception
++- `escalate_governance` = adaptation
++
++## Rule
++
++If a new event cannot be located with an address, the ontology or taxonomy is likely underspecified.
+diff --git a/docs/architecture/habitat-alignment.md b/docs/architecture/habitat-alignment.md
+new file mode 100644
+index 0000000..379ff86
+--- /dev/null
++++ b/docs/architecture/habitat-alignment.md
+@@ -0,0 +1,29 @@
++# Habitat alignment notes
++
++This pack was designed to fit a decision architecture that already assumes:
++
++- decision models as the operating system for agency
++- AIRCA as the governing spine
++- a decision ledger that records inputs, options, owner, and action
++- governance layering across worldview, institutional, operating, human, and technical layers
++- machine-readable appendix patterns for anchors, tags, and sidecars
++
++In that setting, the exceptions lake becomes the counterfactual memory of the system.
++
++## Functional role
++
++- core graph / ontology = what the system believes
++- exceptions lake / event layer = where reality resisted the model
++- decision record = how that pressure was governed
++- promotion log = how local exception handling becomes institutional learning
++
++## AIRCA bridge
++
++- `Architect` creates expectations and thresholds
++- `Inform` captures observations, evidence, and exceptions
++- `Rank` scores urgency and learning value
++- `Commit` approves resolution and promotion
++- `Act` updates rule, taxonomy, ontology, or governance state
++
++## Constraint
++
++Do not treat the exceptions lake as a junk drawer for generic logs.
++
++Every event must point back to the architecture and forward into a governed learning path.
+diff --git a/examples/address-node.sample.json b/examples/address-node.sample.json
+new file mode 100644
+index 0000000..d44a34d
+--- /dev/null
++++ b/examples/address-node.sample.json
+@@ -0,0 +1,27 @@
++{
++  "address_id": "adr_000184",
++  "address": "habitat.governance.approval.policy.policy_07.review.stewardship_rule.executive_override.escalate_governance",
++  "root": "habitat",
++  "domain": "governance",
++  "capability": "approval",
++  "entity": "policy",
++  "instance": "policy_07",
++  "state": "review",
++  "expectation_key": "stewardship_rule",
++  "exception_key": "executive_override",
++  "adaptation_key": "escalate_governance",
++  "parent_address_id": null,
++  "depth": 9,
++  "node_kind": "core",
++  "dna": {
++    "definition": "Approval policy node for stewardship review.",
++    "norm": "Stewardship review requires committee sign-off.",
++    "adaptation_modes": [
++      "escalate_authority",
++      "change_policy"
++    ]
++  },
++  "tags": ["governance", "policy"],
++  "audience_tags": ["chief_of_staff_bridge"],
++  "source_domains": ["decision_architecture", "governance"],
++  "status": "active"
++}
+diff --git a/examples/decision-record.sample.json b/examples/decision-record.sample.json
+new file mode 100644
+index 0000000..d6b484c
+--- /dev/null
++++ b/examples/decision-record.sample.json
+@@ -0,0 +1,17 @@
++{
++  "decision_id": "dec_000184",
++  "address_id": "adr_000184",
++  "architect_constraints": {
++    "required_signoff": "stewardship_committee"
++  },
++  "inform_inputs": ["obs_000184", "ev_000184_1", "ev_000184_2"],
++  "rank_scores": {
++    "fix_score": 840,
++    "learn_score": 60,
++    "priority_score": 509.0
++  },
++  "options_evaluated": [
++    {"option": "ratify_override", "risk": "high"},
++    {"option": "restore_committee_review", "risk": "medium"}
++  ],
++  "decision_owner": "chief_operating_officer",
++  "decision_rationale": "Repeated override pattern indicates authority ambiguity and needs policy-level correction.",
++  "final_action": "promote policy clarification and escalate governance"
++}
+diff --git a/examples/evidence-ref-1.sample.json b/examples/evidence-ref-1.sample.json
+new file mode 100644
+index 0000000..5c8b59f
+--- /dev/null
++++ b/examples/evidence-ref-1.sample.json
+@@ -0,0 +1,10 @@
++{
++  "evidence_id": "ev_000184_1",
++  "source_kind": "policy",
++  "locator": "policy://approval/policy_07#section-4",
++  "summary": "Policy 07 states the stewardship committee must sign off before executive approval.",
++  "captured_at": "2026-04-07T10:16:00Z",
++  "captured_by": "analyst_01",
++  "trust_level": "reviewed",
++  "permission_scope": "internal"
++}
+diff --git a/examples/evidence-ref-2.sample.json b/examples/evidence-ref-2.sample.json
+new file mode 100644
+index 0000000..7bb52a9
+--- /dev/null
++++ b/examples/evidence-ref-2.sample.json
+@@ -0,0 +1,10 @@
++{
++  "evidence_id": "ev_000184_2",
++  "source_kind": "document",
++  "locator": "minutes://stewardship/2026-03-15",
++  "summary": "Meeting minutes show the committee was bypassed due to a time-sensitive donor commitment.",
++  "captured_at": "2026-04-07T10:17:00Z",
++  "captured_by": "analyst_01",
++  "trust_level": "reviewed",
++  "permission_scope": "internal"
++}
+diff --git a/examples/exception-event.sample.json b/examples/exception-event.sample.json
+new file mode 100644
+index 0000000..908fb7a
+--- /dev/null
++++ b/examples/exception-event.sample.json
+@@ -0,0 +1,32 @@
++{
++  "exception_id": "exc_000184",
++  "address_id": "adr_000184",
++  "expectation_id": "exp_policy07_stewardship_rule",
++  "observation_id": "obs_000184",
++  "exception_type": "manual_override",
++  "severity": 4,
++  "blast_radius": 3,
++  "locality": "systemic",
++  "recurrence_key": "governance_override_policy07",
++  "recurrence_count": 5,
++  "expected_snapshot": {
++    "rule": "committee sign-off required"
++  },
++  "observed_snapshot": {
++    "action": "executive approval issued without committee sign-off"
++  },
++  "stated_reason": "time-sensitive donor commitment",
++  "latent_reason_hypothesis": "authority ambiguity under pressure",
++  "triggered_by": "exec_office",
++  "auto_captured": true,
++  "disposition_class": "governance_conflict",
++  "impacted_governance_layers": ["institutional", "operating", "human"],
++  "pressure_vector_id": "pv_000184",
++  "decision_record_id": "dec_000184",
++  "unresolved_age_days": 14,
++  "novelty_score": 2,
++  "cross_domain_spread": 3,
++  "failed_resolution_rate": 2,
++  "fix_score": 840,
++  "learn_score": 60,
++  "status": "active",
++  "opened_at": "2026-04-07T10:15:00Z"
++}
+diff --git a/examples/expectation.sample.json b/examples/expectation.sample.json
+new file mode 100644
+index 0000000..0b24786
+--- /dev/null
++++ b/examples/expectation.sample.json
+@@ -0,0 +1,13 @@
++{
++  "expectation_id": "exp_policy07_stewardship_rule",
++  "address_id": "adr_000184",
++  "expectation_type": "policy",
++  "subject_ref": "policy_07",
++  "expected_state": "committee sign-off required before executive approval",
++  "allowed_values": ["approved_with_committee_signoff"],
++  "rule_ref": "rule://approval/stewardship/signoff",
++  "policy_ref": "policy://approval/policy_07",
++  "owner_role": "chief_operating_officer",
++  "authority_level": "institutional",
++  "dna_norm": "Stewardship review requires collective discernment before executive action.",
++  "review_cycle_days": 90,
++  "status": "active"
++}
+diff --git a/examples/full-example.dataset.json b/examples/full-example.dataset.json
+new file mode 100644
+index 0000000..17c41fd
+--- /dev/null
++++ b/examples/full-example.dataset.json
+@@ -0,0 +1,65 @@
++{
++  "address_nodes": [
++    {"$ref": "./address-node.sample.json"}
++  ],
++  "expectations": [
++    {"$ref": "./expectation.sample.json"}
++  ],
++  "observation_events": [
++    {"$ref": "./observation-event.sample.json"}
++  ],
++  "evidence_refs": [
++    {"$ref": "./evidence-ref-1.sample.json"},
++    {"$ref": "./evidence-ref-2.sample.json"}
++  ],
++  "exception_events": [
++    {"$ref": "./exception-event.sample.json"}
++  ],
++  "pressure_vectors": [
++    {"$ref": "./pressure-vector.sample.json"}
++  ],
++  "resolution_actions": [
++    {"$ref": "./resolution-action.sample.json"}
++  ],
++  "promotion_logs": [
++    {"$ref": "./promotion-log.sample.json"}
++  ],
++  "decision_records": [
++    {"$ref": "./decision-record.sample.json"}
++  ]
++}
+diff --git a/examples/observation-event.sample.json b/examples/observation-event.sample.json
+new file mode 100644
+index 0000000..c7e3642
+--- /dev/null
++++ b/examples/observation-event.sample.json
+@@ -0,0 +1,13 @@
++{
++  "observation_id": "obs_000184",
++  "address_id": "adr_000184",
++  "expectation_id": "exp_policy07_stewardship_rule",
++  "observed_at": "2026-04-07T10:14:00Z",
++  "observed_by": "workflow_monitor",
++  "observed_by_type": "system",
++  "source_system": "approval_service",
++  "observation_method": "audit_log_ingest",
++  "observed_state": {
++    "approved_by": "exec_office",
++    "committee_signoff": false
++  },
++  "confidence": 0.99,
++  "evidence_refs": ["ev_000184_1", "ev_000184_2"]
++}
+diff --git a/examples/pressure-vector.sample.json b/examples/pressure-vector.sample.json
+new file mode 100644
+index 0000000..9ab730f
+--- /dev/null
++++ b/examples/pressure-vector.sample.json
+@@ -0,0 +1,19 @@
++{
++  "pressure_vector_id": "pv_000184",
++  "exception_id": "exc_000184",
++  "theological": 3,
++  "psychological": 2,
++  "moral": 4,
++  "political": 5,
++  "economic": 3,
++  "cultural": 3,
++  "dominant_pressures": ["political", "moral", "economic"],
++  "pressure_notes": "Executive override reflects authority pressure and perceived donor urgency.",
++  "scored_by": "governance_analyst",
++  "scoring_method": "manual",
++  "governance_layer_map": {
++    "worldview": 2,
++    "institutional": 5,
++    "operating": 4,
++    "human": 3,
++    "technical": 1
++  }
++}
+diff --git a/examples/promotion-log.sample.json b/examples/promotion-log.sample.json
+new file mode 100644
+index 0000000..5e10e1f
+--- /dev/null
++++ b/examples/promotion-log.sample.json
+@@ -0,0 +1,16 @@
++{
++  "promotion_id": "pro_000184",
++  "source_exception_id": "exc_000184",
++  "source_resolution_id": "res_000184",
++  "promoted_from_scope": "case",
++  "promoted_to_scope": "policy",
++  "promoted_object_type": "policy",
++  "promoted_object_id": "policy_07_v2",
++  "rationale": "Repeated overrides show the approval policy is ambiguous under donor pressure.",
++  "evidence_threshold_met": true,
++  "approval_basis": "governance review",
++  "approved_by": "board_secretary",
++  "approved_at": "2026-04-07T14:00:00Z",
++  "effective_at": "2026-04-15T00:00:00Z",
++  "previous_version": "policy_07_v1",
++  "new_version": "policy_07_v2",
++  "migration_required": true
++}
+diff --git a/examples/resolution-action.sample.json b/examples/resolution-action.sample.json
+new file mode 100644
+index 0000000..4443244
+--- /dev/null
++++ b/examples/resolution-action.sample.json
+@@ -0,0 +1,17 @@
++{
++  "resolution_id": "res_000184",
++  "exception_id": "exc_000184",
++  "scope": "governance",
++  "action_type": "change_policy",
++  "action_summary": "Clarify committee sign-off rules and escalation path for donor-sensitive approvals.",
++  "owner": "chief_operating_officer",
++  "approver": "board_secretary",
++  "target_object_type": "policy",
++  "target_object_id": "policy_07",
++  "implementation_ref": "change://policy_07/revision_2",
++  "expected_effect": "Reduce discretionary override ambiguity.",
++  "actual_effect": "Pending",
++  "rollback_plan": "Restore policy_07_v1 and require interim committee quorum review.",
++  "result_status": "approved",
++  "started_at": "2026-04-07T12:00:00Z",
++  "completed_at": "2026-04-07T14:05:00Z"
++}
+diff --git a/requirements.txt b/requirements.txt
+new file mode 100644
+index 0000000..790dfe2
+--- /dev/null
++++ b/requirements.txt
+@@ -0,0 +1,3 @@
++jsonschema>=4.18
++PyYAML>=6.0
++referencing>=0.30
+diff --git a/tools/build_priority_report.py b/tools/build_priority_report.py
+new file mode 100644
+index 0000000..3358499
+--- /dev/null
++++ b/tools/build_priority_report.py
+@@ -0,0 +1,120 @@
++"""Build a priority report from the stitched example dataset."""
++
++from __future__ import annotations
++
++import json
++from pathlib import Path
++
++
++ROOT = Path(__file__).resolve().parents[1]
++EXAMPLES = ROOT / "examples"
++BUILD = ROOT / "build"
++
++
++def load_json(path: Path) -> dict:
++    with path.open("r", encoding="utf-8") as handle:
++        return json.load(handle)
++
++
++def main() -> None:
++    BUILD.mkdir(parents=True, exist_ok=True)
++
++    exception = load_json(EXAMPLES / "exception-event.sample.json")
++    pressure = load_json(EXAMPLES / "pressure-vector.sample.json")
++    resolution = load_json(EXAMPLES / "resolution-action.sample.json")
++    promotion = load_json(EXAMPLES / "promotion-log.sample.json")
++
++    pressure_total = sum(
++        pressure[lens]
++        for lens in [
++            "theological",
++            "psychological",
++            "moral",
++            "political",
++            "economic",
++            "cultural",
++        ]
++    )
++
++    priority_score = round(
++        (exception["fix_score"] * 0.55)
++        + (exception["learn_score"] * 0.45)
++        + pressure_total,
++        2,
++    )
++
++    queue = [
++        {
++            "exception_id": exception["exception_id"],
++            "address_id": exception["address_id"],
++            "exception_type": exception["exception_type"],
++            "disposition_class": exception["disposition_class"],
++            "fix_score": exception["fix_score"],
++            "learn_score": exception["learn_score"],
++            "pressure_intensity": pressure_total,
++            "priority_score": priority_score,
++            "dominant_pressures": pressure["dominant_pressures"],
++            "status": exception["status"],
++            "promotion_target": promotion["promoted_to_scope"],
++            "decision_record_id": exception["decision_record_id"],
++        }
++    ]
++
++    (BUILD / "priority_queue.json").write_text(
++        json.dumps(queue, indent=2),
++        encoding="utf-8",
++    )
++
++    report = f"""# Exceptions priority report
++
++- Exceptions: **1**
++- Resolutions: **1**
++- Promotions: **1**
++
++## Priority queue
++
++| Exception | Type | Fix | Learn | Pressure | Priority | Promotion |
++|---|---:|---:|---:|---:|---:|---|
++| {exception['exception_id']} | {exception['exception_type']} | {exception['fix_score']} | {exception['learn_score']} | {pressure_total} | {priority_score} | {promotion['promoted_to_scope']} |
++
++## Pressure totals
++
++| Lens | Total |
++|---|---:|
++| theological | {pressure['theological']} |
++| psychological | {pressure['psychological']} |
++| moral | {pressure['moral']} |
++| political | {pressure['political']} |
++| economic | {pressure['economic']} |
++| cultural | {pressure['cultural']} |
++
++## Recommended immediate focus
++
++Top issue: `{exception['exception_id']}` at address `{load_json(EXAMPLES / 'address-node.sample.json')['address']}`
++"""
++
++    (BUILD / "priority_report.md").write_text(report, encoding="utf-8")
++
++    print("Wrote build/priority_queue.json and build/priority_report.md")
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/tools/validate_examples.py b/tools/validate_examples.py
+new file mode 100644
+index 0000000..50dcc81
+--- /dev/null
++++ b/tools/validate_examples.py
+@@ -0,0 +1,114 @@
++"""Validate example records against the schema contracts."""
++
++from __future__ import annotations
++
++import json
++from pathlib import Path
++
++from jsonschema import Draft202012Validator
++from referencing import Registry, Resource
++
++
++ROOT = Path(__file__).resolve().parents[1]
++SCHEMA_DIR = ROOT / "schema"
++EXAMPLES_DIR = ROOT / "examples"
++
++
++SCHEMA_FILES = {
++    "common.schema.json": "common.schema.json",
++    "address-node.schema.json": "address-node.schema.json",
++    "expectation.schema.json": "expectation.schema.json",
++    "observation-event.schema.json": "observation-event.schema.json",
++    "evidence-ref.schema.json": "evidence-ref.schema.json",
++    "exception-event.schema.json": "exception-event.schema.json",
++    "pressure-vector.schema.json": "pressure-vector.schema.json",
++    "resolution-action.schema.json": "resolution-action.schema.json",
++    "promotion-log.schema.json": "promotion-log.schema.json",
++    "decision-record.schema.json": "decision-record.schema.json",
++    "dataset.schema.json": "dataset.schema.json",
++}
++
++
++def load_json(path: Path) -> dict:
++    with path.open("r", encoding="utf-8") as handle:
++        return json.load(handle)
++
++
++def build_registry() -> Registry:
++    resources = {}
++    for filename, uri in SCHEMA_FILES.items():
++        schema = load_json(SCHEMA_DIR / filename)
++        resources[uri] = Resource.from_contents(schema)
++    return Registry().with_resources(resources.items())
++
++
++def validate_example(schema_name: str, example_name: str, registry: Registry) -> None:
++    schema = load_json(SCHEMA_DIR / schema_name)
++    example = load_json(EXAMPLES_DIR / example_name)
++    validator = Draft202012Validator(schema, registry=registry)
++    errors = sorted(validator.iter_errors(example), key=lambda item: item.path)
++    if errors:
++        joined = "\n".join(
++            f"- {'/'.join(map(str, err.path)) or '<root>'}: {err.message}"
++            for err in errors
++        )
++        raise ValueError(f"{example_name} failed validation:\n{joined}")
++
++
++def validate_cross_refs() -> None:
++    exception = load_json(EXAMPLES_DIR / "exception-event.sample.json")
++    observation = load_json(EXAMPLES_DIR / "observation-event.sample.json")
++    pressure = load_json(EXAMPLES_DIR / "pressure-vector.sample.json")
++    resolution = load_json(EXAMPLES_DIR / "resolution-action.sample.json")
++    promotion = load_json(EXAMPLES_DIR / "promotion-log.sample.json")
++    decision = load_json(EXAMPLES_DIR / "decision-record.sample.json")
++
++    assert observation["observation_id"] == exception["observation_id"]
++    assert pressure["exception_id"] == exception["exception_id"]
++    assert resolution["exception_id"] == exception["exception_id"]
++    assert promotion["source_exception_id"] == exception["exception_id"]
++    assert decision["decision_id"] == exception["decision_record_id"]
++
++    fix_score = (
++        exception["recurrence_count"]
++        * exception["severity"]
++        * exception["blast_radius"]
++        * exception["unresolved_age_days"]
++    )
++    if fix_score != exception["fix_score"]:
++        raise ValueError(
++            f"fix_score mismatch: expected {fix_score}, found {exception['fix_score']}"
++        )
++
++    learn_score = (
++        exception["recurrence_count"]
++        * exception["novelty_score"]
++        * exception["cross_domain_spread"]
++        * exception["failed_resolution_rate"]
++    )
++    if learn_score != exception["learn_score"]:
++        raise ValueError(
++            f"learn_score mismatch: expected {learn_score}, found {exception['learn_score']}"
++        )
++
++
++def main() -> None:
++    registry = build_registry()
++    validate_example("address-node.schema.json", "address-node.sample.json", registry)
++    validate_example("expectation.schema.json", "expectation.sample.json", registry)
++    validate_example("observation-event.schema.json", "observation-event.sample.json", registry)
++    validate_example("evidence-ref.schema.json", "evidence-ref-1.sample.json", registry)
++    validate_example("evidence-ref.schema.json", "evidence-ref-2.sample.json", registry)
++    validate_example("exception-event.schema.json", "exception-event.sample.json", registry)
++    validate_example("pressure-vector.schema.json", "pressure-vector.sample.json", registry)
++    validate_example("resolution-action.schema.json", "resolution-action.sample.json", registry)
++    validate_example("promotion-log.schema.json", "promotion-log.sample.json", registry)
++    validate_example("decision-record.schema.json", "decision-record.sample.json", registry)
++    validate_example("dataset.schema.json", "full-example.dataset.json", registry)
++    validate_cross_refs()
++    print("All examples validated successfully.")
++
++
++if __name__ == "__main__":
++    main()
+
+From 2e59a62fbdc226cfab4fa5834811c8de708bc64d Mon Sep 17 00:00:00 2001
+From: "OpenAI GPT-5.4 Pro" <assistant@example.com>
+Date: Tue, 7 Apr 2026 22:05:47 +0000
+Subject: [PATCH 2/3] feat: add schema contracts for fractal address and
+ learning-loop records
+
+---
+ schema/address-node.schema.json      |  63 ++++++++++
+ schema/common.schema.json            | 118 ++++++++++++++++++++
+ schema/dataset.schema.json           |  82 ++++++++++++++
+ schema/decision-record.schema.json   |  51 +++++++++
+ schema/evidence-ref.schema.json      |  47 ++++++++
+ schema/exception-event.schema.json   |  80 ++++++++++++++
+ schema/expectation.schema.json       |  45 ++++++++
+ schema/observation-event.schema.json |  49 +++++++++
+ schema/pressure-vector.schema.json   |  46 ++++++++
+ schema/promotion-log.schema.json     |  50 +++++++++
+ schema/resolution-action.schema.json |  46 ++++++++
+ 11 files changed, 677 insertions(+)
+ create mode 100644 schema/address-node.schema.json
+ create mode 100644 schema/common.schema.json
+ create mode 100644 schema/dataset.schema.json
+ create mode 100644 schema/decision-record.schema.json
+ create mode 100644 schema/evidence-ref.schema.json
+ create mode 100644 schema/exception-event.schema.json
+ create mode 100644 schema/expectation.schema.json
+ create mode 100644 schema/observation-event.schema.json
+ create mode 100644 schema/pressure-vector.schema.json
+ create mode 100644 schema/promotion-log.schema.json
+ create mode 100644 schema/resolution-action.schema.json
+
+diff --git a/schema/address-node.schema.json b/schema/address-node.schema.json
+new file mode 100644
+index 0000000..da4eb2d
+--- /dev/null
++++ b/schema/address-node.schema.json
+@@ -0,0 +1,63 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "$id": "address-node.schema.json",
++  "title": "AddressNode",
++  "type": "object",
++  "additionalProperties": false,
++  "required": [
++    "address_id",
++    "address",
++    "root",
++    "domain",
++    "capability",
++    "entity",
++    "instance",
++    "state",
++    "expectation_key",
++    "exception_key",
++    "adaptation_key",
++    "depth",
++    "node_kind",
++    "dna",
++    "status"
++  ],
++  "properties": {
++    "address_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "address": {"type": "string", "minLength": 3},
++    "root": {"type": "string", "minLength": 1},
++    "domain": {"type": "string", "minLength": 1},
++    "capability": {"type": "string", "minLength": 1},
++    "entity": {"type": "string", "minLength": 1},
++    "instance": {"type": "string", "minLength": 1},
++    "state": {"type": "string", "minLength": 1},
++    "expectation_key": {"type": "string", "minLength": 1},
++    "exception_key": {"type": "string", "minLength": 1},
++    "adaptation_key": {"type": "string", "minLength": 1},
++    "parent_address_id": {
++      "anyOf": [
++        {"$ref": "common.schema.json#/$defs/idString"},
++        {"type": "null"}
++      ]
++    },
++    "depth": {"type": "integer", "minimum": 1},
++    "node_kind": {"enum": ["core", "exception", "adaptation", "view"]},
++    "dna": {
++      "type": "object",
++      "additionalProperties": false,
++      "required": ["definition", "norm", "adaptation_modes"],
++      "properties": {
++        "definition": {"type": "string", "minLength": 1},
++        "norm": {"type": "string", "minLength": 1},
++        "adaptation_modes": {
++          "type": "array",
++          "items": {"type": "string", "minLength": 1},
++          "minItems": 1
++        }
++      }
++    },
++    "tags": {"$ref": "common.schema.json#/$defs/stringArray"},
++    "audience_tags": {"$ref": "common.schema.json#/$defs/stringArray"},
++    "source_domains": {"$ref": "common.schema.json#/$defs/stringArray"},
++    "status": {"$ref": "common.schema.json#/$defs/statusEnum"}
++  }
++}
+diff --git a/schema/common.schema.json b/schema/common.schema.json
+new file mode 100644
+index 0000000..c3e538b
+--- /dev/null
++++ b/schema/common.schema.json
+@@ -0,0 +1,118 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "$id": "common.schema.json",
++  "title": "CommonDefinitions",
++  "$defs": {
++    "idString": {
++      "type": "string",
++      "pattern": "^[A-Za-z0-9_:-]+$"
++    },
++    "isoDatetime": {
++      "type": "string",
++      "format": "date-time"
++    },
++    "stringArray": {
++      "type": "array",
++      "items": {
++        "type": "string",
++        "minLength": 1
++      },
++      "uniqueItems": true
++    },
++    "statusEnum": {
++      "type": "string",
++      "enum": ["draft", "active", "closed", "promoted", "deprecated"]
++    },
++    "governanceLayerEnum": {
++      "type": "string",
++      "enum": ["worldview", "institutional", "operating", "human", "technical"]
++    },
++    "pressureLensEnum": {
++      "type": "string",
++      "enum": [
++        "theological",
++        "psychological",
++        "moral",
++        "political",
++        "economic",
++        "cultural"
++      ]
++    },
++    "resolutionScopeEnum": {
++      "type": "string",
++      "enum": ["case", "rule", "taxonomy", "ontology", "governance", "policy", "authority"]
++    },
++    "dispositionClassEnum": {
++      "type": "string",
++      "enum": [
++        "noise",
++        "data_defect",
++        "taxonomy_gap",
++        "ontology_gap",
++        "process_defect",
++        "policy_gap",
++        "governance_conflict",
++        "strategic_exception",
++        "emergent_pattern"
++      ]
++    },
++    "exceptionTypeEnum": {
++      "type": "string",
++      "enum": [
++        "low_confidence",
++        "manual_override",
++        "new_label",
++        "forbidden_relation",
++        "actor_conflict",
++        "missing_evidence",
++        "impossible_transition",
++        "rationale_absent",
++        "repeated_workaround",
++        "policy_exception",
++        "disagreement",
++        "other"
++      ]
++    },
++    "confidenceScore": {
++      "type": "number",
++      "minimum": 0,
++      "maximum": 1
++    },
++    "intensityScore": {
++      "type": "integer",
++      "minimum": 0,
++      "maximum": 5
++    },
++    "priorityNumber": {
++      "type": "number",
++      "minimum": 0
++    },
++    "localityEnum": {
++      "type": "string",
++      "enum": ["local", "cross_domain", "systemic"]
++    },
++    "observedByTypeEnum": {
++      "type": "string",
++      "enum": ["human", "model", "system", "external_feed"]
++    },
++    "sourceKindEnum": {
++      "type": "string",
++      "enum": ["document", "policy", "transcript", "dataset", "model_output", "human_note", "external_event"]
++    },
++    "trustLevelEnum": {
++      "type": "string",
++      "enum": ["core", "reviewed", "provisional", "unverified"]
++    },
++    "permissionScopeEnum": {
++      "type": "string",
++      "enum": ["public", "internal", "restricted"]
++    },
++    "resultStatusEnum": {
++      "type": "string",
++      "enum": ["proposed", "approved", "executed", "failed", "rolled_back"]
++    }
++  }
++}
+diff --git a/schema/dataset.schema.json b/schema/dataset.schema.json
+new file mode 100644
+index 0000000..a5d7c2b
+--- /dev/null
++++ b/schema/dataset.schema.json
+@@ -0,0 +1,82 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "$id": "dataset.schema.json",
++  "title": "ExceptionsLakeDataset",
++  "type": "object",
++  "additionalProperties": false,
++  "required": [
++    "address_nodes",
++    "expectations",
++    "observation_events",
++    "evidence_refs",
++    "exception_events",
++    "pressure_vectors",
++    "resolution_actions",
++    "promotion_logs",
++    "decision_records"
++  ],
++  "properties": {
++    "address_nodes": {
++      "type": "array",
++      "items": {"$ref": "address-node.schema.json"},
++      "minItems": 1
++    },
++    "expectations": {
++      "type": "array",
++      "items": {"$ref": "expectation.schema.json"},
++      "minItems": 1
++    },
++    "observation_events": {
++      "type": "array",
++      "items": {"$ref": "observation-event.schema.json"},
++      "minItems": 1
++    },
++    "evidence_refs": {
++      "type": "array",
++      "items": {"$ref": "evidence-ref.schema.json"},
++      "minItems": 1
++    },
++    "exception_events": {
++      "type": "array",
++      "items": {"$ref": "exception-event.schema.json"},
++      "minItems": 1
++    },
++    "pressure_vectors": {
++      "type": "array",
++      "items": {"$ref": "pressure-vector.schema.json"},
++      "minItems": 1
++    },
++    "resolution_actions": {
++      "type": "array",
++      "items": {"$ref": "resolution-action.schema.json"},
++      "minItems": 1
++    },
++    "promotion_logs": {
++      "type": "array",
++      "items": {"$ref": "promotion-log.schema.json"},
++      "minItems": 1
++    },
++    "decision_records": {
++      "type": "array",
++      "items": {"$ref": "decision-record.schema.json"},
++      "minItems": 1
++    }
++  }
++}
+diff --git a/schema/decision-record.schema.json b/schema/decision-record.schema.json
+new file mode 100644
+index 0000000..99defbd
+--- /dev/null
++++ b/schema/decision-record.schema.json
+@@ -0,0 +1,51 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "$id": "decision-record.schema.json",
++  "title": "DecisionRecord",
++  "type": "object",
++  "additionalProperties": false,
++  "required": [
++    "decision_id",
++    "address_id",
++    "architect_constraints",
++    "inform_inputs",
++    "rank_scores",
++    "options_evaluated",
++    "decision_owner",
++    "decision_rationale",
++    "final_action"
++  ],
++  "properties": {
++    "decision_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "address_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "architect_constraints": {"type": "object"},
++    "inform_inputs": {
++      "type": "array",
++      "items": {"$ref": "common.schema.json#/$defs/idString"},
++      "minItems": 1
++    },
++    "rank_scores": {
++      "type": "object",
++      "additionalProperties": {
++        "type": "number"
++      }
++    },
++    "options_evaluated": {
++      "type": "array",
++      "items": {"type": "object"},
++      "minItems": 1
++    },
++    "decision_owner": {"type": "string", "minLength": 1},
++    "decision_rationale": {"type": "string", "minLength": 1},
++    "final_action": {"type": "string", "minLength": 1},
++    "act_execution_ref": {
++      "anyOf": [
++        {"$ref": "common.schema.json#/$defs/idString"},
++        {"type": "null"}
++      ]
++    },
++    "created_at": {
++      "anyOf": [
++        {"$ref": "common.schema.json#/$defs/isoDatetime"},
++        {"type": "null"}
++      ]
++    }
++  }
++}
+diff --git a/schema/evidence-ref.schema.json b/schema/evidence-ref.schema.json
+new file mode 100644
+index 0000000..293340a
+--- /dev/null
++++ b/schema/evidence-ref.schema.json
+@@ -0,0 +1,47 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "$id": "evidence-ref.schema.json",
++  "title": "EvidenceRef",
++  "type": "object",
++  "additionalProperties": false,
++  "required": [
++    "evidence_id",
++    "source_kind",
++    "locator",
++    "summary",
++    "captured_at",
++    "captured_by",
++    "trust_level",
++    "permission_scope"
++  ],
++  "properties": {
++    "evidence_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "source_kind": {"$ref": "common.schema.json#/$defs/sourceKindEnum"},
++    "locator": {"type": "string", "minLength": 1},
++    "excerpt_hash": {
++      "anyOf": [
++        {"type": "string", "minLength": 1},
++        {"type": "null"}
++      ]
++    },
++    "summary": {"type": "string", "minLength": 1},
++    "captured_at": {"$ref": "common.schema.json#/$defs/isoDatetime"},
++    "captured_by": {"type": "string", "minLength": 1},
++    "trust_level": {"$ref": "common.schema.json#/$defs/trustLevelEnum"},
++    "permission_scope": {"$ref": "common.schema.json#/$defs/permissionScopeEnum"}
++  }
++}
+diff --git a/schema/exception-event.schema.json b/schema/exception-event.schema.json
+new file mode 100644
+index 0000000..5a1fcb5
+--- /dev/null
++++ b/schema/exception-event.schema.json
+@@ -0,0 +1,80 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "$id": "exception-event.schema.json",
++  "title": "ExceptionEvent",
++  "type": "object",
++  "additionalProperties": false,
++  "required": [
++    "exception_id",
++    "address_id",
++    "expectation_id",
++    "observation_id",
++    "exception_type",
++    "severity",
++    "blast_radius",
++    "locality",
++    "recurrence_key",
++    "recurrence_count",
++    "expected_snapshot",
++    "observed_snapshot",
++    "triggered_by",
++    "auto_captured",
++    "disposition_class",
++    "impacted_governance_layers",
++    "unresolved_age_days",
++    "novelty_score",
++    "cross_domain_spread",
++    "failed_resolution_rate",
++    "fix_score",
++    "learn_score",
++    "status",
++    "opened_at"
++  ],
++  "properties": {
++    "exception_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "address_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "expectation_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "observation_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "exception_type": {"$ref": "common.schema.json#/$defs/exceptionTypeEnum"},
++    "severity": {"type": "integer", "minimum": 1, "maximum": 5},
++    "blast_radius": {"type": "integer", "minimum": 1, "maximum": 5},
++    "locality": {"$ref": "common.schema.json#/$defs/localityEnum"},
++    "recurrence_key": {"type": "string", "minLength": 1},
++    "recurrence_count": {"type": "integer", "minimum": 1},
++    "expected_snapshot": {"type": "object"},
++    "observed_snapshot": {"type": "object"},
++    "stated_reason": {"type": ["string", "null"]},
++    "latent_reason_hypothesis": {"type": ["string", "null"]},
++    "triggered_by": {"type": "string", "minLength": 1},
++    "auto_captured": {"type": "boolean"},
++    "disposition_class": {"$ref": "common.schema.json#/$defs/dispositionClassEnum"},
++    "impacted_governance_layers": {
++      "type": "array",
++      "items": {"$ref": "common.schema.json#/$defs/governanceLayerEnum"},
++      "minItems": 1,
++      "uniqueItems": true
++    },
++    "pressure_vector_id": {"type": ["string", "null"]},
++    "decision_record_id": {"type": ["string", "null"]},
++    "unresolved_age_days": {"type": "integer", "minimum": 0},
++    "novelty_score": {"type": "number", "minimum": 0},
++    "cross_domain_spread": {"type": "number", "minimum": 0},
++    "failed_resolution_rate": {"type": "number", "minimum": 0},
++    "fix_score": {"$ref": "common.schema.json#/$defs/priorityNumber"},
++    "learn_score": {"$ref": "common.schema.json#/$defs/priorityNumber"},
++    "status": {"$ref": "common.schema.json#/$defs/statusEnum"},
++    "opened_at": {"$ref": "common.schema.json#/$defs/isoDatetime"},
++    "closed_at": {"type": ["string", "null"], "format": "date-time"}
++  }
++}
+diff --git a/schema/expectation.schema.json b/schema/expectation.schema.json
+new file mode 100644
+index 0000000..d8bcf74
+--- /dev/null
++++ b/schema/expectation.schema.json
+@@ -0,0 +1,45 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "$id": "expectation.schema.json",
++  "title": "Expectation",
++  "type": "object",
++  "additionalProperties": false,
++  "required": [
++    "expectation_id",
++    "address_id",
++    "expectation_type",
++    "subject_ref",
++    "expected_state",
++    "owner_role",
++    "authority_level",
++    "dna_norm",
++    "review_cycle_days",
++    "status"
++  ],
++  "properties": {
++    "expectation_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "address_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "expectation_type": {
++      "type": "string",
++      "enum": ["classification", "threshold", "relation", "workflow", "policy"]
++    },
++    "subject_ref": {"type": "string", "minLength": 1},
++    "expected_state": {"type": "string", "minLength": 1},
++    "allowed_values": {"$ref": "common.schema.json#/$defs/stringArray"},
++    "threshold_value": {"type": ["number", "null"]},
++    "unit": {"type": ["string", "null"]},
++    "rule_ref": {"type": ["string", "null"]},
++    "policy_ref": {"type": ["string", "null"]},
++    "owner_role": {"type": "string", "minLength": 1},
++    "authority_level": {"type": "string", "minLength": 1},
++    "dna_norm": {"type": "string", "minLength": 1},
++    "review_cycle_days": {"type": "integer", "minimum": 1},
++    "valid_from": {"type": ["string", "null"], "format": "date-time"},
++    "valid_to": {"type": ["string", "null"], "format": "date-time"},
++    "status": {"$ref": "common.schema.json#/$defs/statusEnum"}
++  }
++}
+diff --git a/schema/observation-event.schema.json b/schema/observation-event.schema.json
+new file mode 100644
+index 0000000..a20f967
+--- /dev/null
++++ b/schema/observation-event.schema.json
+@@ -0,0 +1,49 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "$id": "observation-event.schema.json",
++  "title": "ObservationEvent",
++  "type": "object",
++  "additionalProperties": false,
++  "required": [
++    "observation_id",
++    "address_id",
++    "observed_at",
++    "observed_by",
++    "observed_by_type",
++    "source_system",
++    "observation_method",
++    "observed_state",
++    "confidence",
++    "evidence_refs"
++  ],
++  "properties": {
++    "observation_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "address_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "expectation_id": {"type": ["string", "null"]},
++    "observed_at": {"$ref": "common.schema.json#/$defs/isoDatetime"},
++    "observed_by": {"type": "string", "minLength": 1},
++    "observed_by_type": {"$ref": "common.schema.json#/$defs/observedByTypeEnum"},
++    "source_system": {"type": "string", "minLength": 1},
++    "source_record_ref": {"type": ["string", "null"]},
++    "observation_method": {"type": "string", "minLength": 1},
++    "observed_state": {"type": "object"},
++    "raw_payload_ref": {"type": ["string", "null"]},
++    "confidence": {"$ref": "common.schema.json#/$defs/confidenceScore"},
++    "context_hash": {"type": ["string", "null"]},
++    "evidence_refs": {
++      "type": "array",
++      "items": {"$ref": "common.schema.json#/$defs/idString"},
++      "minItems": 1
++    },
++    "related_decision_id": {"type": ["string", "null"]}
++  }
++}
+diff --git a/schema/pressure-vector.schema.json b/schema/pressure-vector.schema.json
+new file mode 100644
+index 0000000..dd44b62
+--- /dev/null
++++ b/schema/pressure-vector.schema.json
+@@ -0,0 +1,46 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "$id": "pressure-vector.schema.json",
++  "title": "PressureVector",
++  "type": "object",
++  "additionalProperties": false,
++  "required": [
++    "pressure_vector_id",
++    "exception_id",
++    "theological",
++    "psychological",
++    "moral",
++    "political",
++    "economic",
++    "cultural",
++    "dominant_pressures",
++    "scored_by",
++    "scoring_method",
++    "governance_layer_map"
++  ],
++  "properties": {
++    "pressure_vector_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "exception_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "theological": {"$ref": "common.schema.json#/$defs/intensityScore"},
++    "psychological": {"$ref": "common.schema.json#/$defs/intensityScore"},
++    "moral": {"$ref": "common.schema.json#/$defs/intensityScore"},
++    "political": {"$ref": "common.schema.json#/$defs/intensityScore"},
++    "economic": {"$ref": "common.schema.json#/$defs/intensityScore"},
++    "cultural": {"$ref": "common.schema.json#/$defs/intensityScore"},
++    "dominant_pressures": {"$ref": "common.schema.json#/$defs/stringArray"},
++    "pressure_notes": {"type": ["string", "null"]},
++    "scored_by": {"type": "string", "minLength": 1},
++    "scoring_method": {"type": "string", "enum": ["manual", "rules", "hybrid"]},
++    "scored_at": {"type": ["string", "null"], "format": "date-time"},
++    "governance_layer_map": {
++      "type": "object",
++      "additionalProperties": false,
++      "required": ["worldview", "institutional", "operating", "human", "technical"],
++      "properties": {
++        "worldview": {"$ref": "common.schema.json#/$defs/intensityScore"},
++        "institutional": {"$ref": "common.schema.json#/$defs/intensityScore"},
++        "operating": {"$ref": "common.schema.json#/$defs/intensityScore"},
++        "human": {"$ref": "common.schema.json#/$defs/intensityScore"},
++        "technical": {"$ref": "common.schema.json#/$defs/intensityScore"}
++      }
++    }
++  }
++}
+diff --git a/schema/promotion-log.schema.json b/schema/promotion-log.schema.json
+new file mode 100644
+index 0000000..5024063
+--- /dev/null
++++ b/schema/promotion-log.schema.json
+@@ -0,0 +1,50 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "$id": "promotion-log.schema.json",
++  "title": "PromotionLog",
++  "type": "object",
++  "additionalProperties": false,
++  "required": [
++    "promotion_id",
++    "source_exception_id",
++    "promoted_from_scope",
++    "promoted_to_scope",
++    "promoted_object_type",
++    "rationale",
++    "evidence_threshold_met",
++    "approval_basis",
++    "approved_by",
++    "approved_at",
++    "effective_at",
++    "migration_required"
++  ],
++  "properties": {
++    "promotion_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "source_exception_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "source_resolution_id": {"type": ["string", "null"]},
++    "promoted_from_scope": {"$ref": "common.schema.json#/$defs/resolutionScopeEnum"},
++    "promoted_to_scope": {"$ref": "common.schema.json#/$defs/resolutionScopeEnum"},
++    "promoted_object_type": {"type": "string", "minLength": 1},
++    "promoted_object_id": {"type": ["string", "null"]},
++    "rationale": {"type": "string", "minLength": 1},
++    "evidence_threshold_met": {"type": "boolean"},
++    "approval_basis": {"type": "string", "minLength": 1},
++    "approved_by": {"type": "string", "minLength": 1},
++    "approved_at": {"$ref": "common.schema.json#/$defs/isoDatetime"},
++    "effective_at": {"$ref": "common.schema.json#/$defs/isoDatetime"},
++    "previous_version": {"type": ["string", "null"]},
++    "new_version": {"type": ["string", "null"]},
++    "supersedes": {"type": ["string", "null"]},
++    "migration_required": {"type": "boolean"},
++    "decision_record_id": {"type": ["string", "null"]}
++  }
++}
+diff --git a/schema/resolution-action.schema.json b/schema/resolution-action.schema.json
+new file mode 100644
+index 0000000..449da56
+--- /dev/null
++++ b/schema/resolution-action.schema.json
+@@ -0,0 +1,46 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "$id": "resolution-action.schema.json",
++  "title": "ResolutionAction",
++  "type": "object",
++  "additionalProperties": false,
++  "required": [
++    "resolution_id",
++    "exception_id",
++    "scope",
++    "action_type",
++    "action_summary",
++    "owner",
++    "expected_effect",
++    "result_status",
++    "started_at"
++  ],
++  "properties": {
++    "resolution_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "exception_id": {"$ref": "common.schema.json#/$defs/idString"},
++    "scope": {"$ref": "common.schema.json#/$defs/resolutionScopeEnum"},
++    "action_type": {"type": "string", "minLength": 1},
++    "action_summary": {"type": "string", "minLength": 1},
++    "owner": {"type": "string", "minLength": 1},
++    "approver": {"type": ["string", "null"]},
++    "target_object_type": {"type": ["string", "null"]},
++    "target_object_id": {"type": ["string", "null"]},
++    "implementation_ref": {"type": ["string", "null"]},
++    "expected_effect": {"type": "string", "minLength": 1},
++    "actual_effect": {"type": ["string", "null"]},
++    "rollback_plan": {"type": ["string", "null"]},
++    "result_status": {"$ref": "common.schema.json#/$defs/resultStatusEnum"},
++    "started_at": {"$ref": "common.schema.json#/$defs/isoDatetime"},
++    "completed_at": {"type": ["string", "null"], "format": "date-time"}
++  }
++}
+
+From 0f6af17a4c4f5d1b7e7ba5b8d70c11e40e3c2ddc Mon Sep 17 00:00:00 2001
+From: "OpenAI GPT-5.4 Pro" <assistant@example.com>
+Date: Tue, 7 Apr 2026 22:05:47 +0000
+Subject: [PATCH 3/3] feat: add examples, validation tooling, and
+ contribution workflows
+
+---
+ build/priority_queue.json                       |  18 +++++
+ build/priority_report.md                       |  18 +++++
+ examples/full-example.dataset.json             |  20 +++++
+ 3 files changed, 56 insertions(+)
+ create mode 100644 build/priority_queue.json
+ create mode 100644 build/priority_report.md
+
