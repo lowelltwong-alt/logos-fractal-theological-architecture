@@ -1,0 +1,9 @@
+id: relationship_object.trinity_assessment.nicene_core.project_christian_core.presupposes.project_christian_core
+object_type: relationship_object
+trust_zone: proposed
+lifecycle_status: draft
+provenance_note: "Created on 2026-04-07 to express that the Nicene core assessment assumes a prior project Christian core baseline."
+reason_for_inclusion: "Make baseline dependence explicit so judgments are not misread as free-floating or universal when they are actually scoped."
+relationship_type: presupposes
+source_id: doctrine_assessment.trinity.nicene_core.project_christian_core
+target_id: doctrinal_baseline.project_christian_core
