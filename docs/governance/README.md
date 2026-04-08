@@ -91,5 +91,7 @@ That is the practical meaning of fractal discipline in this repository.
 ## Decision traceability
 
 - `pr-decision-ledger-2026-04-08.md` — maps major merged PRs to architecture-rule touchpoints and approval rationale
-- `module-intentional-change-and-drift-notes-2026-04-08.md` — records last intentional change and suspected drift per major module
-
+- `pr-decision-ledger-inferred-mappings-2026-04-08.md` — proposed-zone sidecar for inferred PR-to-rule mappings pending reviewer validation
+- `module-intentional-change-and-drift-notes-2026-04-08.md` — proposed-zone notes for last intentional change and suspected drift by module
+- `governed-metadata-audit-2026-04-08.md` — metadata coverage checkpoint for governed governance docs
+- `zone-promotion-periodic-review-checklist.md` — recurring checklist for trust-zone promotions (for example proposed -> canonical)

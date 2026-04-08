@@ -39,6 +39,9 @@ Allowed dependency direction:
 Disallowed dependency direction:
 - higher trust -> lower trust
 
+Canonical-specific enforcement:
+- artifacts in `canonical` trust zone may depend on `canonical` artifacts only.
+
 **Rationale:**
 Dependency direction preserves epistemic integrity so lower-certainty material cannot become an implicit foundation for higher-certainty content.
 
