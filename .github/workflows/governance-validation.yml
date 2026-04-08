@@ -7,7 +7,8 @@ on:
     branches: ["main"]
 
 jobs:
-  validate:
+  metadata_schema_validator:
+    name: Metadata schema validator
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,5 +19,35 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Run validation suite
-        run: bash scripts/run_ci_validations.sh
+      - name: Validate governance metadata schema
+        run: python3 scripts/validate_governance_metadata.py
+
+  trust_zone_policy_validator:
+    name: Trust-zone policy validator
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate trust-zone policy
+        run: python3 scripts/validate_trust_zone_vocabulary.py
+
+  docs_link_lint_check:
+    name: Docs link/lint check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate internal docs links
+        run: python3 scripts/validate_internal_links.py --all-markdown
