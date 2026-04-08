@@ -1,0 +1,9 @@
+id: observation.example.001
+object_type: ObservationEvent
+status: captured
+observed_object_id: claim.example.trinity.affirms.nicene-core
+observed_condition: claim_has_zero_primary_evidence_items
+timestamp: 2026-04-08T00:00:00Z
+captured_by: validation.pipeline.example
+notes: >-
+  Replace with what was observed in operation, validation, or review.
