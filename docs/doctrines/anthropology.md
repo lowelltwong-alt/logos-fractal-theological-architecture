@@ -1,4 +1,15 @@
-# Anthropology
+---
+object_type: doctrine_legacy_redirect_note
+trust_zone: canonical
+lifecycle_status: active
+provenance_note: "Annotated on 2026-04-08 during wave-1 normalization to prevent duplicate doctrine editing surfaces."
+reason_for_inclusion: "Preserve existing references while clarifying that the governed doctrine node is maintained under docs/doctrine/."
+---
+
+# Anthropology (Legacy Path)
+
+> Canonical file: `docs/doctrine/anthropology.md`.
+> Keep this legacy copy for compatibility and avoid introducing new doctrine changes here.
 
 ## Purpose
 
