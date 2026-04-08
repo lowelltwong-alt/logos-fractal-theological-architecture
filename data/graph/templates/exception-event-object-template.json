@@ -19,7 +19,7 @@
     ],
     "tags": []
   },
-  "trust_zone": "working_proposed",
+  "trust_zone": "proposed",
   "address": {
     "root": "",
     "domain": "",

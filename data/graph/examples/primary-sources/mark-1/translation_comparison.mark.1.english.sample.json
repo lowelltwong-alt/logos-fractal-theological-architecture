@@ -20,7 +20,7 @@
     "source_domains": ["primary_sources", "translation", "lexical"]
   },
   "interfaces": ["reviewable_node", "machine_readable_object", "translation_witness_like"],
-  "trust_zone": "reviewed_specialized",
+  "trust_zone": "tradition-scoped",
   "translation_comparison": {
     "source_language": "Greek",
     "target_language": "English",

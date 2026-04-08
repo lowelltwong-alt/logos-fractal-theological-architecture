@@ -20,7 +20,7 @@
     "source_domains": ["primary_sources", "scripture"]
   },
   "interfaces": ["reviewable_node", "machine_readable_object"],
-  "trust_zone": "reviewed_specialized",
+  "trust_zone": "tradition-scoped",
   "witness": {
     "witness_kind": "hebrew_codex",
     "is_fragmentary": false,

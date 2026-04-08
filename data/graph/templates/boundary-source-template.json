@@ -25,7 +25,7 @@
     "machine_readable_object",
     "source_boundary_object"
   ],
-  "trust_zone": "boundary_restricted",
+  "trust_zone": "learning-sidecar",
   "system": {
     "system_role": "boundary_source_layer",
     "intent": "",

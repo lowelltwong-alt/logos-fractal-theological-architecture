@@ -24,3 +24,6 @@ venv/
 site/
 dist/
 build/
+
+# Generated validation reports
+data/reports/*.json

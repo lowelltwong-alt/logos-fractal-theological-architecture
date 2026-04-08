@@ -20,7 +20,7 @@
     "source_domains": ["primary_sources", "scripture", "lexical"]
   },
   "interfaces": ["reviewable_node", "scripture_grounded_node", "machine_readable_object"],
-  "trust_zone": "reviewed_specialized",
+  "trust_zone": "tradition-scoped",
   "lexical_evidence": {
     "term_id": "cluster.mark.1.gospel_beginning",
     "lemma": "Clustered sample for gospel / beginning language in Mark 1",

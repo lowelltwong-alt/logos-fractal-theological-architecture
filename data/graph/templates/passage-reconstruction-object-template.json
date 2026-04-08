@@ -24,7 +24,7 @@
     "scripture_grounded_node",
     "machine_readable_object"
   ],
-  "trust_zone": "reviewed_specialized",
+  "trust_zone": "tradition-scoped",
   "reconstruction": {
     "passage_id": "",
     "linked_witnesses": [],

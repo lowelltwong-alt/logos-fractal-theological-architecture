@@ -20,7 +20,7 @@
     "source_domains": ["primary_sources", "scripture"]
   },
   "interfaces": ["reviewable_node", "scripture_grounded_node", "machine_readable_object"],
-  "trust_zone": "reviewed_specialized",
+  "trust_zone": "tradition-scoped",
   "reconstruction": {
     "passage_id": "text.genesis.11.1-9",
     "linked_witnesses": ["witness.leningrad_codex", "witness.dss.genesis.manuscript_sample"],

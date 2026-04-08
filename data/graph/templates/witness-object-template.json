@@ -23,7 +23,7 @@
     "reviewable_node",
     "machine_readable_object"
   ],
-  "trust_zone": "reviewed_specialized",
+  "trust_zone": "tradition-scoped",
   "witness": {
     "witness_kind": "",
     "is_fragmentary": false,

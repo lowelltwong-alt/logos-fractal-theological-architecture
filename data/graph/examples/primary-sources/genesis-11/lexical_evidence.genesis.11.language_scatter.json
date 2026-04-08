@@ -20,7 +20,7 @@
     "source_domains": ["primary_sources", "scripture", "lexical"]
   },
   "interfaces": ["reviewable_node", "scripture_grounded_node", "machine_readable_object"],
-  "trust_zone": "reviewed_specialized",
+  "trust_zone": "tradition-scoped",
   "lexical_evidence": {
     "term_id": "cluster.genesis.11.language_scatter",
     "lemma": "Clustered sample for language/lip/speech and scattering motifs",

@@ -24,7 +24,7 @@
     "scripture_grounded_node",
     "machine_readable_object"
   ],
-  "trust_zone": "working_proposed",
+  "trust_zone": "proposed",
   "system": {
     "system_role": "doctrine_layer",
     "intent": "",
