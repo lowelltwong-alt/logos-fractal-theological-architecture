@@ -49,6 +49,7 @@ Preferred order of extension:
 - `textual-traditions-translation-and-noncanonical-sources.md` — structure for original languages, translations, manuscripts, and noncanonical source handling
 - `noncanonical-and-heresy-classification.md` — classification framework for noncanonical, pseudepigraphal, forged, and heretical materials
 - `translation-trust-and-sectarian-classification.md` — trust and boundary framework for Bible translations and disputed renderings
+- `internal-link-conventions.md` — canonical style guide for internal relative links and file naming policy
 
 ## How to use this folder
 

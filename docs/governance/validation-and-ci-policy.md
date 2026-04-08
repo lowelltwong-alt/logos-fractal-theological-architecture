@@ -48,3 +48,16 @@ Once validation scripts exist, CI should run them on pull requests and major bra
 ## Summary principle
 
 Validation and CI should make the Logos architecture more durable, machine-legible, and review-safe without replacing human theological judgment.
+
+
+## Current local validation routine
+
+Run:
+
+- `scripts/run_validations.sh`
+
+This routine currently executes:
+- `scripts/validate_node_frontmatter.py`
+- `scripts/validate_cross_references.py`
+- `scripts/validate_claim_files.py`
+- `scripts/validate_internal_links.py`
