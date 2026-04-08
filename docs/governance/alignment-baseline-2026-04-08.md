@@ -40,7 +40,7 @@ Cross-cutting observation:
 | MM-001 | naming | Parallel directories `docs/doctrine/` and `docs/doctrines/` create naming ambiguity for canonical doctrine docs. | Both directories exist with overlapping topic intent. | Preserve for now; normalize later via deprecation/migration plan. |
 | MM-002 | naming | Parallel top-level directories `schema/` and `schemas/` create schema-layer ambiguity. | Both directories contain machine-readable schema/template files. | Preserve for now; define target naming and migration sequence. |
 | MM-003 | placement | Machine-readable schema/template assets are split across `schema/`, `schemas/`, and `docs/schemas/` instead of one coherent placement policy. | JSON schema/template files observed in all three locations. | Keep as-is in baseline; converge placement policy before moves. |
-| MM-004 | schema | Mixed artifact roles (minimal validation schemas, templates, and prose schema docs) are not yet clearly separated by schema contract tier. | `schemas/*.schema.json` and template JSON files coexist with markdown schema guidance. | Establish explicit contract tiers before consolidating files. |
+| MM-004 | schema | Mixed artifact roles (minimal validation schemas, templates, and prose schema docs) are not yet clearly separated by schema contract tier. | `schemas/` files matching `*.schema.json` and template JSON files coexist with markdown schema guidance. | Establish explicit contract tiers before consolidating files. |
 | MM-005 | dependency direction | Operational/data layers risk becoming de facto sources when canonical-to-derived direction is not explicitly enforced in module contracts. | `data/ai-output/` and other generated layers coexist with canonical sources. | Reassert direction rule: canonical docs -> schemas -> data outputs. |
 | MM-006 | deprecated-but-active | Legacy/alternate naming tracks appear active rather than formally deprecated (especially doctrine/doctrines and schema/schemas). | No explicit deprecation markers in current folder names. | Introduce deprecation markers and migration notes before structural moves. |
 
@@ -57,3 +57,7 @@ Allowed mismatch classes used in this baseline:
 
 This baseline is fixed to the repository state observed on **2026-04-08**.
 Subsequent cleanup work should reference this file and add new dated deltas rather than rewriting this snapshot.
+
+## Decision ledger backlink
+
+Justification record: `DL-PR-0020` in `docs/governance/pr-decision-ledger-2026-04-08.md`.

@@ -87,3 +87,9 @@ The branches can keep growing.
 Repeated concepts can become trunks of their own.
 
 That is the practical meaning of fractal discipline in this repository.
+
+## Decision traceability
+
+- `pr-decision-ledger-2026-04-08.md` — maps major merged PRs to architecture-rule touchpoints and approval rationale
+- `module-intentional-change-and-drift-notes-2026-04-08.md` — records last intentional change and suspected drift per major module
+
