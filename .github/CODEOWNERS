@@ -1,20 +1,21 @@
 # Default owner for everything
 * @lowelltwong-alt
 
-# Core governance and canonical project structure
+# Governance-sensitive documentation and automation
 /.github/ @lowelltwong-alt
-/ontology/ @lowelltwong-alt
-/taxonomy/ @lowelltwong-alt
-/schema/ @lowelltwong-alt
-/validation/ @lowelltwong-alt
-/registry/ @lowelltwong-alt
+/docs/governance/ @lowelltwong-alt
+/scripts/validate_governance_metadata.py @lowelltwong-alt
+/scripts/validate_trust_zone_vocabulary.py @lowelltwong-alt
+/scripts/validate_internal_links.py @lowelltwong-alt
 
-# Public site and docs
+# Canonical manifests and schema registries
+/schemas/schema_registry.json @lowelltwong-alt
+/schemas/*.schema.json @lowelltwong-alt
+/schema/*.json @lowelltwong-alt
+/data/graph/completeness_requirements.json @lowelltwong-alt
+
+# Core ontology and governed content surfaces
+/ontology/ @lowelltwong-alt
+/data/graph/ @lowelltwong-alt
 /docs/ @lowelltwong-alt
 README.md @lowelltwong-alt
-
-# Machine-readable artifacts
-*.json @lowelltwong-alt
-*.jsonld @lowelltwong-alt
-*.yaml @lowelltwong-alt
-*.yml @lowelltwong-alt

@@ -19,14 +19,28 @@ Safely reduce branch sprawl while preserving important unmerged work and enforci
 ## Step-by-step process
 
 ### 1) Establish protections in GitHub
-Configure branch protection or rulesets for `main`:
-- Require pull requests before merge.
+In **GitHub → Settings → Rules → Rulesets**, create/update an active ruleset targeting `refs/heads/main`.
+
+Required rule settings:
+- Require pull request before merge.
+- Require at least **1 approval**.
 - Require status checks to pass.
 - Require branch to be up to date before merge.
-- Block force pushes and direct pushes.
 - Require conversation resolution before merge.
+- Disallow force pushes.
+- Restrict direct pushes.
 
-### 2) Snapshot backup
+Required status checks:
+- `Metadata schema validator`
+- `Trust-zone policy validator`
+- `Docs link/lint check`
+
+Reference machine-readable policy: `.github/rulesets/main-canonical-ruleset.json`.
+
+### 2) Enable automatic branch cleanup
+In **GitHub → Settings → General**, enable **Automatically delete head branches**.
+
+### 3) Snapshot backup
 From a synchronized local checkout:
 ```bash
 git checkout main
@@ -35,7 +49,7 @@ git tag backup/pre-cleanup-YYYY-MM-DD
 git push origin backup/pre-cleanup-YYYY-MM-DD
 ```
 
-### 3) Inventory branches
+### 4) Inventory branches
 Use:
 ```bash
 git fetch --all --prune
@@ -47,12 +61,12 @@ Classify each branch as:
 - archive
 - delete
 
-### 4) Merge discipline
+### 5) Merge discipline
 - Merge in small batches.
 - Keep governance and validation changes in dedicated PRs.
 - Resolve conflicts by preserving canonical governance constraints.
 
-### 5) Archive before delete
+### 6) Archive before delete
 For any unmerged branch with potential future value:
 ```bash
 git tag archive/<branch>-YYYY-MM-DD <sha>
@@ -60,9 +74,11 @@ git push origin archive/<branch>-YYYY-MM-DD
 ```
 Then delete the branch.
 
-### 6) Enforce self-checking CI
-Require the `Governance Validation` GitHub Action check on PRs to `main`.
-This check runs `scripts/run_ci_validations.sh`.
+### 7) Enforce self-checking CI
+Require these checks on PRs to `main`:
+- `Metadata schema validator` (runs `scripts/validate_governance_metadata.py`)
+- `Trust-zone policy validator` (runs `scripts/validate_trust_zone_vocabulary.py`)
+- `Docs link/lint check` (runs `scripts/validate_internal_links.py --all-markdown`)
 
 ## Suggested branch cadence
 - Weekly branch review.

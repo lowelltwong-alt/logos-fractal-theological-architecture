@@ -1,0 +1,41 @@
+{
+  "object_type": "github_branch_ruleset_spec",
+  "trust_zone": "canonical",
+  "lifecycle_status": "active",
+  "provenance_note": "Created on 2026-04-08 to codify required branch protections for the canonical branch.",
+  "reason_for_inclusion": "Provide auditable and reproducible GitHub ruleset intent aligned to governance policy.",
+  "target": "branch",
+  "name": "Canonical Main Branch Protection",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "include": [
+        "refs/heads/main"
+      ],
+      "exclude": []
+    }
+  },
+  "pull_request": {
+    "require_pull_request": true,
+    "required_approving_review_count": 1,
+    "require_last_push_approval": false,
+    "require_code_owner_review": true,
+    "dismiss_stale_reviews_on_push": true,
+    "require_conversation_resolution": true,
+    "require_branch_up_to_date": true
+  },
+  "status_checks": {
+    "require_status_checks": true,
+    "strict_required_status_checks_policy": true,
+    "required_checks": [
+      "Metadata schema validator",
+      "Trust-zone policy validator",
+      "Docs link/lint check"
+    ]
+  },
+  "push_restrictions": {
+    "restrict_direct_pushes": true,
+    "disallow_force_pushes": true
+  },
+  "bypass_actors": []
+}
