@@ -1,0 +1,11 @@
+id: resolution.example.001
+object_type: ResolutionAction
+status: draft
+exception_event_id: exception.example.001
+action_type: adjust_rule
+performed_by: lowell.t.wong
+timestamp: 2026-04-08T00:00:00Z
+changed_object_ids:
+  - claim.example.trinity.affirms.nicene-core
+notes: >-
+  Replace with what was changed, why it was changed, and whether the change is local or promotable.
