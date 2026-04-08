@@ -7,7 +7,7 @@ slug: applications
 node_type: application_root
 system_role: application_layer
 artifact_tier: foundational_support
-trust_zone: working_proposed
+trust_zone: proposed
 lifecycle_state: draft
 epistemic_status: asserted
 status: draft

@@ -1,7 +1,7 @@
 neighborhood_id: retrieval.ai_governance_human_dignity.primary
 focus_object: application.ai_governance.human_dignity_non_reductive_evaluation
 neighborhood_type: application
-trust_zone: working_proposed
+trust_zone: proposed
 review_status: unreviewed
 overlay_scope: application:ai_governance
 included_objects:

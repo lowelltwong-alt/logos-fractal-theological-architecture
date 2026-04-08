@@ -7,7 +7,7 @@ slug: concepts
 node_type: concept_root
 system_role: concept_layer
 artifact_tier: foundational_support
-trust_zone: working_proposed
+trust_zone: proposed
 lifecycle_state: draft
 review_status: unreviewed
 epistemic_status: asserted

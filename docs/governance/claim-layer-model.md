@@ -63,7 +63,7 @@ subject: text.genesis.1.26-28
 predicate: grounds
 object: biblical_theme.image_of_god
 epistemic_status: asserted
-trust_zone: reviewed_specialized
+trust_zone: proposed
 review_status: review_pending
 evidence_refs:
   - text.genesis.1.26-28

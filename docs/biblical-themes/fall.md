@@ -7,7 +7,7 @@ slug: fall
 node_type: biblical_theme_node
 system_role: biblical_theme_object
 artifact_tier: core_candidate
-trust_zone: working_proposed
+trust_zone: proposed
 lifecycle_state: draft
 epistemic_status: asserted
 status: draft

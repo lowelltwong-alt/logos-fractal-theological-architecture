@@ -7,7 +7,7 @@ slug: genesis-3-1-19
 node_type: scripture_text
 system_role: scripture_text_object
 artifact_tier: core_candidate
-trust_zone: working_proposed
+trust_zone: proposed
 lifecycle_state: draft
 epistemic_status: asserted
 status: draft
