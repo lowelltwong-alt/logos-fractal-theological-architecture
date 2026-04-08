@@ -1,0 +1,54 @@
+{
+  "total_graph_nodes": 42,
+  "orphans": [
+    {
+      "id": "concept.<name>",
+      "path": "data/graph/templates/concept-object-template.json"
+    },
+    {
+      "id": "doctrine.<name>",
+      "path": "data/graph/templates/doctrine-object-template.json"
+    },
+    {
+      "id": "exception.<domain>.<capability>.<entity>.<instance>",
+      "path": "data/graph/templates/exception-event-object-template.json"
+    },
+    {
+      "id": "fragment.<name>",
+      "path": "data/graph/templates/fragment-object-template.json"
+    },
+    {
+      "id": "lexical_evidence.<term>.<scope>",
+      "path": "data/graph/templates/lexical-evidence-object-template.json"
+    },
+    {
+      "id": "noncanonical.<name>",
+      "path": "data/graph/templates/boundary-source-template.json"
+    },
+    {
+      "id": "reconstruction.<book>.<chapter>.<verse_span>",
+      "path": "data/graph/templates/passage-reconstruction-object-template.json"
+    },
+    {
+      "id": "text.<book>.<chapter>.<verse_span>",
+      "path": "data/graph/templates/passage-object-template.json"
+    },
+    {
+      "id": "transcription.<name>",
+      "path": "data/graph/templates/transcription-object-template.json"
+    },
+    {
+      "id": "translation.<name>",
+      "path": "data/graph/templates/translation-witness-template.json"
+    },
+    {
+      "id": "translation_comparison.<source>.<target_language>.<scope>",
+      "path": "data/graph/templates/translation-comparison-object-template.json"
+    },
+    {
+      "id": "witness.<name>",
+      "path": "data/graph/templates/witness-object-template.json"
+    }
+  ],
+  "orphan_count": 12
+}

@@ -1,0 +1,51 @@
+name: Semantic Merge Pipeline
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  semantic-pre-merge-checks:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run semantic merge checks
+        run: python scripts/semantic_merge_pipeline.py
+
+      - name: Upload semantic merge artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: semantic-merge-artifacts-pr
+          path: reports/semantic-merge/
+
+  post-merge-graph-integrity-snapshot:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate post-merge graph integrity snapshot
+        run: python scripts/semantic_merge_pipeline.py --snapshot-only
+
+      - name: Upload graph integrity snapshot artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: graph-integrity-snapshot-post-merge
+          path: reports/semantic-merge/graph-integrity-snapshot.json
