@@ -14,7 +14,7 @@
     "audience_tags": ["ontology", "theology", "graph" ]
   },
   "interfaces": ["reviewable_node", "machine_readable_object"],
-  "trust_zone": "working_proposed",
+  "trust_zone": "proposed",
   "edge": {
     "from": "reconstruction.genesis.11.1-9",
     "relation": "grounds",

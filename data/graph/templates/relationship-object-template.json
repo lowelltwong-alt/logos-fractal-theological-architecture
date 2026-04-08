@@ -17,7 +17,7 @@
     "reviewable_node",
     "machine_readable_object"
   ],
-  "trust_zone": "working_proposed",
+  "trust_zone": "proposed",
   "edge": {
     "from": "",
     "relation": "",

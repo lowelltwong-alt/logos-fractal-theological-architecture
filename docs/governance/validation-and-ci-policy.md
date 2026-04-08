@@ -48,7 +48,7 @@ Run the repository validators in this order:
 1. `python scripts/validate_node_frontmatter.py`
 2. `python scripts/validate_claim_files.py`
 3. `python scripts/validate_cross_references.py`
-4. `python scripts/validate_trust_zone_vocabulary.py`
+4. `python scripts/validate_trust_zone_vocabulary.py` (controlled-value validator with machine-readable reporting)
 
 ## CI rule
 
@@ -69,4 +69,5 @@ This routine currently executes:
 - `scripts/validate_node_frontmatter.py`
 - `scripts/validate_cross_references.py`
 - `scripts/validate_claim_files.py`
+- `scripts/validate_trust_zone_vocabulary.py`
 - `scripts/validate_internal_links.py`

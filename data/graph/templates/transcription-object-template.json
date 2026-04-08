@@ -23,7 +23,7 @@
     "reviewable_node",
     "machine_readable_object"
   ],
-  "trust_zone": "reviewed_specialized",
+  "trust_zone": "tradition-scoped",
   "transcription": {
     "transcription_kind": "",
     "source_witness": "",

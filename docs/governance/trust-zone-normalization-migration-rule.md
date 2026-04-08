@@ -21,8 +21,12 @@ reason_for_inclusion: "Document deterministic migration behavior for invalid tru
 
 When a record contains a non-enum `trust_zone` value, normalize it to the nearest allowed trust zone.
 
-Default mapping rule:
+Default mapping rules:
+- `core_trusted` -> `canonical`
+- `reviewed_specialized` -> `tradition-scoped`
 - `working_proposed` -> `proposed`
+- `boundary_restricted` -> `learning-sidecar`
+- `experimental_graph` -> `inferred`
 
 Use a stricter zone only when there is explicit governance justification in the change set.
 
@@ -30,7 +34,7 @@ Use a stricter zone only when there is explicit governance justification in the 
 
 The repository uses a controlled trust-zone vocabulary to preserve retrieval consistency, graph integrity, and governance legibility.
 
-Legacy aliases such as `working_proposed` create vocabulary drift and must be normalized before validation and CI checks run.
+Legacy aliases from previous trust-zone models create vocabulary drift and must be normalized before validation and CI checks run.
 
 ## Scope
 
@@ -38,3 +42,6 @@ This migration rule applies to:
 - markdown frontmatter under `docs/`
 - YAML claim records under `data/claims/`
 - YAML retrieval neighborhood records under `data/retrieval/`
+- JSON templates under `data/graph/templates/`
+- JSON examples under `data/graph/examples/`
+- JSON schemas under `schemas/`
