@@ -139,3 +139,7 @@ These invariants are mandatory for PR review and should be mirrored in validator
 
 The companion checklist is in:
 - `docs/governance/pr-architecture-invariants-checklist.md`
+
+## Decision ledger backlink
+
+Justification record: `DL-PR-0022` in `docs/governance/pr-decision-ledger-2026-04-08.md`.

@@ -91,3 +91,7 @@ Require these checks on PRs to `main`:
 - Protected branch rules live.
 - Required validation checks enforced.
 - Worktree clean.
+
+## Decision ledger backlink
+
+Justification record: `DL-PR-0019` in `docs/governance/pr-decision-ledger-2026-04-08.md`.

@@ -44,3 +44,7 @@ Run (or capture equivalent CI output):
 Include a short PR note:
 
 > "Architecture invariants A1-A4 validated; no unresolved violations."
+
+## Decision ledger backlink
+
+Justification record: `DL-PR-0022` in `docs/governance/pr-decision-ledger-2026-04-08.md`.
