@@ -1,0 +1,18 @@
+id: evidence.example.001
+object_type: EvidenceItem
+status: draft
+claim_id: claim.example.trinity.affirms.nicene-core
+source_id: source.example.primary_text
+source_tier: tier_1_primary
+evidence_grade: A_direct
+support_type: quotation
+locator:
+  work: work.example.primary_text
+  section: section_3
+  page: null
+added_by: lowell.t.wong
+excerpt_or_note: >-
+  Replace with a short excerpt, paraphrase, or evidence note.
+notes:
+  - Every evidence item should point to exactly one claim in the first implementation pass.
+  - Preserve source tier and locator even if excerpt text is brief.
