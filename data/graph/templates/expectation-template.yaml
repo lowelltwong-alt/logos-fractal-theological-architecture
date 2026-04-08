@@ -1,0 +1,12 @@
+id: expectation.example.001
+object_type: Expectation
+status: active
+expectation_type: claim_support_requirement
+target_object_id: claim.example.trinity.affirms.nicene-core
+expected_condition: at_least_one_evidence_item_with_primary_or_secondary_support
+scope:
+  graph: graph.asserted
+  tradition: catholic
+  profile: default
+notes: >-
+  Replace with the rule, threshold, or expected relation that should hold.
