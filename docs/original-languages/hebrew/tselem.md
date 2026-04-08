@@ -6,9 +6,15 @@ slug: tselem
 node_type: original_language_term
 system_role: lexical_layer
 artifact_tier: foundational_support
+address: christian_ai_theology.scripture.hebrew.anthropology.term.original_language_term.tselem.primary
+trust_zone: proposed
+lifecycle_state: draft
+epistemic_status: asserted
 
 domain: christian_ai_theology
 subdomain: original_language_terms
+overlay_scope: shared_core
+shared_core_status: intended_shared_core
 audience_tags:
   - theology
   - biblical_studies
@@ -33,6 +39,11 @@ related:
   - concept.imago_dei
   - canon.augustine
   - canon.aquinas
+
+source_basis:
+  - scripture
+  - original_language
+ai_usage_posture: retrieval_ok_not_auto_promote
 
 authors:
   - id: author.lowell_t_wong

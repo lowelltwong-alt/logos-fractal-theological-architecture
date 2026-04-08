@@ -6,9 +6,15 @@ slug: esv
 node_type: translation_witness
 system_role: translation_layer
 artifact_tier: foundational_support
+address: christian_ai_theology.scripture.translation.mainstream_modern.witness.translation_witness.esv.primary
+trust_zone: proposed
+lifecycle_state: draft
+epistemic_status: asserted
 
 domain: christian_ai_theology
 subdomain: translations
+overlay_scope: shared_core
+shared_core_status: intended_shared_core
 audience_tags:
   - theology
   - biblical_studies
@@ -28,6 +34,11 @@ related:
   - scripture.root
   - original_language.root
   - manuscripts.root
+
+source_basis:
+  - translation
+  - scripture
+ai_usage_posture: retrieval_ok_not_auto_promote
 
 authors:
   - id: author.lowell_t_wong
