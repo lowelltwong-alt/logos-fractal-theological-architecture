@@ -1,0 +1,76 @@
+{
+  "object_type": "exception_event_object",
+  "schema_version": "v1",
+  "identity": {
+    "id": "exception.<domain>.<capability>.<entity>.<instance>",
+    "title": "<short exception title>",
+    "status": "working"
+  },
+  "classification": {
+    "domain": "exceptions_lake",
+    "subdomain": "exception_event",
+    "pressure_vectors": [],
+    "governance_layers": [
+      "worldview",
+      "institutional",
+      "operating",
+      "human",
+      "technical"
+    ],
+    "tags": []
+  },
+  "trust_zone": "working_proposed",
+  "address": {
+    "root": "",
+    "domain": "",
+    "capability": "",
+    "entity": "",
+    "instance": "",
+    "state": "",
+    "expectation": "",
+    "exception": "",
+    "adaptation": ""
+  },
+  "airca_bridge": {
+    "architect_expectation_ref": "",
+    "inform_evidence_refs": [],
+    "rank_score": null,
+    "commit_decision": "pending",
+    "act_targets": []
+  },
+  "event": {
+    "observed_state": "",
+    "expected_state": "",
+    "exception_summary": "",
+    "severity": "",
+    "recurrence": "",
+    "blast_radius": "",
+    "priority": ""
+  },
+  "provenance": {
+    "asserted_by": "",
+    "reviewed_by": [],
+    "created_by": "",
+    "last_modified_by": "",
+    "derived_from": [],
+    "source_refs": [],
+    "captured_at": "",
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_notes": "",
+    "promotion_path": {
+      "candidate_rule_change": [],
+      "candidate_taxonomy_change": [],
+      "candidate_ontology_change": [],
+      "candidate_governance_change": []
+    }
+  },
+  "lifecycle": {
+    "append_only": true,
+    "supersedes": [],
+    "superseded_by": [],
+    "compatibility_status": ""
+  }
+}

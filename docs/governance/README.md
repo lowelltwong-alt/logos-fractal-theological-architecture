@@ -43,6 +43,8 @@ Preferred order of extension:
 - `anchor-conventions-scripture-and-graph-extension.md` — address extensions for scripture, boundary, and graph layers
 - `tag-registry-scripture-and-boundary-extension.md` — tag extensions for scripture, translation, manuscript, and boundary-source layers
 - `node-types-scripture-and-boundary-extension.md` — node-type extensions for scripture, hermeneutic, translation, manuscript, and noncanonical layers
+- `exceptions-lake-and-learning-loop.md` — governed exception-capture and adaptation-promotion model aligned to AIRCA stages
+- `exceptions-lake-integration-note.md` — landing map showing where exceptions-lake import concepts were absorbed
 - `scripture-taxonomy-and-ontology.md` — scripture-layer ontology design for books, chapters, pericopes, texts, and interpretations
 - `textual-traditions-translation-and-noncanonical-sources.md` — structure for original languages, translations, manuscripts, and noncanonical source handling
 - `noncanonical-and-heresy-classification.md` — classification framework for noncanonical, pseudepigraphal, forged, and heretical materials

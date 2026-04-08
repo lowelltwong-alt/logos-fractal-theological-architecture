@@ -25,6 +25,7 @@ Examples include:
 - relationship object templates
 - translation witness templates
 - boundary-source templates
+- exception event object templates
 
 ## Relation to the rest of the repository
 

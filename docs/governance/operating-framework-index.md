@@ -16,10 +16,11 @@ This file gathers the new operating-framework documents added to the Logos repos
 8. `claim-layer-model.md`
 9. `validation-and-ci-policy.md`
 10. `feedback-and-learning-loops.md`
-11. `drift-detection-policy.md`
-12. `proposal-to-promotion-workflow.md`
-13. `review-queue-model.md`
-14. `retrieval-neighborhood-model.md`
+11. `exceptions-lake-and-learning-loop.md`
+12. `drift-detection-policy.md`
+13. `proposal-to-promotion-workflow.md`
+14. `review-queue-model.md`
+15. `retrieval-neighborhood-model.md`
 
 ## Why this index exists
 
