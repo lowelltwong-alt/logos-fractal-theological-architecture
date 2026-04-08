@@ -1,0 +1,38 @@
+{
+  "object_type": "external_mapping_object",
+  "schema_version": "v1",
+  "trust_zone": "proposed",
+  "lifecycle_status": "active",
+  "provenance_note": "Created from external taxonomy ingestion.",
+  "reason_for_inclusion": "Preserve canonical-safe crosswalk mapping for interoperability.",
+  "identity": {
+    "id": "mapping.<canonical_id>__<source>__<source_id>",
+    "title": "<canonical_id> mapped to <source>:<source_id>",
+    "status": "working"
+  },
+  "mapping": {
+    "mapping_type": "exact_match",
+    "canonical_id": "",
+    "canonical_trust_zone": "canonical",
+    "external_ref": {
+      "handle": "ext.<source>.<id>",
+      "source": "",
+      "source_id": "",
+      "source_trust_zone": "inferred"
+    }
+  },
+  "provenance": {
+    "derived_from": [],
+    "source_refs": [],
+    "created_by": "",
+    "last_modified_by": "",
+    "asserted_by": "",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": ""
+  }
+}

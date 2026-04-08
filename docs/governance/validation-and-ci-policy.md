@@ -20,6 +20,7 @@ At minimum, the repository should validate:
 - valid epistemic statuses for claim objects
 - valid relationship verbs where governed
 - resolvable references to IDs where required
+- external mapping integrity (namespace, duplicates, trust-zone direction)
 - duplicate ID collisions
 - missing migration records when address changes occur
 - overlay scope consistency where overlay fields are used
@@ -49,6 +50,7 @@ Run the repository validators in this order:
 2. `python scripts/validate_claim_files.py`
 3. `python scripts/validate_cross_references.py`
 4. `python scripts/validate_trust_zone_vocabulary.py`
+5. `python scripts/validate_external_mappings.py`
 
 ## CI rule
 
@@ -70,3 +72,4 @@ This routine currently executes:
 - `scripts/validate_cross_references.py`
 - `scripts/validate_claim_files.py`
 - `scripts/validate_internal_links.py`
+- `scripts/validate_external_mappings.py`

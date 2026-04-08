@@ -29,6 +29,7 @@ Examples may include:
 - manuscripts
 - boundary sources
 - exceptions lake
+- external mappings
 
 ## Relation to the rest of the repository
 
