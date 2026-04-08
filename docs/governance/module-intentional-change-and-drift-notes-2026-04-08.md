@@ -1,9 +1,9 @@
 ---
 object_type: module_change_and_drift_register
-trust_zone: canonical
+trust_zone: proposed
 lifecycle_status: active
-provenance_note: "Compiled on 2026-04-08 from module ownership map and latest path-scoped git history."
-reason_for_inclusion: "Record per-domain last intentional changes and suspected drift signals for normalization planning and review prioritization."
+provenance_note: "Compiled on 2026-04-08 from module ownership map and latest path-scoped git history; retained in proposed until each drift signal is reviewer-validated."
+reason_for_inclusion: "Record per-domain last intentional changes and suspected drift signals for normalization planning and review prioritization without asserting unresolved inferences as canonical."
 ---
 
 # Module Intentional Change & Suspected Drift Notes (2026-04-08)
