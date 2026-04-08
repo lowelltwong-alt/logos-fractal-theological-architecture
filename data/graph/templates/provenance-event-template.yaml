@@ -1,0 +1,13 @@
+id: provenance.example.001
+object_type: ProvenanceEvent
+status: draft
+event_type: asserted
+actor: lowell.t.wong
+timestamp: 2026-04-08T00:00:00Z
+target_object_id: claim.example.trinity.affirms.nicene-core
+used_source_ids:
+  - source.example.primary_text
+tool_or_ruleset: manual_editorial_assertion
+notes: >-
+  Replace with a brief explanation of what was done and why.
+generated_artifact_ids: []
