@@ -1,0 +1,20 @@
+id: exception.example.001
+object_type: ExceptionEvent
+status: detected
+expectation_id: expectation.example.001
+observation_event_id: observation.example.001
+exception_type: missing_evidence
+affected_claim_ids:
+  - claim.example.trinity.affirms.nicene-core
+evidence_ids:
+  - evidence.example.001
+pressure_vector:
+  theological: low
+  psychological: low
+  moral: medium
+  political: low
+  economic: low
+  cultural: low
+disposition: taxonomy_gap
+notes: >-
+  Replace with a concise explanation of what failed and why it matters.
