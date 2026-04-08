@@ -42,6 +42,7 @@ Preferred order of extension:
 ### Governance extensions and architecture control
 - `architecture-invariants.md` — non-negotiable architecture invariants stated in testable terms
 - `pr-architecture-invariants-checklist.md` — lightweight PR checklist for invariant validation
+- `rollback-protocol-trust-zone-and-invariant-violations.md` — incident and rollback runbook for merges that violate trust-zone or invariant rules
 - `anchor-conventions-scripture-and-graph-extension.md` — address extensions for scripture, boundary, and graph layers
 - `tag-registry-scripture-and-boundary-extension.md` — tag extensions for scripture, translation, manuscript, and boundary-source layers
 - `node-types-scripture-and-boundary-extension.md` — node-type extensions for scripture, hermeneutic, translation, manuscript, and noncanonical layers

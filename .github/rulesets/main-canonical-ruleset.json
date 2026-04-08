@@ -30,7 +30,8 @@
     "required_checks": [
       "Metadata schema validator",
       "Trust-zone policy validator",
-      "Docs link/lint check"
+      "Docs link/lint check",
+      "PR description requirements"
     ]
   },
   "push_restrictions": {
