@@ -70,3 +70,21 @@ The project is trying to make the immutable reference and low-risk graph layers 
 The `data/` branch should grow slowly, clearly, and with stable typed objects.
 
 It is better to have a small trustworthy graph than a large ambiguous one.
+
+## Cross-reference validator ID sources
+
+`scripts/validate_cross_references.py` resolves object IDs from a unified set of machine- and human-readable sources.
+
+Supported object ID sources:
+- `docs/**/*.md` frontmatter field: `id`
+- `data/graph/**/*.json` object fields:
+  - `identity.id`
+  - top-level `id`
+  - `address.id`
+
+Supported claim ID source:
+- `data/claims/*.yaml` field: `claim_id`
+
+Validation currently checks:
+- `data/claims/*.yaml`: `subject`, `object`
+- `data/retrieval/*.yaml`: `included_objects`, `included_claims`

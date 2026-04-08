@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 """Cross-reference validation for Logos bootstrap.
 
-Collects known node IDs from markdown frontmatter and checks that claim objects and
-retrieval neighborhoods reference existing IDs.
+Collects known object IDs from markdown frontmatter and machine-readable graph JSON
+objects, then checks that claim objects and retrieval neighborhoods reference
+existing IDs.
 """
 from __future__ import annotations
 
+import json
 import pathlib
-import sys
+
+OBJECT_ID_SOURCE_HINT = (
+    "expected ID from docs markdown frontmatter `id` or data/graph JSON "
+    "`identity.id`/`id`/`address.id`"
+)
 
 
 def extract_frontmatter(text: str) -> str | None:
@@ -36,8 +42,36 @@ def parse_simple_yaml(text: str) -> dict[str, str]:
     return data
 
 
+def extract_graph_object_ids(path: pathlib.Path) -> set[str]:
+    """Extract supported object IDs from one graph JSON file."""
+    raw = json.loads(path.read_text(encoding='utf-8'))
+    if not isinstance(raw, dict):
+        return set()
+
+    ids: set[str] = set()
+
+    top_level_id = raw.get('id')
+    if isinstance(top_level_id, str) and top_level_id:
+        ids.add(top_level_id)
+
+    identity = raw.get('identity')
+    if isinstance(identity, dict):
+        identity_id = identity.get('id')
+        if isinstance(identity_id, str) and identity_id:
+            ids.add(identity_id)
+
+    address = raw.get('address')
+    if isinstance(address, dict):
+        address_id = address.get('id')
+        if isinstance(address_id, str) and address_id:
+            ids.add(address_id)
+
+    return ids
+
+
 def collect_ids(root: pathlib.Path) -> set[str]:
     ids: set[str] = set()
+
     for path in (root / 'docs').rglob('*.md'):
         fm = extract_frontmatter(path.read_text(encoding='utf-8'))
         if fm is None:
@@ -46,6 +80,10 @@ def collect_ids(root: pathlib.Path) -> set[str]:
         obj_id = data.get('id')
         if obj_id:
             ids.add(obj_id)
+
+    for path in (root / 'data' / 'graph').rglob('*.json'):
+        ids.update(extract_graph_object_ids(path))
+
     return ids
 
 
@@ -66,7 +104,10 @@ def check_claim_refs(root: pathlib.Path, known_ids: set[str]) -> list[str]:
         for key in ('subject', 'object'):
             ref = data.get(key)
             if ref and ref not in known_ids:
-                failures.append(f'{path.as_posix()}: unknown {key} {ref}')
+                failures.append(
+                    f"{path.as_posix()}: missing `{key}` reference '{ref}' "
+                    f"({OBJECT_ID_SOURCE_HINT})"
+                )
     return failures
 
 
@@ -87,9 +128,15 @@ def check_retrieval_refs(root: pathlib.Path, known_ids: set[str], claim_ids: set
                 continue
             value = line[4:].strip()
             if mode == 'objects' and value not in known_ids:
-                failures.append(f'{path.as_posix()}: unknown included object {value}')
+                failures.append(
+                    f"{path.as_posix()}: missing `included_objects` reference '{value}' "
+                    f"({OBJECT_ID_SOURCE_HINT})"
+                )
             if mode == 'claims' and value not in claim_ids:
-                failures.append(f'{path.as_posix()}: unknown included claim {value}')
+                failures.append(
+                    f"{path.as_posix()}: missing `included_claims` reference '{value}' "
+                    "(expected claim ID from data/claims/*.yaml `claim_id`)"
+                )
     return failures
 
 
