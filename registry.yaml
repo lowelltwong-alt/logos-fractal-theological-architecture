@@ -1,0 +1,57 @@
+version: 1
+repository: lowelltwong-alt/logos-fractal-theological-architecture
+purpose: >-
+  Lightweight discovery registry for major governed layers so humans, Codex,
+  and future agents can locate the current operational spine quickly.
+
+layers:
+  readme:
+    path: README.md
+    role: human_overview
+
+  governance_docs:
+    path: docs/governance
+    role: prose_governance_and_operating_rules
+
+  roadmap_docs:
+    path: docs/roadmap
+    role: sequencing_integration_and_future_work
+
+  root_change_taxonomy:
+    path: governance/change-taxonomy.yaml
+    role: machine_readable_change_governance
+
+  graph_layer:
+    path: data/graph
+    role: graph_schemes_relationships_and_machine_readable_structures
+
+  retrieval_layer:
+    path: data/retrieval
+    role: retrieval_neighborhoods_and_render_support
+
+  quarantine_lane:
+    path: data/ai-output/quarantine
+    role: ai_generated_or_review_pending_material
+
+  completeness_reports:
+    path: reports/completeness
+    role: evaluation_and_gap_visibility
+
+  ai_review_queue:
+    path: reports/ai-review-queue
+    role: review_lane_for_generated_or_flagged_material
+
+  validation_scripts:
+    path: scripts
+    role: validation_generation_and_maintenance_operations
+
+  codex_alignment_scorecard:
+    path: docs/roadmap/codex-merge-alignment-scorecard.md
+    role: compare_parallel_agent_branches_and_patterns
+
+merge_bias:
+  - additive_changes_first
+  - compare_before_rewrite
+  - preserve_provenance
+  - preserve_asserted_vs_inferred_separation
+  - prefer_deprecate_over_delete

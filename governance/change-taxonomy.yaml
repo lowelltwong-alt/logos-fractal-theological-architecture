@@ -1,0 +1,191 @@
+version: 1
+owner: lowelltwong-alt
+purpose: >-
+  Shared change taxonomy for repository structure, ontology, taxonomy,
+  retrieval, and machine-readable governance changes.
+
+lifecycle:
+  - proposed
+  - experimental
+  - active
+  - deprecated
+  - retired
+
+default_rules:
+  immutable_ids: true
+  prefer_deprecate_over_delete: true
+  require_migration_for_breaking_changes: true
+  require_action_log_entry: true
+  require_validation_evidence: true
+  separate_asserted_and_inferred: true
+
+change_types:
+  add:
+    description: Introduce a new file, node, schema term, contract, or governed artifact without changing prior meaning.
+    default_breaking_class: non_breaking
+    required_evidence:
+      - rationale
+      - examples
+      - validation_pass
+    reviewers:
+      - maintainer
+    migration:
+      required: false
+
+  split:
+    description: Replace one overloaded thing with two or more narrower successors.
+    default_breaking_class: breaking
+    required_evidence:
+      - ambiguity_or_overload_evidence
+      - successor_mapping
+      - migration_plan
+      - validation_pass
+    reviewers:
+      - maintainer
+      - steward
+    migration:
+      required: true
+      artifacts:
+        - replacement_map
+        - deprecation_notice
+        - backfill_script_or_manual_steps
+
+  merge:
+    description: Consolidate duplicate or overlapping things into one surviving target.
+    default_breaking_class: breaking
+    required_evidence:
+      - equivalence_or_overlap_rationale
+      - surviving_target
+      - redirect_or_tombstone_plan
+      - validation_pass
+    reviewers:
+      - maintainer
+      - steward
+    migration:
+      required: true
+      artifacts:
+        - redirect_map
+        - deprecation_notice
+        - consumer_impact_note
+
+  reorder:
+    description: Change hierarchy, sequence, or presentation ordering.
+    default_breaking_class: soft_breaking
+    required_evidence:
+      - rationale
+      - impact_note
+      - validation_pass
+    reviewers:
+      - maintainer
+    migration:
+      required: false
+
+  reweight:
+    description: Change preference, priority, ranking weight, or default recommendation.
+    default_breaking_class: soft_breaking
+    required_evidence:
+      - rationale
+      - behavior_diff_note
+      - validation_pass
+    reviewers:
+      - maintainer
+    migration:
+      required: false
+
+  reinterpret:
+    description: Change meaning, scope, or referent of an existing item.
+    default_breaking_class: breaking
+    required_evidence:
+      - semantic_diff
+      - impact_assessment
+      - migration_plan
+      - validation_pass
+    reviewers:
+      - maintainer
+      - steward
+      - auditor
+    migration:
+      required: true
+      artifacts:
+        - replacement_or_new_id
+        - compatibility_note
+        - deprecation_notice
+
+  remap:
+    description: Change mappings or equivalence links between schemes, views, or external vocabularies.
+    default_breaking_class: soft_breaking
+    required_evidence:
+      - mapping_rationale
+      - old_to_new_map
+      - validation_pass
+    reviewers:
+      - maintainer
+      - steward
+    migration:
+      required: true
+      artifacts:
+        - mapping_version_note
+
+  deprecate:
+    description: Mark an item as no longer recommended for new use while keeping it addressable.
+    default_breaking_class: non_breaking
+    required_evidence:
+      - deprecation_reason
+      - replacement_or_none
+      - timeline
+    reviewers:
+      - maintainer
+    migration:
+      required: true
+      artifacts:
+        - deprecation_notice
+        - replacement_pointer
+
+  promote:
+    description: Move an item upward in trust, maturity, or lifecycle state.
+    default_breaking_class: non_breaking
+    required_evidence:
+      - review_complete
+      - validation_pass
+      - provenance_complete
+    reviewers:
+      - maintainer
+      - steward
+    migration:
+      required: false
+
+  retire:
+    description: End active use after deprecation window while preserving historical traceability.
+    default_breaking_class: breaking
+    required_evidence:
+      - retirement_reason
+      - deprecation_window_elapsed
+      - archive_or_tombstone_plan
+    reviewers:
+      - maintainer
+      - steward
+    migration:
+      required: true
+      artifacts:
+        - tombstone_or_archive_record
+        - final_redirect_or_resolution_note
+
+review_roles:
+  maintainer:
+    responsibility: Owns local correctness of files and paths.
+  steward:
+    responsibility: Owns cross-file consistency, lifecycle discipline, and merge safety.
+  auditor:
+    responsibility: Reviews high-impact semantic, provenance, or trust-boundary changes.
+
+action_log_template:
+  fields:
+    - timestamp
+    - author
+    - change_type
+    - paths_changed
+    - breaking_class
+    - lifecycle_transitions
+    - validation_status
+    - migration_artifacts
+    - notes
