@@ -6,9 +6,15 @@ slug: noncanonical
 node_type: noncanonical_root
 system_role: noncanonical_layer
 artifact_tier: boundary_support
+address: christian_ai_theology.boundary.noncanonical.core.layer.noncanonical_root.noncanonical_root.primary
+trust_zone: proposed
+lifecycle_state: draft
+epistemic_status: asserted
 
 domain: christian_ai_theology
 subdomain: noncanonical_sources
+overlay_scope: boundary_extension
+shared_core_status: downstream_from_shared_core
 audience_tags:
   - theology
   - biblical_studies
@@ -29,6 +35,11 @@ related:
   - doctrine.root
   - canon.root
   - biblical_theme.root
+
+source_basis:
+  - noncanonical
+  - governance_architecture
+ai_usage_posture: retrieval_ok_not_auto_promote
 
 authors:
   - id: author.lowell_t_wong

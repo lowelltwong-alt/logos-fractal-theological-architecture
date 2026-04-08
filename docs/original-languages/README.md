@@ -6,9 +6,15 @@ slug: original-languages
 node_type: original_language_root
 system_role: original_language_layer
 artifact_tier: foundational_support
+address: christian_ai_theology.scripture.languages.core.layer.original_language_root.original_language_root.primary
+trust_zone: proposed
+lifecycle_state: draft
+epistemic_status: asserted
 
 domain: christian_ai_theology
 subdomain: original_languages
+overlay_scope: shared_core
+shared_core_status: intended_shared_core
 audience_tags:
   - theology
   - biblical_studies
@@ -27,6 +33,11 @@ related:
   - scripture.root
   - translation.root
   - hermeneutic.root
+
+source_basis:
+  - original_language
+  - governance_architecture
+ai_usage_posture: retrieval_ok_not_auto_promote
 
 authors:
   - id: author.lowell_t_wong

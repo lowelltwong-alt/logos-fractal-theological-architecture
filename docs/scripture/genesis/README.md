@@ -6,9 +6,15 @@ slug: genesis
 node_type: scripture_book
 system_role: scripture_layer
 artifact_tier: foundational_support
+address: christian_ai_theology.scripture.genesis.creation.book.scripture_book.genesis.primary
+trust_zone: proposed
+lifecycle_state: draft
+epistemic_status: asserted
 
 domain: christian_ai_theology
 subdomain: scripture
+overlay_scope: shared_core
+shared_core_status: intended_shared_core
 audience_tags:
   - theology
   - biblical_studies
@@ -32,6 +38,10 @@ related:
   - biblical_theme.fall
   - concept.imago_dei
   - concept.vocation
+
+source_basis:
+  - scripture
+ai_usage_posture: retrieval_ok_not_auto_promote
 
 authors:
   - id: author.lowell_t_wong

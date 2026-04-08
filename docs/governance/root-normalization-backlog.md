@@ -22,19 +22,24 @@ The highest-priority normalization fields are:
 
 ## Highest-priority files
 
-- `docs/scripture/README.md`
-- `docs/hermeneutics/README.md`
-- `docs/biblical-themes/README.md`
-- `docs/translations/README.md`
-- `docs/original-languages/README.md`
-- `docs/manuscripts/README.md`
-- `docs/noncanonical/README.md`
-- `docs/scripture/genesis/README.md`
+- `docs/scripture/README.md` ✅ normalized in phased run (2026-04-08)
+- `docs/hermeneutics/README.md` ✅ normalized in phased run (2026-04-08)
+- `docs/biblical-themes/README.md` ✅ normalized in phased run (2026-04-08)
+- `docs/translations/README.md` ✅ normalized in phased run (2026-04-08)
+- `docs/original-languages/README.md` ✅ normalized in phased run (2026-04-08)
+- `docs/manuscripts/README.md` ✅ normalized in phased run (2026-04-08)
+- `docs/noncanonical/README.md` ✅ normalized in phased run (2026-04-08)
+- `docs/scripture/genesis/README.md` ✅ normalized in phased run (2026-04-08)
 - `docs/scripture/genesis/1.md`
 - `docs/original-languages/hebrew/tselem.md`
 - `docs/original-languages/hebrew/demut.md`
 - `docs/translations/mainstream-modern/esv.md`
 - `docs/manuscripts/mt.md`
+
+## Next phased run target
+
+The next cleanup pass should normalize the remaining five files listed above and then rerun:
+- `scripts/run_ci_validations.sh`
 
 ## Normalization rule
 
