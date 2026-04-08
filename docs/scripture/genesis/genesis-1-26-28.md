@@ -7,7 +7,7 @@ slug: genesis-1-26-28
 node_type: scripture_text
 system_role: scripture_text_object
 artifact_tier: core_candidate
-trust_zone: working_proposed
+trust_zone: proposed
 lifecycle_state: draft
 review_status: unreviewed
 epistemic_status: asserted

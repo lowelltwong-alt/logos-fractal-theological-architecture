@@ -3,7 +3,7 @@ subject: concept.sin
 predicate: constrains
 object: application.ai_governance.fallenness_and_automation_limits
 epistemic_status: asserted
-trust_zone: working_proposed
+trust_zone: proposed
 review_status: unreviewed
 evidence_refs:
   - concept.sin

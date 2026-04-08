@@ -41,6 +41,15 @@ Checks whether claim objects preserve required subject / predicate / object and 
 ### 5. Drift detection hooks
 Checks for vocabulary drift, duplicate nodes, or invalid promotion patterns.
 
+## Standard validation command sequence
+
+Run the repository validators in this order:
+
+1. `python scripts/validate_node_frontmatter.py`
+2. `python scripts/validate_claim_files.py`
+3. `python scripts/validate_cross_references.py`
+4. `python scripts/validate_trust_zone_vocabulary.py`
+
 ## CI rule
 
 Once validation scripts exist, CI should run them on pull requests and major branch changes.

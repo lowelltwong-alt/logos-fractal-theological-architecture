@@ -7,7 +7,7 @@ slug: doctrine
 node_type: doctrine_root
 system_role: doctrine_layer
 artifact_tier: foundational_support
-trust_zone: working_proposed
+trust_zone: proposed
 lifecycle_state: draft
 review_status: unreviewed
 epistemic_status: asserted

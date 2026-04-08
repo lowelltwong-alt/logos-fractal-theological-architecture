@@ -7,7 +7,7 @@ slug: anthropology
 node_type: doctrine_node
 system_role: doctrine_object
 artifact_tier: core_candidate
-trust_zone: working_proposed
+trust_zone: proposed
 lifecycle_state: draft
 review_status: unreviewed
 epistemic_status: asserted

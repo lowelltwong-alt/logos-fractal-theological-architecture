@@ -3,7 +3,7 @@ subject: witness.mt
 predicate: attests
 object: text.genesis.1.26-28
 epistemic_status: asserted
-trust_zone: working_proposed
+trust_zone: proposed
 review_status: unreviewed
 evidence_refs:
   - witness.mt
