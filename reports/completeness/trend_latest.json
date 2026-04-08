@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "object_type": "completeness_trend_report",
+    "trust_zone": "proposed",
+    "lifecycle_status": "active",
+    "provenance_note": "Built from reports/completeness/history.jsonl by scripts/compute_completeness.py.",
+    "reason_for_inclusion": "Show structural completeness improvement (or regression) across runs."
+  },
+  "run_timestamp": "20260408T024600Z",
+  "latest": {
+    "run_timestamp": "20260408T024600Z",
+    "node_count": 19,
+    "average_score": 0.8863,
+    "median_score": 0.9142,
+    "threshold_counts": {
+      "lt_0_60": 0,
+      "lt_0_75": 3,
+      "gte_0_90": 11
+    }
+  },
+  "previous": {
+    "run_timestamp": "20260408T024500Z",
+    "node_count": 19,
+    "average_score": 0.8863,
+    "median_score": 0.9142,
+    "threshold_counts": {
+      "lt_0_60": 0,
+      "lt_0_75": 3,
+      "gte_0_90": 11
+    }
+  },
+  "delta": {
+    "average_score_delta": 0.0,
+    "median_score_delta": 0.0,
+    "lt_0_75_delta": 0
+  },
+  "history": [
+    {
+      "run_timestamp": "20260408T024500Z",
+      "node_count": 19,
+      "average_score": 0.8863,
+      "median_score": 0.9142,
+      "threshold_counts": {
+        "lt_0_60": 0,
+        "lt_0_75": 3,
+        "gte_0_90": 11
+      }
+    },
+    {
+      "run_timestamp": "20260408T024600Z",
+      "node_count": 19,
+      "average_score": 0.8863,
+      "median_score": 0.9142,
+      "threshold_counts": {
+        "lt_0_60": 0,
+        "lt_0_75": 3,
+        "gte_0_90": 11
+      }
+    }
+  ]
+}
