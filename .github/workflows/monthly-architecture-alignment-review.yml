@@ -1,0 +1,60 @@
+name: Monthly Architecture Alignment Review
+
+on:
+  schedule:
+    - cron: '0 14 1 * *'
+  workflow_dispatch:
+
+jobs:
+  open_monthly_review_issue:
+    name: Open monthly architecture alignment review issue
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create monthly review issue when missing
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const now = new Date();
+            const year = now.getUTCFullYear();
+            const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+            const title = `Monthly Architecture Alignment Review - ${year}-${month}`;
+
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100
+            });
+
+            const alreadyOpen = issues.some((issue) => issue.title === title);
+            if (alreadyOpen) {
+              core.info(`Issue already open: ${title}`);
+              return;
+            }
+
+            const body = [
+              '## Purpose',
+              'Run the monthly architecture alignment review against canonical governance commitments.',
+              '',
+              '## Fixed checklist',
+              '- [ ] Re-validate trust-zone boundaries and confirm no higher-trust dependency on lower-trust sources.',
+              '- [ ] Re-validate architecture invariants and capture any drift signals.',
+              '- [ ] Confirm doctrine topic, doctrine view, and doctrine assessment remain structurally separated.',
+              '- [ ] Confirm provenance notes are current for all new or materially changed governed artifacts since last review.',
+              '- [ ] Review active deprecations, migration paths, and sunset timing for superseded structures.',
+              '- [ ] Confirm required PR governance sections are still enforced by automation.',
+              '- [ ] Record decisions and follow-up actions in the governance decision ledger.',
+              '',
+              '## Completion criteria',
+              '- [ ] Findings logged with links to changed governance artifacts.',
+              '- [ ] Any corrective actions converted to trackable issues or PRs.'
+            ].join('\n');
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body
+            });
