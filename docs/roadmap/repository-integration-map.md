@@ -100,6 +100,15 @@ Examples:
 
 This layer is meant to connect the repository’s theological and graph logic to a future confidence-aware textual corpus rather than functioning as a separate manuscript project.
 
+### 9. Exceptions-lake and learning-loop layer
+This layer captures expectation failures, pressure vectors, and governed adaptation proposals so the architecture can learn without silent doctrinal drift.
+
+Examples:
+- nine-layer exception addresses
+- exception event objects
+- adaptation promotion records
+- links from exception pressure to rule/taxonomy/ontology/governance updates
+
 ## How the layers connect
 The primary-sources layer extends the scripture, lexical, manuscript, and translation layers by preserving a path from witness or fragment to reconstruction, lexical analysis, translation comparison, and downstream doctrine or theology.
 
@@ -112,6 +121,7 @@ The intended pattern is:
 - canon thinkers interact with doctrine, concept, and scriptural themes
 - boundary layers document what may not function as primary doctrinal authority
 - graph/concordance layers make the connections machine-readable and reviewable
+- exceptions-lake records preserve model resistance and route reviewed adaptation back into governed layers
 
 ## Practical repository reading order
 

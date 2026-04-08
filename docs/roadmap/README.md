@@ -31,6 +31,7 @@ This roadmap organizes the Logos project in build order.
 ## Phase 6. LAIRCA Layer
 - formalize Logos-grounded configuration of Architect, Inform, Rank, Commit, Act
 - define what remains theological, human, hybrid, or automatable
+- integrate exceptions-lake learning loops into Architect/Inform/Rank/Commit/Act governance
 
 ## Phase 7. Integrations and Use Cases
 - crosswalk to AIRCA
@@ -50,3 +51,6 @@ This roadmap organizes the Logos project in build order.
 - maintain open questions
 - track unresolved tensions
 - add review and refresh cadence for living artifacts
+
+See also:
+- `exceptions-lake-learning-loop-roadmap-extension.md`

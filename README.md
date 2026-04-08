@@ -96,6 +96,18 @@ Tool power, model fluency, or operational convenience should not define the arch
 
 The repository should be broad enough for serious Christian reuse while still allowing optional overlays for narrower traditions, local doctrinal commitments, or institution-specific emphases.
 
+### 8. Learn from exception pressure without silent doctrine drift
+
+The repository should preserve where reality resists current models through a governed exceptions-lake layer.
+
+Expectation, exception, and adaptation should remain distinct objects so learning remains traceable.
+
+See:
+- `docs/governance/exceptions-lake-and-learning-loop.md`
+- `docs/governance/exceptions-lake-integration-note.md`
+- `docs/roadmap/exceptions-lake-learning-loop-roadmap-extension.md`
+- `data/graph/schemes/exceptions-lake.md`
+
 ## Structure and vocabulary discipline
 
 This repository depends on disciplined recursive structure and controlled vocabulary.

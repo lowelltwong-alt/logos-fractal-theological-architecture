@@ -28,6 +28,7 @@ Examples may include:
 - translations
 - manuscripts
 - boundary sources
+- exceptions lake
 
 ## Relation to the rest of the repository
 
