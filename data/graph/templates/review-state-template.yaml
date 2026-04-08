@@ -1,0 +1,15 @@
+id: review-state.example.001
+object_type: ReviewState
+status: active
+applies_to_object_id: claim.example.trinity.affirms.nicene-core
+current_state: proposed
+allowed_next_states:
+  - reviewed
+  - disputed
+review_requirements:
+  required_roles:
+    - reviewer
+    - provenance_auditor
+  minimum_approval_count: 1
+notes: >-
+  Replace with workflow notes if this object family becomes first-class rather than a simple enum.
