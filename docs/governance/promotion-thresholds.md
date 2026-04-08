@@ -188,3 +188,20 @@ Promote repeated structure when reuse becomes real.
 Keep material local when independence is still weak.
 
 Fractal growth should make the repository clearer, not merely larger.
+
+## Completeness-score gate for trust-zone promotion
+
+Promotion from `proposed` into higher trust zones should include an architectural completeness gate.
+
+Use the generated completeness reports (`reports/completeness/*.json`) as an explicit threshold check:
+
+- proposed -> tradition-scoped: weighted completeness score >= 0.78
+- proposed -> canonical: weighted completeness score >= 0.90
+
+Before promotion, verify the node also has:
+- review posture at `editor_reviewed`
+- no missing required identity fields
+- no missing required provenance fields
+- relation coverage dimension score >= 0.80
+
+These thresholds should be treated as governance defaults and can be tightened for sensitive doctrine or boundary-source material.

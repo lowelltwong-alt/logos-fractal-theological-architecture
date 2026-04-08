@@ -16,6 +16,7 @@ STAGES=(
   "metadata_lint_and_normalization"
   "cross_reference_validation"
   "link_validation"
+  "completeness_scoring"
   "report_generation"
 )
 
@@ -288,6 +289,14 @@ PY
   return 0
 }
 
+stage_completeness_scoring() {
+  if ! run_cmd "Compute node completeness reports" python3 "$ROOT_DIR/scripts/compute_completeness.py" --run-ts "$RUN_TS"; then
+    handle_check_failure "Completeness scoring failed"
+    return $?
+  fi
+  return 0
+}
+
 stage_report_generation() {
   log INFO "Generating summary report at ${SUMMARY_FILE}"
   {
@@ -334,6 +343,9 @@ if ! run_stage "cross_reference_validation" stage_cross_reference_validation; th
   exit 1
 fi
 if ! run_stage "link_validation" stage_link_validation; then
+  exit 1
+fi
+if ! run_stage "completeness_scoring" stage_completeness_scoring; then
   exit 1
 fi
 if ! run_stage "report_generation" stage_report_generation; then

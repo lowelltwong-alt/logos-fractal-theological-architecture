@@ -1,0 +1,284 @@
+{
+  "metadata": {
+    "object_type": "completeness_requirement_registry",
+    "trust_zone": "canonical",
+    "lifecycle_status": "active",
+    "provenance_note": "Created on 2026-04-08 to standardize architectural completeness scoring inputs.",
+    "reason_for_inclusion": "Define per-node-type completeness requirements so scoring is explicit and recursively aligned."
+  },
+  "default_requirements": {
+    "required_identity_fields": [
+      "id",
+      "anchor",
+      "title",
+      "version",
+      "status"
+    ],
+    "required_provenance_fields": [
+      "created_by",
+      "last_modified_by",
+      "asserted_by",
+      "review_state"
+    ],
+    "accepted_trust_zones": [
+      "canonical",
+      "tradition-scoped",
+      "proposed",
+      "inferred",
+      "deprecated",
+      "learning-sidecar"
+    ],
+    "required_relationship_keys": [
+      "typed_edges",
+      "related_to"
+    ],
+    "minimum_typed_edges": 1,
+    "minimum_retrieval_links": 1,
+    "accepted_review_states": [
+      "editor_reviewed",
+      "community_proposed",
+      "unreviewed"
+    ],
+    "preferred_review_states": [
+      "editor_reviewed"
+    ]
+  },
+  "node_type_requirements": {
+    "verse_node": {
+      "required_identity_fields": [
+        "id",
+        "anchor",
+        "title",
+        "version",
+        "status"
+      ],
+      "required_provenance_fields": [
+        "created_by",
+        "last_modified_by",
+        "asserted_by",
+        "review_state"
+      ],
+      "required_relationship_keys": [
+        "typed_edges",
+        "enables"
+      ],
+      "minimum_typed_edges": 1,
+      "minimum_retrieval_links": 1,
+      "accepted_review_states": [
+        "editor_reviewed",
+        "community_proposed",
+        "unreviewed"
+      ],
+      "preferred_review_states": [
+        "editor_reviewed"
+      ]
+    },
+    "passage_node": {
+      "required_identity_fields": [
+        "id",
+        "anchor",
+        "title",
+        "version",
+        "status"
+      ],
+      "required_provenance_fields": [
+        "created_by",
+        "last_modified_by",
+        "asserted_by",
+        "review_state"
+      ],
+      "required_relationship_keys": [
+        "typed_edges",
+        "children",
+        "enables"
+      ],
+      "minimum_typed_edges": 2,
+      "minimum_retrieval_links": 2,
+      "accepted_review_states": [
+        "editor_reviewed",
+        "community_proposed",
+        "unreviewed"
+      ],
+      "preferred_review_states": [
+        "editor_reviewed"
+      ]
+    },
+    "concept_node": {
+      "required_identity_fields": [
+        "id",
+        "anchor",
+        "title",
+        "version",
+        "status"
+      ],
+      "required_provenance_fields": [
+        "created_by",
+        "last_modified_by",
+        "asserted_by",
+        "review_state"
+      ],
+      "required_relationship_keys": [
+        "typed_edges",
+        "related_to",
+        "enables"
+      ],
+      "minimum_typed_edges": 2,
+      "minimum_retrieval_links": 2,
+      "accepted_review_states": [
+        "editor_reviewed",
+        "community_proposed",
+        "unreviewed"
+      ],
+      "preferred_review_states": [
+        "editor_reviewed"
+      ]
+    },
+    "doctrine_node": {
+      "required_identity_fields": [
+        "id",
+        "anchor",
+        "title",
+        "version",
+        "status"
+      ],
+      "required_provenance_fields": [
+        "created_by",
+        "last_modified_by",
+        "asserted_by",
+        "review_state"
+      ],
+      "required_relationship_keys": [
+        "typed_edges",
+        "depends_on",
+        "related_to"
+      ],
+      "minimum_typed_edges": 2,
+      "minimum_retrieval_links": 2,
+      "accepted_review_states": [
+        "editor_reviewed",
+        "community_proposed",
+        "unreviewed"
+      ],
+      "preferred_review_states": [
+        "editor_reviewed"
+      ]
+    },
+    "topic_node": {
+      "required_identity_fields": [
+        "id",
+        "anchor",
+        "title",
+        "version",
+        "status"
+      ],
+      "required_provenance_fields": [
+        "created_by",
+        "last_modified_by",
+        "asserted_by",
+        "review_state"
+      ],
+      "required_relationship_keys": [
+        "typed_edges",
+        "related_to",
+        "enables"
+      ],
+      "minimum_typed_edges": 2,
+      "minimum_retrieval_links": 2,
+      "accepted_review_states": [
+        "editor_reviewed",
+        "community_proposed",
+        "unreviewed"
+      ],
+      "preferred_review_states": [
+        "editor_reviewed"
+      ]
+    },
+    "translation_witness_node": {
+      "required_identity_fields": [
+        "id",
+        "anchor",
+        "title",
+        "version",
+        "status"
+      ],
+      "required_provenance_fields": [
+        "created_by",
+        "last_modified_by",
+        "asserted_by",
+        "review_state"
+      ],
+      "required_relationship_keys": [
+        "typed_edges",
+        "depends_on"
+      ],
+      "minimum_typed_edges": 1,
+      "minimum_retrieval_links": 1,
+      "accepted_review_states": [
+        "editor_reviewed",
+        "community_proposed",
+        "unreviewed"
+      ],
+      "preferred_review_states": [
+        "editor_reviewed"
+      ]
+    },
+    "cross_reference_node": {
+      "required_identity_fields": [
+        "id",
+        "anchor",
+        "title",
+        "version",
+        "status"
+      ],
+      "required_provenance_fields": [
+        "created_by",
+        "last_modified_by",
+        "asserted_by",
+        "review_state"
+      ],
+      "required_relationship_keys": [
+        "typed_edges",
+        "depends_on"
+      ],
+      "minimum_typed_edges": 1,
+      "minimum_retrieval_links": 1,
+      "accepted_review_states": [
+        "editor_reviewed",
+        "community_proposed",
+        "unreviewed"
+      ],
+      "preferred_review_states": [
+        "editor_reviewed"
+      ]
+    },
+    "entity_person_node": {
+      "required_identity_fields": [
+        "id",
+        "anchor",
+        "title",
+        "version",
+        "status"
+      ],
+      "required_provenance_fields": [
+        "created_by",
+        "last_modified_by",
+        "asserted_by",
+        "review_state"
+      ],
+      "required_relationship_keys": [
+        "typed_edges",
+        "related_to"
+      ],
+      "minimum_typed_edges": 1,
+      "minimum_retrieval_links": 1,
+      "accepted_review_states": [
+        "editor_reviewed",
+        "community_proposed",
+        "unreviewed"
+      ],
+      "preferred_review_states": [
+        "editor_reviewed"
+      ]
+    }
+  }
+}
