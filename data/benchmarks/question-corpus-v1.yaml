@@ -1,0 +1,911 @@
+corpus_id: benchmark-question-corpus-v1
+title: Benchmark Question Corpus
+status: active
+purpose: Initial regression suite for evaluating whether ontology, dependency, profile, and routing changes improve or degrade answer quality across major theological routes.
+scoring_dimensions:
+- text_grounding
+- scope_correctness
+- distinction_handling
+- tradition_fairness
+- theological_coherence
+- pastoral_tone
+- citation_provenance_discipline
+- uncertainty_honesty
+routes:
+- id: exegetical
+  description: Passage handling, lexical sensitivity, context, intertext, and ambiguity restraint.
+- id: dogmatic
+  description: Doctrinal precision, dependency awareness, and tradition-scoped comparison.
+- id: historical_theology
+  description: Diachronic development, source placement, and non-anachronistic comparison.
+- id: pastoral_theology
+  description: Doctrine-to-care translation, wisdom under ambiguity, and non-mechanical application.
+- id: ethics_public_theology
+  description: Public-square reasoning, prudence, sacred values, and tradition-aware application.
+question_count: 40
+questions:
+- id: exe-001
+  route: exegetical
+  question: What does “faith” mean in Romans 3:28, and does the verse teach faith as trust, faithfulness, or both?
+  primary_texts:
+  - scripture:romans-3-28
+  - concept:pistis
+  - canon-thinker:paul
+  expected_answer_mode: uncertain/disputed
+  difficulty: medium
+  requires_scope: false
+  key_dependencies:
+  - doctrine:justification
+  - concept:faith
+  - canon-thinker:paul
+  - scripture:romans
+  evaluation_targets:
+  - lexical nuance
+  - pauline context
+  - ambiguity handling
+  - restraint with contested lexical claims
+  failure_modes:
+  - imports later dogmatics too early
+  - treats one lexical option as uncontested
+  tags:
+  - lexical-risk
+  - requires-disagreement-handling
+  - downstream-heavy
+- id: exe-002
+  route: exegetical
+  question: In John 21, does Jesus’ use of different words for love with Peter materially change the meaning of the passage?
+  primary_texts:
+  - scripture:john-21
+  - concept:agape
+  - concept:phileo
+  - canon-thinker:peter
+  expected_answer_mode: uncertain/disputed
+  difficulty: medium
+  requires_scope: false
+  key_dependencies:
+  - concept:love
+  - scripture:john
+  - canon-thinker:peter
+  evaluation_targets:
+  - greek lexical care
+  - discourse context
+  - restraint with overclaimed word-study conclusions
+  failure_modes:
+  - sermon cliché treated as certainty
+  tags:
+  - lexical-risk
+  - scope-sensitive
+- id: exe-003
+  route: exegetical
+  question: How should “this is my body” in the Synoptics be interpreted in immediate literary context?
+  primary_texts:
+  - scripture:matthew-26
+  - scripture:mark-14
+  - scripture:luke-22
+  expected_answer_mode: comparative
+  difficulty: medium
+  requires_scope: true
+  key_dependencies:
+  - doctrine:eucharist
+  - doctrine:sacrament
+  - concept:presence
+  evaluation_targets:
+  - text-first reading before later doctrinal systems
+  - literary context
+  failure_modes:
+  - jumps straight to tradition without doing exegesis
+  tags:
+  - scope-sensitive
+  - tradition-variant
+  - downstream-heavy
+- id: exe-004
+  route: exegetical
+  question: Does Matthew 16:18 identify Peter himself, Peter’s confession, or both as the “rock”?
+  primary_texts:
+  - scripture:matthew-16-18
+  expected_answer_mode: scoped_by_tradition
+  difficulty: medium
+  requires_scope: true
+  key_dependencies:
+  - canon-thinker:peter
+  - doctrine:church
+  - concept:authority
+  evaluation_targets:
+  - grammar
+  - intertext
+  - ecclesial downstream implications without collapsing them into exegesis
+  failure_modes:
+  - hidden confessional answer disguised as neutral exegesis
+  tags:
+  - scope-sensitive
+  - tradition-variant
+  - downstream-heavy
+- id: exe-005
+  route: exegetical
+  question: What is the most responsible reading of “baptism now saves you” in 1 Peter 3:21?
+  primary_texts:
+  - scripture:1-peter-3-21
+  expected_answer_mode: scoped_by_tradition
+  difficulty: medium
+  requires_scope: true
+  key_dependencies:
+  - doctrine:baptism
+  - doctrine:salvation
+  - doctrine:sacrament
+  evaluation_targets:
+  - difficult text handling
+  - qualifier handling
+  - relation between sign and reality
+  failure_modes:
+  - ignores immediate qualification in the verse
+  tags:
+  - scope-sensitive
+  - tradition-variant
+  - downstream-heavy
+- id: exe-006
+  route: exegetical
+  question: In Genesis 1–2, what does humanity being made in the image of God most directly imply?
+  primary_texts:
+  - scripture:genesis-1
+  - scripture:genesis-2
+  expected_answer_mode: synthesis
+  difficulty: easy
+  requires_scope: false
+  key_dependencies:
+  - doctrine:anthropology
+  - concept:imago-dei
+  - concept:vocation
+  evaluation_targets:
+  - canonical context
+  - anthropology
+  - restraint before later systematic loading
+  failure_modes:
+  - overloads with modern dignity discourse without textual grounding
+  tags:
+  - downstream-heavy
+- id: exe-007
+  route: exegetical
+  question: Is James 2 contradicting Paul on justification?
+  primary_texts:
+  - scripture:james-2
+  - scripture:romans-3
+  - scripture:galatians-2
+  expected_answer_mode: synthesis
+  difficulty: medium
+  requires_scope: false
+  key_dependencies:
+  - doctrine:justification
+  - concept:faith
+  - concept:works
+  - canon-thinker:james
+  - canon-thinker:paul
+  evaluation_targets:
+  - canon reconciliation
+  - semantic distinction
+  - contextual reading
+  failure_modes:
+  - superficial contradiction or flattening
+  tags:
+  - requires-disagreement-handling
+  - downstream-heavy
+- id: exe-008
+  route: exegetical
+  question: How should we read the use of Isaiah in Matthew 1:23 with respect to prophecy and fulfillment?
+  primary_texts:
+  - scripture:matthew-1-23
+  - scripture:isaiah-7-14
+  expected_answer_mode: uncertain/disputed
+  difficulty: hard
+  requires_scope: false
+  key_dependencies:
+  - concept:fulfillment
+  - concept:septuagint
+  - doctrine:scripture
+  evaluation_targets:
+  - OT/NT intertext
+  - translation issues
+  - sensus plenior questions
+  failure_modes:
+  - ignores Hebrew/Greek textual layer
+  tags:
+  - lexical-risk
+  - historical-development
+- id: dog-001
+  route: dogmatic
+  question: How is the Trinity one God in three persons without collapsing into modalism or tritheism?
+  primary_texts:
+  - council:nicaea
+  - council:constantinople
+  expected_answer_mode: direct_answer
+  difficulty: medium
+  requires_scope: false
+  key_dependencies:
+  - doctrine:trinity
+  - concept:person
+  - concept:essence
+  evaluation_targets:
+  - doctrinal precision
+  - historic boundary guarding
+  failure_modes:
+  - vague analogy instead of doctrine
+  tags:
+  - downstream-heavy
+- id: dog-002
+  route: dogmatic
+  question: What is the difference between justification and sanctification, and why does the distinction matter?
+  primary_texts:
+  - doctrine:justification
+  - doctrine:sanctification
+  expected_answer_mode: direct_answer
+  difficulty: easy
+  requires_scope: false
+  key_dependencies:
+  - doctrine:union-with-christ
+  - concept:assurance
+  evaluation_targets:
+  - doctrinal distinction
+  - dependency awareness
+  - pastoral significance
+  failure_modes:
+  - merges categories or over-separates them
+  tags:
+  - downstream-heavy
+  - high-pastoral-risk
+- id: dog-003
+  route: dogmatic
+  question: Is baptism primarily a sign, a means of grace, or both?
+  primary_texts:
+  - doctrine:baptism
+  expected_answer_mode: scoped_by_tradition
+  difficulty: medium
+  requires_scope: true
+  key_dependencies:
+  - doctrine:sacrament
+  - concept:covenant
+  - concept:regeneration
+  - doctrine:church
+  evaluation_targets:
+  - tradition-scoped doctrinal comparison
+  failure_modes:
+  - gives one view as default without scope
+  tags:
+  - tradition-variant
+  - scope-sensitive
+- id: dog-004
+  route: dogmatic
+  question: Did Christ die for all people equally, or particularly for the elect?
+  primary_texts:
+  - doctrine:atonement
+  - doctrine:election
+  expected_answer_mode: scoped_by_tradition
+  difficulty: hard
+  requires_scope: true
+  key_dependencies:
+  - doctrine:atonement
+  - doctrine:election
+  - doctrine:grace
+  - doctrine:salvation
+  evaluation_targets:
+  - compare atonement models fairly
+  - distinguish extent intent application
+  failure_modes:
+  - caricatures either side
+  tags:
+  - tradition-variant
+  - requires-disagreement-handling
+- id: dog-005
+  route: dogmatic
+  question: What does it mean to say Scripture is inspired and authoritative?
+  primary_texts:
+  - doctrine:scripture
+  expected_answer_mode: scoped_by_tradition
+  difficulty: medium
+  requires_scope: true
+  key_dependencies:
+  - concept:revelation
+  - concept:inspiration
+  - concept:canon
+  - doctrine:church
+  evaluation_targets:
+  - doctrine of Scripture
+  - authority structure
+  - tradition variance
+  failure_modes:
+  - Protestant default presented as universal Christianity
+  tags:
+  - tradition-variant
+  - scope-sensitive
+- id: dog-006
+  route: dogmatic
+  question: How should original sin be described in relation to guilt, corruption, and human freedom?
+  primary_texts:
+  - doctrine:original-sin
+  expected_answer_mode: scoped_by_tradition
+  difficulty: hard
+  requires_scope: true
+  key_dependencies:
+  - doctrine:sin
+  - doctrine:anthropology
+  - doctrine:grace
+  - concept:will
+  evaluation_targets:
+  - doctrinal precision
+  - tradition sensitivity
+  failure_modes:
+  - unmarked Augustinian or Reformed default
+  tags:
+  - tradition-variant
+  - scope-sensitive
+- id: dog-007
+  route: dogmatic
+  question: What is the difference between the visible and invisible church?
+  primary_texts:
+  - doctrine:church
+  expected_answer_mode: scoped_by_tradition
+  difficulty: medium
+  requires_scope: true
+  key_dependencies:
+  - doctrine:church
+  - concept:covenant
+  - doctrine:sacrament
+  evaluation_targets:
+  - ecclesiology
+  - category distinction
+  - tradition dependence
+  failure_modes:
+  - answers only from one confessional tradition
+  tags:
+  - tradition-variant
+  - scope-sensitive
+- id: dog-008
+  route: dogmatic
+  question: What is the beatific vision, and how does it relate to glorification?
+  primary_texts:
+  - doctrine:beatific-vision
+  - doctrine:glorification
+  expected_answer_mode: synthesis
+  difficulty: hard
+  requires_scope: false
+  key_dependencies:
+  - doctrine:glorification
+  - concept:union-with-god
+  - doctrine:eschatology
+  evaluation_targets:
+  - lesser-used doctrinal retrieval depth
+  - theological synthesis
+  failure_modes:
+  - shallow generic answer
+  tags:
+  - needs-source-prioritization
+- id: his-001
+  route: historical_theology
+  question: How did the Nicene doctrine of Christ differ from Arianism at the point of greatest controversy?
+  primary_texts:
+  - council:nicaea
+  - canon-thinker:arius
+  - canon-thinker:athanasius
+  expected_answer_mode: direct_answer
+  difficulty: medium
+  requires_scope: false
+  key_dependencies:
+  - doctrine:christology
+  - concept:homoousios
+  evaluation_targets:
+  - historical precision
+  - controversy framing
+  failure_modes:
+  - cartoon history
+  tags:
+  - historical-development
+- id: his-002
+  route: historical_theology
+  question: How did Augustine shape later Western views of grace and sin?
+  primary_texts:
+  - canon-thinker:augustine
+  expected_answer_mode: synthesis
+  difficulty: medium
+  requires_scope: false
+  key_dependencies:
+  - canon-thinker:augustine
+  - doctrine:grace
+  - doctrine:original-sin
+  - doctrine:predestination
+  evaluation_targets:
+  - historical influence tracing
+  - downstream dependency mapping
+  failure_modes:
+  - totalizes Augustine’s effect
+  tags:
+  - historical-development
+  - downstream-heavy
+- id: his-003
+  route: historical_theology
+  question: What changed in the Reformation debate over justification compared with medieval theology?
+  primary_texts:
+  - canon-thinker:luther
+  - council:trent
+  expected_answer_mode: comparative
+  difficulty: hard
+  requires_scope: false
+  key_dependencies:
+  - doctrine:justification
+  - concept:merit
+  - doctrine:grace
+  evaluation_targets:
+  - continuity/discontinuity
+  - doctrinal and institutional dimensions
+  failure_modes:
+  - medieval bad vs Reformation good simplification
+  tags:
+  - historical-development
+  - requires-disagreement-handling
+- id: his-004
+  route: historical_theology
+  question: How did views of the Eucharist diverge among Luther, Zwingli, and Calvin?
+  primary_texts:
+  - canon-thinker:luther
+  - canon-thinker:zwingli
+  - canon-thinker:calvin
+  expected_answer_mode: comparative
+  difficulty: medium
+  requires_scope: false
+  key_dependencies:
+  - doctrine:eucharist
+  - concept:presence
+  - doctrine:sacrament
+  evaluation_targets:
+  - comparative clarity across near-neighbor traditions
+  failure_modes:
+  - flattens Protestants together
+  tags:
+  - tradition-variant
+  - historical-development
+- id: his-005
+  route: historical_theology
+  question: Why did Chalcedon matter for later Christology?
+  primary_texts:
+  - council:chalcedon
+  expected_answer_mode: direct_answer
+  difficulty: medium
+  requires_scope: false
+  key_dependencies:
+  - doctrine:christology
+  - concept:two-natures
+  - concept:person
+  evaluation_targets:
+  - doctrinal history
+  - downstream stability
+  failure_modes:
+  - only slogan-level summary
+  tags:
+  - historical-development
+  - downstream-heavy
+- id: his-006
+  route: historical_theology
+  question: How did dispensationalism differ from classic covenant theology in structuring redemptive history?
+  primary_texts:
+  - tradition:dispensationalism
+  - tradition:covenant-theology
+  expected_answer_mode: comparative
+  difficulty: hard
+  requires_scope: false
+  key_dependencies:
+  - concept:covenant
+  - concept:israel-and-church
+  - doctrine:eschatology
+  - concept:hermeneutics
+  evaluation_targets:
+  - framework comparison
+  - modern theological development
+  failure_modes:
+  - treats one as simply biblical and the other not
+  tags:
+  - tradition-variant
+  - historical-development
+- id: his-007
+  route: historical_theology
+  question: What were the main theological concerns behind iconoclasm and icon veneration debates?
+  primary_texts:
+  - council:nicaea-ii
+  expected_answer_mode: comparative
+  difficulty: hard
+  requires_scope: false
+  key_dependencies:
+  - concept:incarnation
+  - concept:worship
+  - concept:idolatry
+  - tradition:eastern-orthodox
+  evaluation_targets:
+  - non-Western breadth
+  - historical empathy
+  failure_modes:
+  - ignores Eastern Orthodox logic
+  tags:
+  - tradition-variant
+  - historical-development
+- id: his-008
+  route: historical_theology
+  question: How did Vatican II reshape Roman Catholic self-understanding without abandoning prior doctrine?
+  primary_texts:
+  - council:vatican-ii
+  expected_answer_mode: comparative
+  difficulty: hard
+  requires_scope: true
+  key_dependencies:
+  - tradition:roman-catholic
+  - doctrine:church
+  - concept:authority
+  - concept:modernity
+  evaluation_targets:
+  - development vs rupture framing
+  failure_modes:
+  - polemical framing
+  tags:
+  - tradition-variant
+  - historical-development
+  - scope-sensitive
+- id: pas-001
+  route: pastoral_theology
+  question: How should a pastor counsel someone who says, “I believe, but I feel no assurance of salvation”?
+  primary_texts:
+  - doctrine:assurance
+  - doctrine:justification
+  expected_answer_mode: synthesis
+  difficulty: medium
+  requires_scope: true
+  key_dependencies:
+  - doctrine:assurance
+  - doctrine:justification
+  - doctrine:sanctification
+  - concept:conscience
+  evaluation_targets:
+  - doctrinal accuracy plus pastoral sensitivity
+  failure_modes:
+  - abstract doctrine only or sentiment without theology
+  tags:
+  - high-pastoral-risk
+  - scope-sensitive
+- id: pas-002
+  route: pastoral_theology
+  question: How should a church respond when a member confesses habitual hidden sin but fears exposure?
+  primary_texts:
+  - doctrine:repentance
+  - doctrine:church-discipline
+  expected_answer_mode: synthesis
+  difficulty: medium
+  requires_scope: false
+  key_dependencies:
+  - doctrine:repentance
+  - concept:confession
+  - doctrine:church-discipline
+  - concept:grace
+  evaluation_targets:
+  - pastoral care
+  - discipline
+  - restoration
+  - prudence
+  failure_modes:
+  - severity without restoration or restoration without seriousness
+  tags:
+  - high-pastoral-risk
+- id: pas-003
+  route: pastoral_theology
+  question: How would you explain the Trinity to a new believer without teaching heresy?
+  primary_texts:
+  - doctrine:trinity
+  expected_answer_mode: direct_answer
+  difficulty: easy
+  requires_scope: false
+  key_dependencies:
+  - doctrine:trinity
+  - concept:person
+  - concept:essence
+  evaluation_targets:
+  - simplification without distortion
+  failure_modes:
+  - bad analogies presented as doctrine
+  tags:
+  - high-pastoral-risk
+- id: pas-004
+  route: pastoral_theology
+  question: What pastoral difference does belief in God’s providence make after sudden loss?
+  primary_texts:
+  - doctrine:providence
+  - scripture:job
+  - scripture:psalms-of-lament
+  expected_answer_mode: synthesis
+  difficulty: medium
+  requires_scope: false
+  key_dependencies:
+  - doctrine:providence
+  - concept:suffering
+  - concept:lament
+  - concept:sovereignty
+  evaluation_targets:
+  - doctrine-to-care translation
+  failure_modes:
+  - trite comfort speech
+  tags:
+  - high-pastoral-risk
+- id: pas-005
+  route: pastoral_theology
+  question: How should a pastor handle disagreement in a church over baptism when both sides appeal to Scripture?
+  primary_texts:
+  - doctrine:baptism
+  - doctrine:church
+  expected_answer_mode: scoped_by_tradition
+  difficulty: medium
+  requires_scope: true
+  key_dependencies:
+  - doctrine:baptism
+  - concept:conscience
+  - concept:unity
+  - doctrine:church
+  evaluation_targets:
+  - conflict navigation
+  - secondary vs primary doctrine handling
+  failure_modes:
+  - false neutrality or unnecessary polarization
+  tags:
+  - tradition-variant
+  - high-pastoral-risk
+  - scope-sensitive
+- id: pas-006
+  route: pastoral_theology
+  question: What is a wise pastoral approach to a person troubled by intrusive blasphemous thoughts?
+  primary_texts:
+  - concept:temptation
+  - concept:conscience
+  expected_answer_mode: synthesis
+  difficulty: hard
+  requires_scope: true
+  key_dependencies:
+  - concept:temptation
+  - doctrine:sin
+  - concept:conscience
+  - concept:spiritual-warfare
+  - concept:prudence
+  evaluation_targets:
+  - pastoral discernment
+  - spiritual care
+  - possible overlap with mental health
+  failure_modes:
+  - treats all distress as either only sin or only pathology
+  tags:
+  - high-pastoral-risk
+  - scope-sensitive
+- id: pas-007
+  route: pastoral_theology
+  question: How should preaching on judgment be done without manipulation or softening the text?
+  primary_texts:
+  - concept:judgment
+  - concept:preaching
+  expected_answer_mode: synthesis
+  difficulty: medium
+  requires_scope: false
+  key_dependencies:
+  - concept:judgment
+  - concept:gospel
+  - concept:repentance
+  - concept:preaching
+  evaluation_targets:
+  - rhetoric
+  - truth
+  - charity
+  - moral seriousness
+  failure_modes:
+  - fear tactic or total avoidance
+  tags:
+  - high-pastoral-risk
+- id: pas-008
+  route: pastoral_theology
+  question: What distinguishes repentance from shame in Christian pastoral care?
+  primary_texts:
+  - doctrine:repentance
+  - concept:identity-in-christ
+  expected_answer_mode: direct_answer
+  difficulty: medium
+  requires_scope: false
+  key_dependencies:
+  - doctrine:repentance
+  - doctrine:sin
+  - concept:guilt
+  - concept:restoration
+  - concept:identity
+  evaluation_targets:
+  - soul care precision
+  - doctrinal anthropology
+  failure_modes:
+  - therapeutic flattening or harsh moralism
+  tags:
+  - high-pastoral-risk
+- id: eth-001
+  route: ethics_public_theology
+  question: How should Christians think about immigration in light of both justice and political order?
+  primary_texts:
+  - scripture:leviticus-19
+  - scripture:romans-13
+  expected_answer_mode: scoped_by_tradition
+  difficulty: hard
+  requires_scope: true
+  key_dependencies:
+  - concept:neighbor-love
+  - concept:state
+  - concept:justice
+  - concept:nation
+  - concept:hospitality
+  evaluation_targets:
+  - public theology
+  - biblical themes
+  - prudential reasoning
+  failure_modes:
+  - partisan answer disguised as theology
+  tags:
+  - public-square
+  - scope-sensitive
+- id: eth-002
+  route: ethics_public_theology
+  question: What principles should govern Christian use of AI in decision-making?
+  primary_texts:
+  - concept:personhood
+  - concept:truth
+  - concept:stewardship
+  expected_answer_mode: synthesis
+  difficulty: hard
+  requires_scope: false
+  key_dependencies:
+  - concept:personhood
+  - concept:truth
+  - concept:stewardship
+  - concept:power
+  - concept:responsibility
+  evaluation_targets:
+  - tech ethics
+  - anthropology
+  - governance
+  - human dignity
+  failure_modes:
+  - generic 'be ethical' answer or blind techno-optimism
+  tags:
+  - public-square
+  - downstream-heavy
+- id: eth-003
+  route: ethics_public_theology
+  question: Is lying ever permissible to protect life?
+  primary_texts:
+  - scripture:exodus-1
+  - scripture:joshua-2
+  expected_answer_mode: scoped_by_tradition
+  difficulty: hard
+  requires_scope: true
+  key_dependencies:
+  - concept:truth
+  - concept:neighbor-love
+  - concept:natural-law
+  - concept:conscience
+  evaluation_targets:
+  - moral absolutism vs exception reasoning
+  - tradition variance
+  failure_modes:
+  - oversimplified prooftexting
+  tags:
+  - tradition-variant
+  - requires-disagreement-handling
+  - scope-sensitive
+- id: eth-004
+  route: ethics_public_theology
+  question: How should Christians approach wealth, property, and economic inequality?
+  primary_texts:
+  - scripture:acts-2
+  - scripture:1-timothy-6
+  expected_answer_mode: scoped_by_tradition
+  difficulty: hard
+  requires_scope: true
+  key_dependencies:
+  - concept:stewardship
+  - concept:justice
+  - concept:generosity
+  - concept:vocation
+  evaluation_targets:
+  - Scripture doctrine prudence cross-tradition comparison
+  failure_modes:
+  - ideological capture from left or right
+  tags:
+  - public-square
+  - tradition-variant
+  - scope-sensitive
+- id: eth-005
+  route: ethics_public_theology
+  question: Can a Christian support war, and under what conditions?
+  primary_texts:
+  - scripture:romans-13
+  - scripture:sermon-on-the-mount
+  expected_answer_mode: scoped_by_tradition
+  difficulty: hard
+  requires_scope: true
+  key_dependencies:
+  - concept:state
+  - concept:violence
+  - concept:peace
+  - concept:neighbor-love
+  evaluation_targets:
+  - just war vs pacifism
+  - historical theology and ethics integration
+  failure_modes:
+  - no distinction between personal ethics and political authority
+  tags:
+  - public-square
+  - tradition-variant
+  - scope-sensitive
+- id: eth-006
+  route: ethics_public_theology
+  question: How should churches think about abortion when pastoral care and public witness are both in view?
+  primary_texts:
+  - scripture:psalm-139
+  - scripture:luke-1
+  expected_answer_mode: synthesis
+  difficulty: hard
+  requires_scope: true
+  key_dependencies:
+  - concept:life
+  - concept:personhood
+  - concept:justice
+  - concept:care
+  - concept:law
+  evaluation_targets:
+  - high-stakes ethics with moral seriousness and pastoral reality
+  failure_modes:
+  - slogan answer without complexity
+  tags:
+  - public-square
+  - high-pastoral-risk
+  - scope-sensitive
+- id: eth-007
+  route: ethics_public_theology
+  question: What would a Christian account of racial justice need to affirm, and where do traditions differ?
+  primary_texts:
+  - scripture:genesis-1
+  - scripture:galatians-3
+  expected_answer_mode: scoped_by_tradition
+  difficulty: hard
+  requires_scope: true
+  key_dependencies:
+  - concept:image-of-god
+  - concept:partiality
+  - concept:justice
+  - concept:reconciliation
+  evaluation_targets:
+  - public theology
+  - anthropology
+  - sin
+  - social structures
+  failure_modes:
+  - reduction to current political tribe
+  tags:
+  - public-square
+  - tradition-variant
+  - scope-sensitive
+- id: eth-008
+  route: ethics_public_theology
+  question: When should a church resist state authority rather than submit to it?
+  primary_texts:
+  - scripture:romans-13
+  - scripture:acts-5
+  expected_answer_mode: scoped_by_tradition
+  difficulty: hard
+  requires_scope: true
+  key_dependencies:
+  - concept:authority
+  - concept:civil-disobedience
+  - concept:conscience
+  - concept:martyrdom
+  evaluation_targets:
+  - doctrine of state
+  - conscience
+  - resistance
+  failure_modes:
+  - simplistic submissionism or rebellionism
+  tags:
+  - public-square
+  - tradition-variant
+  - scope-sensitive
