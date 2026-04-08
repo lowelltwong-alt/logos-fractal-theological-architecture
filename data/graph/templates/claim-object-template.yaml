@@ -1,0 +1,26 @@
+id: claim.example.trinity.affirms.nicene-core
+object_type: Claim
+status: draft
+subject: thinker.example.athanasius
+predicate: affirms
+object: doctrine.example.nicene_trinity
+claim_type: asserted
+assertion_mode: direct
+scope:
+  tradition: catholic
+  rite_or_family: latin
+  profile: default
+review_state: proposed
+confidence:
+  score: 0.9
+  basis: evidence_weighted
+  note: direct primary-source support expected
+summary: >-
+  Replace with a concise summary of what the claim states.
+evidence_ids:
+  - evidence.example.001
+provenance_event_ids:
+  - provenance.example.001
+notes:
+  - Keep asserted and inferred claims separate.
+  - Do not use this template for an exception event.
