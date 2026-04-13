@@ -15,6 +15,8 @@ import subprocess
 import sys
 from collections import Counter, defaultdict
 
+from validation_contracts import DEFAULT_VALIDATION_SCOPE_NOTE
+
 TRUST_ORDER = {
     "canonical": 0,
     "tradition-scoped": 1,
@@ -248,6 +250,30 @@ def run_command(command: list[str], root: pathlib.Path) -> dict[str, object]:
     }
 
 
+def parse_validation_suite_result(check: dict[str, object]) -> dict[str, object]:
+    stdout = check.get("stdout", "")
+    if not isinstance(stdout, str) or not stdout:
+        return {}
+    try:
+        parsed = json.loads(stdout)
+    except json.JSONDecodeError:
+        return {}
+    return parsed if isinstance(parsed, dict) else {}
+
+
+def validator_result(payload: dict[str, object], name: str) -> dict[str, object]:
+    for result in payload.get("validators", []):
+        if isinstance(result, dict) and result.get("name") == name:
+            return result
+    return {
+        "name": name,
+        "returncode": None,
+        "failure_count": 0,
+        "stdout": "",
+        "stderr": "",
+    }
+
+
 def write_json(path: pathlib.Path, payload: object) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -308,14 +334,19 @@ def run_pipeline(root: pathlib.Path, snapshot_only: bool) -> int:
     conflicts = semantic_conflicts(examples, graph_nodes)
     orphan_data = orphan_report(graph_nodes)
 
-    cross_ref_check = run_command([sys.executable, "scripts/validate_cross_references.py"], root)
-    local_link_check = run_command([sys.executable, "scripts/validate_internal_links.py", "--all-markdown"], root)
+    validation_suite_check = run_command(
+        [sys.executable, "scripts/run_validation_suite.py", "--json"],
+        root,
+    )
+    validation_suite = parse_validation_suite_result(validation_suite_check)
+    cross_ref_check = validator_result(validation_suite, "cross_references")
+    local_link_check = validator_result(validation_suite, "internal_links")
 
     for idx, conflict in enumerate(conflicts, start=1):
         write_json(resolutions_dir / f"conflict-{idx:03d}-{stable_slug(conflict['conflict_type'])}.json", conflict)
 
-    cross_ref_failures = sum(1 for line in cross_ref_check["stdout"].splitlines() if line.startswith("FAIL "))
-    local_link_failures = sum(1 for line in local_link_check["stdout"].splitlines() if line.startswith("FAIL "))
+    cross_ref_failures = int(cross_ref_check.get("failure_count") or 0)
+    local_link_failures = int(local_link_check.get("failure_count") or 0)
 
     summary = {
         "generated_at": snapshot["generated_at"],
@@ -323,6 +354,13 @@ def run_pipeline(root: pathlib.Path, snapshot_only: bool) -> int:
         "orphan_count": orphan_data["orphan_count"],
         "broken_cross_reference_count": cross_ref_failures,
         "broken_local_link_count": local_link_failures,
+        "failed_validator_count": validation_suite.get("failed_validator_count", 0),
+        "validation_scope_note": validation_suite.get(
+            "scope_note",
+            DEFAULT_VALIDATION_SCOPE_NOTE,
+        ),
+        "validation_suite_check": validation_suite_check,
+        "validation_suite": validation_suite,
         "cross_reference_check": cross_ref_check,
         "local_link_check": local_link_check,
     }

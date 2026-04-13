@@ -1,13 +1,45 @@
 {
-  "registry_version": "0.1.0",
+  "registry_version": "0.2.0",
+  "controlled_vocabulary_source": {
+    "path": "docs/governance/controlled-value-registry.md",
+    "fields": [
+      "trust_zone",
+      "lifecycle_status"
+    ],
+    "notes": "Canonical bounded-value source for validators that enforce shared controlled vocabularies."
+  },
   "schemas": [
     {
       "name": "logos_node_min",
       "path": "schemas/logos_node_min.schema.json",
       "applies_to": [
-        "docs/**/*.md"
+        "docs/applications/**/*.md",
+        "docs/biblical-themes/**/*.md",
+        "docs/concepts/**/*.md",
+        "docs/doctrine/**/*.md",
+        "docs/hermeneutics/**/*.md",
+        "docs/manuscripts/**/*.md",
+        "docs/noncanonical/**/*.md",
+        "docs/original-languages/**/*.md",
+        "docs/scripture/**/*.md",
+        "docs/translations/**/*.md"
       ],
-      "notes": "Minimal frontmatter-oriented validation for governed node documents."
+      "validation_kind": "markdown_frontmatter",
+      "activation_keys_any": [
+        "id",
+        "anchor",
+        "title",
+        "node_type",
+        "status",
+        "review_status"
+      ],
+      "recommended_keys": [
+        "address",
+        "trust_zone",
+        "lifecycle_state",
+        "ai_usage_posture"
+      ],
+      "notes": "Minimal frontmatter-oriented validation for governed content-node documents. Governance addenda, roadmap notes, and other non-node authored records remain outside this contract until dedicated schemas exist."
     },
     {
       "name": "logos_claim_min",
@@ -15,6 +47,7 @@
       "applies_to": [
         "data/claims/*.yaml"
       ],
+      "validation_kind": "yaml_record",
       "notes": "Minimal validation for governed claim objects."
     }
   ]

@@ -11,7 +11,7 @@ It should be read together with:
 - `docs/governance/institution-overlay.md`
 - `docs/governance/hitl-decision-rules.md`
 - `docs/governance/build-priority-policy.md`
-- `docs/airca/README.md` in the companion AIRCA repository
+- the AIRCA repository README in the companion AIRCA repository
 
 ## Overlay identity
 

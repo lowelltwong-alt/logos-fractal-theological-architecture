@@ -210,24 +210,20 @@ Major scripture-related nodes should use the document header standard and includ
 ### Scripture layer
 - `docs/scripture/README.md`
 - `docs/scripture/genesis/README.md`
-- `docs/scripture/romans/README.md`
-- `docs/scripture/matthew/README.md`
+- planned scripture-book roots for Romans and Matthew as the layer expands
 
 ### Hermeneutics layer
 - `docs/hermeneutics/README.md`
-- `docs/hermeneutics/grammatical-historical.md`
-- `docs/hermeneutics/patristic.md`
-- `docs/hermeneutics/canonical.md`
-- `docs/hermeneutics/reformed-confessional.md`
+- planned method notes such as `grammatical-historical.md`, `patristic.md`, `canonical.md`, and `reformed-confessional.md`
 
 ### Interpretations layer
-Use either a dedicated `docs/interpretations/` folder or place interpretation nodes under the most relevant scripture folder if locality is more important.
+Use either a dedicated interpretations branch later or place interpretation nodes under the most relevant scripture folder if locality is more important.
 
 ### Biblical themes layer
 - `docs/biblical-themes/README.md`
 - `docs/biblical-themes/image-of-god.md`
-- `docs/biblical-themes/stewardship.md`
-- `docs/biblical-themes/authority.md`
+- `docs/biblical-themes/fall.md`
+- planned future theme nodes such as `stewardship.md` and `authority.md`
 
 ## Recommended anchor patterns
 

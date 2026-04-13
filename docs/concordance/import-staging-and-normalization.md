@@ -38,8 +38,7 @@ The correct order is:
 
 ## Recommended locations
 
-External data should first enter:
-- `data/sources/imported/`
+External data should first enter the provisioned import staging root at `data/sources/imported` when an import bundle is actually added.
 
 Approved normalized graph objects should live under:
 - `data/graph/`

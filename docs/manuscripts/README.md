@@ -77,7 +77,7 @@ This layer connects directly to:
 
 ## Recommended future substructure
 
-- `dss/`
+- planned Dead Sea Scrolls branch once witness material is added
 - `mt.md`
 - `lxx.md`
 - papyri and codex nodes as needed

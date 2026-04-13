@@ -23,10 +23,9 @@ The quarantine lane stores AI-generated outputs that are not yet approved for pr
 
 ## Location
 
-- `data/ai-output/quarantine/proposals/`
-- `data/ai-output/quarantine/normalized/`
-- `data/ai-output/quarantine/suggestions/`
-- `reports/ai-review-queue/`
+- Quarantine root: `data/ai-output/quarantine`
+- Generated subdirectories beneath that root: `proposals`, `normalized`, and `suggestions`
+- Review queue report root: `reports/ai-review-queue`
 
 ## Mandatory reviewer fields before promotion
 

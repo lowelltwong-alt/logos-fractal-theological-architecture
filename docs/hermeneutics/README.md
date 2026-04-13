@@ -6,7 +6,7 @@ slug: hermeneutics
 node_type: hermeneutic_root
 system_role: hermeneutic_layer
 artifact_tier: foundational_support
-address: christian_ai_theology.hermeneutics.core.layer.hermeneutic_root.hermeneutic_root.primary
+address: christian_ai_theology.hermeneutics.core.root.layer.hermeneutic_root.hermeneutic_root.primary
 trust_zone: proposed
 lifecycle_state: draft
 epistemic_status: asserted

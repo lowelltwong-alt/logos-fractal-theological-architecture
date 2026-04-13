@@ -6,7 +6,7 @@ slug: scripture
 node_type: scripture_root
 system_role: scripture_layer
 artifact_tier: foundational_support
-address: christian_ai_theology.scripture.core.layer.scripture_root.scripture_root.primary
+address: christian_ai_theology.scripture.core.root.layer.scripture_root.scripture_root.primary
 trust_zone: proposed
 lifecycle_state: draft
 epistemic_status: asserted
@@ -86,8 +86,7 @@ That distinction matters for biblical scholarship, theological rigor, and ontolo
 
 As this layer grows, it may include:
 - `genesis/`
-- `romans/`
-- `matthew/`
+- planned Romans and Matthew book folders as the layer expands
 - other biblical book folders as needed
 
 Each book folder may later contain:

@@ -69,8 +69,8 @@ The project should be able to document not only what a passage says in translati
 ## Recommended future substructure
 
 - `hebrew/`
-- `aramaic/`
-- `greek/`
+- planned Aramaic folder as that language branch is built out
+- planned Greek folder as that language branch is built out
 
 ## Relation to the rest of the project
 

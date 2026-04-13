@@ -193,7 +193,7 @@ Fractal growth should make the repository clearer, not merely larger.
 
 Promotion from `proposed` into higher trust zones should include an architectural completeness gate.
 
-Use the generated completeness reports (`reports/completeness/*.json`) as an explicit threshold check:
+Use the generated completeness reports in `reports/completeness` as an explicit threshold check:
 
 - proposed -> tradition-scoped: weighted completeness score >= 0.78
 - proposed -> canonical: weighted completeness score >= 0.90
