@@ -41,9 +41,11 @@ Legacy compatibility path retained for link stability:
 - doctrines -> redirect-only legacy surface that points to `docs/doctrine/`
 
 Authority note:
+- `docs/` is the canonical authored source area for governed human-readable publication surfaces.
 - `docs/doctrine/` is the canonical doctrine authoring path.
 - `docs/doctrines/` is not a second doctrine authority surface.
 - `docs/schemas/` remains a documentation/reference branch inside `docs/`, not the machine-contract root.
+- `ontology/` is preserved outside `docs/` as a non-canonical migration/reference layer and is not a competing canonical publication surface.
 
 ## B. `docs/governance/` canonical governance corpus
 
@@ -57,6 +59,7 @@ Primary governance corpus currently includes:
 
 Reference root for this corpus: `docs/governance/README.md` and `docs/governance/operating-framework-index.md`.
 Current post-Wave-A authority addendum: `docs/governance/post-normalization-governance-addendum-wave-a-2026-04-13.md`.
+Current ontology-role addendum: `docs/governance/ontology-migration-buffer-wave-d-2026-04-13.md`.
 
 ## C. Machine-readable authority points
 

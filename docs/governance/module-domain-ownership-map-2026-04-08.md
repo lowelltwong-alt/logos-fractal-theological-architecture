@@ -19,7 +19,7 @@ Operating assumption: this repository is in solo-maintainer mode, so all domains
 | `docs/doctrines/` | Legacy doctrine redirect surface | Solo maintainer | Preserve old links only; no substantive doctrine edits |
 | `docs/governance/` | Governance rules and operating contracts | Solo maintainer | Canonical structural source for contributor discipline |
 | `docs/schemas/` | Schema documentation and reference examples | Solo maintainer | Prose/reference only; not the machine-contract root |
-| `ontology/` | Ontology draft/reference candidates | Solo maintainer | Not the canonical authored doctrine/governance source in Wave A |
+| `ontology/` | Ontology migration-buffer and reference-draft candidates | Solo maintainer | Non-canonical authored source area for now; files may be classified as migrate or reference-only |
 | `reports/` | Review and quality reporting outputs | Solo maintainer | Evidence for promotion/revision loops |
 | `schema/` | Deprecated legacy templates | Solo maintainer | Legacy template territory retained for compatibility; no canonical contract authority |
 | `schemas/` | Canonical machine-readable contracts | Solo maintainer | Schema registry and contract source of truth |
@@ -36,4 +36,4 @@ Wave A authority lock:
 - machine-readable contracts belong in `schemas/`
 - `schema/` is deprecated legacy template territory
 - `docs/schemas/` is documentation/reference only
-- `ontology/` may inform later migration work, but it is not the canonical authored source in this wave
+- `ontology/` may inform later migration work, but it is not the canonical authored source and should be treated as migrate/reference-only support until target homes exist

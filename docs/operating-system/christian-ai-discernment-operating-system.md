@@ -202,9 +202,8 @@ Recommended additions or strengthened branches:
 - `schema/`
 - planned top-level `profiles` branch
 - planned top-level `discernment` branch
-- `ontology/doctrines/`
-- `ontology/traditions/`
-- `ontology/ai-issues/`
+- governed `docs/` destinations for doctrine, tradition/profile, and AI-issue material as those branches are normalized
+- preserved `ontology/doctrines/`, `ontology/traditions/`, and `ontology/ai-issues/` only as migration/reference-draft inputs during that normalization period
 - `examples/`
 
 ## 10. Recommended profile and discernment object types
