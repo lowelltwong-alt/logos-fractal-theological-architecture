@@ -25,6 +25,7 @@ Examples may include:
 - verses
 - passages
 - relationships
+- external mappings
 - translations
 - manuscripts
 - boundary sources

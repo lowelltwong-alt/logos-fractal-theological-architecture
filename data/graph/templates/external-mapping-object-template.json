@@ -1,0 +1,56 @@
+{
+  "object_type": "external_mapping_object",
+  "schema_version": "v1",
+  "identity": {
+    "id": "external_mapping.<canonical_id>__<source>__<source_id>",
+    "title": "<canonical_id> mapped to <source>:<source_id>",
+    "status": "working"
+  },
+  "classification": {
+    "domain": "graph",
+    "subdomain": "relationships",
+    "object_type": "external_mapping_object",
+    "relation_type": "external_mapping",
+    "tags": [],
+    "audience_tags": []
+  },
+  "interfaces": [
+    "reviewable_node",
+    "machine_readable_object"
+  ],
+  "trust_zone": "proposed",
+  "mapping": {
+    "mapping_type": "exact_match",
+    "canonical_id": "",
+    "external_ref": {
+      "handle": "ext.<source>.<source_id>",
+      "source": "",
+      "source_id": "",
+      "display_label": "",
+      "source_trust_zone": "inferred"
+    },
+    "rationale": ""
+  },
+  "relationships": {
+    "depends_on": [
+      "<canonical_id>"
+    ],
+    "related_to": []
+  },
+  "provenance": {
+    "derived_from": [
+      "<canonical_id>"
+    ],
+    "source_refs": [],
+    "created_by": "",
+    "last_modified_by": "",
+    "asserted_by": "",
+    "reviewed_by": [],
+    "last_reviewed_at": ""
+  },
+  "review": {
+    "review_status": "unreviewed",
+    "review_cycle": "",
+    "review_notes": ""
+  }
+}

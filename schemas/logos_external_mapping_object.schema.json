@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/logos_external_mapping_object.schema.json",
+  "title": "Logos External Mapping Object Schema",
+  "type": "object",
+  "required": [
+    "object_type",
+    "identity",
+    "trust_zone",
+    "mapping",
+    "provenance",
+    "review"
+  ],
+  "properties": {
+    "object_type": {
+      "type": "string",
+      "enum": [
+        "external_mapping_object"
+      ]
+    },
+    "schema_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "identity": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^external_mapping\\.[a-z0-9._:-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "interfaces": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "trust_zone": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mapping": {
+      "type": "object",
+      "required": [
+        "mapping_type",
+        "canonical_id",
+        "external_ref"
+      ],
+      "properties": {
+        "mapping_type": {
+          "type": "string",
+          "enum": [
+            "exact_match",
+            "close_match",
+            "broader",
+            "narrower",
+            "related"
+          ]
+        },
+        "canonical_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "external_ref": {
+          "type": "object",
+          "required": [
+            "handle",
+            "source",
+            "source_id"
+          ],
+          "properties": {
+            "handle": {
+              "type": "string",
+              "pattern": "^ext\\.[a-z0-9][a-z0-9_-]*\\.[A-Za-z0-9._:-]+$"
+            },
+            "source": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9_-]*$"
+            },
+            "source_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "display_label": {
+              "type": "string"
+            },
+            "source_trust_zone": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        },
+        "rationale": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "relationships": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "derived_from",
+        "source_refs",
+        "created_by",
+        "last_modified_by",
+        "asserted_by"
+      ],
+      "properties": {
+        "derived_from": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "created_by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "last_modified_by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "asserted_by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewed_by": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "last_reviewed_at": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "review_status"
+      ],
+      "properties": {
+        "review_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_cycle": {
+          "type": "string"
+        },
+        "review_notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

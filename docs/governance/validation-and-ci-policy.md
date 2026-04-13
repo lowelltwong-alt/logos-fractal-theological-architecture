@@ -20,6 +20,7 @@ At minimum, the repository should validate:
 - valid epistemic statuses for claim objects
 - valid relationship verbs where governed
 - resolvable references to IDs where required
+- external mapping integrity where external taxonomy crosswalks are represented as governed graph objects
 - duplicate ID collisions
 - missing migration records when address changes occur
 - overlay scope consistency where overlay fields are used
@@ -46,9 +47,10 @@ Checks for vocabulary drift, duplicate nodes, or invalid promotion patterns.
 Run the repository validators in this order:
 
 1. `python scripts/validate_node_frontmatter.py`
-2. `python scripts/validate_claim_files.py`
-3. `python scripts/validate_cross_references.py`
+2. `python scripts/validate_cross_references.py`
+3. `python scripts/validate_claim_files.py`
 4. `python scripts/validate_trust_zone_vocabulary.py` (controlled-value validator with machine-readable reporting)
+5. `python scripts/validate_external_mappings.py`
 
 ## CI rule
 
@@ -66,8 +68,12 @@ Run:
 - `scripts/run_validations.sh`
 
 This routine currently executes:
+- `scripts/run_validation_suite.py`
+
+The shared suite currently includes:
 - `scripts/validate_node_frontmatter.py`
 - `scripts/validate_cross_references.py`
 - `scripts/validate_claim_files.py`
 - `scripts/validate_trust_zone_vocabulary.py`
+- `scripts/validate_external_mappings.py`
 - `scripts/validate_internal_links.py`

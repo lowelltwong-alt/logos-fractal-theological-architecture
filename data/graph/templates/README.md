@@ -23,6 +23,7 @@ Examples include:
 - doctrine object templates
 - passage object templates
 - relationship object templates
+- external mapping object templates
 - translation witness templates
 - boundary-source templates
 - exception event object templates

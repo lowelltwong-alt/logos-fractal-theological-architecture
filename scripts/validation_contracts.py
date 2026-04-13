@@ -106,7 +106,12 @@ def resolve_contract_paths(contract: dict[str, Any], root: pathlib.Path = ROOT) 
         for path in root.glob(pattern):
             if path.is_file():
                 resolved[path.as_posix()] = path
-    return [resolved[key] for key in sorted(resolved)]
+    excluded: set[str] = set()
+    for pattern in contract.get("exclude_patterns", []):
+        for path in root.glob(pattern):
+            if path.is_file():
+                excluded.add(path.as_posix())
+    return [resolved[key] for key in sorted(resolved) if key not in excluded]
 
 
 def activates_contract(record: dict[str, Any], contract: dict[str, Any]) -> bool:
@@ -187,6 +192,42 @@ def schema_failures(record: dict[str, Any], schema: dict[str, Any]) -> list[str]
                     )
 
     return failures
+
+
+def extract_graph_object_ids(raw: dict[str, Any]) -> set[str]:
+    ids: set[str] = set()
+
+    top_level_id = raw.get("id")
+    if isinstance(top_level_id, str) and top_level_id:
+        ids.add(top_level_id)
+
+    identity = raw.get("identity")
+    if isinstance(identity, dict):
+        identity_id = identity.get("id")
+        if isinstance(identity_id, str) and identity_id:
+            ids.add(identity_id)
+
+    address = raw.get("address")
+    if isinstance(address, dict):
+        address_id = address.get("id")
+        if isinstance(address_id, str) and address_id:
+            ids.add(address_id)
+
+    return ids
+
+
+def iter_string_values(value: Any) -> list[str]:
+    found: list[str] = []
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, list):
+        for item in value:
+            found.extend(iter_string_values(item))
+        return found
+    if isinstance(value, dict):
+        for item in value.values():
+            found.extend(iter_string_values(item))
+    return found
 
 
 def count_prefixed_lines(text: str, prefix: str) -> int:
@@ -274,6 +315,10 @@ def default_validation_commands(python_executable: str | None = None) -> list[di
         {
             "name": "controlled_vocabulary",
             "command": [python, "scripts/validate_trust_zone_vocabulary.py"],
+        },
+        {
+            "name": "external_mappings",
+            "command": [python, "scripts/validate_external_mappings.py"],
         },
         {
             "name": "internal_links",

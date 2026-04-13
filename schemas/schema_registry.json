@@ -49,6 +49,20 @@
       ],
       "validation_kind": "yaml_record",
       "notes": "Minimal validation for governed claim objects."
+    },
+    {
+      "name": "logos_external_mapping_object",
+      "path": "schemas/logos_external_mapping_object.schema.json",
+      "applies_to": [
+        "data/graph/**/*.json"
+      ],
+      "exclude_patterns": [
+        "data/graph/examples/**/*.json",
+        "data/graph/templates/**/*.json"
+      ],
+      "validation_kind": "graph_json_object",
+      "object_type": "external_mapping_object",
+      "notes": "Canonical contract for governed external mapping objects. The dedicated validator resolves canonical targets from real graph objects, excludes example fixtures and templates, and enforces external-handle boundaries."
     }
   ]
 }
