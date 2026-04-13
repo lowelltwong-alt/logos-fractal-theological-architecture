@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Validate local markdown internal links and backtick path references.
 
-Default scope is README.md to prevent regressions in top-level documentation.
-Pass --all-markdown to scan all markdown files.
+Default scope is README.md so local validation, CI validation, and semantic
+merge all measure the same bounded baseline in Wave B. Pass --all-markdown to
+run the broader manual audit that will be normalized in Wave C.
 """
 from __future__ import annotations
 
@@ -77,7 +78,11 @@ def check_markdown_files(root: pathlib.Path, files: list[pathlib.Path]) -> list[
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('paths', nargs='*', help='Optional markdown files to validate.')
-    parser.add_argument('--all-markdown', action='store_true', help='Validate all markdown files in repository.')
+    parser.add_argument(
+        '--all-markdown',
+        action='store_true',
+        help='Validate all markdown files in repository (broader manual audit scope).',
+    )
     args = parser.parse_args()
 
     root = pathlib.Path(__file__).resolve().parents[1]
