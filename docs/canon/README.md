@@ -189,9 +189,9 @@ Preferred live pattern:
 - `docs/canon/<name>.md`
 
 Examples:
-- `docs/canon/augustine.md`
-- `docs/canon/bavinck.md`
-- `docs/canon/kuyper.md`
+- `canon.augustine`
+- `canon.bavinck`
+- `canon.kuyper`
 
 A canon node should stay as a single file as long as it remains one coherent retrieval object.
 

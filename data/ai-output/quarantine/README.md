@@ -8,8 +8,8 @@ reason_for_inclusion: "Provide a governed staging area where AI output can be no
 
 # AI Output Quarantine Data Layout
 
-- `proposals/`: raw AI draft objects.
-- `normalized/`: deterministically normalized proposal objects.
-- `suggestions/`: suggested links and edge candidates.
+- Generated `proposals` lane under the quarantine root: raw AI draft objects.
+- Generated `normalized` lane under the quarantine root: deterministically normalized proposal objects.
+- Generated `suggestions` lane under the quarantine root: suggested links and edge candidates.
 
 All artifacts here are non-canonical until explicit reviewer promotion.

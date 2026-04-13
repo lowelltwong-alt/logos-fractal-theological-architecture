@@ -48,9 +48,9 @@ Allowed values:
 ## Enforcement scope
 
 Validators must enforce membership for:
-- Markdown frontmatter (`docs/**/*.md`)
-- YAML governed records (`data/**/*.yaml`, `examples/**/*.yaml`)
-- JSON templates (`data/graph/templates/**/*.json`)
+- Markdown frontmatter across the `docs` tree
+- YAML governed records under `data` and `examples`
+- JSON templates under `data/graph/templates`
 
 ## CI requirement
 

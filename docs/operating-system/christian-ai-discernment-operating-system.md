@@ -200,8 +200,8 @@ Recommended additions or strengthened branches:
 
 - `docs/operating-system/`
 - `schema/`
-- `profiles/`
-- `discernment/`
+- planned top-level `profiles` branch
+- planned top-level `discernment` branch
 - `ontology/doctrines/`
 - `ontology/traditions/`
 - `ontology/ai-issues/`

@@ -86,8 +86,7 @@ That distinction matters for biblical scholarship, theological rigor, and ontolo
 
 As this layer grows, it may include:
 - `genesis/`
-- `romans/`
-- `matthew/`
+- planned Romans and Matthew book folders as the layer expands
 - other biblical book folders as needed
 
 Each book folder may later contain:

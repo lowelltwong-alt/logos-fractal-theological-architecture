@@ -18,19 +18,18 @@ That combination makes Augustine one of the strongest canon figures for the AI-g
 
 ## Future node expansion path
 
-If this node becomes dense enough to justify promotion into a recursive folder, it should expand as:
+If this canon node later expands beyond the current README anchor, the Augustine folder may gain companion files such as:
 
-- `docs/canon/augustine/README.md`
-- `docs/canon/augustine/artifact.json`
-- `docs/canon/augustine/sources-and-lineage.md`
-- `docs/canon/augustine/core-theology.md`
-- `docs/canon/augustine/creation-fall-redemption.md`
-- `docs/canon/augustine/anthropology-and-will.md`
-- `docs/canon/augustine/governance-and-institutions.md`
-- `docs/canon/augustine/ai-governance-implications.md`
-- `docs/canon/augustine/notes.md`
+- `artifact.json`
+- `sources-and-lineage.md`
+- `core-theology.md`
+- `creation-fall-redemption.md`
+- `anthropology-and-will.md`
+- `governance-and-institutions.md`
+- `ai-governance-implications.md`
+- `notes.md`
 
-Until that promotion becomes necessary, this file functions as the canonical Augustine node.
+Until that deeper decomposition becomes necessary, this README functions as the canonical Augustine node.
 
 ## Creation as good, ordered, and intelligible
 

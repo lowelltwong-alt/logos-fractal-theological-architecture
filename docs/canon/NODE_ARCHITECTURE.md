@@ -19,9 +19,9 @@ Each canon source should begin as a single strong file:
 - `docs/canon/<name>.md`
 
 Examples:
-- `docs/canon/augustine.md`
-- `docs/canon/bavinck.md`
-- `docs/canon/kuyper.md`
+- `canon.augustine`
+- `canon.bavinck`
+- `canon.kuyper`
 
 A single-file canon node should be strong enough to stand as one coherent retrieval object. It should usually include:
 - why the thinker belongs in the shared core or in an overlay

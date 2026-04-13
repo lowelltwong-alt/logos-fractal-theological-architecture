@@ -26,7 +26,7 @@ reason_for_inclusion: "Record what already existed, what was added tonight, and 
 
 ## What still needs human review tomorrow
 
-- Decide whether `docs/governance/phase-1-constitutional-core.md` should remain the only Phase 1 home or whether a root-level `docs/phase-1-constitutional-core.md` is still desired later.
+- Decide whether `docs/governance/phase-1-constitutional-core.md` should remain the only Phase 1 home or whether a separate root-level Phase 1 constitutional core doc is still desired later.
 - Confirm whether the new example YAML files should stay in the `proposed` trust zone or be recast as a different example-only status.
 - Confirm the preferred names for baseline references and assessment outcomes before these examples become templates for wider reuse.
 - Decide whether `docs/phase-2-source-and-interpretation.md` should be linked from an existing `README.md` or roadmap index.

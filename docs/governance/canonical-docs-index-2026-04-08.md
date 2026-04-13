@@ -35,7 +35,7 @@ Canonical authored categories include:
 - scripture
 - translations
 - weightings
-- plus phase and handoff docs at `docs/*.md`
+- plus selected phase and handoff docs at the top level of `docs`
 
 Legacy compatibility path retained for link stability:
 - doctrines -> redirect-only legacy surface that points to `docs/doctrine/`
@@ -76,4 +76,4 @@ Documentation/reference-only schema branch:
 - `docs/schemas/concordance-node-template.json`
 - `docs/schemas/logos-governed-node-template.json`
 
-Note: no dedicated top-level `manifests/` directory is currently present.
+Note: no dedicated top-level manifests directory is currently present.
