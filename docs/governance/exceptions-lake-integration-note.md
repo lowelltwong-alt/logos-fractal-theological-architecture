@@ -39,3 +39,9 @@ The integration preserves:
 ## Architectural result
 
 The exceptions-lake concept now sits in governed repository layers (README, governance, roadmap, graph support) and is not treated as a standalone import sidecar.
+
+## Archival import preservation
+
+The old PR #5 material is preserved under `incoming/exceptions-lake/` as archival incoming context only.
+
+That folder is useful for provenance and handoff context, but it is not a canonical authored source and should not replace the normalized governance, roadmap, or graph surfaces listed above.
