@@ -2,14 +2,15 @@
 object_type: canonical_index_snapshot
 trust_zone: canonical
 lifecycle_status: active
-provenance_note: "Indexed on 2026-04-08 from the current repository state for alignment baseline work."
-reason_for_inclusion: "Provide a fixed reference index of canonical docs and manifest-like assets used during cleanup."
+provenance_note: "Indexed on 2026-04-08 from the current repository state, then updated on 2026-04-13 during Wave A path normalization to record canonical doctrine and schema authority."
+reason_for_inclusion: "Provide a reference index of canonical docs and authority-marked machine-readable assets used during cleanup."
 ---
 
 # Canonical Docs Index (2026-04-08)
 
-## A. `docs/` top-level canonical categories
+## A. `docs/` authority map
 
+Canonical authored categories include:
 - applications
 - biblical-themes
 - canon
@@ -17,7 +18,6 @@ reason_for_inclusion: "Provide a fixed reference index of canonical docs and man
 - concordance
 - derivations
 - doctrine
-- doctrines
 - governance
 - hermeneutics
 - instantiations
@@ -37,6 +37,14 @@ reason_for_inclusion: "Provide a fixed reference index of canonical docs and man
 - weightings
 - plus phase and handoff docs at `docs/*.md`
 
+Legacy compatibility path retained for link stability:
+- doctrines -> redirect-only legacy surface that points to `docs/doctrine/`
+
+Authority note:
+- `docs/doctrine/` is the canonical doctrine authoring path.
+- `docs/doctrines/` is not a second doctrine authority surface.
+- `docs/schemas/` remains a documentation/reference branch inside `docs/`, not the machine-contract root.
+
 ## B. `docs/governance/` canonical governance corpus
 
 Primary governance corpus currently includes:
@@ -49,15 +57,21 @@ Primary governance corpus currently includes:
 
 Reference root for this corpus: `docs/governance/README.md` and `docs/governance/operating-framework-index.md`.
 
-## C. Manifest / machine-readable index points
+## C. Machine-readable authority points
 
-Observed manifest-like machine-readable artifacts:
+Canonical machine-readable contract root:
 - `CITATION.cff`
 - `schemas/schema_registry.json`
 - `schemas/logos_node_min.schema.json`
 - `schemas/logos_claim_min.schema.json`
+
+Deprecated legacy template surface:
 - `schema/discernment-profile-template.json`
 - `schema/fractal-decision-artifact-template-v2.json`
+
+Documentation/reference-only schema branch:
+- `docs/schemas/README.md`
+- `docs/schemas/logos-governed-node-schema.md`
 - `docs/schemas/concordance-node-template.json`
 - `docs/schemas/logos-governed-node-template.json`
 

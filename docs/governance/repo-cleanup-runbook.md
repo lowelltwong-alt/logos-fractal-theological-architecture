@@ -65,9 +65,11 @@ Do not treat this as a content-expansion cycle. Treat it as a normalization cycl
 ### Structural decisions to make once
 1. `docs/doctrine/` remains canonical.
 2. `docs/doctrines/` becomes redirect-only until links are migrated, then gets retired.
-3. Pick one canonical machine-schema folder: either `schema/` or `schemas/`.
-4. Decide whether `ontology/` is source, reference, or draft layer.
-5. Separate governed nodes from meta/governance prose so validators are not checking the wrong files.
+3. `schemas/` is the canonical machine-contract root.
+4. `schema/` remains deprecated legacy template territory.
+5. `docs/schemas/` remains prose/reference only.
+6. `ontology/` remains a non-canonical draft/reference layer in this wave; do not migrate it yet.
+7. Separate governed nodes from meta/governance prose so validators are not checking the wrong files.
 
 ### Validation problems to close
 - Wire validators to the actual JSON schema files.
@@ -93,9 +95,12 @@ Review every open PR and decide one of three actions:
 Build the cleanup branch in waves.
 
 ### Wave A — path normalization
-- Keep `docs/doctrine/` as the editing surface.
+- Keep `docs/doctrine/` as the canonical doctrine editing surface.
 - Keep `docs/doctrines/` as redirect stubs only.
-- Choose canonical schema folder.
+- Treat `schemas/` as the canonical machine-readable contract root.
+- Leave `schema/` in place as deprecated legacy templates.
+- Leave `docs/schemas/` in place as prose/reference-only schema docs.
+- Leave `ontology/` untouched apart from governance wording about path authority.
 - Add README notes where necessary so old paths do not invite new edits.
 
 ### Wave B — validation alignment
