@@ -56,6 +56,7 @@ Primary governance corpus currently includes:
 - operating framework index and continuation guides
 
 Reference root for this corpus: `docs/governance/README.md` and `docs/governance/operating-framework-index.md`.
+Current post-Wave-A authority addendum: `docs/governance/post-normalization-governance-addendum-wave-a-2026-04-13.md`.
 
 ## C. Machine-readable authority points
 
