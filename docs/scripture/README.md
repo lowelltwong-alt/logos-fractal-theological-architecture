@@ -6,7 +6,7 @@ slug: scripture
 node_type: scripture_root
 system_role: scripture_layer
 artifact_tier: foundational_support
-address: christian_ai_theology.scripture.core.layer.scripture_root.scripture_root.primary
+address: christian_ai_theology.scripture.core.root.layer.scripture_root.scripture_root.primary
 trust_zone: proposed
 lifecycle_state: draft
 epistemic_status: asserted

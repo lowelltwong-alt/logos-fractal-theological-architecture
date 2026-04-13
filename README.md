@@ -340,8 +340,8 @@ For long cleanup/buildout cycles, use the staged operations script:
   2. cross-reference validation
   3. link validation
   4. report generation
-- Checkpoints: stage completion markers are written to `logs/overnight/checkpoints/` so interrupted runs can resume safely.
-- Logs: timestamped run logs are written to `logs/overnight/`.
+- Checkpoints: stage completion markers are written to the generated runtime path `logs/overnight/checkpoints` so interrupted runs can resume safely.
+- Logs: timestamped run logs are written to the generated runtime path `logs/overnight`.
 - Reports: timestamped summaries are written to `reports/`.
 
 ### Common commands
