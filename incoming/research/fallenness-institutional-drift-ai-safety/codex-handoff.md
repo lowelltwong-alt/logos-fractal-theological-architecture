@@ -20,7 +20,7 @@ Create one small bridge file explaining how fallenness and institutional drift s
 
 ## Primary target
 
-`docs/applications/ai-governance/fallenness-institutional-drift-ai-safety-bridge.md`
+Planned future bridge file: fallenness-institutional-drift-ai-safety-bridge, under the AI-governance applications folder. This is a planned path note, not a live link in this research packet.
 
 ## Required content
 
