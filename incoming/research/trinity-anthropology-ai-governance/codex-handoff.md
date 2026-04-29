@@ -38,82 +38,32 @@ Before changing any files, read:
 
 ## Primary implementation target
 
-Create one bridge file:
-
-```text
-docs/applications/ai-governance/trinity-personhood-human-agency-bridge.md
-```
+Planned future bridge file: trinity-personhood-human-agency-bridge, under the AI-governance applications folder. This is a planned path note, not a live link in this research packet.
 
 The bridge file should:
 
 - use the governed node header style already present in the repo;
 - explicitly mark itself as `proposed` or `draft`;
-- show the derivation path:
-
-```text
-doctrine.trinity
--> concept.personhood
--> doctrine.anthropology
--> concept.imago_dei
--> concept.human_agency
--> application.ai_governance
-```
-
+- show the derivation path from doctrine.trinity to concept.personhood to doctrine.anthropology to concept.imago_dei to concept.human_agency to application.ai_governance;
 - distinguish direct theological claims from prudential governance applications;
 - avoid presenting the research packet as canonical;
 - link back to this incoming research folder.
 
 ## Suggested bridge file outline
 
-```markdown
-# Trinity, Personhood, Human Agency, and AI Governance
-
-## Purpose
-
-## Status and review boundary
-
-## Dependency path
-
-## Theological claim set
-
-## Governance implications
-
-## LAIRCA translation
-
-## What this bridge permits
-
-## What this bridge forbids
-
-## Related nodes
-
-## Promotion checklist
-```
+Suggested sections: Purpose; Status and review boundary; Dependency path; Theological claim set; Governance implications; LAIRCA translation; What this bridge permits; What this bridge forbids; Related nodes; Promotion checklist.
 
 ## Secondary implementation target
 
-If and only if no adequate existing concept node exists, create:
+If and only if no adequate existing concept node exists, create a future concept-personhood file under the concepts folder. This is a planned path note, not a live link in this research packet.
 
-```text
-docs/concepts/personhood.md
-```
-
-Do not create `docs/concepts/human-agency.md` in the same pass unless the bridge is too unclear without it.
+Do not create a human-agency concept file in the same pass unless the bridge is too unclear without it.
 
 ## Candidate claim object pass
 
 Do not create claim objects until the prose bridge is accepted or at least reviewed.
 
-When ready, the likely first claim object is:
-
-```text
-data/claims/claim.doctrine_anthropology.requires.application_ai_governance_human_decision_ownership.yaml
-```
-
-Use the existing claim pattern from:
-
-```text
-data/claims/claim.concept.imago_dei.constrains.application_ai_governance_human_dignity.yaml
-```
+When ready, the likely first claim object is a future doctrine-anthropology to AI-governance-human-decision-ownership claim file under `data/claims/`. Use the existing imago Dei to AI governance human dignity claim file as a pattern after confirming its current path.
 
 ## Guardrails
 

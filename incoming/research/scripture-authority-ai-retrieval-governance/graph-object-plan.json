@@ -1,0 +1,47 @@
+{
+  "id": "graph_object_plan.scripture_authority_ai_retrieval_governance",
+  "object_type": "graph_object_plan",
+  "trust_zone": "incoming_research",
+  "lifecycle_state": "draft",
+  "review_status": "unreviewed",
+  "epistemic_status": "proposed",
+  "created": "2026-04-29",
+  "created_by": "ChatGPT",
+  "purpose": "Plan a small bridge from theological authority into AI retrieval and rendering governance.",
+  "candidate_new_nodes": [
+    {
+      "id": "application.ai_governance.scripture_authority_retrieval_governance_bridge",
+      "path": "docs/applications/ai-governance/scripture-authority-retrieval-governance-bridge.md",
+      "node_type": "application_bridge",
+      "trust_zone": "proposed",
+      "lifecycle_state": "draft"
+    }
+  ],
+  "candidate_relationship_objects": [
+    {
+      "id": "relationship_object.doctrine_scripture_authority.constrains.application_ai_governance_retrieval_ranking",
+      "relationship_type": "constrains",
+      "source_id": "doctrine.scripture_authority",
+      "target_id": "application.ai_governance.retrieval_ranking",
+      "epistemic_status": "proposed"
+    },
+    {
+      "id": "relationship_object.data_graph_inferred_relationships.requires.generated_answer_disclosure",
+      "relationship_type": "requires",
+      "source_id": "data.graph.inferred_relationships",
+      "target_id": "application.ai_governance.generated_answer_disclosure",
+      "epistemic_status": "proposed"
+    }
+  ],
+  "implementation_sequence": [
+    "Review existing retrieval and governance files.",
+    "Create one bridge file only.",
+    "Do not create graph objects until relationship vocabulary is checked.",
+    "After review, create source authority labels or retrieval contract fields if needed."
+  ],
+  "guardrails": [
+    "Do not flatten tradition-specific source hierarchies.",
+    "Do not mark generated summaries as doctrine.",
+    "Do not create a global source hierarchy that overrides tradition profiles without review."
+  ]
+}
