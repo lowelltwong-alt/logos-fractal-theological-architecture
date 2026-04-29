@@ -20,7 +20,7 @@ Create one small bridge file explaining why AI retrieval must preserve source ty
 
 ## Primary target
 
-`docs/applications/ai-governance/scripture-authority-retrieval-governance-bridge.md`
+Planned future bridge file: scripture-authority-retrieval-governance-bridge, under the AI-governance applications folder. This is a planned path note, not a live link in this research packet.
 
 ## Required content
 
