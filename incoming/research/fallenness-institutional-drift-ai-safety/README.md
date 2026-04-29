@@ -19,7 +19,7 @@ ai_usage_posture: staging_only_not_auto_promote
 
 This packet stages a vertical slice about how the doctrine of sin and fallenness should shape AI governance, institutional drift controls, exception capture, and auditability.
 
-The core issue is that humans, institutions, and tools are all vulnerable to distortion. AI safety must therefore assume drift, rationalization, pride, hidden incentives, category hardening, and misuse of power are normal risks to govern, not rare surprises.
+The core issue is that humans, institutions, and tools are all vulnerable to distortion. AI safety must therefore assume drift, rationalization, pride, incentive pressure, category hardening, and unaccountable control are normal risks to govern, not rare surprises.
 
 ## Status
 
@@ -34,4 +34,4 @@ Incoming research only. Not canonical doctrine. Not promoted AI safety policy. N
 
 ## Likely next bridge
 
-`docs/applications/ai-governance/fallenness-institutional-drift-ai-safety-bridge.md`
+Planned future bridge file: fallenness-institutional-drift-ai-safety-bridge, under the AI-governance applications folder. This is a planned path note, not a live link in this research packet.
