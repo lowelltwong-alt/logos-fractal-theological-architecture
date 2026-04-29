@@ -1,0 +1,64 @@
+packet_id: research_packet.fallenness_institutional_drift_ai_safety
+object_type: research_claim_inventory
+trust_zone: incoming_research
+lifecycle_state: draft
+review_status: unreviewed
+epistemic_status: proposed
+created: 2026-04-29
+created_by: ChatGPT
+requested_by: Lowell T. Wong
+ai_usage_posture: staging_only_not_auto_promote
+
+claims:
+  - claim_id: claim.research.fallenness_ai_safety.auditability_is_theological_realism
+    subject: doctrine.sin
+    predicate: requires
+    object: application.ai_governance.auditability
+    claim_text: >-
+      Because humans and institutions are vulnerable to distortion, AI-assisted
+      workflows should preserve audit trails and review paths rather than hiding
+      responsibility behind process or automation.
+    epistemic_status: proposed
+    confidence: high
+    trust_zone: incoming_research
+    source_basis:
+      existing_repo_refs:
+        - examples/anthropology-to-ai-governance-derivation.md
+        - docs/governance/exceptions-lake-architecture-decision.md
+      review_needed:
+        - doctrine_sin_source_review
+        - governance_policy_mapping
+
+  - claim_id: claim.research.fallenness_ai_safety.exceptions_are_moral_signals
+    subject: exceptions_lake
+    predicate: may_surface
+    object: application.ai_governance.category_drift_or_hidden_harm
+    claim_text: >-
+      Recurring exceptions may be operational signals, but they may also be moral
+      signals that a system is misclassifying persons, hiding harm, or letting
+      categories harden into judgments.
+    epistemic_status: proposed
+    confidence: medium_high
+    trust_zone: incoming_research
+
+  - claim_id: claim.research.fallenness_ai_safety.no_silent_auto_promotion
+    subject: ai_generated_or_inferred_material
+    predicate: must_not
+    object: silently_promote_to_canonical_truth
+    claim_text: >-
+      AI-generated outputs, inferred graph relations, and exception patterns may
+      inform proposals, but they must not silently rewrite doctrine, governance,
+      or canonical source material.
+    epistemic_status: proposed
+    confidence: high
+    trust_zone: incoming_research
+
+implementation_candidates:
+  prose_bridge:
+    path: docs/applications/ai-governance/fallenness-institutional-drift-ai-safety-bridge.md
+    status: proposed_next_file
+
+review_questions:
+  - Which claims require a fuller doctrine of sin node before promotion?
+  - How should exceptions-lake signals be separated from doctrine changes?
+  - Which drift controls belong in application bridges versus governance policy files?
