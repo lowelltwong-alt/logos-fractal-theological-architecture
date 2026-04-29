@@ -1,0 +1,171 @@
+packet_id: research_packet.trinity_anthropology_ai_governance
+object_type: research_claim_inventory
+trust_zone: incoming_research
+lifecycle_state: draft
+review_status: unreviewed
+epistemic_status: proposed
+created: 2026-04-29
+created_by: ChatGPT
+requested_by: Lowell T. Wong
+ai_usage_posture: staging_only_not_auto_promote
+
+research_question: >-
+  How does Christian doctrine of the Trinity and theological anthropology constrain
+  the governance of AI systems that automate, recommend, rank, or delegate
+  decisions affecting human persons?
+
+scope:
+  vertical_slice:
+    - doctrine.trinity
+    - concept.personhood
+    - doctrine.anthropology
+    - concept.imago_dei
+    - concept.human_agency
+    - application.ai_governance
+  promotion_rule: >-
+    Claims in this file are candidates only. They require source review,
+    relationship vocabulary review, and steward approval before promotion.
+
+claims:
+  - claim_id: claim.research.trinity_personhood.non_reductive_personhood
+    subject: doctrine.trinity
+    predicate: shapes_understanding_of
+    object: concept.personhood
+    claim_text: >-
+      The triune God grounds a Christian account of personhood that cannot be
+      reduced to isolated function, productivity, or abstract individuality.
+    epistemic_status: proposed
+    trust_zone: incoming_research
+    confidence: medium
+    source_basis:
+      scripture:
+        - matthew.28.19
+        - john.14-17
+        - 2_corinthians.13.14
+      doctrine:
+        - nicene_constantinopolitan_creed
+      review_needed:
+        - patristic_personhood_language
+        - avoid_overmodernizing_trinitarian_personhood
+    downstream_implications:
+      - concept.personhood
+      - doctrine.anthropology
+      - application.ai_governance.non_reductive_evaluation
+    notes: >-
+      Strong candidate, but needs careful wording because modern personhood
+      language can be projected backward into patristic sources too quickly.
+
+  - claim_id: claim.research.personhood_anthropology.human_not_optimization_variable
+    subject: doctrine.anthropology
+    predicate: constrains
+    object: application.ai_governance.non_reductive_evaluation
+    claim_text: >-
+      Human persons may be represented operationally, but they must not be
+      treated as if the operational representation exhausts their identity,
+      dignity, moral status, or vocation.
+    epistemic_status: proposed
+    trust_zone: incoming_research
+    confidence: high
+    source_basis:
+      scripture:
+        - genesis.1.26-28
+        - colossians.1.15-20
+      existing_repo_refs:
+        - docs/doctrine/anthropology.md
+        - docs/concepts/imago-dei.md
+        - docs/applications/ai-governance/human-dignity-and-non-reductive-evaluation.md
+        - data/claims/claim.concept.imago_dei.constrains.application_ai_governance_human_dignity.yaml
+    downstream_implications:
+      - ai_must_not_totalize_profiles
+      - model_categories_need_scope_notes
+      - sensitive_rankings_need_review
+
+  - claim_id: claim.research.anthropology_agency.named_human_commit_required
+    subject: concept.human_agency
+    predicate: requires
+    object: application.ai_governance.human_decision_ownership
+    claim_text: >-
+      In consequential decisions affecting persons, AI systems may inform and
+      rank, but a named human or institutionally accountable human body should
+      own the final commit point.
+    epistemic_status: proposed
+    trust_zone: incoming_research
+    confidence: high
+    source_basis:
+      scripture:
+        - genesis.1.26-28
+      doctrine:
+        - imago_dei
+        - stewardship
+        - moral_responsibility
+      existing_repo_refs:
+        - examples/anthropology-to-ai-governance-derivation.md
+    downstream_implications:
+      - lairca.commit_stage_requires_owner
+      - approval_gate_for_consequential_actions
+      - audit_log_must_record_decision_owner
+
+  - claim_id: claim.research.fallenness.requires_auditability
+    subject: doctrine.sin
+    predicate: requires
+    object: application.ai_governance.audit_and_category_drift_review
+    claim_text: >-
+      Because humans, institutions, and tools are vulnerable to distortion,
+      AI-assisted workflows require audit trails, review triggers, and category
+      drift checks.
+    epistemic_status: proposed
+    trust_zone: incoming_research
+    confidence: medium_high
+    source_basis:
+      doctrine:
+        - fallenness
+        - moral_disorder
+        - institutional_sin
+      review_needed:
+        - connect_to_augustine_ordered_love
+        - connect_to_governance_drift_files
+    downstream_implications:
+      - no_silent_mutation_of_canonical_truth
+      - periodic_review_of_rankings
+      - exceptions_lake_harm_signal_capture
+
+  - claim_id: claim.research.communion.requires_challenge_paths
+    subject: concept.personhood
+    predicate: supports
+    object: application.ai_governance.explanation_and_challenge_paths
+    claim_text: >-
+      A relational account of persons supports explanation, dialogue, appeal,
+      and challenge paths when AI-assisted systems materially affect a person.
+    epistemic_status: proposed
+    trust_zone: incoming_research
+    confidence: medium
+    source_basis:
+      scripture:
+        - john.14-17
+        - 2_corinthians.13.14
+      doctrine:
+        - trinity
+        - anthropology
+      review_needed:
+        - determine_whether_this_is_direct_doctrine_or_prudential_application
+    downstream_implications:
+      - affected_persons_need_meaningful_recouse
+      - automated_decisions_need_explainability_thresholds
+      - relational_governance_not_only_process_flow
+
+implementation_candidates:
+  prose_bridge:
+    path: docs/applications/ai-governance/trinity-personhood-human-agency-bridge.md
+    status: proposed_next_file
+  possible_concept_nodes:
+    - docs/concepts/personhood.md
+    - docs/concepts/human-agency.md
+  possible_claim_objects:
+    - data/claims/claim.doctrine_anthropology.requires.application_ai_governance_human_decision_ownership.yaml
+    - data/claims/claim.doctrine_sin.requires.application_ai_governance_audit_and_category_drift_review.yaml
+
+review_questions:
+  - Which claims are shared-core Christian commitments and which require tradition-specific overlays?
+  - Should Christology mediate the move from Trinity to anthropology more explicitly?
+  - Which governance requirements are direct implications and which are prudential applications?
+  - What existing relationship_type values should be reused before adding new predicates?
