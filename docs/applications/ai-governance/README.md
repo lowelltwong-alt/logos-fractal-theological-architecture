@@ -66,3 +66,28 @@ The first high-value application work should focus on:
 - limits on reductive human scoring
 - delegated authority and stewardship
 - governance constraints for AI-assisted institutions
+
+## Bridge Pack v1
+
+Bridge Pack v1 is the preferred next step after staged incoming research packets.
+
+It creates draft application bridges that:
+- preserve source research packet references
+- distinguish direct theological claims from prudential governance applications
+- remain proposed and unreviewed
+- do not auto-promote doctrine, claim objects, or graph objects
+
+Current Bridge Pack v1 files:
+- `trinity-personhood-human-agency-bridge.md`
+- `scripture-authority-retrieval-governance-bridge.md`
+- `fallenness-institutional-drift-ai-safety-bridge.md`
+- `christology-incarnation-ai-mediation-bridge.md`
+
+Preferred flow:
+
+```text
+incoming research packet
+-> draft application bridge
+-> steward review
+-> later claim or graph work only if the prose path is accepted
+```

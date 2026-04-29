@@ -394,6 +394,26 @@ What should Codex do next?
 What should Codex not do?
 ```
 
+## Bridge Pack v1 next step
+
+After an incoming research packet is staged and narrowed, the preferred next promotion step is usually a draft application bridge under:
+
+`docs/applications/ai-governance/`
+
+Bridge files are useful because they:
+- preserve the source research packet reference
+- distinguish direct theological claims from prudential governance applications
+- remain visibly draft, proposed, and unreviewed
+- avoid auto-promoting claim objects or graph relationship objects too early
+
+Current Bridge Pack v1 examples include:
+- `docs/applications/ai-governance/trinity-personhood-human-agency-bridge.md`
+- `docs/applications/ai-governance/scripture-authority-retrieval-governance-bridge.md`
+- `docs/applications/ai-governance/fallenness-institutional-drift-ai-safety-bridge.md`
+- `docs/applications/ai-governance/christology-incarnation-ai-mediation-bridge.md`
+
+This is the preferred next step when the research packet is strong enough to show a derivation path, but not yet strong enough to justify claim-object or graph-object promotion.
+
 ## Final principle
 
 The Logos repository should become easier to contribute to without becoming easier to corrupt.
