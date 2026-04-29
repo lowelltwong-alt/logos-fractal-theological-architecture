@@ -1,0 +1,47 @@
+{
+  "id": "graph_object_plan.fallenness_institutional_drift_ai_safety",
+  "object_type": "graph_object_plan",
+  "trust_zone": "incoming_research",
+  "lifecycle_state": "draft",
+  "review_status": "unreviewed",
+  "epistemic_status": "proposed",
+  "created": "2026-04-29",
+  "created_by": "ChatGPT",
+  "purpose": "Plan a small bridge from fallenness and institutional drift into AI safety governance.",
+  "candidate_new_nodes": [
+    {
+      "id": "application.ai_governance.fallenness_institutional_drift_ai_safety_bridge",
+      "path": "docs/applications/ai-governance/fallenness-institutional-drift-ai-safety-bridge.md",
+      "node_type": "application_bridge",
+      "trust_zone": "proposed",
+      "lifecycle_state": "draft"
+    }
+  ],
+  "candidate_relationship_objects": [
+    {
+      "id": "relationship_object.doctrine_sin.requires.application_ai_governance_auditability",
+      "relationship_type": "requires",
+      "source_id": "doctrine.sin",
+      "target_id": "application.ai_governance.auditability",
+      "epistemic_status": "proposed"
+    },
+    {
+      "id": "relationship_object.exceptions_lake.may_surface.category_drift_or_hidden_harm",
+      "relationship_type": "may_surface",
+      "source_id": "exceptions_lake",
+      "target_id": "application.ai_governance.category_drift_or_hidden_harm",
+      "epistemic_status": "proposed"
+    }
+  ],
+  "implementation_sequence": [
+    "Review existing exceptions-lake and governance files.",
+    "Create one bridge file only.",
+    "Do not change validators or canonical governance rules in the bridge pass.",
+    "Create claim objects only after the bridge is reviewed."
+  ],
+  "guardrails": [
+    "Do not treat exception patterns as automatic doctrine changes.",
+    "Do not silently promote AI-generated or inferred material.",
+    "Do not create new safety vocabulary without registry review."
+  ]
+}
