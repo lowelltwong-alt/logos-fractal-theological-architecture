@@ -34,4 +34,4 @@ Incoming research only. Not canonical doctrine. Not a promoted Christology node.
 
 ## Likely next bridge
 
-`docs/applications/ai-governance/christology-incarnation-ai-mediation-bridge.md`
+Planned future bridge file: christology-incarnation-ai-mediation-bridge, under the AI-governance applications folder. This is a planned path note, not a live link in this research packet.
