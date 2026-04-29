@@ -1,0 +1,136 @@
+{
+  "id": "graph_object_plan.trinity_anthropology_ai_governance",
+  "object_type": "graph_object_plan",
+  "trust_zone": "incoming_research",
+  "lifecycle_state": "draft",
+  "review_status": "unreviewed",
+  "epistemic_status": "proposed",
+  "created": "2026-04-29",
+  "created_by": "ChatGPT",
+  "requested_by": "Lowell T. Wong",
+  "ai_usage_posture": "staging_only_not_auto_promote",
+  "purpose": "Plan a small future promotion path from a research seed into governed doctrine, concept, application, claim, and relationship objects.",
+  "vertical_slice": [
+    "doctrine.trinity",
+    "concept.personhood",
+    "doctrine.anthropology",
+    "concept.imago_dei",
+    "concept.human_agency",
+    "application.ai_governance"
+  ],
+  "existing_objects_to_check_first": [
+    {
+      "id": "doctrine.trinity",
+      "path": "docs/doctrine/trinity.md",
+      "action": "patch_lightly_only_if_needed"
+    },
+    {
+      "id": "doctrine.anthropology",
+      "path": "docs/doctrine/anthropology.md",
+      "action": "patch_lightly_only_if_needed"
+    },
+    {
+      "id": "concept.imago_dei",
+      "path": "docs/concepts/imago-dei.md",
+      "action": "reuse_existing_node"
+    },
+    {
+      "id": "application.ai_governance.human_dignity_non_reductive_evaluation",
+      "path": "docs/applications/ai-governance/human-dignity-and-non-reductive-evaluation.md",
+      "action": "reuse_existing_application_node"
+    },
+    {
+      "id": "claim.concept.imago_dei.constrains.application_ai_governance_human_dignity",
+      "path": "data/claims/claim.concept.imago_dei.constrains.application_ai_governance_human_dignity.yaml",
+      "action": "reuse_as_prior_claim_pattern"
+    }
+  ],
+  "candidate_new_nodes": [
+    {
+      "id": "concept.personhood",
+      "path": "docs/concepts/personhood.md",
+      "node_type": "concept_node",
+      "trust_zone": "proposed",
+      "lifecycle_state": "draft",
+      "description": "Concept node for personhood, relation, communion, agency, and non-reductive human identity.",
+      "promotion_condition": "Create only if no adequate personhood node already exists."
+    },
+    {
+      "id": "concept.human_agency",
+      "path": "docs/concepts/human-agency.md",
+      "node_type": "concept_node",
+      "trust_zone": "proposed",
+      "lifecycle_state": "draft",
+      "description": "Concept node for human moral agency, responsibility, decision ownership, and accountable participation.",
+      "promotion_condition": "Create only after confirming relationship to concept.vocation and concept.stewardship."
+    },
+    {
+      "id": "application.ai_governance.trinity_personhood_human_agency_bridge",
+      "path": "docs/applications/ai-governance/trinity-personhood-human-agency-bridge.md",
+      "node_type": "application_bridge",
+      "trust_zone": "proposed",
+      "lifecycle_state": "draft",
+      "description": "A prose bridge showing the derivation from Trinity to personhood to anthropology to AI governance constraints.",
+      "promotion_condition": "Best first promoted file after review."
+    }
+  ],
+  "candidate_relationship_objects": [
+    {
+      "id": "relationship_object.doctrine_trinity.shapes.concept_personhood",
+      "relationship_type": "shapes_understanding_of",
+      "source_id": "doctrine.trinity",
+      "target_id": "concept.personhood",
+      "epistemic_status": "proposed",
+      "trust_zone": "proposed",
+      "notes": "Needs careful review to avoid over-modernizing patristic trinitarian language."
+    },
+    {
+      "id": "relationship_object.concept_personhood.informs.doctrine_anthropology",
+      "relationship_type": "informs",
+      "source_id": "concept.personhood",
+      "target_id": "doctrine.anthropology",
+      "epistemic_status": "proposed",
+      "trust_zone": "proposed",
+      "notes": "Likely useful for graph traversal after personhood node exists."
+    },
+    {
+      "id": "relationship_object.doctrine_anthropology.constrains.application_ai_governance_human_decision_ownership",
+      "relationship_type": "constrains",
+      "source_id": "doctrine.anthropology",
+      "target_id": "application.ai_governance.human_decision_ownership",
+      "epistemic_status": "proposed",
+      "trust_zone": "proposed",
+      "notes": "Could become a claim object before becoming a relationship object."
+    },
+    {
+      "id": "relationship_object.doctrine_sin.requires.application_ai_governance_audit_category_drift_review",
+      "relationship_type": "requires",
+      "source_id": "doctrine.sin",
+      "target_id": "application.ai_governance.audit_and_category_drift_review",
+      "epistemic_status": "proposed",
+      "trust_zone": "proposed",
+      "notes": "Requires checking whether doctrine.sin exists and how fallenness is currently modeled."
+    }
+  ],
+  "implementation_sequence": [
+    "Review research-packet.md and claim-inventory.yaml.",
+    "Check existing concept and application nodes to avoid duplicates.",
+    "Promote a single prose bridge file first if review passes.",
+    "Create at most one concept node in the next Codex pass if missing: concept.personhood.",
+    "Create claim objects only after the prose bridge and concept vocabulary stabilize.",
+    "Create relationship objects only after relationship_type vocabulary review."
+  ],
+  "guardrails": [
+    "Do not promote incoming research automatically.",
+    "Do not overwrite existing doctrine nodes wholesale.",
+    "Do not create tradition-specific claims without explicit tradition scope.",
+    "Do not mix asserted and inferred claims in the same object.",
+    "Do not create graph objects before checking relationship registry and existing patterns."
+  ],
+  "review_questions": [
+    "Should Christology be an explicit intermediate node in this slice?",
+    "Which relationship_type names already exist and should be reused?",
+    "Which claims are source-supported enough for proposed claim objects?",
+    "Which claims are prudential governance applications rather than direct doctrinal assertions?"
+  ]
+}
