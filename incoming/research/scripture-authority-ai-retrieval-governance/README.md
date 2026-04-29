@@ -36,4 +36,4 @@ Incoming research only. Not canonical doctrine. Not a promoted source hierarchy.
 
 ## Likely next bridge
 
-`docs/applications/ai-governance/scripture-authority-retrieval-governance-bridge.md`
+Planned future bridge file: scripture-authority-retrieval-governance-bridge, under the AI-governance applications folder. This is a planned path note, not a live link in this research packet.
