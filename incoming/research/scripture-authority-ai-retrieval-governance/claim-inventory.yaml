@@ -1,0 +1,83 @@
+packet_id: research_packet.scripture_authority_ai_retrieval_governance
+object_type: research_claim_inventory
+trust_zone: incoming_research
+lifecycle_state: draft
+review_status: unreviewed
+epistemic_status: proposed
+created: 2026-04-29
+created_by: ChatGPT
+requested_by: Lowell T. Wong
+ai_usage_posture: staging_only_not_auto_promote
+
+claims:
+  - claim_id: claim.research.authority_retrieval.source_type_must_be_visible
+    subject: application.ai_governance.retrieval_rendering
+    predicate: requires
+    object: source_type_visibility
+    claim_text: >-
+      AI retrieval and rendering should disclose whether a claim is grounded in
+      Scripture, creed, doctrine, canon thinker, commentary, application bridge,
+      AI summary, or inferred graph relation.
+    epistemic_status: proposed
+    confidence: high
+    trust_zone: incoming_research
+    source_basis:
+      existing_repo_refs:
+        - README.md
+        - data/graph/README.md
+        - docs/governance/node-header-template.md
+      review_needed:
+        - source_authority_vocabulary
+        - retrieval_rendering_contract
+
+  - claim_id: claim.research.authority_retrieval.not_all_sources_equal
+    subject: doctrine.scripture_authority
+    predicate: constrains
+    object: application.ai_governance.retrieval_ranking
+    claim_text: >-
+      Retrieval should not treat all text chunks as equally authoritative when
+      source type, tradition scope, review status, or trust zone differ.
+    epistemic_status: proposed
+    confidence: high
+    trust_zone: incoming_research
+    source_basis:
+      review_needed:
+        - authority_tier_scheme
+        - tradition_profile_interaction
+
+  - claim_id: claim.research.authority_retrieval.citation_not_enough
+    subject: application.ai_governance.citation_practice
+    predicate: requires
+    object: authority_scope_labeling
+    claim_text: >-
+      Citations should be paired with authority-scope labels because a citation
+      identifies a source but does not by itself establish how that source should
+      govern doctrine, application, or institutional action.
+    epistemic_status: proposed
+    confidence: medium_high
+    trust_zone: incoming_research
+
+  - claim_id: claim.research.authority_retrieval.inferred_edges_disclosed
+    subject: data.graph.inferred_relationships
+    predicate: requires
+    object: generated_answer_disclosure
+    claim_text: >-
+      When an answer depends on inferred or generated graph relations, the answer
+      should disclose that dependency rather than presenting it as a direct source
+      assertion.
+    epistemic_status: proposed
+    confidence: high
+    trust_zone: incoming_research
+
+implementation_candidates:
+  prose_bridge:
+    path: docs/applications/ai-governance/scripture-authority-retrieval-governance-bridge.md
+    status: proposed_next_file
+  possible_claim_objects:
+    - data/claims/claim.application_ai_governance_retrieval.requires.source_type_visibility.yaml
+    - data/claims/claim.doctrine_scripture_authority.constrains.application_ai_governance_retrieval_ranking.yaml
+
+review_questions:
+  - What source authority tiers should be used by default?
+  - How should AI-generated summaries be marked in retrieval surfaces?
+  - Should inferred graph relations be visible by default or hidden behind expansion?
