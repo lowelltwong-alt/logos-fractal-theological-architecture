@@ -20,7 +20,7 @@ Create one small bridge file explaining how Christology and incarnation constrai
 
 ## Primary target
 
-`docs/applications/ai-governance/christology-incarnation-ai-mediation-bridge.md`
+Planned future bridge file: christology-incarnation-ai-mediation-bridge, under the AI-governance applications folder. This is a planned path note, not a live link in this research packet.
 
 ## Required content
 
