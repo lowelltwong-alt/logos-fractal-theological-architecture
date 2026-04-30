@@ -1,0 +1,81 @@
+object_type: claim_inventory
+trust_zone: incoming_research
+lifecycle_status: draft
+provenance_note: "Created 2026-04-30 as candidate claims for the Human Person and Formation Core Slice."
+reason_for_inclusion: "Prepare small, reviewable candidate claim objects before promotion into data/claims."
+review_status: unreviewed
+ai_usage_posture: staging_only_not_auto_promote
+claims:
+  - id: candidate.claim.imago_dei.constrains.non_reductive_personhood
+    status: candidate
+    subject: concept.imago_dei
+    predicate: constrains
+    object: application.ai_governance.non_reductive_personhood
+    claim_text: "The image of God constrains AI governance against reducing persons to scores, behavioral surfaces, or workflow units."
+    source_basis:
+      - scripture.genesis.1.26-28
+      - doctrine.anthropology
+    review_needed:
+      - theological review
+      - vocabulary review
+      - source-basis review
+  - id: candidate.claim.personhood.requires.human_decision_ownership
+    status: candidate
+    subject: concept.personhood
+    predicate: requires
+    object: application.ai_governance.human_decision_ownership
+    claim_text: "Because persons are accountable moral agents, high-stakes or morally significant decisions require identifiable human ownership rather than anonymous model authority."
+    source_basis:
+      - doctrine.anthropology
+      - concept.human_agency
+      - canon.augustine
+    review_needed:
+      - theology + governance review
+  - id: candidate.claim.fallenness.requires.auditability
+    status: candidate
+    subject: concept.sin
+    predicate: requires
+    object: application.ai_governance.auditability
+    claim_text: "Because fallenness includes pride, self-justification, rationalization, and institutional drift, AI-assisted systems require auditability and visible accountability."
+    source_basis:
+      - scripture.genesis.3.1-19
+      - canon.augustine
+      - doctrine.anthropology
+    review_needed:
+      - theology + AI safety review
+  - id: candidate.claim.ordered_love.constrains.optimization
+    status: candidate
+    subject: concept.ordered_love
+    predicate: constrains
+    object: application.ai_governance.optimization_and_efficiency
+    claim_text: "Ordered love constrains optimization by requiring speed, scale, relevance, and efficiency to remain subordinate to higher goods such as truth, dignity, neighbor-love, and accountability."
+    source_basis:
+      - canon.augustine
+      - doctrine.anthropology
+    review_needed:
+      - theological review
+      - relationship vocabulary review
+  - id: candidate.claim.formation.requires.practice_level_evaluation
+    status: candidate
+    subject: concept.formation
+    predicate: requires
+    object: application.ai_governance.practice_level_evaluation
+    claim_text: "Because systems form habits, attention, loves, and institutional reflexes, AI governance should evaluate what practices and dispositions the system trains over time."
+    source_basis:
+      - canon.dallas_willard
+      - canon.augustine
+      - concept.human_agency
+    review_needed:
+      - theology + governance review
+  - id: candidate.claim.grace.constrains.technical_redemption_language
+    status: candidate
+    subject: concept.grace
+    predicate: constrains
+    object: application.ai_governance.technical_redemption_language
+    claim_text: "Grace constrains AI governance against treating technical architecture, model fluency, or workflow improvement as moral redemption."
+    source_basis:
+      - canon.augustine
+      - canon.athanasius
+      - doctrine.anthropology
+    review_needed:
+      - theological review
