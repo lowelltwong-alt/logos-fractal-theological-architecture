@@ -37,7 +37,7 @@ Use planned path notes rather than live links to future files that do not yet ex
 
 Do not create:
 
-- `.claude/agents/`;
+- a future dot-claude agents folder;
 - executable agent runtime;
 - agent memory;
 - tool registry code;
