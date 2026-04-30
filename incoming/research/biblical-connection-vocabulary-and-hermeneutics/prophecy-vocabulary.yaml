@@ -1,0 +1,118 @@
+packet_id: research_packet.biblical_connection_vocabulary_and_hermeneutics
+object_type: prophecy_vocabulary_seed
+trust_zone: incoming_research
+lifecycle_state: draft
+review_status: unreviewed
+epistemic_status: proposed
+created: 2026-04-29
+created_by: ChatGPT
+ai_usage_posture: staging_only_not_auto_promote
+
+governance_warning: >-
+  Prophecy vocabulary must be tightly governed. It should prevent speculative
+  modern-event mapping, overconfident fulfillment claims, and collapsing typology,
+  promise, prediction, apocalyptic imagery, and theological reception.
+
+prophecy_terms:
+  - term_id: prophetic_oracle
+    label: prophetic oracle
+    definition: A speech unit presented as prophetic address, often judgment, restoration, warning, promise, or summons.
+    evidence_required: genre_and_literary_context
+    ai_rule: Identify addressee, historical setting if known, and genre before making application.
+
+  - term_id: prediction
+    label: prediction
+    definition: A claim that a future event will occur.
+    evidence_required: textual_future_orientation
+    ai_rule: Do not use prediction as the default category for all prophecy.
+
+  - term_id: promise
+    label: promise
+    definition: A divine or covenantal pledge that may be invoked, developed, or claimed as fulfilled later.
+    evidence_required: covenantal_or_narrative_context
+    ai_rule: Distinguish promise from prediction and from later fulfillment interpretation.
+
+  - term_id: covenant_curse
+    label: covenant curse
+    definition: Threatened judgment attached to covenant violation.
+    evidence_required: covenant_context
+    ai_rule: Do not isolate curse language from covenant structure.
+
+  - term_id: covenant_blessing
+    label: covenant blessing
+    definition: Promised blessing attached to covenant faithfulness or divine commitment.
+    evidence_required: covenant_context
+    ai_rule: Mark covenantal frame.
+
+  - term_id: sign_act
+    label: prophetic sign-act
+    definition: Symbolic enacted prophecy performed by a prophet.
+    evidence_required: narrative_or_prophetic_report
+    ai_rule: Explain symbolic action and textual interpretation.
+
+  - term_id: symbolic_vision
+    label: symbolic vision
+    definition: Visionary material using symbolic images.
+    evidence_required: vision_report_and_symbolic_context
+    ai_rule: Avoid collapsing image into literal referent without argument.
+
+  - term_id: apocalyptic
+    label: apocalyptic
+    definition: Visionary and symbolic literature often involving cosmic conflict, judgment, heavenly mediation, and eschatological hope.
+    evidence_required: genre_analysis
+    ai_rule: Mark apocalyptic genre and avoid simplistic prediction-only readings.
+
+  - term_id: eschatological_horizon
+    label: eschatological horizon
+    definition: A future-oriented horizon concerning final restoration, judgment, kingdom, or consummation.
+    evidence_required: textual_and_theological_context
+    ai_rule: Distinguish near historical horizon from ultimate eschatological horizon when relevant.
+
+  - term_id: direct_fulfillment
+    label: direct fulfillment
+    definition: A later event or text is interpreted as directly fulfilling an earlier promise, oracle, or prediction.
+    evidence_required: explicit_fulfillment_claim_or_strong_interpretive_argument
+    ai_rule: Do not conflate with typological fulfillment.
+
+  - term_id: typological_fulfillment
+    label: typological fulfillment
+    definition: A later person, event, or institution fulfills an earlier pattern rather than merely matching a prediction.
+    evidence_required: typological_argument
+    ai_rule: Distinguish from prediction and from allegory.
+
+  - term_id: messianic_expectation
+    label: messianic expectation
+    definition: Hope or expectation concerning an anointed figure, king, deliverer, or related restoration figure.
+    evidence_required: textual_and_second_temple_or_canonical_context
+    ai_rule: Mark whether expectation is textual, historical, canonical, or later reception.
+
+  - term_id: fulfillment_formula
+    label: fulfillment formula
+    definition: A textual formula explicitly identifying fulfillment, especially in later interpretive texts.
+    evidence_required: direct_textual_formula
+    ai_rule: Render as authorial claim where present.
+
+  - term_id: pesher
+    label: pesher
+    definition: Interpretive mode known especially from Qumran texts in which earlier prophetic text is applied to contemporary events or community identity.
+    evidence_required: source_specific_pesher_context
+    ai_rule: Do not generalize pesher to all fulfillment interpretation.
+
+  - term_id: sensus_plenior
+    label: fuller sense
+    definition: A fuller meaning understood in later divine or canonical context beyond the immediate human authorial horizon.
+    evidence_required: tradition_specific_hermeneutical_warrant
+    ai_rule: Mark tradition scope and do not universalize.
+
+  - term_id: contested_fulfillment
+    label: contested fulfillment
+    definition: A fulfillment claim disputed across traditions, scholars, or interpretive communities.
+    evidence_required: plurality_of_interpretive_sources
+    ai_rule: Present multiple views and authority scopes.
+
+prohibited_shortcuts:
+  - Do not equate prophecy with prediction only.
+  - Do not equate typology with proof-texting.
+  - Do not map prophecy to modern events without explicit tradition scope and review.
+  - Do not treat apocalyptic imagery as transparent literal chronology by default.
+  - Do not hide whether fulfillment is asserted by the text, tradition, commentator, or AI inference.

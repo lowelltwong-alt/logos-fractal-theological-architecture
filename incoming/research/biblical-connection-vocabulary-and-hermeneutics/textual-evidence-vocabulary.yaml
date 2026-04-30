@@ -1,0 +1,157 @@
+packet_id: research_packet.biblical_connection_vocabulary_and_hermeneutics
+object_type: textual_evidence_vocabulary_seed
+trust_zone: incoming_research
+lifecycle_state: draft
+review_status: unreviewed
+epistemic_status: proposed
+created: 2026-04-29
+created_by: ChatGPT
+ai_usage_posture: staging_only_not_auto_promote
+
+design_note: >-
+  Textual evidence vocabulary should be recognizable to textual critics and
+  original-language scholars while remaining usable by AI retrieval systems.
+
+textual_criticism_terms:
+  - term_id: witness
+    label: witness
+    definition: A manuscript, version, quotation, or other source that attests a text or reading.
+    ai_rule: Always distinguish witness from reading and from edition.
+
+  - term_id: manuscript_witness
+    label: manuscript witness
+    definition: A manuscript that attests some portion of the text.
+    ai_rule: Include siglum, date, language, text form, and coverage where known.
+
+  - term_id: versional_witness
+    label: versional witness
+    definition: An ancient translation or version that attests a text or reading.
+    ai_rule: Mark language and translation layer; do not treat as original-language witness.
+
+  - term_id: patristic_citation
+    label: patristic citation
+    definition: A quotation or citation by an early Christian writer used as textual or reception evidence.
+    ai_rule: Distinguish exact quotation, paraphrase, and allusion.
+
+  - term_id: variant_unit
+    label: variant unit
+    definition: A location or unit of text where variation is recorded.
+    ai_rule: Link variant unit to passage anchor and source apparatus.
+
+  - term_id: reading
+    label: reading
+    definition: A specific textual form within a variant unit.
+    ai_rule: Link reading to witnesses and edition; avoid treating all readings as equally probable.
+
+  - term_id: lemma_text_critical
+    label: lemma in textual criticism
+    definition: The base text or accepted reading to which variants are compared.
+    ai_rule: Do not confuse with lexical lemma.
+
+  - term_id: lemma_lexical
+    label: lexical lemma
+    definition: Dictionary headword or root form of an inflected word.
+    ai_rule: Do not confuse with text-critical lemma.
+
+  - term_id: apparatus_entry
+    label: apparatus entry
+    definition: Structured entry recording variation and witness support.
+    ai_rule: Preserve source edition and apparatus convention.
+
+  - term_id: siglum
+    label: siglum
+    definition: Abbreviated symbol identifying a witness or source in an apparatus.
+    ai_rule: Resolve sigla to witness metadata where possible.
+
+  - term_id: lacuna
+    label: lacuna
+    definition: Gap or missing portion in a witness.
+    ai_rule: Do not treat absence due to lacuna as negative evidence.
+
+  - term_id: omission
+    label: omission
+    definition: A reading or witness lacks material present elsewhere.
+    ai_rule: Distinguish scribal omission, shorter reading, and lacuna.
+
+  - term_id: addition
+    label: addition
+    definition: A reading includes material absent elsewhere.
+    ai_rule: Mark as addition only in relation to a base text or comparison set.
+
+  - term_id: transposition
+    label: transposition
+    definition: Word or phrase order differs between readings.
+    ai_rule: Render as order variation, not necessarily meaning change.
+
+  - term_id: harmonization
+    label: harmonization
+    definition: A reading appears altered to conform to a parallel text or familiar formula.
+    ai_rule: Mark as text-critical hypothesis.
+
+hebrew_bible_terms:
+  - term_id: ketiv
+    label: ketiv
+    definition: The written consonantal form in the Masoretic tradition.
+    ai_rule: Pair with qere when relevant.
+
+  - term_id: qere
+    label: qere
+    definition: The traditional reading supplied alongside the written form.
+    ai_rule: Distinguish written form from read form.
+
+  - term_id: masoretic_accent
+    label: Masoretic accent
+    definition: Accentual signs in the Masoretic tradition relevant to pronunciation, syntax, and cantillation.
+    ai_rule: Avoid overclaiming theological implications without argument.
+
+  - term_id: dead_sea_scrolls_witness
+    label: Dead Sea Scrolls witness
+    definition: A Qumran or related scroll witness relevant to a passage, text form, or tradition.
+    ai_rule: Include cave, manuscript designation, language, and fragmentary status.
+
+  - term_id: samaritan_pentateuch
+    label: Samaritan Pentateuch
+    definition: Samaritan textual tradition of the Pentateuch.
+    ai_rule: Mark tradition and corpus scope.
+
+greek_nt_terms:
+  - term_id: majuscule
+    label: majuscule
+    definition: Greek manuscript written in majuscule script.
+    ai_rule: Include Gregory-Aland or relevant siglum where possible.
+
+  - term_id: minuscule
+    label: minuscule
+    definition: Greek manuscript written in minuscule script.
+    ai_rule: Include manuscript number and date where known.
+
+  - term_id: papyrus
+    label: papyrus witness
+    definition: Papyrus manuscript witness.
+    ai_rule: Include siglum and coverage.
+
+  - term_id: lectionary
+    label: lectionary witness
+    definition: Manuscript arranged for liturgical readings.
+    ai_rule: Distinguish liturgical arrangement from continuous text.
+
+translation_version_terms:
+  - term_id: septuagint
+    label: Septuagint
+    definition: Greek Jewish scriptural translation tradition, not a single uniform canon or text.
+    ai_rule: Identify edition, book, recension, or manuscript context.
+
+  - term_id: targum
+    label: Targum
+    definition: Aramaic translation or paraphrase tradition.
+    ai_rule: Mark specific Targum and tradition.
+
+  - term_id: peshitta
+    label: Peshitta
+    definition: Syriac biblical version.
+    ai_rule: Mark corpus and edition.
+
+  - term_id: vulgate
+    label: Vulgate
+    definition: Latin biblical translation tradition.
+    ai_rule: Mark edition and relation to Catholic reception where relevant.

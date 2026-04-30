@@ -1,0 +1,160 @@
+packet_id: research_packet.biblical_connection_vocabulary_and_hermeneutics
+object_type: relationship_vocabulary_seed
+trust_zone: incoming_research
+lifecycle_state: draft
+review_status: unreviewed
+epistemic_status: proposed
+created: 2026-04-29
+created_by: ChatGPT
+ai_usage_posture: staging_only_not_auto_promote
+
+design_rule: >-
+  Relationship types should use scholar-recognizable labels while carrying AI/RAG
+  qualifiers for source type, method, authority scope, evidence, asserted-vs-inferred
+  status, confidence, and review.
+
+fractal_fields_required_for_promotion:
+  - relationship_type
+  - family
+  - scholarly_label
+  - definition
+  - source_object_types
+  - target_object_types
+  - directionality
+  - inverse_or_related_terms
+  - evidence_required
+  - hermeneutical_method_if_any
+  - authority_scope
+  - ai_rendering_rule
+  - misuse_risk
+  - review_status
+
+families:
+  canon_reference_structure:
+    description: Relations for books, passages, pericopes, canons, corpora, and versification.
+    seed_terms:
+      - contains_passage
+      - contains_pericope
+      - belongs_to_book
+      - belongs_to_canon
+      - has_versification
+      - parallel_pericope_to
+
+  intertextuality:
+    description: Relations for quotation, citation, allusion, echo, reuse, and thematic development.
+    seed_terms:
+      - quotes
+      - cites
+      - alludes_to
+      - echoes
+      - reuses_phrase_from
+      - shares_motif_with
+      - develops_theme_from
+    ai_rendering_rule: Distinguish quotation, citation, allusion, echo, and motif similarity.
+
+  typology_figural:
+    description: Relations for typology, figure, antitype, recapitulation, and pattern correspondence.
+    seed_terms:
+      - typologically_corresponds_to
+      - prefigures
+      - antitype_of
+      - recapitulates
+      - fulfills_typologically
+      - pattern_repeated_in
+    ai_rendering_rule: Distinguish typological correspondence from direct prediction.
+
+  prophecy_fulfillment:
+    description: Relations for prophecy, promise, oracle, apocalyptic, and fulfillment claims.
+    seed_terms:
+      - gives_oracle_concerning
+      - promises
+      - announces_judgment
+      - announces_restoration
+      - claims_fulfillment_of
+      - interprets_as_fulfilled_by
+      - has_near_horizon
+      - has_future_horizon
+      - uses_apocalyptic_imagery
+    ai_rendering_rule: Always show genre, interpretive tradition, and whether fulfillment is textual, typological, or interpretive.
+
+  covenant_redemptive_history:
+    description: Relations for covenantal continuity, escalation, transformation, and fulfillment.
+    seed_terms:
+      - covenantally_develops
+      - covenantally_constrains
+      - participates_in_covenant_pattern
+      - fulfills_promise_to
+      - renews_covenant_theme
+
+  lexical_semantic_language:
+    description: Relations for Hebrew, Aramaic, Greek, morphology, syntax, semantic domains, and translation.
+    seed_terms:
+      - has_lemma
+      - has_morphology
+      - has_sense
+      - belongs_to_semantic_domain
+      - translated_as
+      - rendered_by
+      - syntactically_modifies
+      - semantically_overlaps_with
+    ai_rendering_rule: Keep translation rendering distinct from original-language meaning.
+
+  textual_criticism_witness:
+    description: Relations for manuscripts, versions, citations, variants, readings, apparatus entries, and attestation.
+    seed_terms:
+      - attested_by_witness
+      - has_variant_unit
+      - has_reading
+      - supports_reading
+      - omits_reading
+      - adds_reading
+      - has_lacuna
+      - harmonizes_to
+    ai_rendering_rule: Distinguish witness attestation from theological authority.
+
+  reception_interpretation:
+    description: Relations for commentaries, traditions, liturgy, rabbinic reception, patristic reception, and later interpretation.
+    seed_terms:
+      - interpreted_by
+      - received_in_tradition
+      - cited_by_commentary
+      - liturgically_used_in
+      - contested_by_interpreter
+    ai_rendering_rule: Show interpreter and tradition scope.
+
+  archaeology_history_context:
+    description: Relations for sites, inscriptions, artifacts, chronology, historical geography, and contextual evidence.
+    seed_terms:
+      - archaeologically_contextualized_by
+      - epigraphically_attested_by
+      - geographically_located_at
+      - associated_with_site
+      - dated_by_method
+      - compared_with_ane_parallel
+    ai_rendering_rule: Render as contextual evidence, not direct theological proof.
+
+  doctrine_application:
+    description: Relations for theology, doctrine, application, governance, and AI outputs.
+    seed_terms:
+      - grounds_doctrine
+      - constrains_doctrine
+      - informs_concept
+      - contrasts_with
+      - entails_prudential_constraint
+      - applied_to_governance
+    ai_rendering_rule: Distinguish doctrine grounding from application constraint.
+
+recommended_first_subset:
+  - quotes
+  - alludes_to
+  - echoes
+  - typologically_corresponds_to
+  - claims_fulfillment_of
+  - translated_as
+  - has_lemma
+  - has_reading
+  - attested_by_witness
+  - interpreted_by
+  - archaeologically_contextualized_by
+  - grounds_doctrine
+  - constrains_application
