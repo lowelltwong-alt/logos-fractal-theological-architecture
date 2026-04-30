@@ -22,22 +22,7 @@ Do not add Christian counseling content, diagnosis/treatment guidance, therapy w
 
 ## First task: inspect existing files
 
-Before editing, inspect:
-
-- `README.md`
-- `AI_FRONT_DOOR.md`
-- `AGENTS.md`
-- `docs/roadmap/theological-buildout-roadmap.md`
-- `docs/roadmap/repository-integration-map.md`
-- `docs/doctrine/anthropology.md`
-- `docs/concepts/README.md`
-- `docs/concepts/imago-dei.md`
-- `docs/concepts/sin.md`
-- `docs/concepts/stewardship.md`
-- `docs/concepts/vocation.md`
-- `docs/canon/README.md`
-- `docs/canon/augustine/README.md`
-- `data/claims/README.md`
+Before editing, inspect the current README, AI front door, agent instructions, theological roadmap, repository integration map, anthropology doctrine file, existing concept files for imago Dei, sin, stewardship, and vocation, the canon README, the Augustine canon README, and the claims README.
 
 Search for existing files or anchors before creating any of these:
 
@@ -60,37 +45,39 @@ Do not duplicate an existing node under a different label.
 
 ## Implementation option A: safest seed-only PR
 
-Create only these staged research files:
+Create only the staged research files in this packet:
 
-- `incoming/research/human-person-formation-core-slice/README.md`
-- `incoming/research/human-person-formation-core-slice/research-packet.md`
-- `incoming/research/human-person-formation-core-slice/claim-inventory.yaml`
-- `incoming/research/human-person-formation-core-slice/graph-object-plan.json`
-- `incoming/research/human-person-formation-core-slice/codex-handoff.md`
+- packet README
+- research packet
+- claim inventory YAML
+- graph object plan JSON
+- Codex handoff
 
 This is the lowest-risk PR and should pass as staged research if metadata is valid.
 
 ## Implementation option B: research + small concept buildout
 
-After option A, add only 3-5 proposed concept nodes if no duplicates exist:
+After option A, add only three to five proposed concept nodes if no duplicates exist.
 
-- `docs/concepts/personhood.md`
-- `docs/concepts/human-agency.md`
-- `docs/concepts/ordered-love.md`
-- `docs/concepts/formation.md`
-- `docs/concepts/grace.md`
+Recommended first candidates:
+
+- personhood
+- human agency
+- ordered love
+- formation
+- grace
 
 Do not add all concepts in one pass unless validation and review remain easy.
 
-For `fallenness`, first decide whether `docs/concepts/sin.md` should be deepened instead of creating `docs/concepts/fallenness.md`.
+For fallenness, first decide whether the existing sin concept should be deepened instead of creating a separate fallenness concept file.
 
-For `suffering-and-lament` and `hope`, consider staging as future follow-up if the branch becomes too large.
+For suffering and lament and hope, consider staging them as future follow-up if the branch becomes too large.
 
 ## Implementation option C: thinker-anchor audit only
 
 Do not create large canon thinker nodes yet unless asked.
 
-Instead, create a small staged note if useful at `incoming/research/human-person-formation-core-slice/thinker-anchor-map.md`.
+Instead, create a small staged thinker-anchor map in this packet.
 
 Use it to map:
 
@@ -128,13 +115,13 @@ Validation: run the repo's existing validation commands or document why a comman
 Use the repo's existing validation commands. At minimum, try:
 
 - `git status`
-- `find incoming/research/human-person-formation-core-slice -maxdepth 2 -type f -print`
-- `python scripts/validate_metadata.py` if available
-- `python scripts/validate_crossrefs.py` if available
-- `python scripts/validate_trust_zones.py` if available
-- `./scripts/overnight_maintenance.sh --dry-run` if available
+- list the files in the staged research packet
+- run the metadata validator if available
+- run the cross-reference validator if available
+- run the trust-zone validator if available
+- run the overnight maintenance dry run if available
 
-If a validation script name differs, inspect `.github/workflows/` and use the scripts referenced there.
+If a validation script name differs, inspect the workflows and use the scripts referenced there.
 
 ## Stop conditions
 
