@@ -1,0 +1,61 @@
+{
+  "object_type": "graph_object_plan",
+  "trust_zone": "incoming_research",
+  "lifecycle_status": "draft",
+  "provenance_note": "Created 2026-04-30 as a staged graph plan for the Human Person and Formation Core Slice.",
+  "reason_for_inclusion": "Plan relationship objects without promoting them before concept and claim review.",
+  "review_status": "unreviewed",
+  "ai_usage_posture": "staging_only_not_auto_promote",
+  "do_not_create_relationship_objects_yet": true,
+  "candidate_relationships": [
+    {
+      "source": "doctrine.trinity",
+      "predicate": "informs",
+      "target": "concept.personhood",
+      "rationale": "Trinitarian theology should later inform relationality/personhood, but this needs careful review before graph encoding."
+    },
+    {
+      "source": "concept.imago_dei",
+      "predicate": "grounds",
+      "target": "concept.personhood",
+      "rationale": "Imago Dei supplies the primary shared-core anthropological dignity anchor."
+    },
+    {
+      "source": "concept.personhood",
+      "predicate": "informs",
+      "target": "doctrine.anthropology",
+      "rationale": "Personhood should become a reusable concept within anthropology rather than remain only in application prose."
+    },
+    {
+      "source": "concept.ordered_love",
+      "predicate": "constrains",
+      "target": "application.ai_governance.optimization_and_efficiency",
+      "rationale": "Ordered love governs which goods outrank efficiency and scale."
+    },
+    {
+      "source": "concept.formation",
+      "predicate": "requires",
+      "target": "application.ai_governance.practice_level_evaluation",
+      "rationale": "AI systems should be assessed by what they form in persons and institutions."
+    },
+    {
+      "source": "concept.sin",
+      "predicate": "requires",
+      "target": "application.ai_governance.auditability",
+      "rationale": "Fallenness requires auditability, role clarity, and anti-drift controls."
+    },
+    {
+      "source": "concept.grace",
+      "predicate": "constrains",
+      "target": "application.ai_governance.technical_redemption_language",
+      "rationale": "Grace prevents technical improvement from being framed as moral redemption."
+    }
+  ],
+  "review_gate_before_promotion": [
+    "confirm approved relationship vocabulary",
+    "confirm concept nodes exist and are not duplicate",
+    "confirm claim objects exist or are explicitly staged",
+    "confirm source basis and review status",
+    "confirm no counseling/therapy/crisis workflow content"
+  ]
+}
