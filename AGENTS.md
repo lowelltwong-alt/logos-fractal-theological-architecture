@@ -2,7 +2,7 @@
 object_type: repository_governance_contract
 trust_zone: canonical
 lifecycle_status: active
-provenance_note: "Created on 2026-04-05 from the maintainer's governing contract provided in chat."
+provenance_note: "Created on 2026-04-05 from the maintainer's governing contract provided in chat. Updated on 2026-04-30 to require live mirror synchronization before Codex work."
 reason_for_inclusion: "Keep the working contract on disk at the repo root so future edits follow the same governance rules."
 ---
 
@@ -21,12 +21,32 @@ Assume one maintainer currently performs:
 - promoter
 - publisher
 
+## Live mirror sync rule
+Before starting any Codex or AI-assisted repository work, treat the live GitHub `main` branch as the source of truth.
+
+Required startup sequence:
+
+```bash
+git checkout main
+git fetch origin --prune --tags
+git pull --ff-only origin main
+git status
+git log --oneline --decorate -n 8
+```
+
+If the local repository cannot fast-forward cleanly, stop and report the blocker before editing files.
+
+Do not create feature, seed, roadmap, or cleanup branches from stale local `main`.
+
+Do not assume a previous chat, local mirror, or deleted branch reflects the current live repo state.
+
 ## Non-negotiable rules
 - Do not invent new top-level folders unless necessary.
 - Keep identity separate from labels.
 - Do not let inferred or AI-generated material overwrite canonical material.
 - Keep doctrine topic, doctrine view, and doctrine assessment separate.
 - Preserve history through deprecation rather than deletion.
+- Sync from live `origin/main` before starting repository edits.
 
 ## Required metadata for meaningful additions
 Every meaningful addition should declare:
