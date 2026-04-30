@@ -3,7 +3,7 @@ id: roadmap.christian_counseling_side_quest
 anchor: roadmap.christian_counseling_side_quest
 title: Christian Counseling Side-Quest Roadmap
 node_type: roadmap_note
-trust_zone: planning
+trust_zone: proposed
 lifecycle_state: draft
 review_status: unreviewed
 epistemic_status: planning
