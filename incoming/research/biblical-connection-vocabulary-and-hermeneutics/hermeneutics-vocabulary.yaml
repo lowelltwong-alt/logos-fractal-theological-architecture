@@ -1,0 +1,130 @@
+packet_id: research_packet.biblical_connection_vocabulary_and_hermeneutics
+object_type: hermeneutics_vocabulary_seed
+trust_zone: incoming_research
+lifecycle_state: draft
+review_status: unreviewed
+epistemic_status: proposed
+created: 2026-04-29
+created_by: ChatGPT
+ai_usage_posture: staging_only_not_auto_promote
+
+design_note: >-
+  Hermeneutical vocabulary should be scholar-recognizable first and AI-useful second.
+  AI/RAG systems should expose method, scope, and confidence rather than hiding
+  interpretation behind a single answer.
+
+methods:
+  - method_id: grammatical_historical
+    label: grammatical-historical interpretation
+    definition: Interprets a text by attending to grammar, syntax, historical context, authorial setting, and literary context.
+    useful_for: [basic_exegesis, passage_commentary, source_grounding]
+    ai_risk: May sound objective while still making interpretive choices.
+    required_disclosure: Show when claims depend on historical or grammatical reconstruction.
+
+  - method_id: literary_context
+    label: literary-contextual reading
+    definition: Interprets a passage within its immediate literary unit, book structure, genre, narrative, or discourse flow.
+    useful_for: [pericope_analysis, narrative_theology, discourse_analysis]
+    required_disclosure: Identify the literary unit or structure used.
+
+  - method_id: canonical_reading
+    label: canonical reading
+    definition: Interprets a passage in relation to its placement within the received canon or canonical corpus.
+    useful_for: [biblical_theology, doctrine_grounding, intertextual_reading]
+    required_disclosure: State canon scope and tradition scope when relevant.
+
+  - method_id: theological_interpretation
+    label: theological interpretation of Scripture
+    definition: Reads Scripture as theological witness in relation to doctrine, church reception, and divine address.
+    useful_for: [doctrine_bridge, application_bridge, church_theology]
+    required_disclosure: Distinguish exegetical observation from theological synthesis.
+
+  - method_id: historical_critical
+    label: historical-critical method
+    definition: Investigates sources, historical development, composition, redaction, and setting of biblical texts.
+    useful_for: [academic_context, source_history, redaction_analysis]
+    required_disclosure: Identify submethod and confidence.
+
+  - method_id: source_criticism
+    label: source criticism
+    definition: Analyzes possible written or oral sources behind a text.
+    useful_for: [pentateuchal_studies, synoptic_studies, composition_history]
+    required_disclosure: Mark hypothesis and scholarly model.
+
+  - method_id: form_criticism
+    label: form criticism
+    definition: Analyzes genre, form, setting, and transmission of smaller units of tradition.
+    useful_for: [psalms, prophecy, gospel_pericopes, oral_tradition]
+    required_disclosure: Distinguish text observation from historical reconstruction.
+
+  - method_id: redaction_criticism
+    label: redaction criticism
+    definition: Studies how an editor or author shaped sources or tradition for theological and literary purposes.
+    useful_for: [gospel_studies, composition_history, theological_emphasis]
+    required_disclosure: Mark inferred redactional claims.
+
+  - method_id: narrative_criticism
+    label: narrative criticism
+    definition: Reads texts as narratives with plot, character, setting, point of view, and rhetorical effect.
+    useful_for: [gospels, narrative_books, character_study]
+    required_disclosure: Signal narrative level of analysis.
+
+  - method_id: discourse_analysis
+    label: discourse analysis
+    definition: Studies structure, cohesion, pragmatics, argument flow, and communicative function across discourse units.
+    useful_for: [epistles, speeches, poetry, argument_flow]
+    required_disclosure: Provide segmentation basis.
+
+  - method_id: intertextuality
+    label: intertextual analysis
+    definition: Studies textual connections, quotation, allusion, echo, reuse, and thematic resonance.
+    useful_for: [old_new_testament_connections, biblical_theology, prophecy_fulfillment]
+    required_disclosure: Grade relation as quotation, allusion, echo, or thematic similarity.
+
+  - method_id: typology
+    label: typological interpretation
+    definition: Identifies meaningful correspondence between earlier and later persons, events, institutions, or patterns.
+    useful_for: [christology, biblical_theology, sacramental_theology]
+    required_disclosure: Distinguish typology from prediction, allegory, and simple analogy.
+
+  - method_id: figural_reading
+    label: figural reading
+    definition: Reads earlier realities as figures whose meaning is more fully disclosed in later canonical or theological contexts.
+    useful_for: [patristic_reception, theological_interpretation, typology]
+    required_disclosure: Identify interpretive tradition or source.
+
+  - method_id: sensus_plenior
+    label: sensus plenior
+    definition: A fuller sense of Scripture beyond the human author's immediate awareness, recognized in later divine or canonical disclosure.
+    useful_for: [catholic_hermeneutics, prophecy_fulfillment, theological_reading]
+    required_disclosure: Mark tradition scope and method.
+
+  - method_id: reception_history
+    label: reception history
+    definition: Studies how texts have been interpreted, used, cited, or received over time in communities and traditions.
+    useful_for: [patristic_reception, rabbinic_reception, liturgy, doctrine_history]
+    required_disclosure: Identify receiving community and period.
+
+  - method_id: second_temple_context
+    label: Second Temple context
+    definition: Uses Second Temple Jewish texts, practices, and contexts to illuminate biblical interpretation.
+    useful_for: [new_testament_context, apocalyptic, messianism, covenant]
+    required_disclosure: Distinguish background context from direct dependence.
+
+  - method_id: rabbinic_reception
+    label: rabbinic reception
+    definition: Studies Jewish interpretive traditions in rabbinic texts and their reception of biblical material.
+    useful_for: [hebrew_bible_reception, jewish_context, later_interpretation]
+    required_disclosure: Identify source, period, and tradition.
+
+  - method_id: patristic_reception
+    label: patristic reception
+    definition: Studies early Christian interpretation and use of biblical texts.
+    useful_for: [doctrine_history, typology, creed_reception]
+    required_disclosure: Identify thinker, school, period, and source.
+
+  - method_id: archaeological_contextualization
+    label: archaeological contextualization
+    definition: Uses material culture, sites, inscriptions, and historical geography to illuminate context.
+    useful_for: [historical_context, geography, cultural_practices, chronology]
+    required_disclosure: Mark evidence type and confidence.

@@ -1,0 +1,129 @@
+packet_id: research_packet.biblical_connection_vocabulary_and_hermeneutics
+object_type: archaeology_context_vocabulary_seed
+trust_zone: incoming_research
+lifecycle_state: draft
+review_status: unreviewed
+epistemic_status: proposed
+created: 2026-04-29
+created_by: ChatGPT
+ai_usage_posture: staging_only_not_auto_promote
+
+design_note: >-
+  Archaeology and science-adjacent evidence should contextualize biblical texts
+  without being forced to prove more than the evidence can support.
+
+terms:
+  - term_id: site
+    label: archaeological site
+    definition: A physical location associated with material remains.
+    ai_rule: Include coordinates, proposed identification status, excavation history, and confidence.
+
+  - term_id: stratum
+    label: stratum
+    definition: A layer or level in an archaeological site.
+    ai_rule: Link to excavation report and dating method.
+
+  - term_id: locus
+    label: locus
+    definition: A specific excavated context or unit.
+    ai_rule: Preserve excavation context; do not detach artifact from locus when provenience matters.
+
+  - term_id: artifact
+    label: artifact
+    definition: A material object recovered or analyzed as evidence.
+    ai_rule: Include provenience, condition, date range, and source report.
+
+  - term_id: inscription
+    label: inscription
+    definition: Text inscribed on material object or surface.
+    ai_rule: Include transcription, translation, language, script, date, and uncertainty.
+
+  - term_id: ostracon
+    label: ostracon
+    definition: Inscribed pottery sherd.
+    ai_rule: Mark inscription reading and archaeological context.
+
+  - term_id: seal_bulla
+    label: seal or bulla
+    definition: Seal impression or seal object relevant to names, offices, administration, or literacy.
+    ai_rule: Distinguish attestation of name or title from proof of narrative event.
+
+  - term_id: stele
+    label: stele
+    definition: Inscribed stone monument.
+    ai_rule: Include edition, translation, and historical context.
+
+  - term_id: provenance
+    label: provenance
+    definition: Ownership or history of an object after recovery.
+    ai_rule: Do not confuse with provenience.
+
+  - term_id: provenience
+    label: provenience
+    definition: Original archaeological findspot or context.
+    ai_rule: Treat as crucial for evidential weight.
+
+  - term_id: ceramic_chronology
+    label: ceramic chronology
+    definition: Dating or contextualization based on pottery forms and ceramic assemblages.
+    ai_rule: Mark date range and regional basis.
+
+  - term_id: radiocarbon_dating
+    label: radiocarbon dating
+    definition: Dating method based on radiocarbon analysis of organic material.
+    ai_rule: Include calibration and range, not just one date.
+
+  - term_id: paleography
+    label: paleography
+    definition: Dating or analysis based on script forms and writing development.
+    ai_rule: Include uncertainty and comparative corpus.
+
+  - term_id: epigraphy
+    label: epigraphy
+    definition: Study of inscriptions.
+    ai_rule: Keep transcription, translation, and interpretation distinct.
+
+  - term_id: historical_geography
+    label: historical geography
+    definition: Study of places, routes, regions, and spatial relationships in historical context.
+    ai_rule: Mark proposed identifications and competing site theories.
+
+  - term_id: ane_parallel
+    label: ancient Near Eastern parallel
+    definition: Text, practice, motif, law, ritual, inscription, or cultural pattern from ancient Near Eastern context used for comparison.
+    ai_rule: Do not imply dependence from similarity alone.
+
+  - term_id: archaeobotany
+    label: archaeobotany
+    definition: Study of plant remains in archaeological context.
+    ai_rule: Use for agriculture, economy, diet, environment, and ritual context; avoid doctrinal overclaim.
+
+  - term_id: archaeozoology
+    label: archaeozoology
+    definition: Study of animal remains in archaeological context.
+    ai_rule: Use for diet, sacrifice, economy, and environment; avoid doctrinal overclaim.
+
+  - term_id: climate_context
+    label: climate or environmental context
+    definition: Environmental data relevant to historical setting, famine, settlement, agriculture, migration, or crisis.
+    ai_rule: Mark correlation vs causation.
+
+  - term_id: genetic_evidence
+    label: genetic evidence
+    definition: Ancient DNA or population evidence relevant to historical population questions.
+    ai_rule: High caution. Do not map directly onto theology, ethnicity, or identity claims without expert review.
+
+evidence_statuses:
+  - secure
+  - probable
+  - possible
+  - contested
+  - rejected
+  - unknown
+
+misuse_warnings:
+  - Archaeological correlation is not doctrinal proof.
+  - Similarity is not dependence.
+  - Lack of evidence is not automatically evidence of absence.
+  - Unprovenanced artifacts carry reduced evidential value.
+  - Scientific evidence must be rendered with method and uncertainty.
