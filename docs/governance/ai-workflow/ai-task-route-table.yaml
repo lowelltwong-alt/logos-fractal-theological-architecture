@@ -1,0 +1,248 @@
+router_version: 0.1.0
+last_updated: "2026-04-30"
+owner_surface: docs/governance/ai-workflow/
+source_of_truth:
+  - AGENTS.md
+  - AI_WORK_START_HERE.md
+  - docs/governance/ai-workflow/ai-routing-algorithm.md
+
+routes:
+  research_addition:
+    description: Add staged research from chat, uploaded files, source synthesis, or public-source review.
+    default_mode: edit
+    reasoning_effort: medium
+    internet: off_unless_source_verification_needed
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/research-addition-template.md
+    allowed_paths:
+      - incoming/research/**
+    forbidden:
+      - doctrine_promotion
+      - claim_objects
+      - graph_objects
+      - copyrighted_full_text_ingestion
+    validation:
+      - metadata
+      - link_lint
+      - structure
+
+  source_document_integration_map:
+    description: Map source packets and document families to workstreams, boundaries, and promotion paths.
+    default_mode: edit
+    reasoning_effort: medium
+    internet: off
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/source-document-integration-map-template.md
+    allowed_paths:
+      - docs/roadmap/**
+      - README.md
+      - AI_FRONT_DOOR.md
+    forbidden:
+      - doctrine_promotion
+      - claim_objects
+      - graph_objects
+      - ingestion
+    validation:
+      - link_lint
+      - structure
+
+  governance_bridge:
+    description: Promote staged research into governed reference, vocabulary, or policy documents.
+    default_mode: edit
+    reasoning_effort: high
+    internet: off_unless_official_docs_needed
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/governance-bridge-template.md
+    allowed_paths:
+      - docs/governance/**
+      - docs/roadmap/**
+    forbidden:
+      - runtime_agents
+      - source_text_ingestion
+      - claim_objects
+      - graph_objects
+    validation:
+      - metadata
+      - link_lint
+      - crossrefs
+      - trust_zone
+
+  concept_promotion:
+    description: Promote staged research into concept or doctrine nodes.
+    default_mode: edit
+    reasoning_effort: high
+    internet: off
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/concept-promotion-template.md
+    allowed_paths:
+      - docs/concepts/**
+      - docs/doctrine/**
+    forbidden:
+      - unsupported_claims
+      - graph_objects
+      - counseling_activation
+      - source_text_ingestion
+    validation:
+      - metadata
+      - crossrefs
+      - trust_zone
+
+  source_profile_card:
+    description: Create source, theologian, thinker, or tradition profile cards without ingesting protected text.
+    default_mode: edit
+    reasoning_effort: high
+    internet: off_unless_source_status_needed
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/source-profile-card-template.md
+    allowed_paths:
+      - docs/profiles/**
+      - docs/canon/**
+      - incoming/research/**
+    forbidden:
+      - full_text_ingestion
+      - copyrighted_source_chunks
+      - claim_objects
+      - graph_objects
+    validation:
+      - metadata
+      - link_lint
+      - trust_zone
+
+  source_registry:
+    description: Create source registry templates, candidate source metadata, and source-use boundaries.
+    default_mode: edit
+    reasoning_effort: xhigh
+    internet: on_for_license_verification_only
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/source-registry-template.md
+    allowed_paths:
+      - data/source-registry/**
+      - schemas/source-registry/**
+      - docs/governance/**
+    forbidden:
+      - source_text_ingestion
+      - embeddings
+      - unreviewed_license_claims
+    validation:
+      - source_registry
+      - schema_if_changed
+      - metadata
+      - trust_zone
+
+  claim_object:
+    description: Create or update machine-readable claim objects.
+    default_mode: edit
+    reasoning_effort: xhigh
+    internet: off_unless_source_status_needed
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/claim-object-template.md
+    allowed_paths:
+      - data/claims/**
+    forbidden:
+      - unsupported_claims
+      - unreviewed_graph_promotion
+      - copyrighted_source_text
+      - inferred_as_asserted
+    validation:
+      - claim_schema
+      - crossrefs
+      - trust_zone
+      - provenance
+
+  graph_object:
+    description: Create or update graph relationship objects.
+    default_mode: edit
+    reasoning_effort: xhigh
+    internet: off
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/graph-object-template.md
+    allowed_paths:
+      - data/graph/**
+      - data/relationships/**
+    prerequisites:
+      - approved_relationship_vocabulary
+      - claim_or_source_basis
+    forbidden:
+      - generic_related_to
+      - unsupported_edges
+      - inferred_as_asserted
+    validation:
+      - graph_schema
+      - relationship_vocabulary
+      - provenance
+      - crossrefs
+
+  ingestion_pilot:
+    description: Add a source-governed public-domain or open-license ingestion pilot.
+    default_mode: plan_first
+    reasoning_effort: xhigh
+    internet: on_for_license_verification
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/ingestion-pilot-template.md
+    allowed_paths:
+      - data/source-registry/**
+      - incoming/research/**
+      - data/ingestion/**
+    forbidden:
+      - protected_modern_text
+      - full_bible_without_policy
+      - embeddings_without_source_review
+    validation:
+      - source_registry
+      - license_policy
+      - metadata
+      - provenance
+
+  validation_infra:
+    description: Change schemas, validators, workflows, PR templates, or checks.
+    default_mode: edit
+    reasoning_effort: xhigh
+    internet: off_unless_official_tool_docs_needed
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/validation-infra-template.md
+    allowed_paths:
+      - schemas/**
+      - scripts/**
+      - .github/**
+    forbidden:
+      - theology_changes
+      - broad_validator_rewrite_without_request
+    validation:
+      - full_available_validation_suite
+
+  runtime_agent_planning:
+    description: Plan future agents, tool registries, approval gates, hooks, and execution controls without creating runtime.
+    default_mode: plan
+    reasoning_effort: xhigh
+    internet: off_unless_official_tool_docs_needed
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/runtime-agent-planning-template.md
+    allowed_paths:
+      - docs/roadmap/**
+      - incoming/research/**
+      - docs/governance/**
+    forbidden:
+      - executable_agents
+      - .claude_agents
+      - external_side_effects
+    validation:
+      - metadata
+      - link_lint
+      - trust_zone
+
+  chat_handoff:
+    description: Convert chat output or assistant-generated material into a repo-safe handoff packet.
+    default_mode: plan
+    reasoning_effort: medium
+    internet: off_unless_source_verification_needed
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/chat-handoff-template.md
+    allowed_paths:
+      - incoming/research/**
+      - docs/roadmap/**
+    forbidden:
+      - silent_promotion
+      - source_text_ingestion
+    validation:
+      - metadata
+      - link_lint
