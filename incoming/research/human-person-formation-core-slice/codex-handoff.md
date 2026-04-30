@@ -12,13 +12,7 @@ ai_usage_posture: staging_only_not_auto_promote
 
 ## Branch
 
-```bash
-git checkout main
-git fetch origin --prune --tags
-git pull --ff-only origin main
-git status
-git checkout -b feature/human-person-formation-core-slice
-```
+Create branch `feature/human-person-formation-core-slice` from live `main` after running the standard live-main startup protocol from `AGENTS.md`.
 
 ## Non-negotiable boundary
 
@@ -30,55 +24,49 @@ Do not add Christian counseling content, diagnosis/treatment guidance, therapy w
 
 Before editing, inspect:
 
-```text
-README.md
-AI_FRONT_DOOR.md
-AGENTS.md
-docs/roadmap/theological-buildout-roadmap.md
-docs/roadmap/repository-integration-map.md
-docs/doctrine/anthropology.md
-docs/concepts/README.md
-docs/concepts/imago-dei.md
-docs/concepts/sin.md
-docs/concepts/stewardship.md
-docs/concepts/vocation.md
-docs/canon/README.md
-docs/canon/augustine/README.md
-data/claims/README.md
-```
+- `README.md`
+- `AI_FRONT_DOOR.md`
+- `AGENTS.md`
+- `docs/roadmap/theological-buildout-roadmap.md`
+- `docs/roadmap/repository-integration-map.md`
+- `docs/doctrine/anthropology.md`
+- `docs/concepts/README.md`
+- `docs/concepts/imago-dei.md`
+- `docs/concepts/sin.md`
+- `docs/concepts/stewardship.md`
+- `docs/concepts/vocation.md`
+- `docs/canon/README.md`
+- `docs/canon/augustine/README.md`
+- `data/claims/README.md`
 
 Search for existing files or anchors before creating any of these:
 
-```text
-personhood
-human agency
-fallenness
-ordered love
-suffering and lament
-hope
-formation
-grace
-Athanasius
-Willard
-Nouwen
-Keller
-Calvin
-Luther
-```
+- personhood
+- human agency
+- fallenness
+- ordered love
+- suffering and lament
+- hope
+- formation
+- grace
+- Athanasius
+- Willard
+- Nouwen
+- Keller
+- Calvin
+- Luther
 
 Do not duplicate an existing node under a different label.
 
 ## Implementation option A: safest seed-only PR
 
-Create only:
+Create only these staged research files:
 
-```text
-incoming/research/human-person-formation-core-slice/README.md
-incoming/research/human-person-formation-core-slice/research-packet.md
-incoming/research/human-person-formation-core-slice/claim-inventory.yaml
-incoming/research/human-person-formation-core-slice/graph-object-plan.json
-incoming/research/human-person-formation-core-slice/codex-handoff.md
-```
+- `incoming/research/human-person-formation-core-slice/README.md`
+- `incoming/research/human-person-formation-core-slice/research-packet.md`
+- `incoming/research/human-person-formation-core-slice/claim-inventory.yaml`
+- `incoming/research/human-person-formation-core-slice/graph-object-plan.json`
+- `incoming/research/human-person-formation-core-slice/codex-handoff.md`
 
 This is the lowest-risk PR and should pass as staged research if metadata is valid.
 
@@ -86,13 +74,11 @@ This is the lowest-risk PR and should pass as staged research if metadata is val
 
 After option A, add only 3-5 proposed concept nodes if no duplicates exist:
 
-```text
-docs/concepts/personhood.md
-docs/concepts/human-agency.md
-docs/concepts/ordered-love.md
-docs/concepts/formation.md
-docs/concepts/grace.md
-```
+- `docs/concepts/personhood.md`
+- `docs/concepts/human-agency.md`
+- `docs/concepts/ordered-love.md`
+- `docs/concepts/formation.md`
+- `docs/concepts/grace.md`
 
 Do not add all concepts in one pass unless validation and review remain easy.
 
@@ -104,11 +90,7 @@ For `suffering-and-lament` and `hope`, consider staging as future follow-up if t
 
 Do not create large canon thinker nodes yet unless asked.
 
-Instead, create a small staged note if useful:
-
-```text
-incoming/research/human-person-formation-core-slice/thinker-anchor-map.md
-```
+Instead, create a small staged note if useful at `incoming/research/human-person-formation-core-slice/thinker-anchor-map.md`.
 
 Use it to map:
 
@@ -121,76 +103,36 @@ Use it to map:
 
 ## Suggested PR title
 
-```text
-Seed human person and formation core slice
-```
+`Seed human person and formation core slice`
 
-## Suggested PR description
+## Suggested PR description content
 
-```md
-## Summary
+Summary: seed the Human Person and Formation Core Slice as staged research for the next theological architecture buildout.
 
-Seeds the Human Person and Formation Core Slice as staged research for the next theological architecture buildout.
+Boundary statement: this PR does not promote counseling content, create therapy workflows, or add crisis/diagnosis/treatment guidance.
 
-This PR does not promote counseling content, create therapy workflows, or add crisis/diagnosis/treatment guidance.
+Invariant impact statement: preserves repository invariants by staging multi-claim theological research before promotion into doctrine, concept, claim, or graph layers.
 
-## Files changed
+Trust zone declaration: touched trust zone is `incoming_research`; optionally `proposed` if concept nodes are added. No canonical or higher-trust theological zone depends on lower-trust material.
 
-- `incoming/research/human-person-formation-core-slice/README.md`
-- `incoming/research/human-person-formation-core-slice/research-packet.md`
-- `incoming/research/human-person-formation-core-slice/claim-inventory.yaml`
-- `incoming/research/human-person-formation-core-slice/graph-object-plan.json`
-- `incoming/research/human-person-formation-core-slice/codex-handoff.md`
+Provenance note update: every added staged file includes a metadata/provenance note. No existing canonical provenance note is changed unless a concept-node audit patch is explicitly included.
 
-## Invariant impact statement
+Deprecation plan: no structures are deprecated.
 
-Preserves repository invariants by staging multi-claim theological research before promotion into doctrine, concept, claim, or graph layers.
+Drift check: staged material does not silently become doctrine or graph truth.
 
-No architecture invariant is intentionally changed.
-
-## Trust zone declaration
-
-Touched trust zones:
-
-- `incoming_research`
-- optionally `proposed` if concept nodes are added
-
-No canonical or higher-trust theological zone depends on lower-trust material.
-
-## Provenance note update
-
-Every added file includes a metadata/provenance note. No existing canonical provenance note is changed unless a concept-node audit patch is explicitly included.
-
-## Deprecation plan
-
-No structures are deprecated.
-
-## Drift check
-
-Old rule preserved: staged material does not silently become doctrine or graph truth.
-
-Intentional change: adds a staged research packet and optional small concept-node candidates for the human-person/formation slice.
-
-Unchanged surface: no counseling side quest activation; no runtime agent work; no claim/graph promotion unless separately reviewed.
-
-## Validation
-
-- [ ] Ran default validation or documented why not.
-```
+Validation: run the repo's existing validation commands or document why a command was not available.
 
 ## Validation commands
 
 Use the repo's existing validation commands. At minimum, try:
 
-```bash
-git status
-find incoming/research/human-person-formation-core-slice -maxdepth 2 -type f -print
-# If available in repo:
-python scripts/validate_metadata.py
-python scripts/validate_crossrefs.py
-python scripts/validate_trust_zones.py
-./scripts/overnight_maintenance.sh --dry-run
-```
+- `git status`
+- `find incoming/research/human-person-formation-core-slice -maxdepth 2 -type f -print`
+- `python scripts/validate_metadata.py` if available
+- `python scripts/validate_crossrefs.py` if available
+- `python scripts/validate_trust_zones.py` if available
+- `./scripts/overnight_maintenance.sh --dry-run` if available
 
 If a validation script name differs, inspect `.github/workflows/` and use the scripts referenced there.
 
