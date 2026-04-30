@@ -2,7 +2,7 @@
 object_type: repository_governance_contract
 trust_zone: canonical
 lifecycle_status: active
-provenance_note: "Created on 2026-04-05 from the maintainer's governing contract provided in chat. Updated on 2026-04-30 to require live mirror synchronization before Codex work."
+provenance_note: "Created on 2026-04-05 from the maintainer's governing contract provided in chat. Updated on 2026-04-30 to add a live-main startup protocol for new Codex work."
 reason_for_inclusion: "Keep the working contract on disk at the repo root so future edits follow the same governance rules."
 ---
 
@@ -21,24 +21,30 @@ Assume one maintainer currently performs:
 - promoter
 - publisher
 
-## Live mirror sync rule
-Before starting any Codex or AI-assisted repository work, treat the live GitHub `main` branch as the source of truth.
+## Live-main startup protocol for new work
+Before starting new Codex or AI-assisted repository work, treat the live GitHub `main` branch as the source of truth.
 
-Required startup sequence:
+Default startup sequence for new work:
 
 ```bash
-git checkout main
+git status
+git branch --show-current
 git fetch origin --prune --tags
+git checkout main
 git pull --ff-only origin main
 git status
 git log --oneline --decorate -n 8
 ```
 
-If the local repository cannot fast-forward cleanly, stop and report the blocker before editing files.
+If the task explicitly continues an existing branch, reviews an old pull request, or inspects historical state, do not blindly switch, reset, rebase, or pull over that work. First report the current branch, working-tree state, and relationship to `origin/main`.
+
+If there is uncommitted work, an untracked-file risk, a non-fast-forward condition, or local/remote divergence, stop and report the blocker before editing files.
 
 Do not create feature, seed, roadmap, or cleanup branches from stale local `main`.
 
 Do not assume a previous chat, local mirror, or deleted branch reflects the current live repo state.
+
+Do not reset, rebase, force-push, discard local work, delete branches, or overwrite files unless explicitly instructed.
 
 ## Non-negotiable rules
 - Do not invent new top-level folders unless necessary.
@@ -46,7 +52,8 @@ Do not assume a previous chat, local mirror, or deleted branch reflects the curr
 - Do not let inferred or AI-generated material overwrite canonical material.
 - Keep doctrine topic, doctrine view, and doctrine assessment separate.
 - Preserve history through deprecation rather than deletion.
-- Sync from live `origin/main` before starting repository edits.
+- Sync from live `origin/main` before starting new repository edits unless explicitly continuing existing branch work.
+- Stop and report dirty, divergent, or non-fast-forward local state before editing.
 
 ## Required metadata for meaningful additions
 Every meaningful addition should declare:
