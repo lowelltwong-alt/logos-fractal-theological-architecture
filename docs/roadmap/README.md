@@ -55,3 +55,4 @@ This roadmap organizes the Logos project in build order.
 See also:
 - `exceptions-lake-learning-loop-roadmap-extension.md`
 - `codex-merge-alignment-scorecard.md`
+- `source-document-integration-map.md`
