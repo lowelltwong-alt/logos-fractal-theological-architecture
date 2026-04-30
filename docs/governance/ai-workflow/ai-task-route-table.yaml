@@ -1,4 +1,4 @@
-router_version: 0.1.0
+router_version: 0.1.1
 last_updated: "2026-04-30"
 owner_surface: docs/governance/ai-workflow/
 source_of_truth:
@@ -209,6 +209,30 @@ routes:
       - broad_validator_rewrite_without_request
     validation:
       - full_available_validation_suite
+
+  ai_run_ledger:
+    description: Define or update AI prompt/input/output capture, run ledger, audit summaries, and redaction policy.
+    default_mode: plan_first
+    reasoning_effort: xhigh
+    internet: off_unless_official_tool_docs_needed
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/ai-run-ledger-template.md
+    allowed_paths:
+      - docs/governance/ai-workflow/**
+      - incoming/ai-runs/**
+      - data/ai-runs/**
+      - schemas/ai-runs/**
+    forbidden:
+      - secrets_capture
+      - private_source_text_capture
+      - protected_text_capture
+      - privileged_material_capture
+      - raw_private_chat_capture_without_redaction
+    validation:
+      - metadata
+      - privacy_boundary_review
+      - schema_if_changed
+      - trust_zone
 
   runtime_agent_planning:
     description: Plan future agents, tool registries, approval gates, hooks, and execution controls without creating runtime.
