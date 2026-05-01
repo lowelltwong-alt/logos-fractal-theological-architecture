@@ -5,6 +5,7 @@ lifecycle_status: draft
 review_status: unreviewed
 ai_usage_posture: mandatory_pr_guidance
 provenance_note: "Created 2026-04-30 to define validation and PR requirements for AI-assisted work."
+reason_for_inclusion: "Define required validation posture, PR governance sections, AI routing impact disclosure, and merge discipline for AI-assisted repository changes."
 ---
 
 # Validation and PR Requirements
