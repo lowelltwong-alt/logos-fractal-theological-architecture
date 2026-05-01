@@ -1,5 +1,5 @@
-router_version: 0.1.1
-last_updated: "2026-04-30"
+router_version: 0.1.2
+last_updated: "2026-05-01"
 owner_surface: docs/governance/ai-workflow/
 source_of_truth:
   - AGENTS.md
@@ -232,6 +232,56 @@ routes:
       - metadata
       - privacy_boundary_review
       - schema_if_changed
+      - trust_zone
+
+  frontier_signal_intelligence:
+    description: Govern monitoring, capture, scoring, and routing of high-leverage external signals such as frontier math, AI capability shifts, algorithms, standards, security research, source licensing changes, and open corpus releases.
+    default_mode: plan_edit
+    reasoning_effort: high
+    internet: on_for_source_verification_only
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/frontier-signal-intelligence-template.md
+    allowed_paths:
+      - docs/governance/frontier-signal-intelligence/**
+      - docs/roadmap/frontier-signal-intelligence-roadmap.md
+      - incoming/research/frontier-signal-intelligence-loop/**
+      - docs/governance/ai-workflow/ai-task-route-table.yaml
+      - docs/governance/ai-workflow/templates/frontier-signal-intelligence-template.md
+    forbidden:
+      - autonomous_repo_rewriting
+      - runtime_monitors
+      - source_ingestion
+      - claim_objects
+      - graph_objects
+      - schemas
+      - validators
+    validation:
+      - metadata
+      - link_lint
+      - trust_zone
+
+  agent_skill_catalog:
+    description: Govern planned or implemented agents, skills, subagents, monitors, orchestrators, tags, edges, owners, cadence, audit requirements, model policies, theological drift checks, and future generated discovery surfaces.
+    default_mode: plan_edit
+    reasoning_effort: high
+    internet: off_unless_official_tool_docs_needed
+    permissions: conservative
+    template: docs/governance/ai-workflow/templates/agent-skill-catalog-template.md
+    allowed_paths:
+      - docs/governance/agent-skills/**
+      - docs/roadmap/agent-skill-registry-roadmap.md
+      - docs/governance/ai-workflow/ai-task-route-table.yaml
+      - docs/governance/ai-workflow/templates/agent-skill-catalog-template.md
+    forbidden:
+      - runtime_implementation
+      - live_scheduled_agents
+      - unapproved_claude_agent_files
+      - unapproved_claude_skill_files
+      - autonomous_repo_rewriting
+      - unrestricted_tool_access
+    validation:
+      - metadata
+      - link_lint
       - trust_zone
 
   runtime_agent_planning:
