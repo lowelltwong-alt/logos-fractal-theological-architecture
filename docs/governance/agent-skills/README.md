@@ -53,3 +53,15 @@ Agents and skills must preserve the declared theological/source profile of Logos
 This is not a ban on studying other traditions. It is a ban on hidden or unapproved drift from the declared profile, source hierarchy, and review gates.
 
 Tradition-scoped or contrastive work must be labeled as such.
+
+## Hardening surfaces
+
+These docs harden specific failure surfaces and apply to every card, adapter, monitor, orchestrator, or composed skill:
+
+- `safety-controls-floor.md` — minimum non-negotiable safety controls.
+- `theological-profile-drift-review-checklist.md` — diff-of-defaults and drift cadence.
+- `local-and-free-model-boundary-policy.md` — what local and free-tier models may not do alone.
+- `unsafe-composition-review-checklist.md` — review checklist for composed skills.
+- `swarm-scale-failure-modes.md` — failure modes that emerge at registry scale.
+
+If any hardening doc imposes a stricter rule than another file, the stricter rule wins.

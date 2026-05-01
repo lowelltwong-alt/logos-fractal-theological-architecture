@@ -53,3 +53,36 @@ They should not autonomously decide doctrine, claims, graph edges, source licens
 Tool-specific implementations must preserve the registry card's constraints.
 
 If a tool cannot express the required constraints, it should not implement that skill without a wrapper or additional review.
+
+## Vendor lock-in deny
+
+A registry card must not require a single vendor to be implementable.
+
+The following are forbidden at the card level:
+
+- describing capabilities only in vendor-specific terminology;
+- depending on a vendor-only feature without a model-agnostic fallback;
+- binding source-policy, theology, claim, graph, or schema decisions to one vendor's behavior;
+- making auditability, kill-switch, or stop-condition expression conditional on one vendor.
+
+Vendor-specific features may be used by an adapter, but the card must remain implementable on at least one alternative model class.
+
+## Adapter portability test
+
+Before an adapter is approved, confirm that another approved model class could implement the same card without weakening:
+
+- allowed and forbidden tools;
+- side-effect level;
+- source boundaries;
+- doctrinal profile boundary;
+- audit capture level;
+- stop conditions;
+- kill-switch and pause behavior.
+
+If portability is impossible, the card must be reviewed for vendor lock-in before any adapter is approved.
+
+## Vendor-terms change posture
+
+If a vendor changes terms, capabilities, retention, or source-handling in a way that conflicts with the card's constraints, the adapter must be paused, not the card.
+
+The card and registry remain canonical. Adapters are replaceable.
