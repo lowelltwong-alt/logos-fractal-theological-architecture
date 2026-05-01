@@ -5,6 +5,7 @@ lifecycle_status: draft
 review_status: unreviewed
 ai_usage_posture: reusable_prompt_header
 provenance_note: "Created 2026-04-30 as the universal header for AI-assisted work prompts."
+reason_for_inclusion: "Provide a reusable mandatory prompt header so AI-assisted tools declare tool settings, branch, PR title, scope, non-goals, trust zones, work mode, side-effect level, validation, live-main sync, route selection, and routing impact."
 ---
 
 # Universal AI Prompt Header
