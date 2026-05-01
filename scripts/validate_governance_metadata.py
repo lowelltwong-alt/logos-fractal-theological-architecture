@@ -21,6 +21,7 @@ ALLOWED_TRUST_ZONES = {
     "canonical",
     "tradition-scoped",
     "proposed",
+    "governance_instructions",
     "inferred",
     "deprecated",
     "learning-sidecar",
