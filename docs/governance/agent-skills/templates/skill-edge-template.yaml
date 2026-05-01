@@ -1,0 +1,15 @@
+object_type: skill_edge
+trust_zone: proposed
+lifecycle_status: draft
+review_status: unreviewed
+provenance_note: "Template created 2026-05-01 for future skill graph edges."
+reason_for_inclusion: "Template only. Do not treat as an active relationship object."
+edge_id:
+edge_type:
+source_skill_id:
+target_skill_id:
+rationale:
+risk:
+review_required:
+created_by:
+created_at:
