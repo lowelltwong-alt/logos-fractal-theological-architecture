@@ -5,6 +5,8 @@ lifecycle_status: draft
 review_status: unreviewed
 ai_usage_posture: reusable_route_template
 route: graph_object
+provenance_note: "Created 2026-04-30 as the AI work route template for graph object and relationship-object tasks."
+reason_for_inclusion: "Define required settings, scope, prerequisites, and stop rules for future graph-object work so AI tools do not create unsupported or generic relationship edges."
 ---
 
 # Graph Object Template
@@ -20,7 +22,7 @@ route: graph_object
 
 Use this route for graph objects, relationship objects, or typed relationship data.
 
-Default allowed paths: `data/graph/` and `data/relationships/`.
+Default allowed paths are the governed graph-object and relationship-object areas once present in the repository.
 
 ## Required prompt fields
 
