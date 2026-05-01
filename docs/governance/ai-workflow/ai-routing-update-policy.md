@@ -5,6 +5,7 @@ lifecycle_status: draft
 review_status: unreviewed
 ai_usage_posture: mandatory_router_maintenance_policy
 provenance_note: "Created 2026-04-30 to require updates to AI routing whenever repository process or trust boundaries change."
+reason_for_inclusion: "Require the AI routing algorithm, route table, templates, and settings guidance to be reviewed whenever repository changes affect AI-assisted work classification, prompting, validation, source boundaries, or governance process."
 ---
 
 # AI Routing Update Policy
