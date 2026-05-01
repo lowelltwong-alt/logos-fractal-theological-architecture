@@ -5,6 +5,7 @@ lifecycle_status: draft
 review_status: unreviewed
 ai_usage_posture: contributor_guidance_only
 provenance_note: "Created 2026-04-30 to guide reasoning, internet, and permission settings for AI-assisted work."
+reason_for_inclusion: "Provide route-sensitive guidance for reasoning effort, internet use, permissions, and work mode so AI-assisted contributors choose settings proportional to risk."
 ---
 
 # AI Tool Settings Matrix
