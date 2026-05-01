@@ -3,18 +3,28 @@
 
 Rules enforced:
 - For markdown files with YAML frontmatter in docs/governance/, require:
-  object_type, trust_zone, lifecycle_status, provenance_note, reason_for_inclusion
+  object_type and trust_zone.
+- For governance files outside reusable AI workflow templates/tool guides, also require:
+  provenance_note and reason_for_inclusion.
 - trust_zone must be one of the allowed values.
 """
 from __future__ import annotations
 
 import pathlib
 
-REQUIRED_KEYS = {
+BASE_REQUIRED_KEYS = {
     "object_type",
     "trust_zone",
+}
+
+FULL_REQUIRED_KEYS = BASE_REQUIRED_KEYS | {
     "provenance_note",
     "reason_for_inclusion",
+}
+
+AI_WORKFLOW_TEMPLATE_PARTS = {
+    "templates",
+    "tool-configs",
 }
 
 ALLOWED_TRUST_ZONES = {
@@ -54,6 +64,13 @@ def parse_simple_yaml(text: str) -> dict[str, str]:
     return data
 
 
+def required_keys_for(path: pathlib.Path) -> set[str]:
+    parts = set(path.parts)
+    if "ai-workflow" in parts and parts.intersection(AI_WORKFLOW_TEMPLATE_PARTS):
+        return BASE_REQUIRED_KEYS
+    return FULL_REQUIRED_KEYS
+
+
 def main() -> int:
     root = pathlib.Path(__file__).resolve().parents[1]
     base = root / "docs" / "governance"
@@ -70,7 +87,8 @@ def main() -> int:
         checked += 1
         data = parse_simple_yaml(fm)
 
-        missing = sorted(REQUIRED_KEYS - data.keys())
+        required_keys = required_keys_for(path)
+        missing = sorted(required_keys - data.keys())
         if missing:
             failures.append(f"FAIL {path.as_posix()}: missing keys {', '.join(missing)}")
 
