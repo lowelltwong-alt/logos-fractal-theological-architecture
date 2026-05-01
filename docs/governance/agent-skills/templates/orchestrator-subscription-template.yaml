@@ -1,0 +1,14 @@
+object_type: orchestrator_subscription
+trust_zone: proposed
+lifecycle_status: draft
+review_status: unreviewed
+provenance_note: "Template created 2026-05-01 for future orchestrator subscriptions."
+reason_for_inclusion: "Template only. Does not create runtime notification behavior."
+orchestrator_id:
+watches_tags: []
+watches_routes: []
+watches_outputs: []
+notify_on: []
+owner_role:
+approval_required_for: []
+notes:
