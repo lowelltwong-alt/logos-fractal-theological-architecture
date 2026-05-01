@@ -5,6 +5,7 @@ lifecycle_status: draft
 review_status: unreviewed
 ai_usage_posture: mandatory_routing_logic
 provenance_note: "Created 2026-04-30 as the route-selection algorithm for AI-assisted repository work."
+reason_for_inclusion: "Define the mandatory decision algorithm that classifies AI-assisted tasks into routes, modes, settings, templates, validation expectations, and stop conditions."
 ---
 
 # AI Routing Algorithm
