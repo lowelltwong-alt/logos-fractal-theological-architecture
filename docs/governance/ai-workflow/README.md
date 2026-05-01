@@ -1,6 +1,6 @@
 ---
 object_type: governance_reference
-trust_zone: governance_instructions
+trust_zone: proposed
 lifecycle_status: draft
 review_status: unreviewed
 ai_usage_posture: contributor_guidance_only
