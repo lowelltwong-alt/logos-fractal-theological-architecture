@@ -5,6 +5,7 @@ lifecycle_status: draft
 review_status: unreviewed
 ai_usage_posture: mandatory_stop_conditions
 provenance_note: "Created 2026-04-30 as mandatory stop conditions for AI-assisted repository work."
+reason_for_inclusion: "Define mandatory stop-and-report conditions so AI-assisted tools do not improvise when git state, scope, source rights, theology, graph, runtime, or validation boundaries are unsafe or ambiguous."
 ---
 
 # Stop Conditions
