@@ -5,6 +5,7 @@ lifecycle_status: draft
 review_status: unreviewed
 ai_usage_posture: mandatory_source_boundary_guidance
 provenance_note: "Created 2026-04-30 to define clean-room and source-use boundaries for AI-assisted work."
+reason_for_inclusion: "Define clean-room limits and source-use boundaries so AI-assisted work does not import leaked material, private prompts, protected source text, or private corpus artifacts."
 ---
 
 # Clean-Room and Source Boundaries
