@@ -11,7 +11,7 @@ lifecycle_state: active
 ai_usage_posture: ai_assist_human_review
 object_type: repository_governance_contract
 lifecycle_status: active
-provenance_note: "Created on 2026-04-08 during controlled-vocabulary normalization pass."
+provenance_note: "Updated on 2026-05-01 to include governance_instructions as the trust-zone value for AI workflow routing and prompt-template control-plane files."
 reason_for_inclusion: "Define canonical bounded vocabularies and migration aliases so validators and templates enforce the same value spaces."
 ---
 
@@ -26,6 +26,7 @@ Allowed values:
 - `canonical`
 - `tradition-scoped`
 - `proposed`
+- `governance_instructions`
 - `inferred`
 - `deprecated`
 - `learning-sidecar`
@@ -34,6 +35,7 @@ Migration aliases (must be normalized before validation):
 - `core_trusted` -> `canonical`
 - `reviewed_specialized` -> `tradition-scoped`
 - `working_proposed` -> `proposed`
+- `governance_instruction` -> `governance_instructions`
 - `boundary_restricted` -> `learning-sidecar`
 - `experimental_graph` -> `inferred`
 
