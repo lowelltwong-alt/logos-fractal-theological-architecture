@@ -5,6 +5,7 @@ lifecycle_status: draft
 review_status: unreviewed
 ai_usage_posture: mandatory_process_guidance
 provenance_note: "Created 2026-04-30 to define the repeatable cycle for AI-assisted repository work."
+reason_for_inclusion: "Define the required orient, sync, classify, route, validate, PR, report, and router-update cycle for AI-assisted repository work."
 ---
 
 # AI Work Cycle
