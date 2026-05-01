@@ -1,0 +1,40 @@
+object_type: agent_skill_card
+trust_zone: proposed
+lifecycle_status: draft
+review_status: unreviewed
+provenance_note: "Template created 2026-05-01 for future agent/skill registry cards."
+reason_for_inclusion: "Template only. Do not treat as an active skill."
+skill_id:
+name:
+type:
+status: proposed
+owner:
+model_policy:
+  allowed_model_classes: []
+  local_model_allowed:
+  frontier_model_required:
+  human_review_required:
+  vendor_binding: model_agnostic
+doctrinal_profile_boundary:
+  active_profile:
+  tradition_scoped:
+  theological_assertion_allowed:
+inputs: []
+outputs: []
+allowed_tools: []
+forbidden_tools: []
+side_effect_level: read_only
+required_permissions: []
+source_boundaries: []
+reasoning_effort_default:
+internet_default:
+validation_required: []
+routes_supported: []
+related_skills: []
+depends_on: []
+improves: []
+supersedes: []
+risk_level:
+audit_capture_level:
+last_reviewed:
+notes:
