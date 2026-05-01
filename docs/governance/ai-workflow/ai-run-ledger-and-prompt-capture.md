@@ -5,6 +5,7 @@ lifecycle_status: draft
 review_status: unreviewed
 ai_usage_posture: prompt_audit_and_run_ledger_policy
 provenance_note: "Created 2026-04-30 to define future prompt/input/output capture expectations for AI-assisted contributors."
+reason_for_inclusion: "Define audit expectations for AI prompts, outputs, settings, validation status, and redaction boundaries before adding any run-ledger storage or schema."
 ---
 
 # AI Run Ledger and Prompt Capture Policy
@@ -65,13 +66,9 @@ Do not include secrets, credentials, private data, protected source text, or ful
 
 Use for high-risk work such as schemas, validators, claims, graph objects, source registry, ingestion, or runtime planning.
 
-Store a redacted prompt/output artifact under a future governed path such as:
+Store a redacted prompt/output artifact under a future governed AI run-ledger location. The exact storage path must be approved later by a schema and privacy-boundary PR.
 
-- `data/ai-runs/`
-- `incoming/ai-runs/`
-- or another approved run-ledger location.
-
-This path must not be created for sensitive or protected content until the repo has a validated schema and privacy policy for AI run capture.
+This storage path must not be created for sensitive or protected content until the repo has a validated schema and privacy policy for AI run capture.
 
 ### Level 3: Full run ledger
 
