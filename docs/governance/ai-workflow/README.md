@@ -5,6 +5,7 @@ lifecycle_status: draft
 review_status: unreviewed
 ai_usage_posture: contributor_guidance_only
 provenance_note: "Created 2026-04-30 as the index for the AI-assisted work routing control plane."
+reason_for_inclusion: "Provide a navigable index for the AI-assisted work routing control plane and point contributors to the required cycle, route table, settings matrix, templates, and tool guides."
 ---
 
 # AI Workflow Governance
